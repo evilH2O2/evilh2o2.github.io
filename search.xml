@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Test Page]]></title>
+    <url>%2F2019%2F06%2F12%2FTest-Page%2F</url>
+    <content type="text"><![CDATA[本页面用来进行测试，任何事情 h2h3h4h5 code code code code list1 list2 list3 llist1 llist2 list1 list2 list3 list4 1234import osos.system("ls -l") I jump you jump 行千里路，吃万家菜 佚名, Internet您可就别点击了 https://404.com 404 $C^2$]]></content>
+      <tags>
+        <tag>Test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F06%2F12%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
