@@ -1,24 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title><![CDATA[Blog Reference Link]]></title>
-    <url>%2F2019%2F06%2F14%2FBlog-Reference-Link%2F</url>
-    <content type="text"><![CDATA[扬帆，起航 配置 Blog时参考的链接： 从jekyll到hexo Hexo的Next主题详细配置 hexo搭建个人博客–NexT主题优化 在Hexo博客上添加可爱的Live2D模型 Hexo添加字数统计、阅读时长 下载的hexo主题必须删掉.git 2个小时教你hexo博客添加评论、打赏… 使用GithubPages和Hexo搭建自己… 将hexo+github博客同步托管至coding NexT使用文档]]></content>
-      <tags>
-        <tag>Note</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Test Page]]></title>
-    <url>%2F2019%2F06%2F12%2FTest-Page%2F</url>
-    <content type="text"><![CDATA[本页面用来进行测试 h2h3h4h5 code code code code list1 list2 list3 llist1 llist2 list1 list2 list3 list4 1234import osos.system("ls -l") I jump you jump 行千里路，吃万家菜 佚名, Internet您可就别点击了 https://404.com 404 $C^2$]]></content>
-      <tags>
-        <tag>Test</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F06%2F12%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
-  </entry>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Blog Reference Link</title>
+      <link href="/2019/06/14/Blog-Reference-Link/"/>
+      <url>/2019/06/14/Blog-Reference-Link/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>扬帆，起航</p></blockquote><a id="more"></a><hr><!-- ![68527244_p0.jpg](68527244_p0.jpg) --><img src="/2019/06/14/Blog-Reference-Link/68527244_p0.jpg" width="600" height="600" title="68527244_p0.jpg"><br><p>配置 Blog时参考的链接：</p><ul><li><a href="https://blog.csdn.net/u011475210/article/details/79023429" target="_blank" rel="noopener">从jekyll到hexo</a></li><li><a href="https://www.jianshu.com/p/3a05351a37dc" target="_blank" rel="noopener">Hexo的Next主题详细配置</a></li><li><a href="https://www.jianshu.com/p/1f8107a8778c" target="_blank" rel="noopener">hexo搭建个人博客–NexT主题优化</a></li><li><a href="https://blog.csdn.net/u011054333/article/details/82718910" target="_blank" rel="noopener">在Hexo博客上添加可爱的Live2D模型</a></li><li><a href="https://www.jianshu.com/p/baea8c95e39b" target="_blank" rel="noopener">Hexo添加字数统计、阅读时长</a></li><li><a href="https://segmentfault.com/q/1010000017254914" target="_blank" rel="noopener">下载的hexo主题必须删掉.git</a></li><li><a href="https://www.cnblogs.com/php-linux/p/8416116.html" target="_blank" rel="noopener">2个小时教你hexo博客添加评论、打赏…</a></li><li><a href="https://blog.csdn.net/qq_36759224/article/details/82121420#font_colorFF000__Hexo__Github_font_155" target="_blank" rel="noopener">使用GithubPages和Hexo搭建自己…</a></li><li><a href="https://hubojing.github.io/2016/04/06/%E5%B0%86hexo-github%E5%8D%9A%E5%AE%A2%E5%90%8C%E6%AD%A5%E6%89%98%E7%AE%A1%E8%87%B3coding/" target="_blank" rel="noopener">将hexo+github博客同步托管至coding</a></li><li><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT使用文档</a></li></ul><br><ul><li><a href="https://iochen.com/2018/01/06/use-gitalk-in-hexo/" target="_blank" rel="noopener">Hexo中Gitalk配置使用教程</a></li><li><a href="https://asdfv1929.github.io/2018/01/20/gitalk/" target="_blank" rel="noopener">Hexo NexT主题中集成gitalk评论系统</a></li></ul><hr><blockquote><p>gitalk评论系统注意</p></blockquote><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// gitalk.swig </span></span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> gitalk = <span class="keyword">new</span> Gitalk(&#123;</span><br><span class="line">      clientID: <span class="string">'&#123;&#123; theme.gitalk.ClientID &#125;&#125;'</span>,   <span class="comment">// &lt;----</span></span><br><span class="line">      clientSecret: <span class="string">'&#123;&#123; theme.gitalk.ClientSecret &#125;&#125;'</span>, <span class="comment">// &lt;----</span></span><br><span class="line">      repo: <span class="string">'&#123;&#123; theme.gitalk.repo &#125;&#125;'</span>,</span><br><span class="line">      owner: <span class="string">'&#123;&#123; theme.gitalk.githubID &#125;&#125;'</span>,</span><br><span class="line">      admin: [<span class="string">'&#123;&#123; theme.gitalk.adminUser &#125;&#125;'</span>],</span><br><span class="line">      id: location.pathname,</span><br><span class="line">      distractionFreeMode: <span class="string">'&#123;&#123; theme.gitalk.distractionFreeMode &#125;&#125;'</span></span><br><span class="line">    &#125;)</span><br><span class="line">    gitalk.render(<span class="string">'gitalk-container'</span>)           </span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  githubID:</span> <span class="string">evilH2O2</span>  </span><br><span class="line"><span class="attr">  repo:</span> <span class="string">gitalkComments</span>   </span><br><span class="line"><span class="attr">  ClientID:</span> <span class="string">xxxx</span>      <span class="comment"># &lt;---- 与上面对应，网上有版本不一样的 （ client_id )</span></span><br><span class="line"><span class="attr">  ClientSecret:</span> <span class="string">xxx</span>   <span class="comment"># &lt;---- 与上面对应</span></span><br><span class="line"><span class="attr">  owner:</span> <span class="string">evilH2O2</span></span><br><span class="line"><span class="attr">  adminUser:</span> <span class="string">evilH2O2</span> </span><br><span class="line"><span class="attr">  distractionFreeMode:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Note </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Test Page</title>
+      <link href="/2019/06/12/Test-Page/"/>
+      <url>/2019/06/12/Test-Page/</url>
+      
+        <content type="html"><![CDATA[<p>本页面用来进行测试</p><a id="more"></a><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1351291792&auto=1&height=66"></iframe><h2 id="h2"><a href="#h2" class="headerlink" title="h2"></a>h2</h2><h3 id="h3"><a href="#h3" class="headerlink" title="h3"></a>h3</h3><h4 id="h4"><a href="#h4" class="headerlink" title="h4"></a>h4</h4><h5 id="h5"><a href="#h5" class="headerlink" title="h5"></a>h5</h5><hr><p><em>code</em> <code>code</code> <strong>code</strong> <del>code</del> </p><ul><li>list1</li><li>list2</li><li>list3<ul><li>llist1</li><li>llist2</li></ul></li></ul><ol><li>list1</li><li>list2</li><li>list3</li><li>list4</li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">os.system(<span class="string">"ls -l"</span>)</span><br></pre></td></tr></table></figure><blockquote><p>I jump you jump </p></blockquote><blockquote><p>行千里路，吃万家菜</p><footer><strong>佚名, Internet</strong><cite><a href="https://404.com" target="_blank" rel="noopener">您可就别点击了</a></cite></footer></blockquote><p><a href="https://404.com" target="_blank" rel="noopener">https://404.com</a></p><p><a href="https://404.com" title="404" target="_blank" rel="noopener">404</a></p><p>$C^2$</p><hr><p><img src="74716414_p0.jpg" alt="error"></p><hr><img src="/2019/06/12/Test-Page/74716414_p0.jpg" width="400" height="600" title="祢豆子 鬼灭">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Test </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2019/06/12/hello-world/"/>
+      <url>/2019/06/12/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
 </search>

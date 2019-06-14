@@ -97,7 +97,7 @@
 <meta property="og:description" content="扬帆，起航">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="localhost:/2019/06/14/Blog-Reference-Link/68527244_p0.jpg">
-<meta property="og:updated_time" content="2019-06-14T01:42:54.424Z">
+<meta property="og:updated_time" content="2019-06-14T10:28:12.250Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Blog Reference Link">
 <meta name="twitter:description" content="扬帆，起航">
@@ -365,7 +365,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  107 字
+                  234 字
                 </span>
               
 
@@ -425,7 +425,19 @@
 <li><a href="https://hubojing.github.io/2016/04/06/%E5%B0%86hexo-github%E5%8D%9A%E5%AE%A2%E5%90%8C%E6%AD%A5%E6%89%98%E7%AE%A1%E8%87%B3coding/" target="_blank" rel="noopener">将hexo+github博客同步托管至coding</a></li>
 <li><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT使用文档</a></li>
 </ul>
+<br>
 
+<ul>
+<li><a href="https://iochen.com/2018/01/06/use-gitalk-in-hexo/" target="_blank" rel="noopener">Hexo中Gitalk配置使用教程</a></li>
+<li><a href="https://asdfv1929.github.io/2018/01/20/gitalk/" target="_blank" rel="noopener">Hexo NexT主题中集成gitalk评论系统</a></li>
+</ul>
+<hr>
+<blockquote>
+<p>gitalk评论系统注意</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// gitalk.swig </span></span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> gitalk = <span class="keyword">new</span> Gitalk(&#123;</span><br><span class="line">      clientID: <span class="string">'&#123;&#123; theme.gitalk.ClientID &#125;&#125;'</span>,   <span class="comment">// &lt;----</span></span><br><span class="line">      clientSecret: <span class="string">'&#123;&#123; theme.gitalk.ClientSecret &#125;&#125;'</span>, <span class="comment">// &lt;----</span></span><br><span class="line">      repo: <span class="string">'&#123;&#123; theme.gitalk.repo &#125;&#125;'</span>,</span><br><span class="line">      owner: <span class="string">'&#123;&#123; theme.gitalk.githubID &#125;&#125;'</span>,</span><br><span class="line">      admin: [<span class="string">'&#123;&#123; theme.gitalk.adminUser &#125;&#125;'</span>],</span><br><span class="line">      id: location.pathname,</span><br><span class="line">      distractionFreeMode: <span class="string">'&#123;&#123; theme.gitalk.distractionFreeMode &#125;&#125;'</span></span><br><span class="line">    &#125;)</span><br><span class="line">    gitalk.render(<span class="string">'gitalk-container'</span>)           </span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  githubID:</span> <span class="string">evilH2O2</span>  </span><br><span class="line"><span class="attr">  repo:</span> <span class="string">gitalkComments</span>   </span><br><span class="line"><span class="attr">  ClientID:</span> <span class="string">xxxx</span>      <span class="comment"># &lt;---- 与上面对应，网上有版本不一样的 （ client_id )</span></span><br><span class="line"><span class="attr">  ClientSecret:</span> <span class="string">xxx</span>   <span class="comment"># &lt;---- 与上面对应</span></span><br><span class="line"><span class="attr">  owner:</span> <span class="string">evilH2O2</span></span><br><span class="line"><span class="attr">  adminUser:</span> <span class="string">evilH2O2</span> </span><br><span class="line"><span class="attr">  distractionFreeMode:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
