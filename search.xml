@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Blog Reference Link]]></title>
+    <url>%2F2019%2F06%2F14%2FBlog-Reference-Link%2F</url>
+    <content type="text"><![CDATA[扬帆，起航 配置 Blog时参考的链接： 从jekyll到hexo Hexo的Next主题详细配置 hexo搭建个人博客–NexT主题优化 在Hexo博客上添加可爱的Live2D模型 Hexo添加字数统计、阅读时长 下载的hexo主题必须删掉.git 2个小时教你hexo博客添加评论、打赏… 使用GithubPages和Hexo搭建自己… 将hexo+github博客同步托管至coding NexT使用文档]]></content>
+      <tags>
+        <tag>Note</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Test Page]]></title>
     <url>%2F2019%2F06%2F12%2FTest-Page%2F</url>
-    <content type="text"><![CDATA[本页面用来进行测试，任何事情 h2h3h4h5 code code code code list1 list2 list3 llist1 llist2 list1 list2 list3 list4 1234import osos.system("ls -l") I jump you jump 行千里路，吃万家菜 佚名, Internet您可就别点击了 https://404.com 404 $C^2$]]></content>
+    <content type="text"><![CDATA[本页面用来进行测试 h2h3h4h5 code code code code list1 list2 list3 llist1 llist2 list1 list2 list3 list4 1234import osos.system("ls -l") I jump you jump 行千里路，吃万家菜 佚名, Internet您可就别点击了 https://404.com 404 $C^2$]]></content>
       <tags>
         <tag>Test</tag>
       </tags>

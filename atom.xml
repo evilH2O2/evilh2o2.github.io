@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="localhost:4000/"/>
-  <updated>2019-06-12T23:09:26.572Z</updated>
+  <updated>2019-06-14T01:42:54.424Z</updated>
   <id>localhost:4000/</id>
   
   <author>
@@ -17,15 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Blog Reference Link</title>
+    <link href="localhost:4000/2019/06/14/Blog-Reference-Link/"/>
+    <id>localhost:4000/2019/06/14/Blog-Reference-Link/</id>
+    <published>2019-06-14T01:12:05.000Z</published>
+    <updated>2019-06-14T01:42:54.424Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;扬帆，起航&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="Note" scheme="localhost:4000/tags/Note/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Test Page</title>
     <link href="localhost:4000/2019/06/12/Test-Page/"/>
     <id>localhost:4000/2019/06/12/Test-Page/</id>
     <published>2019-06-12T00:38:37.000Z</published>
-    <updated>2019-06-12T23:09:26.572Z</updated>
+    <updated>2019-06-14T01:40:02.867Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;本页面用来进行测试，任何事情&lt;/p&gt;
+      &lt;p&gt;本页面用来进行测试&lt;/p&gt;
     
     </summary>
     
