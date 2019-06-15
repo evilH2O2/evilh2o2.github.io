@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="localhost:4000/"/>
-  <updated>2019-06-15T00:48:36.911Z</updated>
+  <updated>2019-06-15T01:20:13.081Z</updated>
   <id>localhost:4000/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="localhost:4000/2019/06/14/Blog-Reference-Link/"/>
     <id>localhost:4000/2019/06/14/Blog-Reference-Link/</id>
     <published>2019-06-14T01:12:05.000Z</published>
-    <updated>2019-06-15T00:48:36.911Z</updated>
+    <updated>2019-06-15T01:20:13.081Z</updated>
     
     <summary type="html">
     
@@ -50,22 +50,6 @@
     
     
       <category term="Test" scheme="localhost:4000/tags/Test/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="localhost:4000/2019/06/12/hello-world/"/>
-    <id>localhost:4000/2019/06/12/hello-world/</id>
-    <published>2019-06-12T00:05:07.299Z</published>
-    <updated>2019-06-12T09:06:04.244Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-    
-    </summary>
-    
     
   </entry>
   
