@@ -97,7 +97,7 @@
 <meta property="og:description" content="恩 有点特别的信但是但这是……世界上最纯粹最美丽的思念 文伽Bilibili《死后文》">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="localhost:/2019/06/14/Blog-Reference-Link/68527244_p0.jpg">
-<meta property="og:updated_time" content="2019-06-15T03:03:38.731Z">
+<meta property="og:updated_time" content="2019-06-15T09:30:16.847Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Blog Reference Link">
 <meta name="twitter:description" content="恩 有点特别的信但是但这是……世界上最纯粹最美丽的思念 文伽Bilibili《死后文》">
@@ -365,7 +365,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  277 字
+                  312 字
                 </span>
               
 
@@ -431,6 +431,8 @@
 <ul>
 <li><a href="https://iochen.com/2018/01/06/use-gitalk-in-hexo/" target="_blank" rel="noopener">Hexo中Gitalk配置使用教程</a></li>
 <li><a href="https://asdfv1929.github.io/2018/01/20/gitalk/" target="_blank" rel="noopener">Hexo NexT主题中集成gitalk评论系统</a></li>
+<li><a href="https://tyloafer.github.io/posts/7790/" target="_blank" rel="noopener">Hexo中引入Mermaid流程图</a></li>
+<li><a href="https://github.com/webappdevelp/hexo-filter-mermaid-diagrams" target="_blank" rel="noopener">hexo-filter-mermaid-diagrams</a></li>
 </ul>
 <hr>
 <blockquote>
@@ -440,7 +442,10 @@
 
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  githubID:</span> <span class="string">evilH2O2</span>  </span><br><span class="line"><span class="attr">  repo:</span> <span class="string">gitalkComments</span>   </span><br><span class="line"><span class="attr">  ClientID:</span> <span class="string">xxxx</span>      <span class="comment"># &lt;---- 与上面对应，网上有版本不一样的 （ client_id )</span></span><br><span class="line"><span class="attr">  ClientSecret:</span> <span class="string">xxx</span>   <span class="comment"># &lt;---- 与上面对应</span></span><br><span class="line"><span class="attr">  owner:</span> <span class="string">evilH2O2</span></span><br><span class="line"><span class="attr">  adminUser:</span> <span class="string">evilH2O2</span> </span><br><span class="line"><span class="attr">  distractionFreeMode:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
-
+<blockquote>
+<p>用 代码块(3个 `) + mermaid使用 Mermaid流程图</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ``3 mermaid</span></span><br><span class="line"><span class="comment"># graph LR </span></span><br><span class="line"><span class="comment">#   A --&gt; B</span></span><br><span class="line"><span class="comment"># ``3</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -660,6 +665,14 @@
 
 
 
+
+
+  <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize("");
+    }
+  </script>
 
         
 
@@ -1171,6 +1184,6 @@
 
   
 
-  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":true,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script>
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":true,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"mobileShow":false,"log":false});</script>
 </body>
 </html>

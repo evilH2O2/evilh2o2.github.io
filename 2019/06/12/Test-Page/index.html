@@ -98,7 +98,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="localhost:4000/2019/06/12/Test-Page/74716414_p0.jpg">
 <meta property="og:image" content="localhost:/2019/06/12/Test-Page/74716414_p0.jpg">
-<meta property="og:updated_time" content="2019-06-14T14:59:30.164Z">
+<meta property="og:updated_time" content="2019-06-15T09:19:34.927Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Test Page">
 <meta name="twitter:description" content="本页面用来进行测试">
@@ -368,7 +368,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  68 字
+                  259 字
                 </span>
               
 
@@ -440,6 +440,48 @@
 <p><a href="https://404.com" target="_blank" rel="noopener">https://404.com</a></p>
 <p><a href="https://404.com" title="404" target="_blank" rel="noopener">404</a></p>
 <p>$C^2$</p>
+<pre class="mermaid">graph LR 
+    subgraph 初始轮 
+        txt[明文块] --> init0[加轮秘钥] 
+    end 
+    subgraph 普通轮 第1轮
+        pu0[字节代替] 
+        pu1[行移位] 
+        pu2[列混淆] 
+        pu3[加轮秘钥] 
+    end
+    init0[加轮秘钥] --> pu0[字节代替] 
+    pu3[加轮秘钥] --> lue0[...] 
+    subgraph 普通轮 第9轮
+        pu20[字节代替] 
+        pu21[行移位] 
+        pu22[列混淆] 
+        pu23[加轮秘钥] 
+    end
+    lue0[...] --> pu20[字节代替] 
+
+    subgraph 最终轮
+        end0[字节代替]
+        end1[行移位]
+        end2[加轮秘钥]
+    end
+    pu23[加轮秘钥] --> end0[字节代替]
+    end2[加轮秘钥] --> end3[密文] 
+
+    subgraph 扩展密钥
+        expand0[W 0-15]
+        expand1[W 16-31]
+        expand2[W 144-159]
+        expand3[W 160-175]
+    end
+
+    密钥 --- expand0[W 0-15]
+
+    expand0[W 0-15] --> init0[加轮秘钥]
+    expand1[W 16-31] --> pu3[加轮秘钥]
+    expand2[W 144-159] --> pu23[加轮秘钥]
+    expand3[W 160-175] --> end2[加轮秘钥]</pre>
+
 <hr>
 <p><img src="74716414_p0.jpg" alt="error"></p>
 <hr>
@@ -695,6 +737,14 @@
 
 
 
+
+
+  <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize("");
+    }
+  </script>
 
         
 
@@ -1221,6 +1271,6 @@
 
   
 
-  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":true,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script>
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":true,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"mobileShow":false,"log":false});</script>
 </body>
 </html>
