@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="localhost:4000/"/>
-  <updated>2019-06-22T03:06:28.803Z</updated>
+  <updated>2019-07-15T04:50:49.348Z</updated>
   <id>localhost:4000/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>信息收集</title>
+    <link href="localhost:4000/2019/07/15/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/"/>
+    <id>localhost:4000/2019/07/15/信息收集/</id>
+    <published>2019-07-15T03:47:25.000Z</published>
+    <updated>2019-07-15T04:50:49.348Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;信息收集，收集的是那些信息？怎样收集？&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Web Secirty" scheme="localhost:4000/tags/Web-Secirty/"/>
+    
+      <category term="Secirty" scheme="localhost:4000/tags/Secirty/"/>
+    
+  </entry>
   
   <entry>
     <title>ADB常用命令</title>
