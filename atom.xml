@@ -5,9 +5,9 @@
   <subtitle>Web安全 | 安全狗 | 攻</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="localhost:4000/"/>
+  <link href="https://jiuli.coding.me/"/>
   <updated>2019-07-15T04:50:49.348Z</updated>
-  <id>localhost:4000/</id>
+  <id>https://jiuli.coding.me/</id>
   
   <author>
     <name>荼雨</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>信息收集</title>
-    <link href="localhost:4000/2019/07/15/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/"/>
-    <id>localhost:4000/2019/07/15/信息收集/</id>
+    <link href="https://jiuli.coding.me/2019/07/15/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/"/>
+    <id>https://jiuli.coding.me/2019/07/15/信息收集/</id>
     <published>2019-07-15T03:47:25.000Z</published>
     <updated>2019-07-15T04:50:49.348Z</updated>
     
@@ -30,16 +30,16 @@
     </summary>
     
     
-      <category term="Web Secirty" scheme="localhost:4000/tags/Web-Secirty/"/>
+      <category term="Web Secirty" scheme="https://jiuli.coding.me/tags/Web-Secirty/"/>
     
-      <category term="Secirty" scheme="localhost:4000/tags/Secirty/"/>
+      <category term="Secirty" scheme="https://jiuli.coding.me/tags/Secirty/"/>
     
   </entry>
   
   <entry>
     <title>ADB常用命令</title>
-    <link href="localhost:4000/2019/06/22/ADB%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>localhost:4000/2019/06/22/ADB常用命令/</id>
+    <link href="https://jiuli.coding.me/2019/06/22/ADB%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>https://jiuli.coding.me/2019/06/22/ADB常用命令/</id>
     <published>2019-06-21T23:53:54.000Z</published>
     <updated>2019-06-22T03:06:28.803Z</updated>
     
@@ -52,14 +52,14 @@
     </summary>
     
     
-      <category term="Android" scheme="localhost:4000/tags/Android/"/>
+      <category term="Android" scheme="https://jiuli.coding.me/tags/Android/"/>
     
   </entry>
   
   <entry>
     <title>Blog Reference Link</title>
-    <link href="localhost:4000/2019/06/14/Blog-Reference-Link/"/>
-    <id>localhost:4000/2019/06/14/Blog-Reference-Link/</id>
+    <link href="https://jiuli.coding.me/2019/06/14/Blog-Reference-Link/"/>
+    <id>https://jiuli.coding.me/2019/06/14/Blog-Reference-Link/</id>
     <published>2019-06-14T01:12:05.000Z</published>
     <updated>2019-06-15T09:30:16.847Z</updated>
     
@@ -71,14 +71,14 @@
     </summary>
     
     
-      <category term="Note" scheme="localhost:4000/tags/Note/"/>
+      <category term="Note" scheme="https://jiuli.coding.me/tags/Note/"/>
     
   </entry>
   
   <entry>
     <title>Test Page</title>
-    <link href="localhost:4000/2019/06/12/Test-Page/"/>
-    <id>localhost:4000/2019/06/12/Test-Page/</id>
+    <link href="https://jiuli.coding.me/2019/06/12/Test-Page/"/>
+    <id>https://jiuli.coding.me/2019/06/12/Test-Page/</id>
     <published>2019-06-12T00:38:37.000Z</published>
     <updated>2019-06-15T09:19:34.927Z</updated>
     
@@ -89,7 +89,7 @@
     </summary>
     
     
-      <category term="Test" scheme="localhost:4000/tags/Test/"/>
+      <category term="Test" scheme="https://jiuli.coding.me/tags/Test/"/>
     
   </entry>
   
