@@ -122,7 +122,7 @@
 <meta property="og:image" content="https://evilh2o2.github.io/2019/07/15/信息收集/1.png">
 <meta property="og:image" content="https://evilh2o2.github.io/2019/07/15/信息收集/1563071999609.png">
 <meta property="og:image" content="https://evilh2o2.github.io/2019/07/15/信息收集/2019-07-14%2010-41-47%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
-<meta property="og:updated_time" content="2019-07-17T14:38:41.273Z">
+<meta property="og:updated_time" content="2019-07-18T03:11:08.629Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="信息收集">
 <meta name="twitter:description" content="信息收集，收集的是那些信息？怎样收集？">
@@ -402,7 +402,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,872 字
+                  2,900 字
                 </span>
               
 
@@ -631,18 +631,18 @@ nslookup会得到 DNS解析服务器保存在缓存中的非权威解答
 <p>抓包观察 IP地址，使用 <code>telnet</code>去连接相应端口，如果返回 html则为真实 IP</p>
 <br>
 
-<h4 id="内部邮箱源（RSS订阅、邮件等）"><a href="#内部邮箱源（RSS订阅、邮件等）" class="headerlink" title="内部邮箱源（RSS订阅、邮件等）"></a>内部邮箱源（RSS订阅、邮件等）</h4><br>
+<h4 id="内部邮箱源（RSS订阅、邮件等）"><a href="#内部邮箱源（RSS订阅、邮件等）" class="headerlink" title="内部邮箱源（RSS订阅、邮件等）*"></a>内部邮箱源（RSS订阅、邮件等）*</h4><br>
 
 <p>有的服务器本地自带 sendmail，注册之后，会主动发一封邮件给我们，打开邮件的源代码，你就能看到邮件服务器的真实IP了，很大可能与主站处在一个网段</p>
 <p>注意，如果是第三方或公共邮件服务器是没用的</p>
 <br>
 
-<h4 id="查询子域名"><a href="#查询子域名" class="headerlink" title="查询子域名"></a>查询子域名</h4><br>
+<h4 id="查询子域名"><a href="#查询子域名" class="headerlink" title="查询子域名*"></a>查询子域名*</h4><br>
 
 <p>很多站长可能只会对主站或者流量大的子站点做了 CDN，很多子站点又跟主站 <em>在同一台服务器或者同一个C段内</em>，从而能判断出目标的真实 IP段</p>
 <br>
 
-<h4 id="国外主机解析域名-amp-国外-DNS"><a href="#国外主机解析域名-amp-国外-DNS" class="headerlink" title="国外主机解析域名&amp;国外 DNS"></a>国外主机解析域名&amp;国外 DNS</h4><br>
+<h4 id="国外主机解析域名-amp-国外-DNS"><a href="#国外主机解析域名-amp-国外-DNS" class="headerlink" title="国外主机解析域名&amp;国外 DNS*"></a>国外主机解析域名&amp;国外 DNS*</h4><br>
 国内很多 CDN 厂商因为各种原因只做了国内的线路，而针对国外的线路可能几乎没有，此时我们使用国外的主机直接访问可能就能获取到真实 IP
 
 <p>国外 DNS：</p>
@@ -656,17 +656,17 @@ nslookup会得到 DNS解析服务器保存在缓存中的非权威解答
 </ul>
 <br>
 
-<h4 id="利用-SSL证书寻找真实原始IP"><a href="#利用-SSL证书寻找真实原始IP" class="headerlink" title="利用 SSL证书寻找真实原始IP"></a>利用 SSL证书寻找真实原始IP</h4><br>
+<h4 id="利用-SSL证书寻找真实原始IP"><a href="#利用-SSL证书寻找真实原始IP" class="headerlink" title="利用 SSL证书寻找真实原始IP*"></a>利用 SSL证书寻找真实原始IP*</h4><br>
 
 <p><a href="https://www.secjuice.com/finding-real-ips-of-origin-servers-behind-cloudflare-or-tor/" target="_blank" rel="noopener">Finding The Real Origin IPs Hiding Behind CloudFlare or Tor</a>  [19 August 2018]</p>
 <br>
 
-<h4 id="目标-APP抓包"><a href="#目标-APP抓包" class="headerlink" title="目标 APP抓包"></a>目标 APP抓包</h4><br>
+<h4 id="目标-APP抓包"><a href="#目标-APP抓包" class="headerlink" title="目标 APP抓包*"></a>目标 APP抓包*</h4><br>
 如果目标站有自己的 APP，可以通过 Fiddler或 Burp Suite抓包，寻找真实 IP
 
 <br>
 
-<h4 id="利用网站漏洞"><a href="#利用网站漏洞" class="headerlink" title="利用网站漏洞"></a>利用网站漏洞</h4><br>
+<h4 id="利用网站漏洞-近距离与网站进行-Py交易"><a href="#利用网站漏洞-近距离与网站进行-Py交易" class="headerlink" title="利用网站漏洞(近距离与网站进行 Py交易)*"></a>利用网站漏洞(近距离与网站进行 Py交易)*</h4><br>
 例如xss、ssrf、命令执行反弹shell等
 
 <br>
@@ -690,13 +690,16 @@ nslookup会得到 DNS解析服务器保存在缓存中的非权威解答
 
 <br>
 
-<h4 id="全网扫描"><a href="#全网扫描" class="headerlink" title="全网扫描"></a>全网扫描</h4><br>
-通过扫描所有 IP，根据目标网站的特征回应，找出其 IP 地址
+<h4 id="全网扫描"><a href="#全网扫描" class="headerlink" title="全网扫描*"></a>全网扫描*</h4><br>
+通过扫描所有 IP，根据对比目标网站的 banner，找出其 IP 地址
 可以用现成的搜索引擎： shodan、fofa、 zoomeye或扫描工具 zmap、Masscan等等
 
+<ul>
+<li><a href="https://phpinfo.me/2015/01/15/809.html" target="_blank" rel="noopener">(转)简单获取CDN背后网站的真实IP</a> 使用 zmap扫描</li>
+</ul>
 <br>
 
-<h4 id="利用-DDoS"><a href="#利用-DDoS" class="headerlink" title="利用 DDoS"></a>利用 DDoS</h4><br>
+<h4 id="利用-DDoS"><a href="#利用-DDoS" class="headerlink" title="利用 DDoS*"></a>利用 DDoS*</h4><br>
 利用 DDoS耗光 DNS的流量，TG、暗网有专门的 DDoS
 
 <br>
@@ -1047,7 +1050,7 @@ nslookup会得到 DNS解析服务器保存在缓存中的非权威解答
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#分类"><span class="nav-text">分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#域名相关信息收集"><span class="nav-text">域名相关信息收集</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Whois信息"><span class="nav-text">Whois信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#备案信息查询"><span class="nav-text">备案信息查询</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子域名收集"><span class="nav-text">子域名收集</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Google-Hacking"><span class="nav-text">Google Hacking</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#证书透明度"><span class="nav-text">证书透明度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#crossdomain-xml-文件"><span class="nav-text">crossdomain.xml 文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他网站-amp-工具-【TODO】"><span class="nav-text">其他网站&amp;工具 【TODO】</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#寻找真实-IP"><span class="nav-text">寻找真实 IP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#判断-CND是否存在"><span class="nav-text">判断 CND是否存在</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#通过多地-Ping域名"><span class="nav-text">通过多地 Ping域名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用-nslookup"><span class="nav-text">使用 nslookup</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改本地-hosts文件"><span class="nav-text">修改本地 hosts文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#IP反查域名（这个……）"><span class="nav-text">IP反查域名（这个……）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绕过-CDN-查找网站真实-IP-TODO"><span class="nav-text">绕过 CDN 查找网站真实 IP [TODO]</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#秃域名"><span class="nav-text">秃域名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#抓包"><span class="nav-text">抓包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内部邮箱源（RSS订阅、邮件等）"><span class="nav-text">内部邮箱源（RSS订阅、邮件等）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询子域名"><span class="nav-text">查询子域名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#国外主机解析域名-amp-国外-DNS"><span class="nav-text">国外主机解析域名&amp;国外 DNS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#利用-SSL证书寻找真实原始IP"><span class="nav-text">利用 SSL证书寻找真实原始IP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#目标-APP抓包"><span class="nav-text">目标 APP抓包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#利用网站漏洞"><span class="nav-text">利用网站漏洞</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#历史解析记录"><span class="nav-text">历史解析记录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#全网扫描"><span class="nav-text">全网扫描</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#利用-DDoS"><span class="nav-text">利用 DDoS</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#验证获取的-IP"><span class="nav-text">验证获取的 IP</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C段-TODO"><span class="nav-text">C段 [TODO]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#收集开放端口信息"><span class="nav-text">收集开放端口信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#服务器系统"><span class="nav-text">服务器系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CMS指纹扫描-amp-WAF-TODO"><span class="nav-text">CMS指纹扫描&amp;WAF [TODO]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目录扫描"><span class="nav-text">目录扫描</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#漏洞扫描"><span class="nav-text">漏洞扫描</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#漏洞扫描-1"><span class="nav-text">漏洞扫描</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网站应用程序扫描"><span class="nav-text">网站应用程序扫描</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ref"><span class="nav-text">Ref</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#分类"><span class="nav-text">分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#域名相关信息收集"><span class="nav-text">域名相关信息收集</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Whois信息"><span class="nav-text">Whois信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#备案信息查询"><span class="nav-text">备案信息查询</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子域名收集"><span class="nav-text">子域名收集</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Google-Hacking"><span class="nav-text">Google Hacking</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#证书透明度"><span class="nav-text">证书透明度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#crossdomain-xml-文件"><span class="nav-text">crossdomain.xml 文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他网站-amp-工具-【TODO】"><span class="nav-text">其他网站&amp;工具 【TODO】</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#寻找真实-IP"><span class="nav-text">寻找真实 IP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#判断-CND是否存在"><span class="nav-text">判断 CND是否存在</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#通过多地-Ping域名"><span class="nav-text">通过多地 Ping域名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用-nslookup"><span class="nav-text">使用 nslookup</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改本地-hosts文件"><span class="nav-text">修改本地 hosts文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#IP反查域名（这个……）"><span class="nav-text">IP反查域名（这个……）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绕过-CDN-查找网站真实-IP-TODO"><span class="nav-text">绕过 CDN 查找网站真实 IP [TODO]</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#秃域名"><span class="nav-text">秃域名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#抓包"><span class="nav-text">抓包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内部邮箱源（RSS订阅、邮件等）"><span class="nav-text">内部邮箱源（RSS订阅、邮件等）*</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询子域名"><span class="nav-text">查询子域名*</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#国外主机解析域名-amp-国外-DNS"><span class="nav-text">国外主机解析域名&amp;国外 DNS*</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#利用-SSL证书寻找真实原始IP"><span class="nav-text">利用 SSL证书寻找真实原始IP*</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#目标-APP抓包"><span class="nav-text">目标 APP抓包*</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#利用网站漏洞-近距离与网站进行-Py交易"><span class="nav-text">利用网站漏洞(近距离与网站进行 Py交易)*</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#历史解析记录"><span class="nav-text">历史解析记录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#全网扫描"><span class="nav-text">全网扫描*</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#利用-DDoS"><span class="nav-text">利用 DDoS*</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#验证获取的-IP"><span class="nav-text">验证获取的 IP</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C段-TODO"><span class="nav-text">C段 [TODO]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#收集开放端口信息"><span class="nav-text">收集开放端口信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#服务器系统"><span class="nav-text">服务器系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CMS指纹扫描-amp-WAF-TODO"><span class="nav-text">CMS指纹扫描&amp;WAF [TODO]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目录扫描"><span class="nav-text">目录扫描</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#漏洞扫描"><span class="nav-text">漏洞扫描</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#漏洞扫描-1"><span class="nav-text">漏洞扫描</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网站应用程序扫描"><span class="nav-text">网站应用程序扫描</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ref"><span class="nav-text">Ref</span></a></li></ol></div>
             
 
           </div>
