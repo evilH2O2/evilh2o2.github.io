@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://evilh2o2.github.io/"/>
-  <updated>2019-08-23T13:56:15.879Z</updated>
+  <updated>2019-08-25T03:30:05.866Z</updated>
   <id>https://evilh2o2.github.io/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Windows域认证体系—Kerberos认证</title>
+    <link href="https://evilh2o2.github.io/2019/08/25/Windows%E5%9F%9F%E8%AE%A4%E8%AF%81%E4%BD%93%E7%B3%BB%E2%80%94Kerberos%E8%AE%A4%E8%AF%81/"/>
+    <id>https://evilh2o2.github.io/2019/08/25/Windows域认证体系—Kerberos认证/</id>
+    <published>2019-08-25T02:50:10.000Z</published>
+    <updated>2019-08-25T03:30:05.866Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Kerberos认证流程、含义&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Windows" scheme="https://evilh2o2.github.io/tags/Windows/"/>
+    
+      <category term="渗透测试" scheme="https://evilh2o2.github.io/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
+    
+      <category term="Secirty" scheme="https://evilh2o2.github.io/tags/Secirty/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Windows认证体系—NTLM认证</title>
     <link href="https://evilh2o2.github.io/2019/08/23/Windows%E8%AE%A4%E8%AF%81%E4%BD%93%E7%B3%BB%E2%80%94NTLM%E8%AE%A4%E8%AF%81/"/>
     <id>https://evilh2o2.github.io/2019/08/23/Windows认证体系—NTLM认证/</id>
     <published>2019-08-23T09:00:38.000Z</published>
-    <updated>2019-08-23T13:56:15.879Z</updated>
+    <updated>2019-08-23T14:00:36.375Z</updated>
     
     <summary type="html">
     

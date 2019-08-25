@@ -77,7 +77,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Windows,渗透测试,Secirty,">
 
 
 
@@ -90,18 +90,23 @@
 
 
 
-<meta name="description" content="Welcome 荼雨&apos;s Blog">
-<meta name="keywords" content="Web安全|渗透测试">
-<meta property="og:type" content="website">
-<meta property="og:title" content="All tags">
-<meta property="og:url" content="https://evilh2o2.github.io/tags/index.html">
+<meta name="description" content="Kerberos认证流程、含义">
+<meta name="keywords" content="Windows,渗透测试,Secirty">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows域认证体系—Kerberos认证">
+<meta property="og:url" content="https://evilh2o2.github.io/2019/08/25/Windows域认证体系—Kerberos认证/index.html">
 <meta property="og:site_name" content="荼雨&#39;s Blog">
-<meta property="og:description" content="Welcome 荼雨&apos;s Blog">
+<meta property="og:description" content="Kerberos认证流程、含义">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-12T10:55:23.107Z">
+<meta property="og:image" content="https://evilh2o2.github.io/2019/08/25/Windows域认证体系—Kerberos认证/%E5%9F%9F%E8%AE%A4%E8%AF%81%E6%B5%81%E7%A8%8B.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2019/08/25/Windows域认证体系—Kerberos认证/%E5%9F%9F%E8%AE%A4%E8%AF%81%E7%AC%AC%E4%B8%80%E6%AD%A5.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2019/08/25/Windows域认证体系—Kerberos认证/%E5%9F%9F%E8%AE%A4%E8%AF%81%E7%AC%AC%E4%BA%8C%E6%AD%A5.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2019/08/25/Windows域认证体系—Kerberos认证/%E5%9F%9F%E8%AE%A4%E8%AF%81%E7%AC%AC%E4%B8%89%E6%AD%A5.png">
+<meta property="og:updated_time" content="2019-08-25T03:30:05.866Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="All tags">
-<meta name="twitter:description" content="Welcome 荼雨&apos;s Blog">
+<meta name="twitter:title" content="Windows域认证体系—Kerberos认证">
+<meta name="twitter:description" content="Kerberos认证流程、含义">
+<meta name="twitter:image" content="https://evilh2o2.github.io/2019/08/25/Windows域认证体系—Kerberos认证/%E5%9F%9F%E8%AE%A4%E8%AF%81%E6%B5%81%E7%A8%8B.png">
 
 
 
@@ -131,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="https://evilh2o2.github.io/tags/">
+  <link rel="canonical" href="https://evilh2o2.github.io/2019/08/25/Windows域认证体系—Kerberos认证/">
 
 
 
 
 
-  <title>All tags | 荼雨's Blog</title>
+  <title>Windows域认证体系—Kerberos认证 | 荼雨's Blog</title>
   
 
 
@@ -294,41 +299,358 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://evilh2o2.github.io/2019/08/25/Windows域认证体系—Kerberos认证/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="荼雨">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/log-img2.svg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="荼雨's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">All tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 8 个标签
-            </div>
-            <div class="tag-cloud-tags">
+          <h1 class="post-title" itemprop="name headline">Windows域认证体系—Kerberos认证</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
               
-              <a href="/tags/Android/" style="font-size: 12px; color: #ccc">Android</a> <a href="/tags/Note/" style="font-size: 12px; color: #ccc">Note</a> <a href="/tags/Secirty/" style="font-size: 30px; color: #111">Secirty</a> <a href="/tags/Test/" style="font-size: 12px; color: #ccc">Test</a> <a href="/tags/Web-Secirty/" style="font-size: 12px; color: #ccc">Web Secirty</a> <a href="/tags/Windows/" style="font-size: 21px; color: #6f6f6f">Windows</a> <a href="/tags/渗透测试/" style="font-size: 21px; color: #6f6f6f">渗透测试</a>
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-25T10:50:10+08:00">
+                2019-08-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/08/25/Windows域认证体系—Kerberos认证/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/08/25/Windows域认证体系—Kerberos认证/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,645 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  7 分钟
+                </span>
+              
             </div>
-          </div>
-        
-      </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>Kerberos认证流程、含义</p>
+<a id="more"></a>
+
+<h2 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h2><br>
+
+<ul>
+<li>Kerberos认证</li>
+<li>域控制器（Domain Controller，DC）</li>
+<li>密钥分发中心（Key Distribution Center，KDC）</li>
+<li>帐户数据库（Account Database，AD）</li>
+<li>身份验证服务（Authentication Service，AS）</li>
+<li>入场卷[认证票据]（Ticket Granting Ticket，TGT）</li>
+<li>票据发放服务（Ticket Granting Service，TGS）</li>
+<li>票据（Ticket）</li>
+<li>Master Key / Long-term Key |长期密钥（被 Hash加密的用户密钥）</li>
+<li>Session Key / Short-term Key | 短期会话密钥</li>
+<li>krbtgt 账户</li>
+</ul>
+<br>
+
+<p>关键词/名称含义：</p>
+<ul>
+<li><code>Account Database</code>：类似于 SAM的数据库，存储所有 Client的白名单，只有处于白名单中的 Client才可以成功申请 TGT</li>
+<li><code>Authentication Service</code>：为 Client生成 TGT的服务</li>
+<li><code>Ticket Granting Ticket</code>：入场券，通过入场券能够获得票据，是一种临时凭证的存在</li>
+<li><code>Ticket Granting Service</code>：为 Client生成某个服务的票据</li>
+<li><code>Ticket</code>：票据，网络对象互相访问的凭证</li>
+<li><code>Master Key</code>：长期密钥。将本机密码进行 Hash运算（NTML）得到一个 Hash Code, 我们一般管这样的 Hash Code叫做 Master Key</li>
+<li><code>Session Key</code>：短期会话密钥。一种只在一段时间内有效的 Key</li>
+<li><code>krbtgt账户</code>：每个域控制器都有一个 krbtgt的用户账户，是 KDC的服务账户，用来创建票据授予服务(TGS)加密的密钥</li>
+</ul>
+<br>
+
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><br>
+
+<h3 id="Kerberos认证含义"><a href="#Kerberos认证含义" class="headerlink" title="Kerberos认证含义"></a>Kerberos认证含义</h3><blockquote>
+<p>Kerberos 是一种网络认证协议，其设计目标是通过密钥系统为 客户机 / 服务器应用程序 提供强大的认证服务。该认证过程的实现不依赖于主机操作系统的认证，无需基于主机地址的信任，不要求网络上所有主机的物理安全，并假定网络上传送的数据包可以被任意地读取、修改和插入数据。</p>
+</blockquote>
+<blockquote>
+<p>在以上情况下， Kerberos 作为一种可信任的第三方认证服务，是通过传统的密码技术（如：共享密钥）执行认证服务的。——<a href="https://baike.baidu.com/item/Kerberos/5561682?fr=aladdin" target="_blank" rel="noopener">度娘百科</a></p>
+</blockquote>
+<br>
+
+<h3 id="Kerberos认证的三只狗头（脑补地狱三头犬）"><a href="#Kerberos认证的三只狗头（脑补地狱三头犬）" class="headerlink" title="Kerberos认证的三只狗头（脑补地狱三头犬）"></a>Kerberos认证的三只狗头（脑补地狱三头犬）</h3><ul>
+<li>Client</li>
+<li>Server</li>
+<li>DC（KDC）。在 Windows域环境中，KDC的角色由 DC（Domain Controller）来担当</li>
+</ul>
+<br>
+
+
+<h2 id="Kerberos大致流程"><a href="#Kerberos大致流程" class="headerlink" title="Kerberos大致流程"></a>Kerberos大致流程</h2><br>
+
+<ul>
+<li>Client 携带账户信息向 KDC上的 AS服务发送想要访问 Server A的请求，索要入场卷（ TGT）；AS通过 AD验证 Client账户的访问权，成功后返回 TGT</li>
+<li>Client 携带 TGT请求 KDC中的 TGS服务想要访问 Server A，索要票据（Ticket）；TGS验证 Client的 TGT，具有 Server A的访问权，返回 Ticket</li>
+<li>Client 携带 Ticket与服务器进行相互验证且成功，可以访问 Server A，但无权访问其他服务器</li>
+</ul>
+<p><img src="./%E5%9F%9F%E8%AE%A4%E8%AF%81%E6%B5%81%E7%A8%8B.png" alt="域认证流程"></p>
+<br>
+
+<h2 id="Kerberos-认证三步走"><a href="#Kerberos-认证三步走" class="headerlink" title="Kerberos 认证三步走"></a>Kerberos 认证三步走</h2><br>
+
+<h3 id="第一步-Client-与-AS"><a href="#第一步-Client-与-AS" class="headerlink" title="第一步 Client 与 AS"></a>第一步 Client 与 AS</h3><br>
+
+<blockquote>
+<p>第一步 AS 实现对 Client 身份的确认，并颁发给该 Client 一个 TGT</p>
+</blockquote>
+<p>首先，Client发送一个携带被自身 Master Key加密的身份信息 AS Request到 KDC，KDC验证用户名是否存在于 AD中（KDC 可以通 AD中对应用户名提取该 Client 的 Master Key）</p>
+<ol>
+<li><code>AS Request</code>大致内容：</li>
+</ol>
+<ul>
+<li><code>Pre-authentication data</code>：被 Client 的 Master Key加密过的 Timestamp（Timestamp防爆破）。时间同步（Time Synchronization）显得尤为重要</li>
+<li><code>Client name &amp; realm</code>：<em>Domain name\Client name</em> （Client info）</li>
+<li><code>Server Name</code>：KDC中 TGS 的 Server Name</li>
+</ul>
+<br>
+
+<p>AS 需要验证发送方 <code>Client info</code> 是否为本人（Client的密码对否），所以 AS 只需从 AD中提取 Client对应的 Master Key 对 <code>Pre-authentication data</code> 进行解密，如果是一个合法的 <strong>Timestamp</strong>（时间差距合理），则可以证明发送方提供的用户名是存在于白名单中且密码对应正确的</p>
+<p>验证成功后，返回给 Client一个 <code>AS Response</code>，主要包含两个部分：请求 Client 的 Master Key加密过的 <code>TGS Session Key</code> 和被 KDC（krbtgt 帐户）加密的TGT （<strong>客户端无法解密 TGT</strong>，因为它没有 KDC Hash）</p>
+<ol>
+<li>TGT大致内容：</li>
+</ol>
+<ul>
+<li><code>Session Key</code> : 第一部分的 <code>TGS Session Key</code> （这里的 Session Key 是被 KDC加密,不是 Client）</li>
+<li><code>Client name &amp; realm</code> : <em>Domain name\Client</em> （Client info）</li>
+<li><code>End time</code> : TGT到期的时间</li>
+</ul>
+<br>
+
+<p>KDC此时生成一个 <code>Session Key</code>，使用 Client 用户名对应的 Master Key加密 Session Key，作为 AS数据（第一部分，用于后续与 TGS通讯）；使用 KDC中 krbtgt 帐户 的 Master Key 加密 Session Key 和 <code>Client info</code>，生成TGT（第二部分）</p>
+<p>Client 通过自己的 Master Key 对第一部分解密获得 <code>TGS Session Key</code>后，携带 TGT进入第二步</p>
+<p><img src="./%E5%9F%9F%E8%AE%A4%E8%AF%81%E7%AC%AC%E4%B8%80%E6%AD%A5.png" alt="域认证第一步" title="域认证第一步"></p>
+<br>
+
+<h3 id="第二步-Client-与-TGS"><a href="#第二步-Client-与-TGS" class="headerlink" title="第二步 Client 与 TGS"></a>第二步 Client 与 TGS</h3><br>
+
+<blockquote>
+<p>第二步 实现 TGS 对 Client 身份（TGT）的确认，并分发给该 Client 一个 Ticket</p>
+</blockquote>
+<p>Client 使用 AS返回的 <code>TGS Session Key</code> 建立访问 KDC中 TGS服务的请求（<code>TGS Request</code>），再将 TGT 连同请求一起发送到 TGS 服务</p>
+<ol>
+<li><code>TGS Request</code>大致内容：</li>
+</ol>
+<ul>
+<li><code>Authenticator</code>：（Client info + timestamp）通过 <code>TGS Session Key</code>加密</li>
+<li><code>TGT</code> ：（<em>TGS Session Key + Client info + End Time</em>）</li>
+<li><code>Client info</code> ：<em>Domain name/ Client</em></li>
+<li><code>Server info</code> ：Client试图访问的 Server</li>
+<li><code>时间戳</code></li>
+</ul>
+<br>
+
+<p>TGS收到 <code>TGS Request</code>后需要验证 TGT 和 Authenticator；因为 <code>Authenticator</code> 被 <code>TGS Session Key</code> 加密，TGS服务并没有保存这个 Session Key ；于是使用 TGS 自己的 Master Key 解密 TGT 获得其中的 TGS Session Key，进而解密 Authenticator，验证客户端是否受信</p>
+<p>验证成功后，TGS 返回一个 <code>TGS Response</code> ，包含两个消息：加密的 Ticket 和加密的 Session Key</p>
+<ol>
+<li><code>TGS Response</code> 大致内容：</li>
+</ol>
+<ul>
+<li>使用 Server 的 Master Key 进行加密的 Ticket</li>
+<li>通过 <code>TGS Session Key</code> 加密的 <code>Server Session Key</code> （将来 Client与 Server Service的通信使用）</li>
+</ul>
+<ol start="2">
+<li><code>Ticket</code> 大致内容：</li>
+</ol>
+<ul>
+<li>Server Session Key</li>
+<li>Client info</li>
+<li>End time: Ticket的到期时间</li>
+</ul>
+<br>
+
+<p>Client收到 <code>TGS Response</code> 后，使用 <code>TGS Session Key</code> 解密 <code>Server Session Key</code>，得到 Session Key 后，进入第三步</p>
+<p><img src="./%E5%9F%9F%E8%AE%A4%E8%AF%81%E7%AC%AC%E4%BA%8C%E6%AD%A5.png" alt="域认证第二步" title="域认证第二步"></p>
+<br>
+
+<h3 id="第三步-Client-和-Server"><a href="#第三步-Client-和-Server" class="headerlink" title="第三步 Client 和 Server"></a>第三步 Client 和 Server</h3><br>
+
+<blockquote>
+<p>第三步，Client 携带 <code>Server Session Key</code> 和 <code>Ticket</code>访问服务器，验证成功后，可以访问 Server资源</p>
+</blockquote>
+<p>Client 通过第二步获的 Server 的 Session Key ，创建用于证明自己就是 Ticket 的真正所有者的 Authenticator 和时间戳，并使用 Server的 Session Key 进行加密</p>
+<p>向服务器请求后，服务器用自己的 Master Key 解密  Ticket ，得到 <em>Server Session Key</em>，使用 <em>Server Session Key</em> 解密 Authenticator 进行验证，同上一步一样<br>验证成功后返回给 Client <strong>新时间戳</strong>，<strong>使用 Server Session Key 加密</strong></p>
+<p>Client 通过缓存中的 <code>Server Session Key</code> 解密服务器返回信息，得到新时间戳并验证其是否正确。验证通过的话则客户端可以信赖服务器，并向服务器发送服务请求，服务器向客户端提供相应的服务</p>
+<p>校验通过后，认证成功，该票据会一直存在客户端内存中</p>
+<p><img src="./%E5%9F%9F%E8%AE%A4%E8%AF%81%E7%AC%AC%E4%B8%89%E6%AD%A5.png" alt="域认证第三步" title="域认证第三步"></p>
+<br>
+
+<h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h2><ul>
+<li><a href="https://blog.csdn.net/wy_97/article/details/87649262" target="_blank" rel="noopener">windows 域认证 Kerberos详解</a></li>
+<li><a href="https://www.secpulse.com/archives/94848.html" target="_blank" rel="noopener">彻底理解Windows认证 - 议题解读</a></li>
+<li><a href="https://blog.csdn.net/wulantian/article/details/42418231" target="_blank" rel="noopener">kerberos认证原理—讲的非常细致，易懂</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/Kerberos" target="_blank" rel="noopener">Kerberos</a></li>
+</ul>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Windows/" rel="tag"><i class="fa fa-tag"></i> Windows</a>
+          
+            <a href="/tags/渗透测试/" rel="tag"><i class="fa fa-tag"></i> 渗透测试</a>
+          
+            <a href="/tags/Secirty/" rel="tag"><i class="fa fa-tag"></i> Secirty</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/23/Windows认证体系—NTLM认证/" rel="next" title="Windows认证体系—NTLM认证">
+                <i class="fa fa-chevron-left"></i> Windows认证体系—NTLM认证
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -337,6 +659,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -357,8 +686,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -440,6 +778,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关键词"><span class="nav-text">关键词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-text">介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Kerberos认证含义"><span class="nav-text">Kerberos认证含义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kerberos认证的三只狗头（脑补地狱三头犬）"><span class="nav-text">Kerberos认证的三只狗头（脑补地狱三头犬）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kerberos大致流程"><span class="nav-text">Kerberos大致流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kerberos-认证三步走"><span class="nav-text">Kerberos 认证三步走</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一步-Client-与-AS"><span class="nav-text">第一步 Client 与 AS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二步-Client-与-TGS"><span class="nav-text">第二步 Client 与 TGS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三步-Client-和-Server"><span class="nav-text">第三步 Client 和 Server</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ref"><span class="nav-text">Ref</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
