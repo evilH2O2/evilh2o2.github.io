@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://evilh2o2.github.io/"/>
-  <updated>2019-08-25T03:36:09.623Z</updated>
+  <updated>2019-09-04T11:03:00.192Z</updated>
   <id>https://evilh2o2.github.io/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python不常用用法</title>
+    <link href="https://evilh2o2.github.io/2019/09/04/Python%E4%B8%8D%E5%B8%B8%E7%94%A8%E7%94%A8%E6%B3%95/"/>
+    <id>https://evilh2o2.github.io/2019/09/04/Python不常用用法/</id>
+    <published>2019-09-04T10:54:50.000Z</published>
+    <updated>2019-09-04T11:03:00.192Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Python 日常使用时的一些方法或技巧，怕忘记怕麻烦，记录一下&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="https://evilh2o2.github.io/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows域认证体系—Kerberos认证</title>
