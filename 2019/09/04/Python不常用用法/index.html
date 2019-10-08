@@ -98,7 +98,7 @@
 <meta property="og:site_name" content="荼雨&#39;s Blog">
 <meta property="og:description" content="Python 日常使用时的一些方法或技巧，怕忘记怕麻烦，记录一下">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-12T04:21:08.692Z">
+<meta property="og:updated_time" content="2019-10-08T01:17:55.007Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python不常用用法">
 <meta name="twitter:description" content="Python 日常使用时的一些方法或技巧，怕忘记怕麻烦，记录一下">
@@ -377,7 +377,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  224 字
+                  238 字
                 </span>
               
 
@@ -422,6 +422,12 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>dct = &#123;<span class="string">'Name'</span>: <span class="string">'Alice'</span>, <span class="string">'Age'</span>: <span class="number">18</span>, <span class="string">'uid'</span>: <span class="number">1001</span>, <span class="string">'id'</span>: <span class="number">1001</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">get_key1</span><span class="params">(dct, value)</span>:</span></span><br><span class="line"><span class="meta">... </span>  <span class="keyword">return</span> list(filter(<span class="keyword">lambda</span> k:dct[k] == value, dct))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>get_key1(dct, <span class="number">1001</span>)</span><br><span class="line">[<span class="string">'id'</span>, <span class="string">'uid'</span>]</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 某函数返回的结果（参数 md5dict）</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/76478297_p0.jpg'</span>: <span class="string">'6beb7af8d37e26eb88bb1b75c8e51474'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/76478297_p0_copy.jpg'</span>: <span class="string">'6beb7af8d37e26eb88bb1b75c8e51474'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/561284.jpg'</span>: <span class="string">'4f9d1c75bd62b0d7e3fdd0abd810ce34'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/561271.jpg'</span>: <span class="string">'bb60b6e6626968cde17cad0a8f18290b'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/561279.jpg'</span>: <span class="string">'e5af4c3275dafbef5932ab69c446374c'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 变量 cp的内容</span></span><br><span class="line">(<span class="string">'6beb7af8d37e26eb88bb1b75c8e51474'</span>, <span class="number">2</span>)</span><br><span class="line">(<span class="string">'4f9d1c75bd62b0d7e3fdd0abd810ce34'</span>, <span class="number">1</span>)</span><br><span class="line">(<span class="string">'bb60b6e6626968cde17cad0a8f18290b'</span>, <span class="number">1</span>)</span><br><span class="line">(<span class="string">'e5af4c3275dafbef5932ab69c446374c'</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">analysedDict</span><span class="params">(md5dict)</span>:</span></span><br><span class="line">    cp = Counter(md5dict.values())  <span class="comment"># 只取 MD5值</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">filterFun</span><span class="params">(dicts, value)</span>:</span></span><br><span class="line">        bad = list(filter(<span class="keyword">lambda</span> k:dicts[k] == value, dicts))</span><br><span class="line">        print(bad)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> cp.items():</span><br><span class="line">        <span class="keyword">if</span> i[<span class="number">1</span>] &gt; <span class="number">1</span>:</span><br><span class="line">            print(<span class="string">"\033[0;31m&#123;0&#125;\033[0m"</span>.format(i))</span><br><span class="line">            filterFun(md5dict, i[<span class="number">0</span>])</span><br><span class="line">            </span><br><span class="line"><span class="comment"># ---- 结果 ------</span></span><br><span class="line"><span class="comment"># ('6beb7af8d37e26eb88bb1b75c8e51474', 2)</span></span><br><span class="line"><span class="comment"># ['/root/MyDocs/Python/02-PhotosMD5/76478297_p0.jpg', '/root/MyDocs/Python/02-PhotosMD5/76478297_p0_copy.jpg']</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="快速启动-http服务器"><a href="#快速启动-http服务器" class="headerlink" title="快速启动 http服务器"></a>快速启动 http服务器</h2><br>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># python2</span></span><br><span class="line">python -m SimpleHTTPServer</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -635,7 +641,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#通过值获取键"><span class="nav-text">通过值获取键</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#通过值获取键"><span class="nav-text">通过值获取键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速启动-http服务器"><span class="nav-text">快速启动 http服务器</span></a></li></ol></div>
             
 
           </div>
