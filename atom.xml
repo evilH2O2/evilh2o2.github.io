@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://evilh2o2.github.io/"/>
-  <updated>2020-04-20T07:54:23.000Z</updated>
+  <updated>2020-04-20T12:26:50.000Z</updated>
   <id>https://evilh2o2.github.io/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>DC-2</title>
+    <link href="https://evilh2o2.github.io/2020/03/25/DC-2/"/>
+    <id>https://evilh2o2.github.io/2020/03/25/DC-2/</id>
+    <published>2020-03-25T04:24:07.000Z</published>
+    <updated>2020-04-20T12:26:50.000Z</updated>
+    
+    <summary type="html">
+    
+      Vulnhub 靶机——DC-2
+    
+    </summary>
+    
+      <category term="vulnhub" scheme="https://evilh2o2.github.io/categories/vulnhub/"/>
+    
+    
+      <category term="vulnhub" scheme="https://evilh2o2.github.io/tags/vulnhub/"/>
+    
+      <category term="OSCP" scheme="https://evilh2o2.github.io/tags/OSCP/"/>
+    
+  </entry>
+  
+  <entry>
     <title>DC-1</title>
     <link href="https://evilh2o2.github.io/2020/03/19/DC-1/"/>
     <id>https://evilh2o2.github.io/2020/03/19/DC-1/</id>
     <published>2020-03-19T23:41:24.000Z</published>
-    <updated>2020-04-20T07:54:23.000Z</updated>
+    <updated>2020-04-20T12:25:53.000Z</updated>
     
     <summary type="html">
     
