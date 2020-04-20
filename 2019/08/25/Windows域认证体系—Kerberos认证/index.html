@@ -6,7 +6,7 @@
 
 
 <html class="theme-next muse use-motion" lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -77,7 +77,7 @@
 
 
 
-  <meta name="keywords" content="Security,Windows,渗透测试,">
+  <meta name="keywords" content="Windows,渗透测试,Security,">
 
 
 
@@ -91,7 +91,7 @@
 
 
 <meta name="description" content="Kerberos认证流程、含义">
-<meta name="keywords" content="Security,Windows,渗透测试">
+<meta name="keywords" content="Windows,渗透测试,Security">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Windows域认证体系—Kerberos认证">
 <meta property="og:url" content="https://evilh2o2.github.io/2019/08/25/Windows域认证体系—Kerberos认证/index.html">
@@ -102,7 +102,7 @@
 <meta property="og:image" content="https://evilh2o2.github.io/2019/08/25/Windows域认证体系—Kerberos认证/%E5%9F%9F%E8%AE%A4%E8%AF%81%E7%AC%AC%E4%B8%80%E6%AD%A5.png">
 <meta property="og:image" content="https://evilh2o2.github.io/2019/08/25/Windows域认证体系—Kerberos认证/%E5%9F%9F%E8%AE%A4%E8%AF%81%E7%AC%AC%E4%BA%8C%E6%AD%A5.png">
 <meta property="og:image" content="https://evilh2o2.github.io/2019/08/25/Windows域认证体系—Kerberos认证/%E5%9F%9F%E8%AE%A4%E8%AF%81%E7%AC%AC%E4%B8%89%E6%AD%A5.png">
-<meta property="og:updated_time" content="2019-08-25T03:36:09.623Z">
+<meta property="og:updated_time" content="2020-01-24T06:58:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windows域认证体系—Kerberos认证">
 <meta name="twitter:description" content="Kerberos认证流程、含义">
@@ -340,7 +340,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-25T10:50:10+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-25T02:50:10+00:00">
                 2019-08-25
               </time>
             
@@ -562,7 +562,7 @@
 <p>第三步，Client 携带 <code>Server Session Key</code> 和 <code>Ticket</code>访问服务器，验证成功后，可以访问 Server资源</p>
 </blockquote>
 <p>Client 通过第二步获的 Server 的 Session Key ，创建用于证明自己就是 Ticket 的真正所有者的 Authenticator 和时间戳，并使用 Server的 Session Key 进行加密</p>
-<p>向服务器请求后，服务器用自己的 Master Key 解密  Ticket ，得到 <em>Server Session Key</em>，使用 <em>Server Session Key</em> 解密 Authenticator 进行验证，同上一步一样<br>验证成功后返回给 Client <strong>新时间戳</strong>，<strong>使用 Server Session Key 加密</strong></p>
+<p>向服务器请求后，服务器用自己的 Master Key 解密  Ticket ，得到 <em>Server Session Key*，使用 *Server Session Key</em> 解密 Authenticator 进行验证，同上一步一样<br>验证成功后返回给 Client <strong>新时间戳</strong>，<strong>使用 Server Session Key 加密</strong></p>
 <p>Client 通过缓存中的 <code>Server Session Key</code> 解密服务器返回信息，得到新时间戳并验证其是否正确。验证通过的话则客户端可以信赖服务器，并向服务器发送服务请求，服务器向客户端提供相应的服务</p>
 <p>校验通过后，认证成功，该票据会一直存在客户端内存中</p>
 <p><img src="./%E5%9F%9F%E8%AE%A4%E8%AF%81%E7%AC%AC%E4%B8%89%E6%AD%A5.png" alt="域认证第三步" title="域认证第三步"></p>
@@ -591,11 +591,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Security/" rel="tag"><i class="fa fa-tag"></i> Security</a>
-          
             <a href="/tags/Windows/" rel="tag"><i class="fa fa-tag"></i> Windows</a>
           
             <a href="/tags/渗透测试/" rel="tag"><i class="fa fa-tag"></i> 渗透测试</a>
+          
+            <a href="/tags/Security/" rel="tag"><i class="fa fa-tag"></i> Security</a>
           
         </div>
       
@@ -717,12 +717,21 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
             
 
             
@@ -730,7 +739,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -812,7 +821,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2019 &mdash; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

