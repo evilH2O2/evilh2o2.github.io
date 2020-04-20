@@ -65,10 +65,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/dropbox-32.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icon_32x32.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/dropbox-16.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icon_16x16.png?v=5.1.4">
 
 
   <link rel="mask-icon" href="/mm?v=5.1.4" color="#222">
@@ -77,7 +77,7 @@
 
 
 
-  <meta name="keywords" content="Windows,渗透测试,Security,">
+  <meta name="keywords" content="Security,Windows,渗透测试,">
 
 
 
@@ -91,7 +91,7 @@
 
 
 <meta name="description" content="Kerberos认证流程、含义">
-<meta name="keywords" content="Windows,渗透测试,Security">
+<meta name="keywords" content="Security,Windows,渗透测试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Windows域认证体系—Kerberos认证">
 <meta property="og:url" content="https://evilh2o2.github.io/2019/08/25/Windows域认证体系—Kerberos认证/index.html">
@@ -591,11 +591,11 @@
       
         <div class="post-tags">
           
+            <a href="/tags/Security/" rel="tag"><i class="fa fa-tag"></i> Security</a>
+          
             <a href="/tags/Windows/" rel="tag"><i class="fa fa-tag"></i> Windows</a>
           
             <a href="/tags/渗透测试/" rel="tag"><i class="fa fa-tag"></i> 渗透测试</a>
-          
-            <a href="/tags/Security/" rel="tag"><i class="fa fa-tag"></i> Security</a>
           
         </div>
       
@@ -801,7 +801,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关键词"><span class="nav-text">关键词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-text">介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Kerberos认证含义"><span class="nav-text">Kerberos认证含义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kerberos认证的三只狗头（脑补地狱三头犬）"><span class="nav-text">Kerberos认证的三只狗头（脑补地狱三头犬）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kerberos大致流程"><span class="nav-text">Kerberos大致流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kerberos-认证三步走"><span class="nav-text">Kerberos 认证三步走</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一步-Client-与-AS"><span class="nav-text">第一步 Client 与 AS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二步-Client-与-TGS"><span class="nav-text">第二步 Client 与 TGS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三步-Client-和-Server"><span class="nav-text">第三步 Client 和 Server</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ref"><span class="nav-text">Ref</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关键词"><span class="nav-number">1.</span> <span class="nav-text">关键词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">2.</span> <span class="nav-text">介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Kerberos认证含义"><span class="nav-number">2.1.</span> <span class="nav-text">Kerberos认证含义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kerberos认证的三只狗头（脑补地狱三头犬）"><span class="nav-number">2.2.</span> <span class="nav-text">Kerberos认证的三只狗头（脑补地狱三头犬）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kerberos大致流程"><span class="nav-number">3.</span> <span class="nav-text">Kerberos大致流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kerberos-认证三步走"><span class="nav-number">4.</span> <span class="nav-text">Kerberos 认证三步走</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一步-Client-与-AS"><span class="nav-number">4.1.</span> <span class="nav-text">第一步 Client 与 AS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二步-Client-与-TGS"><span class="nav-number">4.2.</span> <span class="nav-text">第二步 Client 与 TGS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三步-Client-和-Server"><span class="nav-number">4.3.</span> <span class="nav-text">第三步 Client 和 Server</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ref"><span class="nav-number">5.</span> <span class="nav-text">Ref</span></a></li></ol></div>
             
 
           </div>
